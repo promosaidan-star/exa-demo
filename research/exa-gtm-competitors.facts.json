@@ -1,0 +1,365 @@
+{
+ "key_facts": [
+  {
+   "fact": "Exa raised a $250M Series C at a $2.2B valuation on May 20, 2026, led by a16z with Benchmark, Lightspeed and Y Combinator; reported 400,000+ developers and 5,000+ companies; Marcus Holm (ex-President of LaunchDarkly) joined as CRO.",
+   "source": "https://exa.ai/blog/announcing-series-c",
+   "confidence": "high"
+  },
+  {
+   "fact": "Series B: $85M at $700M valuation led by Benchmark on Sep 3, 2025 (Lightspeed, YC, NVentures). Exa started in 2021 and in Sept 2025 described itself as having two products: the API and Websets.",
+   "source": "https://exa.ai/blog/announcing-series-b",
+   "confidence": "high"
+  },
+  {
+   "fact": "Seed plus Series A totaled $22M, led by Lightspeed with NVentures and YC, announced July 16, 2024.",
+   "source": "https://exa.ai/blog/series-a",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa was previously named Metaphor and rebranded on January 25, 2024.",
+   "source": "https://exa.ai/blog/announcing-exa",
+   "confidence": "high"
+  },
+  {
+   "fact": "Founders are Will Bryk (CEO, ex-Cresta) and Jeff Wang (co-founder, ex-Plaid); about page cites hundreds of H200 GPUs and a 500B+ page index.",
+   "source": "https://exa.ai/about",
+   "confidence": "high"
+  },
+  {
+   "fact": "As of August 2026 Exa's index tracks 1.4 trillion URLs and serves 100 billion pages; ExaSearchBot respects robots.txt and does not bypass logins, paywalls or CAPTCHAs.",
+   "source": "https://exa.ai/docs/admin/faqs.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Third-party revenue estimates only: Sacra estimated $10M ARR in Sept 2025 (about 11x YoY); ARR Club lists $12M ARR in January 2026. Exa has not published revenue.",
+   "source": "https://sacra.com/research/exa-at-10m-growing-11x-yoy/",
+   "confidence": "low"
+  },
+  {
+   "fact": "NYC Forward Deployed Engineer posting (published Aug 13, 2026): in-person NYC, GTM department, $130K to $275K plus equity and bonus; FDE owns customers from cold outbound to production integration to closed deal; team size stated as about 100.",
+   "source": "https://jobs.ashbyhq.com/exa/c542d672-691c-46c1-9741-856d66f2c2ea",
+   "confidence": "high"
+  },
+  {
+   "fact": "FDE EMEA/APJ postings define the FDE as paired with an AE to own the technical win: discovery, solution design, demos, POCs/POVs with clear success criteria, objection handling, security questionnaires and RFPs; AI-assisted coding expected.",
+   "source": "https://jobs.ashbyhq.com/exa/234bf118-672a-45d1-a4a2-02065d1c02f0",
+   "confidence": "high"
+  },
+  {
+   "fact": "Forward Deployed PM posting (Sep 26, 2026) says the team is about 150 people and the role builds proof-of-value demos and helps price custom engagements.",
+   "source": "https://jobs.ashbyhq.com/exa/521540d5-697e-4020-aa83-cd2f60e144a2",
+   "confidence": "high"
+  },
+  {
+   "fact": "Technical Enablement Manager posting says enablement for FDEs centers on demo excellence and the POV/POC process, value narratives, technical objection handling, competitive positioning and demo scenarios across industries and personas.",
+   "source": "https://jobs.ashbyhq.com/exa/b193ad1c-7700-4e32-98cb-efc791993963",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa's enterprise page offers a demo where the prospect brings a query their current search gets wrong and Exa runs it live; lists forward-deployed engineers, custom data indexes, SLAs, SOC 2 Type II, HIPAA with BAA, ZDR; claims 500,000+ developers.",
+   "source": "https://exa.ai/enterprise",
+   "confidence": "high"
+  },
+  {
+   "fact": "Changelog (Oct 2025 to Sep 2026): Deep search (Nov 20), People Search (Dec 19), Company Search (Jan 21), maxAgeHours replaces livecrawl (Feb 2), Exa Instant (Feb 5), pricing overhaul (Mar 3), deep-reasoning with field-level grounding (Mar 4), Monitors (Mar 30), /research retired (Apr 1), Exa Agent (Jun 16), Exa Connect (Jun 24), Agent in MCP (Jul 1), publication search 350M papers (Jul 23), Dynamic Highlights preview (Aug 28), Agent Ultra (Sep 24).",
+   "source": "https://exa.ai/docs/changelog.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Websets docs now tell new list-building users to use Exa Agent and keep Websets for existing integrations.",
+   "source": "https://exa.ai/docs/websets/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Current list pricing: Search instant $4/1k, fast/auto $7/1k (10 results with text and highlights), Deep $12/1k, Deep-reasoning $15/1k, Contents $1/1k pages, Answer $5/1k, Monitors $15/1k, Agent $0.012 to $1.00 per fixed run or metered with $5/$20 caps; $10 free credits monthly.",
+   "source": "https://exa.ai/docs/admin/pricing.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "ZDR is Enterprise-only, enabled per team, available for Search, Contents and Agent but not Answer or Websets.",
+   "source": "https://exa.ai/docs/admin/security/zero-data-retention.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "HIPAA mode applies only to cached retrieval: /search with instant or fast type, text or highlights, no summaries, no live crawl.",
+   "source": "https://exa.ai/docs/admin/security/hipaa.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Google's Grounding with Exa web search in Gemini Enterprise Agent Platform requires the customer's own Exa API key, bills Exa usage at Exa's rates plus Gemini tokens, default quota 200 prompts per minute; page updated 2026-09-28.",
+   "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/grounding-with-exa",
+   "confidence": "high"
+  },
+  {
+   "fact": "Google added Parallel as a native grounding provider on July 16, 2026, purchasable through Google Cloud Marketplace on the existing Google invoice.",
+   "source": "https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/",
+   "confidence": "high"
+  },
+  {
+   "fact": "Nebius agreed to acquire Tavily on Feb 10, 2026; Tavily keeps its brand; Tavily has a 1M+ developer community and customers including IBM, Cohere and Groq.",
+   "source": "https://nebius.com/newsroom/nebius-announces-agreement-to-acquire-tavily-to-add-agentic-search-to-its-ai-cloud-platform",
+   "confidence": "high"
+  },
+  {
+   "fact": "Tavily deal reported at $275M upfront, up to $400M with milestones (citing Calcalist); Tavily had raised $25M.",
+   "source": "https://siliconangle.com/2026/02/10/ai-infrastructure-giant-nebius-buys-agentic-search-startup-tavily/",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Parallel Web Systems raised a $100M Series B at a $2B valuation led by Sequoia (Apr 29, 2026), five months after a $100M Series A at $740M; $230M total; 100,000+ developers; customers include Clay, Harvey, Notion, Opendoor.",
+   "source": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
+   "confidence": "high"
+  },
+  {
+   "fact": "Parallel's own Sep 9, 2026 BrowseComp comparison shows Parallel 74% at $399 per 1,000 questions vs Exa Auto 70% at $971, calling Exa the most expensive frontier run.",
+   "source": "https://parallel.ai/articles/best-ai-search-for-agents",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Independent AIMultiple benchmark (May 25, 2026, updated Sep 27, 2026; 100 queries, GPT-5.2 judge): Brave 14.89, Firecrawl 14.58, Exa 14.39, Parallel Pro 14.21, Tavily 13.67, Perplexity 12.96, SerpAPI 12.28; top four statistically tied; SerpApi disclosed as a subscriber.",
+   "source": "https://aimultiple.com/agentic-search",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Exa-run benchmarks vs Tavily (Aug 4, 2026): people rank-1 recall 75.5% vs 40.5%, company 81.5% vs 61.3%, publications 63.3% vs 31.8%; Tavily concedes higher published RPM and bundled raw content.",
+   "source": "https://exa.ai/versus/tavily",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Exa's own Brave comparison concedes Brave's higher citation precision (0.328 vs 0.259) and cheaper list price ($5 vs $7 per 1,000), while claiming 2x lower latency and much better entity retrieval.",
+   "source": "https://exa.ai/versus/brave",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Brave Search API: Search $5 per 1,000 requests, Answers $4 per 1,000 plus $5 per million tokens, 50 QPS, 30B+ page independent index, ZDR; customers AWS, Shopify, Snowflake, Cohere, Mistral.",
+   "source": "https://brave.com/search/api/",
+   "confidence": "high"
+  },
+  {
+   "fact": "Perplexity Search API is $5 per 1,000 requests and $1 per 1,000 with Fast Search; Agent API web_search tool $2.50 per 1,000, people_search and finance_search $5 per 1,000; Perplexity now documents an MCP server.",
+   "source": "https://docs.perplexity.ai/docs/getting-started/pricing.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Perplexity launched its Search API on Sep 26, 2025 at $5 per 1,000 requests, claiming an index of hundreds of billions of pages.",
+   "source": "https://www.infoworld.com/article/4064296/from-answer-engine-to-infrastructure-perplexity-launches-search-api-for-developers.html",
+   "confidence": "high"
+  },
+  {
+   "fact": "Grounding with Google Search on Gemini 3 costs $14 per 1,000 grounding queries after 5,000 free per month (billing began Jan 5, 2026); older models $35 per 1,000 prompts; Web Grounding for Enterprise $45 per 1,000 prompts.",
+   "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+   "confidence": "high"
+  },
+  {
+   "fact": "Google's Custom Search JSON API is closed to new customers and existing customers must move off by January 1, 2027.",
+   "source": "https://developers.google.com/custom-search/v1/overview",
+   "confidence": "high"
+  },
+  {
+   "fact": "Bing Search APIs were retired August 11, 2025; Microsoft points customers to Grounding with Bing Search in Azure AI Agents.",
+   "source": "https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement",
+   "confidence": "high"
+  },
+  {
+   "fact": "Grounding with Bing costs $14 per 1,000 transactions, 150 TPS, and its output is restricted to use within Microsoft products such as Azure AI Foundry.",
+   "source": "https://www.microsoft.com/en-us/bing/apis/grounding-pricing",
+   "confidence": "high"
+  },
+  {
+   "fact": "You.com raised a $100M Series C at $1.5B (Sep 3, 2025, led by Cox); over 1 billion API queries per month; customers DuckDuckGo, Windsurf, Harvey.",
+   "source": "https://you.com/articles/series-c",
+   "confidence": "high"
+  },
+  {
+   "fact": "Linkup raised a $10M seed led by Gradient; offices in New York, SF and Paris; offers private index and bring-your-own-cloud, SOC 2 Type II, HIPAA, ZDR; logos include KPMG, McKinsey, EY, Databricks.",
+   "source": "https://www.linkup.so/",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Firecrawl raised a $75M Series B led by Smash Ventures on Sep 22, 2026 and launched the Alexandria data platform.",
+   "source": "https://siliconangle.com/2026/09/22/web-scraping-startup-firecrawl-closes-75m-investment/",
+   "confidence": "high"
+  },
+  {
+   "fact": "Google sued SerpApi on Dec 19, 2025 alleging circumvention of security measures to scrape and resell licensed content.",
+   "source": "https://blog.google/technology/safety-security/serpapi-lawsuit/",
+   "confidence": "high"
+  },
+  {
+   "fact": "Per a third-party summary, the core Google v. SerpApi claims were dismissed July 20, 2026; Google refiled Aug 10 and SerpApi moved to dismiss again Aug 25.",
+   "source": "https://crawlraven.com/blog/google-serpapi-lawsuit",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Exa's April 2026 deprecation made startCrawlDate/endCrawlDate silently ignored from April 15 while still returning HTTP 200, flagged as a stale-data risk by a monitoring vendor's blog.",
+   "source": "https://dev.to/flarecanary/exa-just-removed-research-and-started-silently-ignoring-two-date-filters-your-agent-is-probably-1p51",
+   "confidence": "high"
+  },
+  {
+   "fact": "monday.com case study: 2.7M enrichments, 50% less research time per SDR/AE, top 10 leads pre-mapped in CRM on login.",
+   "source": "https://exa.ai/customers/monday",
+   "confidence": "high"
+  },
+  {
+   "fact": "CodeRabbit case study: Deep Search cut P50 latency to 7.1s from 30 to 45s and reduced web-search call volume 70 to 75%.",
+   "source": "https://exa.ai/customers/coderabbit",
+   "confidence": "high"
+  },
+  {
+   "fact": "HubSpot case study: Exa beat native model search for HubSpot; 40% latency improvement; uses Search API and Monitors API.",
+   "source": "https://exa.ai/customers/hubspot",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa demo gallery includes Exa vs Native Search, GTM Intelligence (domain to TAM list, scored prospects, decision makers, monitors), Company and People Enrichment, voice agent, paper search.",
+   "source": "https://exa.ai/demos",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa Snapshot pins search and contents to a stored page version at a chosen past datetime (rolling 5-month window) for backtests and reproducible evals.",
+   "source": "https://exa.ai/docs/search/snapshot.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Singapore office opened March 30, 2026 as Exa's first APAC office, focused on core retrieval engineering.",
+   "source": "https://exa.ai/blog/exa-singapore",
+   "confidence": "high"
+  }
+ ],
+ "uncertainties": [
+  "Exa's revenue is not public; the $10M (Sept 2025) and $12M (Jan 2026) ARR figures are third-party estimates from Sacra and ARR Club and could be well off, especially after the May 2026 raise.",
+  "Headcount conflicts across Exa's own postings: about 100 (FDE postings, Aug 2026) versus about 150 (Forward Deployed PM posting, Sep 26, 2026).",
+  "Index size and developer counts differ across Exa pages (500B+ pages vs 1.4T URLs tracked / 100B served; 400,000 vs 500,000 developers); latency for Exa Instant ranges from sub-150ms to 323ms depending on the page.",
+  "Nearly all head-to-head benchmark numbers are vendor-run (Exa's versus pages, Parallel's article). The only independent benchmark found (AIMultiple) discloses SerpApi as a subscriber and shows the top four providers statistically tied.",
+  "Exa's comparison pages are partly stale: the Perplexity page (Feb 2026) says Perplexity has no MCP server or people search, but Perplexity's current docs show both; Feb/Mar 2026 pages quote Exa at $5 per 1,000, not the current $4/$7.",
+  "Default data retention for non-ZDR Exa accounts is not stated on any page I read; I did not load trust.exa.ai.",
+  "Launch dates for Exa Snapshot, Batch API, Exa in Slack, Exa for Google Sheets and HIPAA mode are not in the changelog.",
+  "Whether Grounding with Exa in Google's platform is still private preview or generally available is unclear; the Exa blog (Apr 2026) said private preview and the Google doc page does not state a stage.",
+  "Series C angel investors (Scott Wu, Igor Babuschkin, Tal Broda) come from a search-result summary of press coverage, not a page I loaded directly.",
+  "Linkup's seed date differs between sources (FinSMEs Feb 2026 vs Linkup blog March 3, 2026). Tavily's deal price comes from SiliconANGLE citing Calcalist; Nebius did not disclose it.",
+  "The status of Google v. SerpApi after Aug 25, 2026 comes from a third-party blog (CrawlRaven), not court records.",
+  "What the Oct 2 demo round is testing is my inference from the recruiter brief and Exa's postings; Exa has published nothing about its FDE interview loop.",
+  "Pages that failed or had no usable content: Bloomberg Series C article (403), perplexity.ai/api-platform (403), a16z Bryk podcast and Yahoo Bryk video pages (no transcript), jobs.ashbyhq.com/exa (client-rendered; used Ashby's public posting API instead), exa.ai/security (only a vulnerability disclosure policy)."
+ ],
+ "verification": {
+  "checks": [
+   {
+    "claim": "1. Exa raised a $250M Series C at a $2.2B valuation on May 20, 2026, led by a16z with Benchmark, Lightspeed and YC; 400,000+ developers and 5,000+ companies; Marcus Holm (LaunchDarkly President) joined as CRO.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/blog/announcing-series-c (Will Bryk post dated May 20, 2026: $250M, $2.2B, led by a16z, over 400,000 developers, over 5,000 companies, 'Marcus Holm, President of LaunchDarkly, is joining as Exa's CRO'). The blog itself names only a16z; Benchmark, Lightspeed and YC 'doubling down' comes from Exa's Ashby postings (api.ashbyhq.com/posting-api/job-board/exa)."
+   },
+   {
+    "claim": "8. NYC Forward Deployed Engineer posting published Aug 13, 2026: in-person NYC, GTM department, $130K to $275K plus equity and bonus; FDE takes customers from cold outbound to production integration to closed deal; team of about 100.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true (posting c542d672-691c-46c1-9741-856d66f2c2ea: publishedAt 2026-08-13, department GTM, OnSite, '$130K to $275K, Offers Equity, Offers Bonus', 'Take a customer from first cold outbound to production integration to closed deal', 'team of ~100')"
+   },
+   {
+    "claim": "9. FDE EMEA/APJ postings define the FDE as paired with an AE to own the technical win: discovery, solution design, demos, POCs/POVs with clear success criteria, objection handling, security questionnaires and RFPs; AI-assisted coding expected.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true (posting 234bf118-672a-45d1-a4a2-02065d1c02f0, FDE EMEA London: 'Partnered with an Account Executive, you own the technical win'; 'scope a POC with clear success criteria'; 'security questionnaires, RFP responses'; 'using AI-assisted tooling is expected, hand-crafted code is not the bar')"
+   },
+   {
+    "claim": "12. Enterprise page offers a demo where the prospect brings a query their current search gets wrong; lists forward-deployed engineers, custom data indexes, SLAs, SOC 2 Type II, HIPAA with BAA, ZDR; claims 500,000+ developers.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/enterprise ('Bring a query your current search gets wrong. We will run it on Exa with you, on the call.'; 'Forward-deployed engineers'; 'Custom data'; 'Production SLAs'; 'SOC 2 Type II'; 'HIPAA ... with a BAA available'; 'Zero data retention'; 'over 500,000 developers')"
+   },
+   {
+    "claim": "13. Changelog dates: Deep search Nov 20; People Search Dec 19; Company Search Jan 21; maxAgeHours replaces livecrawl Feb 2; Exa Instant Feb 5; pricing overhaul Mar 3; deep-reasoning with field-level grounding Mar 4; Monitors Mar 30; /research retired Apr 1; Exa Agent Jun 16; Exa Connect Jun 24; Agent in MCP Jul 1; publication search 350M Jul 23; Dynamic Highlights Aug 28; Agent Ultra Sep 24.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/changelog.md (every date and item matches). Small inconsistency inside Exa's docs: changelog says deep-reasoning 12-50s and deep 4-12s; pricing.md says 12-40s and 4-15s."
+   },
+   {
+    "claim": "14. Websets docs tell new list-building users to use Exa Agent and keep Websets for existing integrations.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/websets/quickstart.md ('Starting a new list-building or enrichment workflow? Use Exa Agent. Use this guide to maintain or extend an existing Websets integration.' Also: Websets API requires a paid Websets plan and its credits are separate from Search API credits.)"
+   },
+   {
+    "claim": "15. List pricing: Search instant $4/1k, fast/auto $7/1k (10 results with text and highlights), Deep $12/1k, Deep-reasoning $15/1k, Contents $1/1k pages, Answer $5/1k, Monitors $15/1k, Agent $0.012 to $1.00 per fixed run or metered with $5/$20 caps; $10 free credits monthly.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/pricing.md (all figures match; free balance resets to $10 on the first of each month). The 'text and highlights included' wording is from the Mar 3, 2026 entry at https://exa.ai/docs/changelog.md, not the pricing page. Omitted by the claim: deep-lite also $12/1k; Contents is $1/1k pages PER content type (text plus highlights on one page bills twice); results above 10 add $1/1k; AI summaries add $1/1k pages."
+   },
+   {
+    "claim": "16. ZDR is Enterprise-only, enabled per team, available for Search, Contents and Agent but not Answer or Websets.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/security/zero-data-retention.md (table: Search, Contents, Agent 'Available'; Answer, Websets 'Not currently supported'; 'available on Enterprise plans and enabled per team')"
+   },
+   {
+    "claim": "17. HIPAA mode applies only to cached retrieval: /search with instant or fast type, text or highlights, no summaries, no live crawl.",
+    "verdict": "wrong",
+    "correction": "HIPAA mode covers BOTH /search and /contents, not just /search. It is switched on per request with a top-level field \"compliance\": \"hipaa\", only for Enterprise teams Exa has enabled (otherwise 403 FEATURE_DISABLED). On /search, type must be explicitly instant or fast (omitting type is rejected); on /contents, omit freshness fields or set maxAgeHours: -1. No summary on either. Incompatible requests return 400 INVALID_REQUEST_BODY. HIPAA mode includes ZDR for those requests; other endpoints (Answer, Agent, Monitors) reject the field.",
+    "source": "https://exa.ai/docs/admin/security/hipaa.md"
+   },
+   {
+    "claim": "40. monday.com case study: 2.7M enrichments, 50% less research time per SDR/AE, top 10 leads pre-mapped in CRM on login.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers/monday ('2.7M enrichments completed', '50% reduction in research time Per SDR/AE, per prospecting cycle', 'Top 10 leads on open ... live in the CRM every time a rep logs in'; API listed: Search API; quote from Daniel Lereya, Chief Product and Technology Officer)"
+   },
+   {
+    "claim": "41. CodeRabbit case study: Deep Search cut P50 latency to 7.1s from 30 to 45s and reduced web-search call volume 70 to 75%.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers/coderabbit (numbers present: 'P50 7.1 seconds and P95 11.1 seconds', '70-75% fewer web-search calls'). Caveat for the pitch: the 30-45s baseline is 'about 30-45 seconds for some Deep Search-style questions' with the prior provider, NOT a P50, so do not say 'P50 fell from 30-45s to 7.1s'."
+   },
+   {
+    "claim": "42. HubSpot case study: Exa beat native model search for HubSpot; 40% latency improvement; uses Search API and Monitors API.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers/hubspot ('Exa was better than the native model search experience for us.' attributed to Prakash Balasubramanian, no title given; '40% Improved latency' with no baseline stated; API field 'People and company search, Monitoring'; 'HubSpot works with Exa's Monitors API'; product is Breeze Assistant and Agents; other quote from Praty Sharma, AI Lead)"
+   },
+   {
+    "claim": "43. Exa demo gallery includes Exa vs Native Search, GTM Intelligence (domain to TAM list, scored prospects, decision makers, monitors), Company and People Enrichment, voice agent, paper search.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/demos (all listed, plus Exa Terminal, Web-Grounded Chat, Subject Image Search, Product Shopping). The 'monitors' part is not on the gallery card; it is on https://demos.exa.ai/gtm-intelligence, which describes an 'Always Enrich' step using Exa Monitors with a create_monitor call (query, output_schema, schedule, webhook_url)."
+   },
+   {
+    "claim": "44. Exa Snapshot pins search and contents to a stored page version at a chosen past datetime (rolling 5-month window) for backtests and reproducible evals.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/search/snapshot.md (parameter snapshotAsOf; on /search it goes INSIDE contents, on /contents at top level; 'rolling 5-month index window'; pay-as-you-go at 10 QPS and 'After 100 requests, talk to sales to continue')"
+   },
+   {
+    "claim": "5. Founders Will Bryk (CEO, ex-Cresta) and Jeff Wang (co-founder, ex-Plaid); about page cites hundreds of H200 GPUs and a 500B+ page index.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/about ('CEO Will Bryk ... one of the first engineers at Cresta'; 'Co-founder Jeff Wang ... three years building data and web infra at Plaid'; 'exa-cluster of hundreds of H200s'; 'Web-scale infrastructure for 500B+ webpages'; advised by Tal Broda, former VP of Compute, OpenAI)"
+   },
+   {
+    "claim": "6. As of August 2026 Exa's index tracks 1.4 trillion URLs and serves 100 billion pages; ExaSearchBot respects robots.txt and does not bypass logins, paywalls or CAPTCHAs.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/faqs.md (line: 'As of August 2026, Exa's index tracks 1.4 trillion URLs and serves 100 billion pages'). Conflicts with the Series C blog ('crawlers track over 500 billion urls') and the about page (500B+ webpages); pick one and cite it."
+   },
+   {
+    "claim": "18. Google's Grounding with Exa in Gemini Enterprise Agent Platform requires the customer's own Exa API key, bills Exa usage at Exa's rates plus Gemini tokens, default quota 200 prompts per minute; page updated 2026-09-28.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/grounding-with-exa (fetched via curl: 'you need to get an API key from Exa's web site'; 'The default quota is 200 prompts per minute'; billing = Gemini tokens + 'Pricing for the use of Exa's search API: see Exa's pricing page'; 'Last updated 2026-09-28 UTC'; no launch stage label; only fast and instant search types supported; called a 'Separate Offering')"
+   }
+  ],
+  "missing": [
+   "The API basics for the demo build. Base URL https://api.exa.ai. Auth header is 'x-api-key' or 'Authorization: Bearer'. SDKs are exa-py and exa-js. Hosted MCP is at https://mcp.exa.ai/mcp. The OpenAPI spec at https://exa.ai/docs/exa-spec.yaml is the source of truth for request shapes. Source: header of https://exa.ai/docs/admin/pricing.md",
+   "Parameters that now fail silently. The report mentions startCrawlDate/endCrawlDate only through a third-party blog. The changelog says that since Jul 23, 2026 they are 'ignored for all teams' while still being accepted. It also says: livecrawl is replaced by maxAgeHours (0 = always crawl, -1 = cache only); highlights numSentences and highlightsPerUrl are deprecated in favor of highlights.maxCharacters; the 'linkedin' category became 'people'; 'research paper' became 'publication'; and the pdf, github and tweet categories are being deprecated. Old tutorial code will return HTTP 200 with quietly wrong behavior. Source: https://exa.ai/docs/changelog.md",
+   "Current parameter names a demo would use: type (instant, fast, auto, deep-lite, deep, deep-reasoning); category ('company', 'people', 'publication'); outputSchema (returns output.content plus output.grounding, which are field-level citations); includeDomains/excludeDomains (supports paths and *.subdomain wildcards); userLocation; snapshotAsOf. Agent API: POST /agent/runs with effort (minimal, low, medium, high, xhigh, auto, ultra), outputSchema, input.data, dataSources for Connect, budget.maxCostDollars and budget.maxDurationSeconds, plus POST /agent/runs/{id}/stop. Dynamic Highlights (a research preview) needs dynamic: true plus the header 'Exa-Beta: dynamic-highlights-2026-08-28'. Sources: https://exa.ai/docs/changelog.md, https://exa.ai/docs/admin/pricing.md",
+   "Named customer quotes with job titles on the enterprise page, useful for the slides: Daniel Lereya (Chief Product and Technology Officer, monday.com), Praty Sharma (AI Lead, HubSpot), Walden Yan (Co-founder, Cognition), David Loker (VP of AI, CodeRabbit), Alex Atallah (CEO, OpenRouter), Prabhav Jain (CEO, 11x). The page also claims 'Up to 94% fewer tokens per answer' and shows an Exa-run latency chart: Exa Instant 45% / 178 ms, Parallel 37% / 3051 ms, Brave 20% / 559 ms, Tavily Ultra-Fast 11% / 260 ms. The scraped text did not say what the percentage axis measures. Source: https://exa.ai/enterprise",
+   "Exa gives several different latency numbers for Instant: 'sub-150ms' in the changelog (Feb 5, 2026), 'under 180 ms' on the enterprise page, and 'sub200ms' in the Series C blog. In a live pitch, quote one number and name its page.",
+   "Launch dates the report said it could not find. Exa Snapshot came out Sep 17, 2026 ('Introducing Exa Snapshot, A New Way to Search the Past'), and the Agent Ultra blog is dated Sep 25, 2026 (changelog says Sep 24). Both appear in the 'See more' list at the bottom of https://exa.ai/blog/announcing-series-c",
+   "Snapshot limits that matter for a finance backtest demo. Pay-as-you-go runs at 10 QPS (queries per second) with a rolling 5-month window, and after 100 requests you must talk to sales. On /search, snapshotAsOf goes inside 'contents', not at the top level. Source: https://exa.ai/docs/search/snapshot.md",
+   "Websets API needs a paid Websets plan, and Websets credits are separate from Search API credits. Free plan caps a webset at 25 verified results. Source: https://exa.ai/docs/websets/quickstart.md",
+   "Google's Exa grounding tool details, relevant if the enterprise story runs through Google Cloud. SDK tool is types.Tool(exa_ai_search=types.ToolExaAiSearch(api_key=..., custom_configs={...})). Only 'fast' and 'instant' search types are allowed. numResults defaults to 5. includeDomains/excludeDomains accept up to 1200 domains. Supported models include gemini-2.5-flash/pro and gemini-3.5-flash. Google calls it a 'Separate Offering' under the Google Cloud Agreement. Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/grounding-with-exa",
+   "More NYC FDE posting details worth using in the interview. The posting mentions building 'demos, tutorials, and sample applications', running 'many sales and technical calls each week', analyzing usage data to 'spot churn risk early and drive expansion', willingness to travel, and visa sponsorship. An older SF FDE posting from 2025-06-26 (same $130K to $275K band) is also still live. Source: Ashby posting API https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true",
+   "Enterprise buildout signals on Exa's job board that the report did not mention: Head of Cloud Partnerships (May 20, 2026), VP Customer Experience, Deal Desk Manager and Revenue Insights Manager (all Aug 13, 2026), Head of Security (Sep 1, 2026), a NYC SDR Manager (Sep 13, 2026), and Commercial Counsel SF/NY (Sep 28, 2026). Together they suggest Exa is building the enterprise sales motion now, which fits an FDE pitch about enterprise evaluations. Source: same Ashby API",
+   "HubSpot's 40% latency improvement has no baseline or method on the case study page, so present it as Exa's claim, not a measured head-to-head. Source: https://exa.ai/customers/hubspot",
+   "Scope of this check: I verified 17 of the 45 claims against their primary sources. I did not re-check the competitor claims (19 through 39: Parallel, Tavily, Brave, Perplexity, Google and Bing pricing, You.com, Linkup, Firecrawl, SerpApi) or the funding-history claims 2, 3, 4 and 7. Exception: the Series B page (https://exa.ai/blog/announcing-series-b) did confirm $85M at $700M, led by Benchmark with Lightspeed, YC and NVentures, Sep 3, 2025, founded 2021. I did not verify its 'two products: API and Websets' wording."
+  ]
+ }
+}

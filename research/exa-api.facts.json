@@ -1,0 +1,357 @@
+{
+ "key_facts": [
+  {
+   "fact": "docs.exa.ai returns a 307 redirect to https://exa.ai/docs; the docs say the OpenAPI spec at https://exa.ai/docs/exa-spec.yaml ('Exa Public API' v2.0.0) is the source of truth for request and response schemas.",
+   "source": "https://docs.exa.ai/llms.txt",
+   "confidence": "high"
+  },
+  {
+   "fact": "Base URL is https://api.exa.ai; auth is 'x-api-key: KEY' or 'Authorization: Bearer KEY'; keys are created at https://dashboard.exa.ai/api-keys; both SDKs read EXA_API_KEY.",
+   "source": "https://exa.ai/docs/index.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "/search type enum is instant, fast, auto (default), deep-lite, deep, deep-reasoning; neural and keyword are not in the current API enum.",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "Documented latencies: instant ~250 ms, fast ~450 ms, auto ~1 s, deep-lite ~4 s, deep 4-15 s, deep-reasoning 12-40 s; outputSchema adds about 2 s.",
+   "source": "https://exa.ai/docs/search/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "The product page gives different latencies (Instant 323 ms, Fast 450 ms, Auto ~1.2 s, Deep 4-12 s) and a benchmark of Exa Deep 80.0% accuracy at 4.3 s versus Perplexity 50.0% and Brave 43.0%.",
+   "source": "https://exa.ai/products/search",
+   "confidence": "medium"
+  },
+  {
+   "fact": "The /research endpoint was retired on April 1, 2026 and replaced by /search with type deep-reasoning; both SDKs still ship an exa.research client that calls /research/v1.",
+   "source": "https://exa.ai/docs/changelog.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "/findSimilar is deprecated (deprecated: true, Deprecation header); Exa says to use /search with a query describing the source.",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "Category values: company, publication, news, personal site, financial report, people. company and people reject startPublishedDate, endPublishedDate and excludeDomains with a 400.",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "numResults ranges from 1 to 100 (default 10), with no pagination; each result above 10 costs $1 per 1,000.",
+   "source": "https://exa.ai/docs/search/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "On /search, outputSchema returns output.content plus output.grounding[{field, citations[{url,title}], confidence low/medium/high}]. Object schemas are capped at 10 total properties and 2 nesting levels, and every array needs items.",
+   "source": "https://exa.ai/docs/search/deep-search.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Content options go inside 'contents' on /search but at the top level on /contents; /contents takes ids or urls (1-100), never both.",
+   "source": "https://exa.ai/docs/contents/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "maxAgeHours replaces livecrawl: omitted = cache with fetch fallback, N = fetch if older than N hours, 0 = always fetch, -1 = cache only, max 720; livecrawlTimeout defaults to 10000 ms (max 90000).",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "Dynamic Highlights (highlights.dynamic) is a research preview that requires the header 'Exa-Beta: dynamic-highlights-2026-08-28' and cannot be combined with maxCharacters.",
+   "source": "https://exa.ai/docs/search/highlights.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Pricing: instant $4/1k, fast and auto $7/1k, deep-lite and deep $12/1k, deep-reasoning $15/1k, contents $1/1k pages per content type, answer $5/1k, monitors $15/1k, summaries $1/1k pages.",
+   "source": "https://exa.ai/docs/admin/pricing.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Free tier: $10 in credits on signup, reset to $10 on the 1st of each month (non-accumulating), plus a one-time $10 onboarding bonus; no payment method required.",
+   "source": "https://exa.ai/docs/admin/billing.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Default rate limits: /search, /answer and /chat/completions 10 QPS; deep types 5 QPS; /contents 100 QPS; /agent/runs and /responses 5 QPS with 50 active runs; /websets 20 QPS. Buying $1,000 of credits in 30 days unlocks 25 QPS for 90 days.",
+   "source": "https://exa.ai/docs/admin/billing.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Agent effort values are minimal, low, medium, high, xhigh, auto (default) and ultra. Fixed prices are $0.012, $0.025, $0.10, $0.50 and $1.00; auto is metered ($0.10/ACU, $0.005/search) with a default $5 cap; ultra has a $20 cap.",
+   "source": "https://exa.ai/docs/agent/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Agent Ultra typically takes about 30 minutes and up to 3 hours; budget.maxDurationSeconds accepts 300 to 10,800 and applies only to ultra.",
+   "source": "https://exa.ai/docs/agent/agent-ultra.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Agent run output has text, structured and grounding (per-field citations with confidence); stopReason is one of schema_satisfied, budget_reached, time_limit_reached, stopped, error, cancelled.",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Websets API requires a paid Websets plan with credits separate from Search API credits; the Free plan caps a webset at 25 verified results; the docs route new list-building work to Exa Agent.",
+   "source": "https://exa.ai/docs/websets/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Monitors need a webhook URL that is HTTPS and not localhost or a private IP; the minimum interval is 1 hour; POST /monitors/{id}/trigger runs one immediately; webhookSecret is returned only once.",
+   "source": "https://exa.ai/docs/exa-spec.yaml",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Batch API is Enterprise-only, in beta, and needs the header 'Exa-Beta: batches-2026-06-06'; items can target /search or /agent/runs.",
+   "source": "https://exa.ai/docs/batch/quickstart.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Zero Data Retention is available for Search, Contents and Agent, but not for Answer or Websets; it is Enterprise-only and enabled per team.",
+   "source": "https://exa.ai/docs/admin/security/zero-data-retention.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa states it is SOC 2 Type II certified, with reports and a DPA at trust.exa.ai; HIPAA mode (compliance: 'hipaa') works on /search and /contents only, with instant or fast and cache-only retrieval.",
+   "source": "https://exa.ai/docs/admin/security/overview.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Current package versions: exa-py 2.22.2 (Python 3.9 or later), exa-js 2.23.0, exa-mcp-server 3.4.1, @exalabs/ai-sdk 2.1.0.",
+   "source": "https://pypi.org/pypi/exa-py/json",
+   "confidence": "high"
+  },
+  {
+   "fact": "The hosted MCP server is https://mcp.exa.ai/mcp with tools web_search_exa, web_fetch_exa, web_search_advanced_exa (opt-in) and agent_run (needs OAuth or an API key); the keyless tier is 3 QPS and 150 calls per day.",
+   "source": "https://exa.ai/docs/get-started/exa-mcp.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "exa-py get_contents() adds text with 10,000 characters whenever no text, summary or extras is passed, even when highlights are requested; search() defaults to text with 10,000 characters unless contents=False.",
+   "source": "https://raw.githubusercontent.com/exa-labs/exa-py/master/exa_py/api.py",
+   "confidence": "high"
+  },
+  {
+   "fact": "exa-py agent.runs.create_and_wait times out after 120,000 ms by default and poll_until_finished after 3,600,000 ms; poll_interval is in milliseconds.",
+   "source": "https://raw.githubusercontent.com/exa-labs/exa-py/master/exa_py/agent/client.py",
+   "confidence": "high"
+  },
+  {
+   "fact": "The OpenAI-compatible /chat/completions (model 'exa') routes to /answer, and /responses (model 'exa-agent') routes to Agent; high, xhigh and ultra effort in synchronous mode return a 400.",
+   "source": "https://exa.ai/docs/integrations/openai-sdk.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "As of August 2026, Exa's index tracks 1.4 trillion URLs and serves 100 billion pages.",
+   "source": "https://exa.ai/docs/admin/faqs.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "The enterprise page claims SOC 2 Type II, GDPR, CCPA, HIPAA with BAA, ZDR, contractual SLAs, custom indexing and forward-deployed engineers, and names customers including monday.com, HubSpot, Cognition, CodeRabbit, OpenRouter and 11x.",
+   "source": "https://exa.ai/enterprise",
+   "confidence": "medium"
+  }
+ ],
+ "uncertainties": [
+  "No authenticated calls were made (no API key; no account created). Unauthenticated /search returns an x402 payment challenge before any validation runs, so no field behavior was tested live.",
+  "Whether the API still accepts the legacy type values 'neural', 'keyword' or 'hybrid' is unknown: the spec enum omits them, but exa-py still lists 'neural' and exa-js lists 'keyword', 'neural' and 'hybrid'.",
+  "Exa's own latency figures disagree: docs say instant ~250 ms and auto ~1 s; the product page says Instant 323 ms and Auto ~1.2 s; the enterprise page says Instant P50 178 ms; the Feb 2026 changelog says sub-150 ms. Deep is 4-15 s in the docs and 4-12 s on the product page.",
+  "Runtime for fixed-effort Agent runs (minimal to xhigh) is not documented anywhere I read; only Ultra (~30 min typical, up to 3 h) and 'seconds to minutes' are stated.",
+  "Websets credit prices and plan tiers are not public; the docs point to https://websets.exa.ai/billing (logged-in) and the pricing page's websets tab showed no Websets content.",
+  "highlightScores: the April 2026 changelog says it was removed on May 1, 2026, but the current spec still lists it on results.",
+  "numResults cap for non-enterprise: docs say up to 100, but the Enterprise card lists 'requests above 25 results' as an enterprise feature and a NUM_RESULTS_EXCEEDED tag exists; the practical free or pay-as-you-go cap may be lower than 100.",
+  "additionalQueries limit: the spec says up to 10, the exa-py docstring says max 5.",
+  "Whether includeDomains and excludeDomains can be combined: an exa-py comment calls them exclusive; the spec does not say.",
+  "The exa-py comment that date filters exclude pages with no detected date was not confirmed in the API docs.",
+  "exa-js getContents() with no options sends no content fields; what the API returns by default in that case is not documented.",
+  "Baselayer price range differs between the pricing page ($0.15-$4.00 per order) and the Connect overview ($0.10-$4.00).",
+  "trust.exa.ai did not render any content, so the SOC 2 Type II claim rests on Exa's docs and enterprise page, not the reports themselves.",
+  "The exa.ai/demos page and customer case studies were not reviewed in this pass (outside this topic)."
+ ],
+ "verification": {
+  "checks": [
+   {
+    "claim": "1. docs.exa.ai returns a 307 redirect to https://exa.ai/docs; the OpenAPI spec at https://exa.ai/docs/exa-spec.yaml ('Exa Public API' v2.0.0) is the source of truth for request and response schemas.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "curl of https://docs.exa.ai/llms.txt returned 307 to https://exa.ai/docs/llms.txt; that file says the specs at exa-spec.yaml and team-management-spec.yaml are the source of truth. https://exa.ai/docs/exa-spec.yaml header reads title 'Exa Public API', version 2.0.0, server https://api.exa.ai"
+   },
+   {
+    "claim": "2. Base URL https://api.exa.ai; auth via x-api-key or Authorization: Bearer; keys at https://dashboard.exa.ai/api-keys; both SDKs read EXA_API_KEY.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/index.md (lines 6-7, 15) and securitySchemes in https://exa.ai/docs/exa-spec.yaml"
+   },
+   {
+    "claim": "3. /search type enum is instant, fast, auto (default), deep-lite, deep, deep-reasoning; neural and keyword are not in the enum.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/exa-spec.yaml (/search request 'type' enum, default auto). 'neural' and 'keyword' appear only as fields in the costDollars breakdown, not as type values."
+   },
+   {
+    "claim": "4. Latencies: instant ~250 ms, fast ~450 ms, auto ~1 s, deep-lite ~4 s, deep 4-15 s, deep-reasoning 12-40 s; outputSchema adds about 2 s.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Latency table is in https://exa.ai/docs/search/quickstart.md. The 'about 2 seconds' figure is NOT on the quickstart (it only says outputSchema 'adds a synthesis step'); it is in the outputSchema description in https://exa.ai/docs/exa-spec.yaml. An older entry in https://exa.ai/docs/changelog.md says deep-reasoning 12-50 s and deep 4-12 s."
+   },
+   {
+    "claim": "5. Product page: Instant 323 ms, Fast 450 ms, Auto ~1.2 s, Deep 4-12 s; benchmark Exa Deep 80.0% at 4.3 s vs Perplexity 50.0% and Brave 43.0%.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/products/search (server HTML). Caveats: the benchmark shown by default is the 'MultiLoko' dataset tab (dropdown also lists HotpotQA, FRAMES, Web Walker QA, MuSiQue, HLE-Search). The chart shows Fast at 454 ms and Auto at ~1.2 s, but the same page's pricing card says fast 450ms and auto ~1s."
+   },
+   {
+    "claim": "6. /research retired April 1, 2026, replaced by /search type deep-reasoning; both SDKs still ship exa.research calling /research/v1.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/changelog.md ('April 1, 2026' API Deprecation Notice); https://raw.githubusercontent.com/exa-labs/exa-py/master/exa_py/research/base.py (base_path = \"/research/v1\"); https://raw.githubusercontent.com/exa-labs/exa-js/master/src/research/base.ts (`/research/v1${endpoint}`), client wired in exa-js src/index.ts and exa-py api.py"
+   },
+   {
+    "claim": "7. /findSimilar is deprecated (deprecated: true, Deprecation header); use /search with a query describing the source.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/exa-spec.yaml (/findSimilar: x-exa-lifecycle deprecated, deprecated: true, Deprecation response header, 'prefer /search with a query describing the source')"
+   },
+   {
+    "claim": "8. Categories: company, publication, news, personal site, financial report, people; company and people reject startPublishedDate, endPublishedDate, excludeDomains with 400.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/exa-spec.yaml (category enum and description). The spec also says other strings are accepted as category hints."
+   },
+   {
+    "claim": "9. numResults 1-100 (default 10), no pagination; each result above 10 costs $1 per 1,000.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/search/quickstart.md line 69; https://exa.ai/docs/admin/pricing.md table and glossary; spec numResults min 1 max 100 default 10, with the note 'Limits vary by search type'"
+   },
+   {
+    "claim": "10. outputSchema returns output.content plus output.grounding[{field, citations[{url,title}], confidence low/medium/high}]; object schemas capped at 10 total properties and 2 nesting levels; every array needs items.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/search/deep-search.md (limits table and response example); confidence enum low/medium/high in https://exa.ai/docs/exa-spec.yaml. Nesting limit is 2 levels of nested objects below the root."
+   },
+   {
+    "claim": "11. Content options go inside 'contents' on /search but top level on /contents; /contents takes ids or urls (1-100), never both.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/contents/quickstart.md line 325 (no contents wrapper on /contents); ContentsRequest in https://exa.ai/docs/exa-spec.yaml (ids and urls each minItems 1, maxItems 100; 'Provide either ids or urls, but not both'). Note the quickstart itself loosely calls urls and ids 'interchangeable'."
+   },
+   {
+    "claim": "12. maxAgeHours replaces livecrawl: omitted = cache with fetch fallback, N = fetch if older than N hours, 0 = always fetch, -1 = cache only, max 720; livecrawlTimeout default 10000 ms, max 90000.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/exa-spec.yaml (maxAgeHours min -1 max 720; livecrawlTimeout default 10000 max 90000; livecrawl deprecated with x-exa-replacement maxAgeHours and 'Do not send livecrawl and maxAgeHours together')"
+   },
+   {
+    "claim": "13. Dynamic Highlights is a research preview needing header 'Exa-Beta: dynamic-highlights-2026-08-28' and cannot be combined with maxCharacters.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Header and preview status: https://exa.ai/docs/search/highlights.md. The maxCharacters incompatibility is not on that page; it is in the 'dynamic' field description in https://exa.ai/docs/exa-spec.yaml and in the exa-py and exa-js docstrings."
+   },
+   {
+    "claim": "14. Pricing: instant $4/1k, fast and auto $7/1k, deep-lite and deep $12/1k, deep-reasoning $15/1k, contents $1/1k pages per content type, answer $5/1k, monitors $15/1k, summaries $1/1k pages.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/pricing.md"
+   },
+   {
+    "claim": "15. Free tier: $10 credits on signup, reset to $10 on the 1st of each month (non-accumulating), plus one-time $10 onboarding bonus; no payment method required.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/billing.md (Free tier credits); 'No payment method required' is on https://exa.ai/docs/admin/pricing.md. Conditions: the monthly grant goes only to a user's first team, and the bonus requires completing dashboard onboarding."
+   },
+   {
+    "claim": "16. Rate limits: /search, /answer, /chat/completions 10 QPS; deep types 5 QPS; /contents 100 QPS; /agent/runs and /responses 5 QPS with 50 active runs; /websets 20 QPS; $1,000 of credits in 30 days unlocks 25 QPS for 90 days.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/billing.md (Rate limits table and '25 QPS on pay as you go')"
+   },
+   {
+    "claim": "17. Agent effort values minimal, low, medium, high, xhigh, auto (default), ultra; fixed prices $0.012/$0.025/$0.10/$0.50/$1.00; auto metered ($0.10/ACU, $0.005/search) with $5 default cap; ultra $20 cap.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/agent/quickstart.md (Effort section) and https://exa.ai/docs/admin/pricing.md (Agent tables). budget.maxCostDollars accepts $1 to $100 and is not accepted for fixed efforts."
+   },
+   {
+    "claim": "21. Monitors webhook must be HTTPS, not localhost or private IP; minimum interval 1 hour; POST /monitors/{id}/trigger runs one immediately; webhookSecret returned only once.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/exa-spec.yaml (webhook URL description, SearchMonitorTrigger period 'Minimum interval is 1 hour', /monitors/{id}/trigger, webhookSecret 'only returned once at creation time')"
+   },
+   {
+    "claim": "23. Zero Data Retention available for Search, Contents and Agent, not Answer or Websets; Enterprise-only, enabled per team.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/security/zero-data-retention.md"
+   },
+   {
+    "claim": "24. SOC 2 Type II certified, reports and DPA at trust.exa.ai; HIPAA mode works on /search and /contents only, with instant or fast and cache-only retrieval.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/security/overview.md and https://exa.ai/docs/admin/security/hipaa.md (also excludes summaries and any positive or 0 maxAgeHours). I did not open trust.exa.ai itself."
+   },
+   {
+    "claim": "25. exa-py 2.22.2 (Python 3.9+), exa-js 2.23.0, exa-mcp-server 3.4.1, @exalabs/ai-sdk 2.1.0.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://pypi.org/pypi/exa-py/json (2.22.2, requires_python >=3.9, uploaded 2026-09-21); https://registry.npmjs.org/exa-js/latest, /exa-mcp-server/latest, /@exalabs/ai-sdk/latest"
+   },
+   {
+    "claim": "26. Hosted MCP at https://mcp.exa.ai/mcp with web_search_exa, web_fetch_exa, web_search_advanced_exa (opt-in), agent_run (needs OAuth or API key); keyless tier is 3 QPS and 150 calls per day.",
+    "verdict": "unverifiable",
+    "correction": "The server URL and the four tools are confirmed on https://exa.ai/docs/get-started/exa-mcp.md. The current page does NOT state 3 QPS or 150 calls/day; it only says keyless is 'Free rate-limited usage'. Those numbers appear only in a February 2, 2026 changelog entry (found in https://exa.ai/docs/llms-full.txt) and may be stale.",
+    "source": "https://exa.ai/docs/get-started/exa-mcp.md; https://exa.ai/docs/llms-full.txt"
+   },
+   {
+    "claim": "27. exa-py get_contents() adds text with 10,000 characters whenever no text, summary or extras is passed, even with highlights; search() defaults to text 10,000 chars unless contents=False.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://raw.githubusercontent.com/exa-labs/exa-py/master/exa_py/api.py (DEFAULT_MAX_CHARACTERS = 10_000; get_contents check only for text/summary/extras; search() adds default contents when contents is None)"
+   },
+   {
+    "claim": "28. exa-py create_and_wait default timeout 120,000 ms, poll_until_finished 3,600,000 ms; poll_interval in ms.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://raw.githubusercontent.com/exa-labs/exa-py/master/exa_py/agent/client.py (_DEFAULT_CREATE_AND_WAIT_TIMEOUT_MS = 120000, _DEFAULT_POLL_TIMEOUT_MS = 3600000, 'Delay between polls in milliseconds')"
+   },
+   {
+    "claim": "29. /chat/completions (model 'exa') routes to /answer; /responses (model 'exa-agent') routes to Agent; high, xhigh, ultra effort in synchronous mode return 400.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/integrations/openai-sdk.md (routing table and Warning block; /responses also has no budget field)"
+   },
+   {
+    "claim": "30. As of August 2026, the index tracks 1.4 trillion URLs and serves 100 billion pages.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/admin/faqs.md line 40"
+   },
+   {
+    "claim": "31. Enterprise page claims SOC 2 Type II, GDPR, CCPA, HIPAA with BAA, ZDR, contractual SLAs, custom indexing and forward-deployed engineers; names monday.com, HubSpot, Cognition, CodeRabbit, OpenRouter, 11x.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/enterprise (server HTML): 'Forward-deployed engineers', 'Custom data', 'Production SLAs: Contractual uptime...', compliance cards, and six customer quotes"
+   }
+  ],
+  "missing": [
+   "Search already includes page contents at no extra charge for up to 10 results; after that it is $1 per 1,000 pages. So for the demo, one /search call with contents is cheaper than /search followed by /contents (source: https://exa.ai/docs/contents/quickstart.md line 17). Claim 14 lists only the standalone /contents price.",
+   "Double-billing trap, my inference from two sources: exa-py get_contents(urls, highlights=True) also adds 10,000-character text, and /contents bills each content type separately (pricing glossary: one page with text and highlights counts as two). Pass text=False when you only want highlights (sources: exa_py/api.py and https://exa.ai/docs/admin/pricing.md).",
+   "The product-page benchmark comes from the 'MultiLoko' dataset, the tab selected by default. On that tab Exa Fast (69.6%) scores higher than Auto (67.8%). Other rows: Parallel Adv 46.0%/2.7s, Parallel Basic 41.0%/1.3s. In a pitch, name the benchmark and do not say 80% vs 50% in general (https://exa.ai/products/search).",
+   "The enterprise page has its own Instant chart: Exa Instant 45%/178 ms, Parallel 37%/3051 ms, Brave 20%/559 ms, Tavily Ultra-Fast 11%/260 ms. The dataset is not named. The page also claims 'over 500,000 developers' and 'up to 94% fewer tokens'. Its logo strip also shows Cursor, Databricks, Klarna, Groq and AWS (https://exa.ai/enterprise).",
+   "Names and titles behind the enterprise-page quotes (useful for the pitch): Daniel Lereya, Chief Product and Technology Officer, monday.com; Praty Sharma, AI Lead, HubSpot; Walden Yan, Co-founder, Cognition; David Loker, VP of AI, CodeRabbit; Alex Atallah, CEO, OpenRouter; Prabhav Jain, CEO, 11x (https://exa.ai/enterprise).",
+   "How Exa describes the forward-deployed engineer (FDE) role on the enterprise page, relevant to AJ's interview: 'Work directly with Exa engineers on integration, evals, and retrieval quality' (https://exa.ai/enterprise).",
+   "Category changes from July 23, 2026: 'publication' replaced 'research paper', and the pdf, github and tweet categories are being deprecated. Older demos and tutorials may use the stale names (https://exa.ai/docs/changelog.md).",
+   "Exa Snapshot: the snapshotAsOf parameter returns the stored version of a page as of a chosen date, so a historical request never uses content from after that date. This fits a finance or market use case (https://exa.ai/docs/exa-spec.yaml; guide at https://exa.ai/docs/search/snapshot.md, listed in llms.txt but not opened by me).",
+   "Deprecated highlight parameters: numSentences and highlightsPerUrl (February 2, 2026 changelog). maxCharacters is now the way to control highlight length; highlights.md recommends plain highlights: true by default.",
+   "Agent run limits: each POST /agent/runs counts as two requests against QPS, and GET polling does not count against QPS (https://exa.ai/docs/admin/billing.md).",
+   "In the outputSchema quick-reference, the docs recommend Deep types by default and warn against choosing Deep only because the output is JSON (https://exa.ai/docs/search/best-practices.md).",
+   "Latency inconsistency not in the report: an older changelog entry gives deep-reasoning as 12-50 s and deep as 4-12 s, while the current docs say 12-40 s and 4-15 s (https://exa.ai/docs/changelog.md).",
+   "Claims 18, 19, 20 and 22 (Agent Ultra timing, stopReason values, Websets plan limits, Batch API beta header) were not re-verified in this pass.",
+   "https://exa.ai/blog/private-equity-case-study returned 404 when fetched, so do not cite it. The exa.ai/demos page and the customer case studies are still unreviewed, as the researcher noted."
+  ]
+ }
+}

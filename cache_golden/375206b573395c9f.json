@@ -1,0 +1,281 @@
+{
+ "saved_at": "2026-10-02 13:14:47",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by OneMedNet Corp (Nasdaq: ONMD): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for OneMedNet Corp (Nasdaq: ONMD), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 2245,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "525103a47eca8bb98e10374544adfb68",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+    "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "OneMedNet Corporation Announces 1-for-10 Reverse Stock\n\n# OneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\n September 25, 2026 11:50 ET | Source: OneMedNet Corporation \n\nMINNEAPOLIS, Sept. 25, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\nThe Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n...\nContinental Stock Transfer & Trust Company is acting as the exchange ... and transfer agent for the Reverse Stock Split. Stock ... holding their shares electronically are not required to take any ... to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "title": "688 Information Regarding the Reverse Stock Split and CUSIP ...",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)\n...\n## Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | OneMedNet Corp (ONMD) will effect a one-for-ten (1-10) reverse split of its Class A Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 68270C202. If you would like to register as a market maker in ONMD, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/30/3371902/0/en/onemednet-signs-seven-figure-multiyear-agreement-to-power-a-partner-sold-derivative-data-solution.html",
+    "title": "OneMedNet Signs Seven Figure Multiyear Agreement to Power a",
+    "url": "https://www.globenewswire.com/news-release/2026/09/30/3371902/0/en/onemednet-signs-seven-figure-multiyear-agreement-to-power-a-partner-sold-derivative-data-solution.html",
+    "publishedDate": "2026-09-30T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "MINNEAPOLIS, Sept. 30, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (\"OneMedNet,\" the \"Company,\" \"we,\" \"us\" or \"our\"), a leading provider of First-Party (Direct-from-Source) regulatory decision-grade, AI-driven Real World Data (RWD), today announced a seven figure multiyear agreement to deliver de-identified, multimodal, longitudinal clinical Real World Data to a commercially scaled AI-enabled precision medicine company.\n...\n\"Sophisticated AI companies in healthcare are not buying one-time data pulls. They want a long-term source of multimodal, regulatory-grade data, direct from the source, at the quality required to build models and commercialize their data products,\" said Aaron Green, President & CEO of OneMedNet. \"That is this agreement: a seven figure multiyear license, plus a derivative dataset our partner will commercialize, with OneMedNet paid on every downstream license \u2014 multiyear licenses, sublicensing on solutions built with our data, and room to expand.\"\n...\n- Seven-figure, multiyear agreement, with an option to expand volume and value.\n- Customer-sold derivative dataset with OneMedNet\u2019s tenth channel partner, and recurring sublicensing revenue to OneMedNet on each end-customer license.\n- First-party, direct-from-source data, de-identified at the source, from more than 2,300 partner sites.\n- OneMedNet retains source-data rights. End customers of the derivative may not relicense or resell the underlying OneMedNet data."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/22/3366361/0/en/onemednet-expands-commercial-reach-through-multi-year-resale-agreement-with-atropos-health.html",
+    "title": "OneMedNet Expands Commercial Reach Through Multi-Year",
+    "url": "https://www.globenewswire.com/news-release/2026/09/22/3366361/0/en/onemednet-expands-commercial-reach-through-multi-year-resale-agreement-with-atropos-health.html",
+    "publishedDate": "2026-09-22T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "# OneMedNet Expands Commercial Reach Through Multi-Year Resale Agreement with Atropos Health\n\n September 22, 2026 08:40 ET | Source: OneMedNet Corporation \n\nMINNEAPOLIS, Sept. 22, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (\u201cOneMedNet,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d), a leading provider of regulatory decision-grade, AI-driven Real-World Data (RWD), today announced a strategic partnership with Atropos Health, the creator of real-world evidence for clinical decision-making under a multi-year agreement. The partnership adds OneMedNet's regulatory decision-grade data to Atropos\u2019 platform and customer offerings under a fee arrangement adding to our Annual Recurring Revenue (ARR).\n...\nUnder the partnership, Atropos\u2019 customers \u2013 health systems, life sciences organizations, and researchers \u2013 will be able to purchase additional OneMedNet multi-modal data from OneMedNet through the Atropos platform. The collaboration is structured as a 3-year subscription-based license purchased by At ... , providing seamless, ongoing data access and data delivery."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/18/3364690/0/en/onemednet-reports-record-bookings-as-faster-fulfillment-begins.html",
+    "title": "OneMedNet Reports Record Bookings as Faster Fulfillment",
+    "url": "https://www.globenewswire.com/news-release/2026/09/18/3364690/0/en/onemednet-reports-record-bookings-as-faster-fulfillment-begins.html",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "MINNEAPOLIS, Sept. 18, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (\u201cOneMedNet,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cus\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced year-to-date bookings of approximately $16.2 million, a 16X increase versus the same period in 2025. A significant portion of these bookings are expected to be delivered during the remainder of the year.\n...\n\u201cOur commercial engine is delivering,\u201d said Aaron Green, CEO & President. \u201cBookings are up more than 16X year over year, and we are executing to our contracted delivery schedules. Expanding demand combined with disciplined execution is what builds durable value. The market is shifting decisively towards direct-from-source, regulatory grade Real-World Data, and One ... through our provider ... and advanced technology is ... , scale,"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/31/3353309/0/en/onemednet-s-irwd-platform-enables-rapid-feasibility-to-delivery-for-leading-ai-driven-drug-development-company.html",
+    "title": "OneMedNet\u2019s iRWD Platform Enables Rapid",
+    "url": "https://www.globenewswire.com/news-release/2026/08/31/3353309/0/en/onemednet-s-irwd-platform-enables-rapid-feasibility-to-delivery-for-leading-ai-driven-drug-development-company.html",
+    "publishedDate": "2026-08-31T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "MINNEAPOLIS, Aug. 31, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (\u201cOneMedNet,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cus\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced a new agreement to deliver de-identified, full-fidelity clinical Real-World Data to a leading AI-driven drug development company. OneMedNet's iRWD\u2122 Platform enabled cohort feasibility within minutes, data validation within a week, and signed contract within three weeks of initial contact, and is now delivering the data to support the customer's development and validation of AI models designed to accelerate and improve how new therapies are discovered and developed.\n...\n\u201cHealthcare innovators are coming ... OneMedNet because they ... what it takes to build AI that performs in the real world ... private clinical data sourced directly from healthcare providers,\u201d said Aaron Green, President & CEO of OneMedNet. \u201cOneMednet provided first-party data is what enables our customers to accelerate the development and validation of their AI models, and we believe the surge in demand we are experiencing reflects it. Our iRWD platform enables ... pace \u2014 feasibility, validation, contracting, and delivery ... of weeks \u2014 and the ease of doing business customers\n...\ndata. The ... . Learn more at www"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-640",
+    "title": "Equity Corporate Actions Alert #2026 - 640 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for TNL Mediagene (TNMG)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-640",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 640 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for TNL Mediagene (TNMG)\n...\n## Equity Corporate Actions Alert #2026 - 640 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for TNL Mediagene (TNMG) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | TNL Mediagene (TNMG) will effect a one-for-eight (1-8) reverse split and par value change of its Ordinary Shares. The reverse stock split and par value change from $0.002 to $0.016 will become effective on Tuesday, September 8, 2026. In conjunction with the reverse split, the CUSIP number will change to G8924F139. If you would like to register as a market maker in TNMG, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "title": "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)\n...\n## Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | SHF Holdings, Inc. (SHFS) will effect a one-for-twelve (1-12) reverse split of its Class A Common Stock. The reverse stock split will become effective on Wednesday, September 30, 2026. In conjunction with the reverse split, the CUSIP number will change to 824430409. If you would like to register as a market maker in SHFS, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-554",
+    "title": "Equity Corporate Actions Alert #2026 - 554 Information Regarding the Reverse Stock Split and CUSIP Number Change for Tenon Medical, Inc. (TNON)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-554",
+    "publishedDate": "2026-08-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 554 Information Regarding the Reverse Stock Split and CUSIP Number Change for Tenon Medical, Inc. (TNON)\n...\n## Equity Corporate Actions Alert #2026 - 554 Information Regarding the Reverse Stock Split and CUSIP Number Change for Tenon Medical, Inc. (TNON) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tenon Medical, Inc. (TNON) will effect a one-for-thirty five (1-35) reverse split of its Common Stock. The reverse stock split will become effective on Monday, August 10, 2026. In conjunction with the reverse split, the CUSIP number will change to 88066N402. If you would like to register as a market maker in TNON, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 263.7,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "event_type": "reverse split",
+    "effective_date": "2026-09-29",
+    "source_notice_date": "2026-09-25",
+    "effective_as_stated": "12:01 a.m. Eastern Time on September 29, 2026",
+    "new_identifier": "68270C 202",
+    "terms": "1-for-10",
+    "identifier_in_source": "ONMD"
+   },
+   "grounding": [
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "688 Information Regarding the Reverse Stock Split and CUSIP ..."
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "688 Information Regarding the Reverse Stock Split and CUSIP ..."
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "688 Information Regarding the Reverse Stock Split and CUSIP ..."
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "688 Information Regarding the Reverse Stock Split and CUSIP ..."
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

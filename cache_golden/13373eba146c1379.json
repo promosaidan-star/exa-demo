@@ -1,0 +1,183 @@
+{
+ "saved_at": "2026-09-29 09:20:59",
+ "endpoint": "/search",
+ "body": {
+  "query": "Bank of America SEC filing about the redemption of Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5",
+  "type": "auto",
+  "includeDomains": [
+   "sec.gov"
+  ],
+  "startPublishedDate": "2026-08-05T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the exchange's or the SEC's official notices about Bank of America Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5; ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 2978,
+ "data": {
+  "requestId": "fd5a0b9e163d0855e9cb0c05d0c3145e",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/935036/000093503626000026/aciw-20260806_exx991.htm",
+    "title": "Document",
+    "url": "https://www.sec.gov/Archives/edgar/data/935036/000093503626000026/aciw-20260806_exx991.htm",
+    "publishedDate": "2026-08-06T00:00:00.000Z",
+    "highlights": [
+     "| Redemption of 2026 Notes | \u2014 | | (400,000) | | \u2014 | | (400,000) | |\n| Proceeds from revolving credit facility | 25,000 | | 290,000 | | 40,000 | | 290,000 | |\n| Repayment of revolving credit facility | \u2014 | | (30,000) | | (15,000) | | (100,000) | |\n| Proceeds from term portion of credit agreement | \u2014 | | 200,000 | | \u2014 | | 200,000 | |\n| Repayment of term portion of credit agreement | (10,625) | | (9,375) | | (21,250) | | (18,750) | |\n...\nPayments on or ... ) | | (6, ... 47) | | (10,666) | | ("
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/935036/000093503626000026/aciw-logoa.jpg"
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/50725/000162828026054906/gff-20260807_d2.htm",
+    "title": "gff-20260807_d2",
+    "url": "https://www.sec.gov/Archives/edgar/data/50725/000162828026054906/gff-20260807_d2.htm",
+    "publishedDate": "2026-08-07T00:00:00.000Z",
+    "highlights": [
+     "Griffon\u2019s senior notes, which have limited covenants, are due in March 2028; and our $500 million revolving line of credit, which has greater covenant requirements, matures in 2028. However, in the event the 2028 Senior Notes are not repaid, refinanced, or replaced prior to December 1, 2027, the Revolver will mature on December 1, 2027. There are potential impacts from Griffon\u2019s use of debt to finance certain of its activities, especially acquisitions and expansions, as set forth below."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1755101/000109690626001208/alds-20260805_8-k.htm",
+    "title": "APPLIFE DIGITAL SOLUTIONS, INC. - Form 8-K SEC filing",
+    "url": "https://www.sec.gov/Archives/edgar/data/1755101/000109690626001208/alds-20260805_8-k.htm",
+    "publishedDate": "2026-08-05T00:00:00.000Z",
+    "highlights": [
+     "1.01 Entry into a ... Definitive Agreement.\n\nOn August 5, 2026, APPlife Digital Solutions, Inc. (the \u201cCompany\u201d) entered into a Securities Purchase Agreement (the \u201cPurchase Agreement\u201d) with an accredited investor (the \u201cInvestor\u201d), pursuant to which the Company issued and sold to the Investor a 6% convertible redeemable promissory note in the aggregate principal amount of $170,000 (the \u201cNote\u201d). The Note was issued with an original issue discount of $17,000, resulting in a purchase price of $153,000.\n\nThe Note bears interest at a rate of 6% per annum and matures on August 5, 2027. Commencing on the six-month anniversary of the issuance date, the Investor may convert all or any portion of the outstanding principal amount and accrued interest under the Note into shares of the Company\u2019s common stock at a conversion price equal to 65% of the lowest trading price of the common stock during the 20 trading days immediately preceding the applicable conversion date. The Investor\u2019s ability to convert the Note is subject to a beneficial ownership limitation of 4.99% (which may be increased to 9.9% upon not less than 60 days\u2019 prior written notice from the Investor). The Company may prepay the Note at any time during the 180-day period following the issuance date at prepayment premiums ranging from 105% to 140% of the outstanding principal and accrued interest, as set forth in the Note. The Note contains customary events of default and related remedies, including an increase in the conversion discount upon the occurrence of an event of default.\n...\nThe information set forth in Item 1.01 of this Current Report on Form 8-K is incorporated by reference into this Item 3.02. The Note, and the shares of common stock issuable upon conversion of the Note, were offered and sold to the Investor, an accredited investor, in a private transaction in reliance upon the exemption from the registration requirements of the Securities Act of 1933, as amended (the \u201cSecurities Act\u201d), provided by Section 4(a)(2) of the Securities Act and/or Rule 506 of Regulation D promulgated thereunder. Because the conversion price of the Note is variable, the number of shares of common stock issuable upon conversion of the Note is not presently determinable.\n...\nForm of 6% Convertible Redeemable Promissory Note, dated August 5, 2026\n...\nAgreement, dated August"
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1756770/000175677026000079/curlf-20260805_d3.htm",
+    "title": "curlf-20260805_d3",
+    "url": "https://www.sec.gov/Archives/edgar/data/1756770/000175677026000079/curlf-20260805_d3.htm",
+    "publishedDate": "2026-08-05T00:00:00.000Z",
+    "highlights": [
+     "of Senior Secured Notes - 2026* for Senior Secured\n...\n2029*(\n...\n(1) The remaining outstanding balance of the Senior Secured Notes \u2013 2026* of $ 142.2 million was exchanged on a non-cash basis for Senior Secured Notes \u2013 2029*.\n...\nNCI with redemption features, such as put and call options, that are not solely within the Company\u2019s control are considered redeemable non-controlling interests (\u201cRedeemable NCI\u201d). Redeemable NCI is considered to be temporary equity and is reported in the mezzanine section between Commitments and contingencies and Shareholders\u2019 equity on the Condensed Consolidated Balance Sheets (Unaudited). Redeemable NCI is recorded at the greater of the carrying value, which is adjusted for the NCI\u2019s share of net income or loss generated over the reporting period, and the estimated redemption value at the end of the reporting period. In instances where the redemption value of Redeemable NCI is greater than the carrying value (\u201cexcess redemption value\u201d) and redemption is at least probable, the Company has elected to immediately recognize the entire excess redemption value as an adjustment to Additional paid-in capital on the Condensed Consolidated Balance Sheets (Unaudited). This election provides for a more immediate and transparent reflection of the economic impact associated with changes in redemption value, as opposed to accreting the difference over time."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+    "title": "424B5",
+    "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+    "publishedDate": "2026-09-14T00:00:00.000Z",
+    "highlights": [
+     "Subject to completion, dated September 14, 2026 \n\nPROSPECTUS SUPPLEMENT \n\n(To prospectus dated February 23, 2026) \n\nCDW LLC and CDW Finance Corporation \n\n$ % Senior Notes due 20 \n\n$ % Senior Notes due 20 \n\n$ % Senior Notes due 20 \n\nWe are offering $ aggregate principal amount of % Notes due 20 (the \u201c20 Notes\u201d), $ aggregate principal amount of % Notes due 20 (the \u201c20 Notes\u201d) and $ aggregate principal amount of % Notes due 20 (the \u201c20 Notes\u201d and, together with the 20 Notes and the 20 Notes, the \u201cnotes\u201d), which will bear interest at the applicable rate per year for each series as set forth above. The 20 Notes will mature on , 20 , the 20 Notes will mature on , 20 , and the 20 Notes will mature on , 20 . Interest on the notes will accrue from , 2026, and the first interest payment date for the 20 Notes will be , 2027, the 20 Notes will be , 2027, and the 20 Notes will be , 2027. \n\nThe notes will be redeemable at our option, in whole or in part, at any time and from time to time, prior to their maturity at the respective redemption prices set forth herein. See \u201cDescription of Notes\u2014Optional Redemption.\u201d We do not intend to list the notes on any securities exchange. Currently, there are no public markets for the notes. \n\nWe expect to use the net proceeds to redeem, repay, repurchase, or otherwise retire, $1.0 billion in aggregate principal amount of our 2.670% senior notes due December 2026 (the \u201c2026 Senior Notes\u201d) outstanding at or before maturity, and to use any remaining net proceeds for general corporate purposes, including to fund a substantial portion of the Acquisition (as defined below).\n...\nPayment Dates for the 2 ... on , ... 026.\n...\nOptional Redemption \n\nPrior to the applicable Par Call Date (as defined in this prospectus supplement) of the 20 Notes, the 20 Notes, and the 20 Notes, respectively, we may redeem the applicable series of notes at our option, in whole or in part, at any time and from time to time, at a redemption price (expressed as a percentage of principal amount and rounded to three decimal places) equal to the greater of:\n...\nOn or after the applicable Par Call Date, we may redeem the notes of the applicable series, in whole or in part, at any time and from time to time, at a redemption price equal to 100% of the principal amount of \n\n the notes of such series being redeemed plus accrued and unpaid interest thereon to the applicable redemption date. \n\n| See \u201cDescription of Notes\u2014Optional Redemption.\u201d |\n| --- |\n...\nWe intend to use the net proceeds from this offering to redeem, repay, repurchase, or otherwise retire, $1.0 billion in aggregate principal amount of our 2026 Senior Notes, and to use any remaining net proceeds for general corporate purposes, including to fund a substantial portion of the Acquisition. See \u201cUse of Proceeds.\u201d\n...\nUSE OF PROCEEDS \n\nWe estimate that our net proceeds from the issuance and sale of the notes will be approximately $ , after deducting underwriters\u2019 discounts and our estimated offering expenses. We intend to use the net proceeds from this offering to redeem, repay, repurchase, or otherwise retire, $1.0 billion in aggregate principal amount of our 2026 Senior Notes, and to use any remaining net proceeds for general corporate purposes, including to fund a substantial portion of the Acquisition. See \u201cProspectus Supplement Summary \u2014 Recent Development\u201d for a discussion of the Acquisition.\n...\nCDW LLC (\u201c CDW\u201d) and CDW Finance Corporation (\u201c FinanceCo,\u201d and together with CDW, the \u201c Issuers\u201d) will issue the % senior notes due 20 (the \u201c 20 Notes\u201d), the % senior notes due 20 (the \u201c 20 Notes\u201d), and the % senior notes due 20 (the \u201c 20 Notes,\u201d and together with the 20 Notes and the 20 Notes, the \u201c Notes\u201d) under the indenture dated December 1, 2014 (the \u201c Base Indenture\u201d) among CDW, FinanceCo, the guarantors party thereto, and U.S. Bank National Association, as predecessor in interest to U.S. Bank Trust Company, National Association, as trustee (the \u201c Trustee\u201d), as supplemented with respect to the 20 Notes by a twenty-first supplemental indenture to be dated on or about , 2026 (the \u201c Twenty-First Supplemental Indenture\u201d), as supplemented with respect to the 20 Notes by a twenty-second supplemental indenture to be dated on or about , 2026 (the \u201c Twenty-Second Supplemental Indenture\u201d), and as supplemented with respect to the 20 Notes by a twenty-third supplemental indenture to be dated on or about , 2026 (the \u201c Twenty-Third Supplemental Indenture,\u201d and together with the Base Indenture, the Twenty-First Supplemental Indenture, and the Twenty-Second Supplemental Indenture, the \u201c Indenture\u201d) among CDW, FinanceCo, CDW Corporation (the \u201c Parent\u201d) and the Trustee. The terms of the Notes include those stated in the Indenture and those expressly made part of the Indenture by reference to the Trust Indenture Act of 1939, as amended (the \u201c Trust Indenture Act\u201d).\n...\nOptional Redemption \n\nPrior to the applicable Par Call Date (as defined below), the Issuers may redeem the 20 Notes, the 20 Notes, or the 20 Notes at their option, in whole or in part, at any time and from time to time, at a redemption price (expressed as a percentage of principal amount and rounded to three decimal places) equal to the greater of: \n\n| (1) | (a) the sum of the present values of the remaining scheduled payments of principal and interest thereon discounted to the redemption date (assuming the notes matured on the applicable Par Call Date) on a semi-annual basis (assuming a 360-day year consisting of twelve 30-day months) at the Treasury Rate plus basis points, in the case of the 20 Notes, basis points, in the case of the 20 Notes, and basis points, in the case of the 20 Notes less (b) interest accrued to the date of redemption, and |\n| --- | --- |\n...\nplus, in either case, accrued and unpaid interest thereon to the redemption date. Notwithstanding the foregoing, if the redemption date is on or after a Record Date and on or before the related Interest Payment Date, any accrued and unpaid interest to the redemption date will be paid to the Person in whose name the applicable Note is registered at the close of business on such Record Date. On or after the applicable Par Call Date, we may redeem the notes, in whole or in part, at any time and from time to time, at a redemption price equal to 100% of the principal amount of the notes being redeemed plus accrued and unpaid interest thereon to the redemption date. \n\n\u201cPar Call Date\u201d means , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes, , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes, and , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes.\n...\nNotice of redemption will be mailed or sent electronically pursuant to applicable procedures of The Depository Trust Company (\u201cDTC\u201d) at least 10 but not more than 60 days before the redemption date to each holder of record of the notes to be redeemed at its registered address. If less than all of the notes are to be redeemed at any time, and the notes are global securities, the notes to be redeemed will be selected by DTC in accordance with its standard procedures. If the notes to be redeemed are not global securities then held by DTC, the trustee will select notes to be redeemed on a pro rata basis, by lot, or by such other method the Trustee shall deem fair and appropriate subject to the rules and procedures of DTC. The notice of redemption for the notes will state, among other things, the amount of notes to be redeemed, the redemption date, the redemption price, if then determinable, or the manner in which the redemption price will be determined, the place or places that payment will be made upon presentation and surrender of notes to be redeemed, and any conditions precedent to the effectiveness of the redemption. Unless we default in"
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/886982/000119312526390084/spxe1873_prelim.htm",
+    "title": "424B2",
+    "url": "https://www.sec.gov/Archives/edgar/data/886982/000119312526390084/spxe1873_prelim.htm",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "highlights": [
+     "Preliminary Pricing Supplement filed pursuant to Rule 424(b)(2) dated September 11, 2026 / Registration Statement No. 333-284538 STRUCTURED INVESTMENTS \n\nOpportunities in U.S. Equities\n...\nPricing date:\n\nexpected to price on or about September 30, 2026\n...\nexpected to be October 5, 2026\n...\nuation date:\n\nexpected to be September 30, 2032, subject to adjustment as described in the accompanying general terms supplement \n\nStated maturity date:\n\nexpected to be October 5, 2032, subject to adjustment as described in the accompanying general terms supplement\n...\nCUSIP / ISIN:\n\n40058LSW1 / US40058LSW18\n...\nThe notes are part of the Medium-Term Notes, Series F program of GS Finance Corp. and are fully and unconditionally guaranteed ... The Goldman Sachs Group, Inc. This prospectus includes this pricing supplement and the accompanying documents listed below. This pricing supplement constitutes a supplement to the documents listed below, does not set forth all of the terms of your notes and therefore should be read in conjunction with such documents:\n...\nThe notes will be issued under the senior debt indenture, dated as of October 10, 2008, as supplemented by the First Supplemental Indenture, dated as of February 20, 2015, each among us, as issuer, The Goldman Sachs Group, Inc., as guarantor, and The Bank of New York Mellon, as trustee. This indenture, as so supplemented and as further supplemented thereafter, is referred to as the \u201cGSFC 2008 indenture\u201d in the accompanying prospectus supplement.\n...\nMarket-Linked Notes Based on the Value of the S&P 500\u00ae Index due October 5, 2032\n...\nThe Market-Linked Notes Based on the Value of the S&P 500\u00ae Index due October 5, 2032 (the \u201cnotes\u201d) offer 100% participation in the positive performance of the underlying index, subject to the maximum payment at maturity. The notes provide investors:\n...\nGS Finance Corp. will sell to GS&Co., and GS&Co. will purchase from GS Finance Corp., the aggregate stated principal amount of the offered securities specified on the front cover of this pricing supplement. GS&Co. proposes initially to offer the securities to the public at the original issue price set forth on the cover page of this pricing supplement. Morgan Stanley Smith Barney LLC (Morgan Stanley Wealth Management), acting as dealer for the offering, will receive a selling concession of $35.00 for each security it sells. Morgan Stanley Wealth Management has informed us that it intends to internally allocate at Morgan Stanley Wealth Management $5.00 of the selling concession for each security as a structuring fee. The ... included in the original issue ... of the securities will include a fee paid by GS&Co. to LFT Securities, LLC, an entity in which an affiliate of Morgan Stanley Wealth Management has an ownership interest, for providing certain electronic platform services with respect to this offering. GS&Co. is an affiliate of ... Finance Corp. and The Goldman Sachs Group, Inc. and, as such, will have a \u201cconflict of interest\u201d in this offering of securities within the meaning of Financial Industry Regulatory Authority, Inc. (FINRA) Rule 5121. Consequently, this offering of securities will be conducted in compliance with the provisions of FINRA Rule 5121. GS&Co. will not be permitted to sell securities in this offering to an account over which it exercises discretionary authority without the prior specific written approval of the account holder.\n\nWe expect to deliver the securities against payment therefor in New York, New York on October 5, 2026. Under Rule 15c6-1 of the Securities Exchange Act of 1934, trades in the secondary market generally are required to settle in one business day, unless the parties to any such trade expressly agree otherwise. Accordingly, purchasers who wish to trade securities on any date prior to one business day before delivery will be required to specify alternative settlement arrangements to prevent a failed settlement."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/2147557/000214755726000001/hlnk-20260818-final.htm",
+    "title": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/2147557/000214755726000001/hlnk-20260818-final.htm",
+    "publishedDate": "2026-08-18T00:00:00.000Z",
+    "highlights": [
+     "We have applied to list the Class Common Shares on the Nasdaq, under the symbol \u201cHLNK.\u201d We expect our Class Common Shares to begin trading on or about , 2027.\n...\nsection titled \u201c ... \u201cWhere You\n...\n\u2022 We may require additional capital to support our operations and the growth of our business, and we cannot be certain that financing will be available on reasonable terms when required, or at all, and our existing credit facility and our senior notes contain, and any future debt financing may contain, covenants that impact the operation of our business and pursuit of business opportunities."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1756770/000175677026000079/curlf-20260805_d2.htm",
+    "title": "curlf-20260805_d2",
+    "url": "https://www.sec.gov/Archives/edgar/data/1756770/000175677026000079/curlf-20260805_d2.htm",
+    "publishedDate": "2026-08-05T00:00:00.000Z",
+    "highlights": [
+     "This annual report on Form ... -K (the ... operational results and ... and potential benefits ... key suppliers and service providers; ... ability of contracts ... resale limitations, limited ... for U.S. ... as well as significant sales of S ... , including challenges in"
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/1756770/000175677026000079/curlf-20260805_g1.jpg"
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1455863/000162828026054326/art-20260806_d2.htm",
+    "title": "art-20260806_d2",
+    "url": "https://www.sec.gov/Archives/edgar/data/1455863/000162828026054326/art-20260806_d2.htm",
+    "publishedDate": "2026-08-06T00:00:00.000Z",
+    "highlights": [
+     "Americold Realty Trust, Inc. (the \u201cCompany\u201d) is filing this exhibit (this \u201cExhibit\u201d) solely for changes in the Company\u2019s reportable segment information and the related impact to segment disclosures as set forth in its Annual Report on Form 10-K for the fiscal year ended December 31, 2025 (the \u201cAnnual Report on Form 10-K\u201d), as filed with the Securities and Exchange Commission (the \u201cSEC\u201d) on February 26, 2026. As previously disclosed in the Company\u2019s Quarterly Report on Form 10-Q for the quarter ended March 31, 2026 (as filed with the SEC on May 7, 2026), the Company made changes to the composition of its segments. During the three months ended March 31, 2026, the Company revised the operating segment information regularly provided to and used by the Company's Chief Operating Decision Maker (the \u201cCODM\u201d) for the purposes of allocating resources and assessing performance measures to combine the Warehouse and the former Third-Party Managed operating segments. As a result of this change, the Company now has two reportable operating segments: Warehouse and Transportation. The segment information in this Form 8-K (this \u201cForm 8-K\u201d) has been recast to conform to the way the Company internally manages and monitors its business during fiscal year 2026. This Exhibit should be read in conjunction with the Annual Report on Form 10-K. For developments subsequent to the filing of the Annual Report on Form 10-K, refer to our Quarterly Reports on Form 10-Q for the quarters ended March 31, 2026 and June 30, 2026 and our Current Reports on Form 8-K.\n...\nDuring the three ... ended March 31, 2026, the Company revised the operating segment information regularly provided to and used by the Company ... s Chief Operating Decision Maker (the \u201cCODM\u201d) for the purposes of allocating resources and assessing performance measures to combine the Warehouse and the former Third-Party Managed operating segments. As a result of this change, the Company now has two ... able operating segments: Warehouse and Transportation. The ... has been recast ... fiscal year 20\n...\nDuring the three months ended March 31, 2026, the Company revised the operating segment information regularly provided to and used by the Company's Chief Operating Decision Maker (the \u201cCODM\u201d) for the purposes of allocating resources and assessing performance measures to combine the Warehouse and the former Third-Party Managed operating segments. As a result of this change, the Company now has two reportable operating segments: Warehouse and Transportation. The segment information in this Form 8-K has been recast to conform to the way the Company internally manages and monitors its business during fiscal year 2026."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1543652/000109690626001191/fflo-20260811_8k.htm",
+    "title": "Free Flow USA, Inc. - Form 8-K SEC filing",
+    "url": "https://www.sec.gov/Archives/edgar/data/1543652/000109690626001191/fflo-20260811_8k.htm",
+    "publishedDate": "2026-08-11T00:00:00.000Z",
+    "highlights": [
+     "Free Flow USA, Inc. - Form 8-K SEC filing\n\nUNITED STATES\n\nSECURITIES AND EXCHANGE COMMISSION\n\nWASHINGTON, D.C. 20549\n\nFORM 8-K\n\nCURRENT REPORT\n\nPursuant to Section 13 or 15(d) of the\n\nSecurities Exchange Act of 1934\n\nDate of Report (Date of Earliest event Reported): August 11, 2026\n\n \n\nFree Flow USA, Inc.\n...\nItem 4.01. Changes in Registrant\u2019s Certifying Accountant.\n...\nOn August 5, 2026, BCRG Group, Inc. (PCAOB ID 7158) (\u201cBCRG\u201d) resigned as the independent registered public accounting firm of Free Flow USA Inc., a Delaware corporation (the \u201cCompany\u201d), effective immediately. BCRG\u2019s resignation followed the sale of its attest business to Simon & Edward, LLP, effective June 15, 2026. The Company\u2019s Board of Directors accepted BCRG\u2019s resignation. The Company has authorized BCRG to respond fully to the inquiries of GSKCA & Associates (\u201cGSKCA\u201d), the Company\u2019s successor independent registered public accounting firm.\n...\nhas provided BCRG with a copy of the disclosures contained ... this Item 4.01(a) and has requested that BCRG furnish the Company with a letter addressed to the Securities and Exchange Commission stating whether BCRG agrees with the statements made herein and, if not, stating the respects in which ... does not agree. A copy of BCRG\u2019s letter is filed as Exhibit 16.1 to this Current Report ... Form 8-K.\n...\nOn August 10, 2026, the Board of Directors of the Company approved the engagement of GSKCA & Associates (\u201cGSKCA\u201d) as the Company\u2019s new independent registered public accounting firm, effective immediately."
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/1543652/000109690626001191/fflo8k_1.jpg"
+   }
+  ],
+  "searchTime": 1163.9,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "effective_as_stated": "not stated",
+    "event_type": "not stated",
+    "new_symbol": "not stated",
+    "identifier_in_source": "not stated",
+    "source_notice_date": "not stated",
+    "terms": "not stated",
+    "new_cusip": "not stated",
+    "market_effective_date": "not stated"
+   },
+   "grounding": []
+  }
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "saved_at": "2026-09-29 09:21:04",
+ "endpoint": "/search",
+ "body": {
+  "query": "Nasdaq Equity Corporate Actions Alert for Immutep Limited (IMMP) American Depositary Shares ratio change, with the effective date and new CUSIP",
+  "type": "auto",
+  "includeDomains": [
+   "nasdaqtrader.com"
+  ],
+  "startPublishedDate": "2026-08-01T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the exchange's or the SEC's official notices about Immutep Limited American Depositary Shares (Nasdaq: IMMP); ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3509,
+ "data": {
+  "requestId": "04a0031e8f430aa1473df199ba2bc6e4",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-601",
+    "title": "Equity Corporate Actions Alert #2026 - 601 Information Regarding the Reverse Stock Split, Ratio Change and  CUSIP Number Change for NOVONIX Limited (NVX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-601",
+    "publishedDate": "2026-08-25T00:00:00.000Z",
+    "highlights": [
+     "25,\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release ADR Notice | NOVONIX Limited (NVX) will effect a one-for-ten (1-10) reverse split of its American Depositary Shares and ratio change from one (1) American Depositary Share representing four (4) Ordinary Shares (1:4) to one (1) American Depositary Share representing forty (40) Ordinary Shares (1:40). The reverse stock split and ADS ratio change will become effective on Thursday, August 27, 2026. In conjunction with the reverse split, the CUSIP number will change to 67010L209. If you would like to register as a market maker in NVX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-643",
+    "title": "Equity Corporate Actions Alert #2026 - 643 Information Regarding the Reverse Stock Split, Ratio Change and CUSIP Number Change for XIAO-I Corporation (AIXI)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-643",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release ADS Notice | Xiao-I Corporation (AIXI) will effect a one-for-seven (1-7) reverse split of its American Depositary Shares and ratio change from one (1) American Depositary Share representing sixty (60) Ordinary Shares (1:60) to one (1) American Depositary Share representing four hundred and twenty (420) Ordinary Shares (1:420). The reverse stock split and ADS ratio change will become effective on Tuesday, September 8, 2026. In conjunction with the reverse split, the CUSIP number will change to 98423X407. If you would like to register as a market maker in AIXI, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-635",
+    "title": "Equity Corporate Actions Alert #2026 - 635 (UPDATED: Effective date revised) Information Regarding the Reverse Stock Split and CUSIP Number Change for Megan Holdings Limited (MGN)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-635",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "highlights": [
+     "026 ... and CUS\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | The previously announced 1-40 reverse split and CUSIP change for Megan Holdings Limited (MGN) has been postponed at the company's request. An updated notice will be posted once updated timing has been confirmed. The CUSIP number will revert to G5980E105 on 9/9/2026, on an unadjusted basis. The reverse stock split will become effective on a date to be announced at a revised rate of 1-30. In conjunction with the reverse split, the CUSIP number will change to G5980E113. If you would like to register as a market maker in MGN, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-624",
+    "title": "Equity Corporate Actions Alert #2026 - 624 Information Regarding the Reverse Stock Split and CUSIP Number Change for Founder Group Limited  (FGL)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-624",
+    "publishedDate": "2026-09-01T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Founder Group Limited (FGL) will effect a one-for-one-hundred (1-100) reverse split of its Class A Ordinary Shares. The reverse stock split will become effective on Tuesday, September 1, 2026. In conjunction with the reverse split, the CUSIP number will change to G3662E147. If you would like to register as a market maker in FGL, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-679",
+    "title": "Equity Corporate Actions Alert #2026 - 679 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Delixy Holdings Limited (DLXY)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-679",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Delixy Holdings Limited (DLXY) will effect a one-for-five (1-5) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.000005 to $0.000025 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G2703G111. If you would like to register as a market maker in DLXY, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-618",
+    "title": "Equity Corporate Actions Alert #2026 - 618 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Ohmyhome Ltd (OMH)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-618",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "highlights": [
+     "Value and CUSIP Number Change for ... home Ltd (OM\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Ohmyhome Ltd (OMH) will effect a one-for-fifty (1-50) reverse split of its Class A Ordinary Shares. The reverse stock split and par value change from US $0.0000001 to US $0.000005 will become effective on Monday, August 31, 2026. In conjunction with the reverse split, the CUSIP number will change to G6S38M131. If you would like to register as a market maker in OMH, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-561",
+    "title": "Equity Corporate Actions Alert #2026 - 561 Information Regarding the Reverse Stock Split, Reclassification, Par Value and CUSIP Number Change for Masonglory Limited (MSGY)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-561",
+    "publishedDate": "2026-08-11T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Masonglory Limited (MSGY) will effect a one-for-eight (1-8) reverse split, par value change from US$0.0001 to US$0.0008, and reclassification of its Ordinary Shares to Class A Ordinary Shares. These actions will become effective on Tuesday, August 11, 2026. In conjunction with the reverse split, the CUSIP number will change to G6007A118. If you would like to register as a market maker in MSGY, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-642",
+    "title": "Equity Corporate Actions Alert #2026 - 642 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Wellchange Holdings Company Limited (WCT)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-642",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Wellchange Holdings Company Limited (WCT) will effect a one-for-five (1-5) reverse split and par value change of its Class A Ordinary shares. The reverse stock split and par value change from $0.000005 to $0.000025 will become effective on Tuesday, September 8, 2026. In conjunction with the reverse split, the CUSIP number will change to G9545M131. Please note that a previous par value change from $0.0025 to $0.000005 was effective on 7/6/2026. If you would like to register as a market maker in WCT, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-631",
+    "title": "Equity Corporate Actions Alert #2026 - 631 Information Regarding the Reverse Stock Split and CUSIP Number Change for CollPlant Biotechnologies Ltd. (CLGN)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-631",
+    "publishedDate": "2026-09-02T00:00:00.000Z",
+    "highlights": [
+     "| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | CollPlant Biotechnologies Ltd. (CLGN) will effect a one-for-ten (1-10) reverse split of its ordinary shares. The reverse stock split will become effective on Friday, September 4, 2026. In conjunction with the reverse split, the CUSIP number will change to M2R51X124. If you would like to register as a market maker in CLGN, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-602",
+    "title": "Equity Corporate Actions Alert #2026 - 602 Information Regarding the Reverse Stock Split and CUSIP Number Change for IM Cannabis Corp. (IMCC)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-602",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 602 Information Regarding the Reverse Stock Split and CUSIP Number Change for IM Cannabis Corp. (IMCC)\n\nTuesday, August 25,\n...\n## Equity Corporate Actions Alert #2026 - 602 Information Regarding the Reverse Stock Split and CUSIP Number Change for IM Cannabis Corp. (IMCC) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | IM Cannabis Corp. (IMCC) will effect a one-for-thirty (1-30) reverse split of its Common Shares. The reverse stock split will become effective on Thursday, August 27, 2026. In conjunction with the reverse split, the CUSIP number will change to 44969Q505. If you would like to register as a market maker in IMCC, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 1757.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "terms": "not stated",
+    "market_effective_date": "not stated",
+    "effective_as_stated": "not stated",
+    "event_type": "not stated",
+    "new_cusip": "not stated",
+    "identifier_in_source": "not stated",
+    "new_symbol": "not stated",
+    "source_notice_date": "not stated"
+   },
+   "grounding": []
+  }
+ }
+}

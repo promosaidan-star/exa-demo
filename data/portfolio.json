@@ -1,0 +1,194 @@
+{
+  "_about": "The watchlist for the scan. EVERYTHING in this file is MOCKED: the holdings, the open orders and both vendor records. The announcements the scan finds are real and retrieved by Exa. Holdings and orders never leave this laptop; only the issuer name and identifier go into a search. Every text is fixed (no date is computed from today) so request bodies stay identical and saved runs keep matching.",
+
+  "scan_start_published": "2026-08-03T00:00:00Z",
+  "scan_window_note": "Announcements published on or after 2026-08-03 (about 60 days before 2026-10-02).",
+
+  "domain_mode": "approved",
+
+  "approved_domains": [
+    "globenewswire.com",
+    "prnewswire.com",
+    "businesswire.com",
+    "accessnewswire.com",
+    "nasdaqtrader.com",
+    "sec.gov",
+    "newsroom.bankofamerica.com",
+    "news.microsoft.com",
+    "news.pg.com"
+  ],
+
+  "query_template": "Recent corporate action announcements by {subject}: reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+
+  "system_prompt_template": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for {subject}, either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+
+  "output_schema": {
+    "type": "object",
+    "required": ["identifier_in_source", "event_type", "terms", "effective_as_stated", "effective_date", "new_identifier", "source_notice_date"],
+    "properties": {
+      "identifier_in_source": {"type": "string", "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"},
+      "event_type": {"type": "string", "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"},
+      "terms": {"type": "string", "description": "Split ratio, or redemption price and amount, as stated"},
+      "effective_as_stated": {"type": "string", "description": "Effective date and time exactly as the source writes it"},
+      "effective_date": {"type": "string", "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"},
+      "new_identifier": {"type": "string", "description": "New CUSIP or new ticker as stated, or not stated"},
+      "source_notice_date": {"type": "string", "description": "YYYY-MM-DD printed on the notice itself"}
+    }
+  },
+
+  "securities": [
+    {
+      "id": "ONMD",
+      "kind": "equity",
+      "ticker": "ONMD",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "OneMedNet Corp",
+      "legal_names": ["OneMedNet Corp", "OneMedNet Corporation"],
+      "bond": null,
+      "subject": "OneMedNet Corp (Nasdaq: ONMD)",
+      "holding": {"shares": 10000},
+      "open_orders": [{"order_id": "ORD-1041", "side": "Sell", "quantity": 2000, "limit_price": 1.85}],
+      "vendor_a": {"event_type": "reverse split", "terms": "1-for-10", "effective_date": "2026-09-29", "new_identifier": "68270C202"},
+      "vendor_b": {"event_type": "reverse split", "terms": "1-for-10", "effective_date": "2026-09-29", "new_identifier": ""}
+    },
+    {
+      "id": "CDT",
+      "kind": "equity",
+      "ticker": "CDT",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "CDT Equity Inc.",
+      "legal_names": ["CDT Equity Inc", "CDT Equity"],
+      "bond": null,
+      "subject": "CDT Equity Inc. (Nasdaq: CDT)",
+      "holding": {"shares": 25000},
+      "open_orders": [],
+      "vendor_a": {"event_type": "reverse split", "terms": "1-for-25", "effective_date": "2026-09-28", "new_identifier": "20678X700"},
+      "vendor_b": {"event_type": "reverse split", "terms": "1-for-25", "effective_date": "2026-09-29", "new_identifier": "20678X700"}
+    },
+    {
+      "id": "CTNT",
+      "kind": "equity",
+      "ticker": "CTNT",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "Cheetah Net Supply Chain Service Inc.",
+      "legal_names": ["Cheetah Net Supply Chain Service", "Cheetah Net"],
+      "bond": null,
+      "subject": "Cheetah Net Supply Chain Service Inc. (Nasdaq: CTNT)",
+      "holding": {"shares": 30000},
+      "open_orders": [],
+      "vendor_a": {"event_type": "reverse split", "terms": "1-for-150", "effective_date": "2026-09-28", "new_identifier": "16307X400"},
+      "vendor_b": null
+    },
+    {
+      "id": "AGRZ",
+      "kind": "equity",
+      "ticker": "AGRZ",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "Agroz Inc.",
+      "legal_names": ["Agroz Inc", "Agroz"],
+      "bond": null,
+      "subject": "Agroz Inc. (Nasdaq: AGRZ)",
+      "holding": {"shares": 20000},
+      "open_orders": [{"order_id": "ORD-1057", "side": "Buy", "quantity": 5000, "limit_price": 0.42}],
+      "vendor_a": null,
+      "vendor_b": null
+    },
+    {
+      "id": "NFE",
+      "kind": "equity",
+      "ticker": "NFE",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "New Fortress Energy Inc.",
+      "legal_names": ["New Fortress Energy"],
+      "bond": null,
+      "subject": "New Fortress Energy Inc. (Nasdaq: NFE)",
+      "holding": {"shares": 15000},
+      "open_orders": [
+        {"order_id": "ORD-1062", "side": "Sell", "quantity": 4000, "limit_price": 1.10},
+        {"order_id": "ORD-1063", "side": "Buy", "quantity": 1500, "limit_price": 0.95}
+      ],
+      "vendor_a": null,
+      "vendor_b": null
+    },
+    {
+      "id": "JAGX",
+      "kind": "equity",
+      "ticker": "JAGX",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "Jaguar Health, Inc.",
+      "legal_names": ["Jaguar Health"],
+      "bond": null,
+      "subject": "Jaguar Health, Inc. (Nasdaq: JAGX)",
+      "holding": {"shares": 12000},
+      "open_orders": [],
+      "vendor_a": {"event_type": "reverse split", "terms": "1-for-15", "effective_date": "2026-09-17", "new_identifier": "47010C854"},
+      "vendor_b": {"event_type": "reverse split", "terms": "1-for-5", "effective_date": "2026-09-17", "new_identifier": "47010C854"}
+    },
+    {
+      "id": "TRUG",
+      "kind": "equity",
+      "ticker": "TRUG",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "TruGolf Holdings, Inc.",
+      "legal_names": ["TruGolf"],
+      "bond": null,
+      "subject": "TruGolf Holdings, Inc. (Nasdaq: TRUG)",
+      "holding": {"shares": 10000},
+      "open_orders": [],
+      "vendor_a": null,
+      "vendor_b": {"event_type": "reverse split", "terms": "1-for-10", "effective_date": "2026-09-29", "new_identifier": "243733607"}
+    },
+    {
+      "id": "BAC 06051GLX5",
+      "kind": "bond",
+      "ticker": "",
+      "cusip": "06051GLX5",
+      "exchange": "",
+      "issuer": "Bank of America",
+      "legal_names": ["Bank of America"],
+      "bond": {"issuer": "Bank of America", "coupon": "Floating Rate", "maturity": "September 2027"},
+      "subject": "Bank of America Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5",
+      "holding": {"par": 2000000},
+      "open_orders": [],
+      "vendor_a": {"event_type": "redemption", "terms": "100% of principal plus accrued interest", "effective_date": "2026-09-15", "new_identifier": ""},
+      "vendor_b": null
+    },
+    {
+      "id": "MSFT",
+      "kind": "equity",
+      "ticker": "MSFT",
+      "cusip": "",
+      "exchange": "Nasdaq",
+      "issuer": "Microsoft Corporation",
+      "legal_names": ["Microsoft"],
+      "bond": null,
+      "subject": "Microsoft Corporation (Nasdaq: MSFT)",
+      "holding": {"shares": 500},
+      "open_orders": [],
+      "vendor_a": null,
+      "vendor_b": null
+    },
+    {
+      "id": "PG",
+      "kind": "equity",
+      "ticker": "PG",
+      "cusip": "",
+      "exchange": "NYSE",
+      "issuer": "The Procter & Gamble Company",
+      "legal_names": ["Procter & Gamble", "Procter and Gamble"],
+      "bond": null,
+      "subject": "The Procter & Gamble Company (NYSE: PG)",
+      "holding": {"shares": 800},
+      "open_orders": [],
+      "vendor_a": null,
+      "vendor_b": null
+    }
+  ]
+}

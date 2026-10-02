@@ -1,0 +1,332 @@
+{
+ "saved_at": "2026-10-02 13:06:39",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by CDT Equity Inc. (Nasdaq: CDT): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for CDT Equity Inc. (Nasdaq: CDT), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 4717,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "a2a505f6ce8270ed7a65e02c1c277d51",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "CDT Equity Inc ... Announces Reverse Stock Split\n...\nNAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "title": "683 Information Regarding the Reverse Stock Split and ...",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)\n...\n## Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | CDT Equity Inc. (CDT) will effect a one-for-twenty five (1-25) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 20678X700. If you would like to register as a market maker in CDT, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+    "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+    "publishedDate": "2026-09-25T12:15:15.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "said the reverse split is\n...\nCDT Equity Inc. will effect a 1-for-25 reverse stock split on September 28, 2026, at 5:00 p.m. Eastern Time. The company expects its common stock to begin trading on a split-adjusted basis at market open on September 29, 2026, under ticker CDT. After the split, outstanding common shares are expected to be approximately 1,124,515. The $0.0001 par value per share will remain unchanged, with proportional adjustments to shares issuable under equity awards, convertible securities, warrants, and equity incentive plans. No fractional shares will be issued; eligible holders will receive cash based on the fraction multiplied by the September 28 closing price per share, adjusted for the split. The company said the split is intended to ensure continued compliance with Nasdaq\u2019s bid-price rule.\n...\nOn September 24, 2026, CDT Equity Inc. (the \u201cCompany\u201d) filed a certificate of amendment to the Company\u2019s Second Amended and Restated Certificate of Incorporation (the \u201cAmendment\u201d) with the Secretary of State of the State of Delaware to effectuate a 1-for-25 reverse stock split (the \u201cReverse Stock Split\u201d) of the outstanding shares of the Company\u2019s common stock, par value $0.0001 per share (\u201cCommon Stock\u201d). The Company\u2019s stockholders previously approved future reverse stock splits and granted the board of directors the authority to determine the exact split ratios and when to proceed with any such reverse stock splits.\n\nThe Reverse Stock Split will become effective on September 28, 2026, at 5:00 p.m., Eastern Time (the \u201cEffective Time\u201d) and the Common Stock is expected to begin trading on The Nasdaq Capital Market on a Reverse Stock Split-adjusted basis on September 29, 2026, at market open under the existing ticker symbol, \u201cCDT.\u201d As of the Effective Time, every 25 shares of the Company\u2019s issued and outstanding Common Stock will be combined into one share of Common Stock.\n\nThe par value and other terms of the Common Stock will not be affected by the Reverse Stock Split. The Company\u2019s post-Reverse Stock Split Common Stock CUSIP number will be 20678X700.\n\nNo fractional shares will be issued as a result of the Reverse Stock Split. Stockholders of record who would otherwise be entitled to receive a fractional share of Common Stock will receive a cash payment in lieu thereof at a price equal to the fraction to which the stockholder would otherwise be entitled multiplied by the closing price per share of the Common Stock (as adjusted for the Reverse Stock Split) on the Nasdaq Capital Market on September 28, 2026.\n...\nCDT Equity Inc. Announces Reverse Stock Split\n\nNAPLES, Fla. and CAMBRIDGE, United Kingdom, September 25, 2026 (GLOBE NEWSWIRE) \u2014 CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n\nAs of the Effective Time, every 25 shares of the Company\u2019s issued and outstanding common stock will be combined into one share of common stock. The par value per share of the Company\u2019s common stock will remain unchanged at $0.0001. Proportional adjustments will be made to the number of shares of common stock issuable upon the exercise of the Company\u2019s equity awards, convertible securities and warrants, as well as the applicable exercise price, and the number of shares authorized and reserved for issuance pursuant to the Company\u2019s equity incentive plans.\n\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,124,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment.\n\nThe Company\u2019s transfer agent, Continental Stock Transfer & Trust Co., will serve as the exchange agent for the reverse stock split. Registered stockholders holding pre-reverse stock split shares of common stock electronically in book-entry form are not required to take any action to receive post-reverse stock split shares. Those stockholders who hold their shares in brokerage accounts or in \u201cstreet name\u201d will have their positions automatically adjusted to reflect the reverse stock split, subject to each broker\u2019s particular processes, and will not be required to take any action in connection with the reverse stock split."
+    ]
+   },
+   {
+    "id": "https://finance.yahoo.com/markets/stocks/articles/cdt-equity-inc-announces-reverse-121000623.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/cdt-equity-inc-announces-reverse-121000623.html",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "CDT Equity Inc. Announces Reverse Stock Split\n...\nNAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\"CDT\" or the \"Company\"), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company's common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company's stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios. \n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \"Effective Time\"), and the Company's common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\"Nasdaq\") at market open under the existing ticker symbol, \"CDT\" on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company's common stock will continue to trade on Nasdaq under the symbol \"CDT\" following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ],
+    "image": "https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png"
+   },
+   {
+    "id": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+    "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split",
+    "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "\u25cf CDT Equity will combine every 25 shares into one share effective 5:00 p.m. Eastern on September 28, 2026.\n\n\u25cf Split-adjusted trading begins September 29, 2026 under a new CUSIP number, 20678X700, with the ticker unchanged.\n\n\u25cf Fractional shares will be cashed out based on the post-split closing price on September 28, 2026 rather than rounded up.\n\n\u25cf The board acted under previously granted stockholder authority rather than holding a new vote\n...\nCDT Equity Inc. (NASDAQ:CDT), a Delaware corporation trading on the Nasdaq Capital Market, filed a certificate of amendment implementing a 1-for-25 reverse stock split, according to a Form 8-K filed September 25, 2026. The split takes effect September 28, 2026 at 5:00 p.m. Eastern time, with split-adjusted trading beginning the next day under a new CUSIP number.\n...\nUnder the certificate of amendment, every 25 shares of CDT Equity's outstanding common stock will be combined into one share, effective at 5:00 p.m. Eastern time on September 28, 2026. The filing states that split-adjusted trading will begin on the Nasdaq Capital Market on September 29, 2026, and that the stock will trade under a new CUSIP number, 20678X700, to distinguish the post-split shares in clearing systems. The company's ticker symbol, CDT, remains unchanged.\n\nStockholders entitled to a Fractional Share as a result of the 25-to-1 combination will not receive fractional shares. Instead, the filing states they will receive a cash payment equal to the fraction to which they would otherwise be entitled, multiplied by the closing price of the common stock, as adjusted for the reverse split, on the Nasdaq Capital Market on September 28, 2026.\n...\nThe filing indicates that CDT Equity's stockholders had previously approved giving the Board of Directors authority to execute a reverse stock split, with the board retaining discretion over timing and the specific ratio. This 8-K reflects the board's exercise of that previously granted authority to set the ratio at 1-for-25 and the effective date at September 28, 2026, rather than reflecting a new stockholder vote taken around the filing date.\n...\nSeptember 28, 2026 at 5:00 p.m. Eastern marks when the reverse split becomes effective, with CDT beginning to trade split-adjusted under new CUSIP 20678X700 on September 29, 2026. Whether CDT Equity discloses in a future filing the specific listing or market rationale behind the 1-for-25 ratio remains an open question for subsequent disclosures.\n...\nA: CDT Equity is executing a 1-for-25 reverse stock split, combining every 25 shares into one share.\n...\nA: The split becomes effective at 5:00 p.m. Eastern time on September 28, 2026, with split-adjusted trading beginning September 29, 2026.\n\n### Q: Will CDT Equity's ticker symbol change?\n\nA: No, the company will continue trading under the symbol CDT, though it will trade under a new CUSIP number, 20678X700.\n...\nA: Stockholders owed a fractional share will instead receive a cash payment based on the post-split closing price on September 28, 2026."
+    ],
+    "image": "https://kalkine.com/featured_image/gallery/xlarge/shutterstock_1221962938_09_28_2026_18_44_38_297121.jpg"
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-50ccb32afa91.html",
+    "title": "CDT Equity names CEO, gets reverse split approval | CDT 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-50ccb32afa91.html",
+    "publishedDate": "2026-09-01T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "CDT Equity names CEO, gets reverse split approval | CDT 8-K Filing\n...\nFormer CEO and director Dr. Andrew Regan resigned effective the same date, receiving $50,000 per month in severance for six months, and the board size decreased from five to four members. Stockholders at the August 28, 2026 annual meeting elected five directors, ratified Carr, Riggs & Ingram, L.L.C. as auditor, and approved amendments authorizing one or more reverse stock splits within a range between 1\u2011for\u20112 and, in the aggregate, not more than 1\u2011for\u2011500, at the board\u2019s discretion.\n\nStockholders also approved share issuances under a senior secured convertible note and warrant issued to J.J. Astor & Co., and the issuance of up to 12,131,770 shares of common stock upon exercise of certain pre\u2011funded warrants, each under Nasdaq Listing Rule 5635, along with an adjournment proposal supporting these items.\n...\n### Key Figures\n\n CEO annual base salary: $600,000 CEO target bonus percentage: 50% of base salary Regan monthly severance: $50,000 +4 more \n\n 7 metrics \n\n CEO annual base salary $600,000 Annual base salary for James Bligh as Chief Executive Officer \n\n CEO target bonus percentage 50% of base salary Target annual cash performance bonus for James Bligh \n\n Regan monthly severance $50,000 Monthly severance to Dr. Andrew Regan for six months after resignation \n\n Pre-funded warrant share capacity 12,131,770 shares of Common Stock Maximum aggregate shares issuable upon exercise of certain pre\u2011funded warrants \n\n Auditor ratification votes for 302,336 Votes for ratifying Carr, Riggs & Ingram, L.L.C. as auditor for 2026 \n\n Reverse stock split approval votes for 240,831 Votes for amendments authorizing reverse stock splits between 1\u2011for\u20112 and up to 1\u2011for\u2011500 in aggregate \n\n Quorum threshold exceeded Over one-third of shares Proxies submitted representing over one-third of outstanding common shares entitled to vote\n...\n## FAQ\n\n What executive leadership changes did CDT (CDT) announce on August 31, 2026? \n\n CDT appointed James Bligh as Chief Executive Officer effective August 31, 2026. He will also remain Chief Financial Officer and a director. Former CEO and director Dr. Andrew Regan resigned from both roles effective the same date. \n\n What are the key compensation terms for CDT (CDT) CEO James Bligh? \n\n Under his employment agreement, James Bligh receives an annual base salary of $600,000 and is eligible for an annual cash performance bonus targeted at 50% of base salary, based on performance criteria set by the board. He also participates in standard senior officer benefit plans. \n\n What severance will former CDT (CDT) CEO Dr. Andrew Regan receive? \n\n In connection with his resignation, Dr. Andrew Regan will receive a severance payment of $50,000 per month for the next six months. His decision to resign was stated as not due to any disagreement regarding the company\u2019s operations, policies, or practices. \n\n What reverse stock split authority did CDT (CDT) stockholders approve? \n\n Stockholders approved amendments to allow one or more reverse stock splits of common stock at ratios ranging from 1\u2011for\u20112 to, in the aggregate, not more than 1\u2011for\u2011500, as determined by the board, with the board also authorized to abandon such amendments. \n\n How many CDT (CDT) shares may be\n...\nStockholders approved the issuance of up to an aggregate of 1 ... ,131,770 shares of common stock upon exercise of certain pre\u2011funded warrants to purchase common stock,\n...\nWhich auditor did CDT (CDT) stockholders ... 2026? \n\n Stockholders ... Riggs & Ingram, L.L.C. as CDT\u2019s independent registered public accounting ... for the fiscal year ending December 31, 2026, with ... 2,336 votes for, 8,643 against, and 1,186 abstentions. \n\n What share issuance related to J.J. Astor & Co. did CDT (CDT) approve? \n\n Stockholders approved the issuance of shares of common stock under Nasdaq Listing Rule 5635 pursuant to a senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co., with 254,403 votes for, 22,769 against, and 34,993 abstentions.\n...\n| Title of each class | Trading Symbol(s) | Name of each exchange on which registered |\n| --- | --- | --- |\n| Common Stock, $0.0001 par value per share | CDT | The Nasdaq Stock Market LLC |\n| Redeemable Warrants, each whole warrant exercisable for one share of Common Stock | CDTTW | The Nasdaq Stock Market LLC |\n...\neffective immediately. ... . Regan\u2019 ... decision to resign ... the result of any disagreement with the Company on ... matter relating to the ... \u2019s operations, policies, or practices. ... connection with his resignation, the Company ... . Regan a severance ... in the amount of $ ... next six months. Following Dr. Regan ... s resignation, the ... was reduced from five\n...\nOn August 28, 2026, the Company convened its 2026 annual ... of stockholders (the \u201cAnnual Meeting\u201d). Proxies had been submitted by stockholders representing over one-third of the shares of the Company\u2019s common stock, par value $0.0001 per share (the \u201cCommon Stock\u201d) outstanding and entitled to vote, which constituted a quorum. At the Annual Meeting, the Company\u2019s stockholders voted on six proposals, which are described in more detail in the Company\u2019s Proxy Statement and incorporated herein by reference.\n...\nProposal No. 3. Stockholders approved one or more amendments of the Company\u2019s Second Amended and Restated Certificate of Incorporation to effect one or more reverse stock splits of the Company\u2019s Common Stock, at a ratio ranging from any whole number between and including 1-for-2 and 1-for-100 and in the aggregate not more than 1-for-500, inclusive, as determined by the Company\u2019s board of directors in its discretion, subject to the authority of the board of directors to abandon such amendments. The voting results were as follows:\n...\nProposal No. 4. Stockholders approved the issuance of shares of Common Stock under Nasdaq Listing Rule 5635 pursuant to that certain senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co. The voting results were as follows:\n...\nProposal No. 5. Stockholders approved the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase shares of Common Stock under Nasdaq Listing Rule 5635. The voting results were as follows:"
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/cdt_8-K.webp"
+   },
+   {
+    "id": "https://markets.businessinsider.com/news/stocks/cdt-equity-inc-announces-reverse-stock-split-1036574081",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split | Markets Insider",
+    "url": "https://markets.businessinsider.com/news/stocks/cdt-equity-inc-announces-reverse-stock-split-1036574081",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/CDT/def-14a-cdt-equity-inc-definitive-proxy-statement-153a35042894.html",
+    "title": "CDT Equity outlines reverse split and major issuances | CDT Proxy Statement",
+    "url": "https://www.stocktitan.net/sec-filings/CDT/def-14a-cdt-equity-inc-definitive-proxy-statement-153a35042894.html",
+    "publishedDate": "2026-08-11T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "The board seeks authority to implement one or more reverse stock splits of the common stock, with individual ratios between 1\u2011for\u20112 and 1\u2011for\u2011100 and an aggregate limit of 1\u2011for\u2011500, at its discretion. Stockholders are also asked to approve share issuances under a senior secured convertible note and warrant issued to J.J. Astor & Co., and to approve the issuance of up to 12,131,770 shares of common stock upon exercise of pre\u2011funded warrants, all under Nasdaq Listing Rule 5635.\n...\n- Election of five directors for one-year terms (Proposal No. 1)\n- Ratification of Carr, Riggs & Ingram, L.L.C. as 2026 auditor (Proposal No. 2)\n- Approval of reverse stock split amendments with ratios up to an aggregate 1-for-500 (Proposal No. 3)\n- Approval of share issuance under senior secured convertible note and warrant to J.J. Astor & Co. (Proposal No. 4)\n- Approval to issue up to 12,131,770 shares upon exercise of pre-funded warrants (Proposal No. 5)\n- Approval of potential adjournment to solicit additional votes (Proposal No. 6)\n...\n| 1. | to elect five nominees to serve as directors, each for a one-year term expiring at our next annual meeting of stockholders and until each such director\u2019s successor is elected and qualified (Proposal No. 1); |\n| --- | --- |\n| 2. | to ratify the appointment of Carr, Riggs & Ingram, L.L.C. as our independent registered public accounting firm for the fiscal year ending December 31, 2026 (Proposal No. 2); |\n| 3. | to approve one or more amendments of the Company\u2019s Second Amended and Restated Certificate of Incorporation to effect one or more reverse stock splits of our common stock, at a ratio ranging from any whole number between and including 1-for-2 and 1-for-100 and in the aggregate not more than 1-for-500, inclusive, as determined by the Company\u2019s board of directors in its discretion, subject to the authority of the board of directors to abandon such amendments (Proposal No. 3); |\n| 4. | to approve the issuance of shares of common stock, for purposes of Nasdaq Listing Rule 5635, pursuant to that certain senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co. (Proposal No. 4); |\n| 5. | to approve the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase the Company\u2019s Common Stock, in accordance with Nasdaq Listing Rule 5635 (Proposal No. 5); |\n...\n| PROPOSAL NO. 3 \u2013 APPROVAL OF ONE OR MORE AMENDMENTS OF THE COMPANY\u2019S SECOND AMENDED AND RESTATED CERTIFICATE OF INCORPORATION TO EFFECT ONE OR MORE REVERSE STOCK SPLITS OF THE COMPANY\u2019S COMMON STOCK, AT A RATIO RANGING FROM ANY WHOLE NUMBER BETWEEN AND INCLUDING 1-FOR-2 AND 1-FOR-100 AND IN THE AGGREGATE NOT MORE THAN 1-FOR-500, INCLUSIVE, AS DETERMINED BY THE BOARD OF DIRECTORS IN ITS DISCRETION, SUBJECT TO THE AUTHORITY OF THE BOARD OF DIRECTORS TO ABANDON SUCH AMENDMENTS | 31 |\n| PROPOSAL NO. 4 \u2013 TO APPROVE THE issuance of shares of common stock, for purposes of Nasdaq Listing Rules 5635, pursuant to that certain senior secured convertible note AND COMMON STOCK PURCHASE WARRANT issued to J.J. Astor & Co. | 41 |\n| PROPOSAL NO. 5 - to approve the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase the Company\u2019s Common Stock, in accordance with Nasdaq Listing Rule 5635 | 43 |\n...\n| \u25cf | Proposal No. 3 (Approval of one or more amendments of the Company\u2019s Second Amended and Restated Certificate of Incorporation to effect one or more reverse stock splits of the Company\u2019s issued and outstanding Common Stock, at a ratio ranging from any whole number between and including 1-for-2 and 1-for-100 and in the aggregate not more than 1-for-500, inclusive, as determined by the Company\u2019s board of directors in its discretion, subject to the authority of the board of directors to abandon such amendments) \u2013 Approval of this proposal requires the affirmative vote of a majority of the votes cast by the holders of shares of Common Stock virtually present in person or represented by proxy at the Annual Meeting and entitled to vote thereon. Because this proposal is considered \u201croutine,\u201d brokers will have discretionary authority to vote and, therefore, we do not expect there to be broker non-votes resulting from the vote on Proposal No. 3. Abstentions and broker non-votes, if any, are not treated as votes cast and, therefore, will have no effect on the outcome of this proposal. |\n| \u25cf | Proposal No. 4 (Approval of the issuance of shares of Common Stock, for purposes of Nasdaq Listing Rules 5635, pursuant to that certain senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co.) \u2013 Approval of this proposal requires the affirmative vote of a majority of the votes cast by the holders of shares of Common Stock virtually present in person or represented by proxy at the Annual Meeting and entitled to vote thereon. Abstentions and broker non-votes, if any, are not treated as votes cast, and, therefore, will have no effect on the outcome of this proposal. |\n| \u25cf | Proposal No. 5 (Approval of the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase the Company\u2019s Common Stock, in accordance with Nasdaq Listing Rule 5635) \u2013 Approval of this proposal requires the affirmative vote of a majority of the votes cast by the holders of shares of Common Stock virtually present in person or represented by proxy at the Annual Meeting and entitled to vote thereon. Abstentions and broker non-votes, if any, are not treated as votes cast, and, therefore, will have no effect on the outcome of this proposal. |\n...\nOur Board recommends that you vote your shares \u201c FOR\u201d each of our Board\u2019s nominees who are standing for election (Proposal No. 1), \u201c FOR\u201d the ratification of the appointment of CRI as our independent registered public accounting firm for the fiscal year ending December 31, 2026 (Proposal No. 2), \u201c FOR\u201d approval of one or more amendments of the Company\u2019s Second Amended and Restated Certificate of Incorporation to effect one or more reverse stock splits of the Company\u2019s issued and outstanding Common Stock, at a ratio ranging from any whole number between and including 1-for-2 and 1-for-100 and in the aggregate not more than 1-for-500, inclusive, as determined by the Company\u2019s board of directors in its discretion, subject to the authority of the board of directors to abandon such amendments (Proposal No. 3), \u201c FOR\u201d approval of the issuance of shares of Common Stock, for purposes of Nasdaq Listing Rule 5635, pursuant to that certain senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co.) (Proposal No. 4), \u201c FOR\u201d the approval of the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase the Company\u2019s Common Stock, in accordance with Nasdaq Listing Rule 5635 (Proposal No. 5), and \u201c FOR\u201d the approval of the adjournment or postponement of the Annual Meeting, if necessary, to continue to solicit votes for Proposals Nos. 1, 2, 3, 4, and 5 (Proposal No. 6).\n...\nissuance of shares of Common Stock, for purposes of Nasdaq Listing Rules 5635, pursuant to that certain senior secured convertible note and common stock purchase warrant issued to J.J. Astor & Co. (Proposal No. 4), \u201c FOR\u201d the approval of the issuance of up to an aggregate of 12,131,770 shares of Common Stock issuable upon exercise of certain pre-funded warrants to purchase the Company\u2019s Common Stock, in accordance with Nasdaq Listing Rule 5635 (Proposal No. 5), and \u201c FOR\u201d the approval of the adjournment or postponement of the Annual Meeting, if necessary, to continue to solicit votes for Proposals Nos. 1, 2, 3, 4, and 5 (Proposal No."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/cdt_DEF-14A.webp"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/02/3354891/0/en/cdt-provides-capital-update-and-confirms-no-nasdaq-deficiencies.html",
+    "title": "CDT Provides Capital Update and Confirms No Nasdaq",
+    "url": "https://www.globenewswire.com/news-release/2026/09/02/3354891/0/en/cdt-provides-capital-update-and-confirms-no-nasdaq-deficiencies.html",
+    "publishedDate": "2026-09-02T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 02, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201c CDT\u201d or the \u201c Company\u201d) today announced that, following the recent issuance of shares and the exercise of pre-funded warrants, the Company had 13,693,866 shares of Common Stock issued and outstanding as of August 31, 2026. Based on the closing price of CDT\u2019s Common Stock on August 31, 2026, the Company had a market capitalisation of approximately $23.0 million.\n\nCDT\u2019s stockholders\u2019 equity, as reported in its Quarterly Report on Form 10-Q for the quarter ended June 30, 2026, was approximately $103 million. Following the recent issuances and related corporate actions, CDT also confirms that it no longer has any outstanding deficiencies with The Nasdaq Stock Market LLC.\n...\nThis press release contains certain forward-looking statements within the meaning of the federal securities laws. All statements other than statements of historical facts contained in this press release, including statements regarding CDT's future results of operations and financial position, CDT's business strategy, prospective product candidates, product approvals, research and development cost timing and likelihood of success, plans and objectives of management for future operations, future results of current and anticipated studies and business endeavors with third parties, and future results of current and anticipated product candidates, are forward-looking statements. These forward-looking statements generally are identified by the words \u201cbelieve,\u201d \u201cproject,\u201d \u201cexpect,\u201d \u201canticipate,\u201d \u201cestimate,\u201d \u201cintend,\u201d \u201cstrategy,\u201d \u201cfuture,\u201d \u201copportunity,\u201d \u201cplan,\u201d \u201cmay,\u201d \u201cshould,\u201d \u201cwill,\u201d \u201cwould,\u201d \u201cwill be,\u201d \u201cwill continue,\u201d \u201cwill likely result,\u201d and similar expressions. These forward-looking statements are subject to a number of risks, uncertainties and assumptions, including, but not limited to; the effect that the reverse stock split may have on the price of the Company\u2019s common stock; the ability or inability to maintain the listing of CDT's securities on Nasdaq; the ability to recognize the anticipated benefits of the business combination completed in September 2023, which may be affected by, among other things, competition; the ability of the combined company to grow and manage growth economically and hire and retain key employees; the risks that CDT's product candidates in development fail clinical trials or are not approved by the U.S. Food and Drug Administration or other applicable authorities on a timely basis or at all; changes in applicable laws or regulations; the possibility that CDT may be adversely affected by other economic, business, and/or competitive factors; and other risks and uncertainties identified in other filings made by CDT with the U.S. Securities and Exchange Commission. Moreover, CDT operates in a very competitive and rapidly changing environment. Because forward-looking statements are inherently subject to risks and uncertainties, some of which cannot be predicted or quantified and some of which are beyond CDT's control, you should not rely on these forward-looking statements as predictions of future events."
+    ]
+   },
+   {
+    "id": "https://www.pubt.io/view/8F3A0D67683DCEF05193978A1908B378123C51B1",
+    "title": "CDT Equity Inc. (via Public) / Supplemental Prospectus (Form 424B3)",
+    "url": "https://www.pubt.io/view/8F3A0D67683DCEF05193978A1908B378123C51B1",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "highlights": [
+     "On July 15, 2026, the Company filed a certificate of amendment to the Company's Second Amended and Restated Certificate of Incorporation (the \"Certificate of Amendment\") with the Secretary of State of Delaware to effectuate a 1-for-10 reverse stock split (the \"Reverse Stock Split\") of the outstanding shares of the Company's Common Stock. Effective July 17, 2026 at 5:00 p.m. Eastern Time, every 10 shares of our Common Stock, either issued or outstanding, immediately prior to the filing and effectiveness of our Certificate of Amendment, was automatically combined and converted (without any further act) into one fully paid and non-assessable share of Common Stock. No fractional shares were issued as a result of the Reverse Stock Split. Stockholders of record who would otherwise be entitled to receive a fractional share of Common Stock received a cash payment in lieu thereof at a price equal to the fraction to which the stockholder would otherwise be entitled multiplied by the closing price per share of our Common Stock (as adjusted for the Reverse Stock Split) on The Nasdaq Capital Market on July 17, 2026. \n\n All financial information, share numbers, option numbers, warrant numbers, other derivative security numbers and exercise prices appearing in this registration statement have been adjusted to give effect to the Reverse Stock Split, except where otherwise stated. \n\n Our Common Stock is traded on The Nasdaq Capital Market under the trading symbol \"CDT.\" On September 17, 2026, the last reported sale price of our Common Stock on The Nasdaq Capital Market was $0.19. \n\n We are an \"emerging growth company,\" as defined under the federal securities laws, and, as such, may elect to comply with certain reduced public company reporting requirements for future filings. \n\n Investing in our securities ... securities, you\n...\nIf an emerging growth ... , indicate by check mark if the registrant ... elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 \n\n Item 1.01 Entry into a Material Definitive Agreement. \n\n Senior Secured Convertible Promissory Note to J.J. Astor & Co. \n\n On September 14, 2026, CDT Equity Inc. (the \"Company\") issued a senior secured convertible promissory note (the \"Note\") to J.J. Astor & Co. (the \"Lender\"), in ... principal amount of $2,126,250 (the \"Principal Amount\"). The Note matures on March 1, 2027 and is payable in twenty-four (24) weekly installments of $88,593.75 each. The Note was issued pursuant to the Loan Agreement, dated as of June 11, 2026, as amended and restated to date (the \"Loan Agreement\"), between the Company, CDT Equity Ltd. (the \"Subsidiary Guarantor\") and the Lender. The Company received $1,575,000 before deducting closing fees, with net proceeds of $1,501,850 funded to the Company. In connection with the issuance of the Note, the Company also issued to the Lender Common Stock Purchase Warrants (the \"Warrants\") to purchase 3,468,500 shares of the Company's Common Stock (the \"Warrant Shares\") at an exercise price of $0.25 per share. The Warrants are exercisable immediately upon issuance and will expire five years after the issue date.\n...\nTHIS COMMON STOCK PURCHASE WARRANT (the \"Warrant\") certifies that, for value received, J. ... . Astor & Co., a Utah corporation (\"Astor\") or its assigns (together ... Astor, the \"Holder\") is entitled, upon the terms and subject to the limitations on exercise and the conditions hereinafter set forth, at any time on or after the September 14, 2026 Issue Date (the \"Initial Exercise Date\"), and on or prior to 5:0 ... p.m. (New York City time) five years following ... Issue Date (the \" ... Date\") but not thereafter, to subscribe for and purchase from CDT ... Company\"), up ... 3,4 ... shares of Common Stock ... ), the \"W ... Shares\" of ... Company. The purchase price of ... share of Common\n...\n(a ... Stock Dividends and Splits. If ... while this Warrant ... outstanding: (\n...\nHolder. If ... Stock, (B ... special nonrecurring cash dividend on ... the approval of any stockholders ... shall be required in connection ... any reclassification ... cause to be delivered ... specified, a notice stating ... shall be entitled ... deliverable upon ... the failure to deliver such notice or any defect therein or in the delivery thereof shall not affect the validity ... required to be specified in ... notice. To the extent that any notice provided in this Warrant constitutes, or contains, material, non-public information ... the Company or any of the Subsidiaries, the Company shall simultaneously file such notice with ... a Current Report on Form 8-K. The Holder ... remain entitled to exercise this Warrant during the period commencing on the date ... the effective date ... notice except as ... otherwise be expressly set forth\n...\n(g) Semi-Annual Reset. On each date that is six (6) months after the Issue Date and on each date that is six (6) months thereafter for so long as this Warrant remains outstanding (each, a \"Reset Date\"), the Exercise Price shall be reduced (but not increased) to equal the lowest VWAP of the Common Stock during the twenty (20) consecutive Trading Days immediately preceding such Reset Date, if such lowest VWAP is lower than the Exercise Price then in effect, and, upon each such reduction, the number of Warrant Shares issuable upon exercise of this Warrant shall simultaneously be increased such that the aggregate Exercise Price payable upon exercise of this Warrant in full immediately after such reset equals the aggregate Exercise Price payable upon exercise of this Warrant in full immediately prior to such reset. Any reset pursuant to this Section 3(g) shall be in addition to, and shall not limit, any other adjustment provided for in this Section 3, and the Company shall deliver notice of each such reset in accordance with Section 3(f)(i). For the avoidance of doubt, if the Company effects a reverse stock split or other combination of the Common Stock and the trading price of the Common Stock thereafter declines, both Section 3(a) and this Section 3(g) shall apply: Section 3(a) shall adjust the Exercise Price and the number of Warrant Shares proportionately upon the reverse stock split, and on the next Reset Date the Exercise Price shall be reduced based on post-split trading prices and the number of Warrant Shares shall be increased as provided above, so that the aggregate Exercise Price payable upon exercise of this Warrant in full remains unchanged. Solely by way of illustration: if this Warrant is exercisable for 3,468,500 Warrant Shares at an Exercise Price of $0.25 (an aggregate Exercise Price of $867,125) and the Company effects a one-for-ten reverse stock split, then pursuant to Section 3(a) this Warrant would thereupon be exercisable for 346,850 Warrant Shares at an Exercise Price of $2.50 (the aggregate Exercise Price remaining $867,125); and if the lowest VWAP of the Common Stock during the twenty (20) consecutive Trading Days immediately preceding the next Reset Date is $1.00, then on such Reset Date the Exercise Price would be reduced to $1.00 and the number of Warrant Shares would be increased to 867,125 (the aggregate Exercise Price remaining $867,125)."
+    ]
+   }
+  ],
+  "searchTime": 2794.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "effective_as_stated": "September 28, 2026, at 5:00 pm, Eastern Time",
+    "terms": "1-for-25",
+    "event_type": "reverse split",
+    "source_notice_date": "2026-09-25",
+    "effective_date": "2026-09-29",
+    "new_identifier": "20678X700",
+    "identifier_in_source": "CDT"
+   },
+   "grounding": [
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "683 Information Regarding the Reverse Stock Split and ..."
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "683 Information Regarding the Reverse Stock Split and ..."
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://finance.yahoo.com/markets/stocks/articles/cdt-equity-inc-announces-reverse-121000623.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://markets.businessinsider.com/news/stocks/cdt-equity-inc-announces-reverse-stock-split-1036574081",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split | Markets Insider"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "683 Information Regarding the Reverse Stock Split and ..."
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "683 Information Regarding the Reverse Stock Split and ..."
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "683 Information Regarding the Reverse Stock Split and ..."
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/CDT/8-k-cdt-equity-inc-reports-material-event-4fa01fb00497.html",
+       "title": "CDT Equity plans 1-for-25 reverse stock split | CDT 8-K Filing"
+      },
+      {
+       "url": "https://kalkine.com/news/general-news/cdt-equity-nasdaqcdt-moves-ahead-with-a-1-for-25-reverse-stock-split",
+       "title": "CDT Equity (NASDAQ:CDT) Moves Ahead With a 1-for-25 Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

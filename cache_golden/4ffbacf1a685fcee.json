@@ -1,0 +1,315 @@
+{
+ "saved_at": "2026-09-29 09:20:38",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from Jaguar Health, Inc. (Nasdaq: JAGX) announcing a reverse stock split, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com"
+  ],
+  "startPublishedDate": "2026-08-20T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about Jaguar Health, Inc. (Nasdaq: JAGX); ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3376,
+ "data": {
+  "requestId": "9fcf44e5b67d54113f90942cb526a71f",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+    "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "# All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)\n\n Thursday, 10 September 2026 09:00 AM\n...\nSAN FRANCISCO, CA / ACCESS Newswire / September 10, 2026 / Jaguar Health, Inc. (NASDAQ:JAGX) (Jaguar) family company Napo Pharmaceuticals (Napo) today announced that all randomized pediatric MVID patients in Napo's pivotal crossover clinical trial have entered the single-blind extension phase to receive blinded doses of crofelemer to support longer-term safety and efficacy for crofelemer powder for oral solution as adjunctive therapy to parenteral support (PS). The trial is ongoing at multiple centers in the United States, the European Union, and the United Arab Emirates. This trial is expected to support a New Drug Application (NDA) filing for the treatment of the MVID indication in mid-2027.\n...\n, including an NDA filing ... and the completion of ... in SBS-IF by mid- ... 7. The totality of our ... liquid crofelemer formulation ... Lisa Conte, Jaguar's founder, president, and CEO. \"Upon completion of the ... , data from this study may serve as the basis for a Breakthrough Therapy Designation ... arare pediatric disorder with a lethal natural history - and an ... trial of crofelemer in ... small number of MVID patients is expected ... be clinically meaningful and significant.\"\n...\nis a commercial stage pharmaceuticals company ... on developing novel proprietary ... from plants from rainforest ... people and animals with gastro ... Napo Pharmaceuticals, ... Napo) ... Napo Therapeutics S ... of novel cro ... failure, including microv"
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+    "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "SAN FRANCISCO, CA / ACCESS Newswire / September 29, 2026 / Jaguar Health, Inc. (Nasdaq:JAGX) (Jaguar) family company Napo Pharmaceuticals (Napo) today announced the acceptance of an abstract on preliminary results of an ongoing open-label study of the company's crofelemer powder for oral solution in adult patients with short bowel syndrome with intestinal failure (SBS-IF) for presentation at the American College of Gastroenterology Annual Scientific Meeting (ACG 2026). ACG 2026 takes place October 9-14, 2026 in Nashville, Tennessee."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "title": "La Rosa Holdings Announces 1-for-6 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "author": "La Rosa Holdings Corp.",
+    "highlights": [
+     "# La Rosa ... Announces 1-for-6 Reverse Stock Split\n...\n08:30 ET | Source: La Rosa Holdings Corp. \n\nCelebration, FL, Sept. 03, 2026 (GLOBE NEWSWIRE) -- La Rosa Holdings Corp. (NASDAQ: LRHC) (\u201cLa Rosa\u201d or the \u201cCompany\u201d), a real estate and PropTech enterprise, today announced that it will effect a 1-for-6 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 8, 2026 at 12:01 a.m. (Eastern Time).\n\nLa Rosa\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cLRHC\u201d and will begin trading on a split-adjusted basis when the market opens on September 8, 2026. The new CUSIP number for the common stock following the reverse stock split will be 50172T509. At the effective time of the reverse stock split, every 6 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 3.4 million shares to approximately 569 thousand shares, without giving effect to rounding. The reverse stock split will also apply to Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f854f31e-8844-4c15-a86b-772ced2fcb2a"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "title": "TruGolf Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "Announces Reverse Stock\n...\nSeptember 25, 2026 07:3 ... ET | Source:\n...\nSalt Lake City, Utah, Sept. 25, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings, Inc. (NASDAQ: TRUG), today announced a 1-for-10 reverse split of its Class A common stock. Beginning on September 29, 2026, the Company\u2019s Class A common stock will continue to trade on The Nasdaq Capital Market on a split adjusted basis under the trading symbol \u201cTRUG\u201d but will trade under the following new CUSIP number: 243733607.\n\nAs a result of the reverse stock split, every 10 shares of Class A common stock issued and outstanding as of the effective date will be automatically combined into one share of Class A common stock. No fractional shares will be issued if, as a result of the reverse stock split, a stockholder would otherwise become entitled to a fractional share because the number of shares of Class A common stock they hold before the reverse stock split is not evenly divisible by the split ratio. Instead, each stockholder will be entitled to receive a cash payment in lieu of a fractional share."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "title": "NextNRG Announces 1-for-10 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "NextNRG, Inc.",
+    "highlights": [
+     "Miami, FL, Sept. 10, 2026 (GLOBE NEWSWIRE) -- NextNRG, Inc. (Nasdaq: NXXT) (\"NextNRG\" or the \"Company\"), a pioneer in AI-driven energy innovation transforming how energy is produced, managed and delivered, today announced that it will effect a 1-for-10 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 14, 2026 at 12:00 a.m. (Eastern Time).\n\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cNXXT\u201d and will begin trading on a split-adjusted basis when the market opens on September 14, 2026. The new CUSIP number for the common stock following the reverse stock split will be 652941204. At the effective time of the reverse stock split, every 10 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 168.4 million shares to approximately 16.8 million shares, without giving effect to rounding. The reverse stock split will also apply to the Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/467287f0-fabc-4c2d-a951-3bb8bec81e97"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/27/3351943/0/en/artelo-biosciences-announces-reverse-stock-split.html",
+    "title": "Artelo Biosciences Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/08/27/3351943/0/en/artelo-biosciences-announces-reverse-stock-split.html",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "author": "Artelo Biosciences",
+    "highlights": [
+     "## Shares Expected to Begin Trading on a Split-Adjusted Basis on August 31, 2026\n\n August 27, 2026 08:00 ET | Source: Artelo Biosciences \n\nSOLANA BEACH, Calif., Aug. 27, 2026 (GLOBE NEWSWIRE) -- Artelo Biosciences, Inc. (Nasdaq: ARTL) (\u201cArtelo\u201d or the \u201cCompany\u201d), a clinical-stage pharmaceutical company focused on modulating lipid-signaling pathways to develop treatments for people living with cancer, pain, dermatological, or neurological conditions, today announced a 1-for-9 reverse stock split (\u201cReverse Split\u201d) of the Company\u2019s common stock (\u201cCommon Stock\u201d). The Company\u2019s Common Stock will begin trading on a split-adjusted basis on the Nasdaq Capital Market commencing at the market open on August 31, 2026. The Reverse Split is being effected in order to increase the price per share of the Common Stock to improve its marketability and liquidity. The new CUSIP number for the Common Stock following the Reverse Split will be 04301G805.\n\nAs a result of the Reverse Split, each nine shares of the Company\u2019s issued and outstanding Common Stock will be automatically combined and converted into one issued and outstanding share of Common Stock. No fractional shares will be issued as a result of the Reverse Split. Stockholders who otherwise would be entitled to a fractional share will automatically be entitled to receive one whole share of Common Stock for each such fractional share. Each shareholder\u2019s pro-rata percentage ownership will remain unchanged as ... result of the Reverse Split and no further action is required by shareholders. All of the Company\u2019s current outstanding warrants to purchase shares of Common Stock and other derivatives automatically adjust per their terms to reflect the Reverse Split. Immediately after the Reverse Split becomes effective, there will be approximately 547,774 shares of Common Stock issued and outstanding. For further details, all shareholders are invited to review the Current Report on Form 8-K regarding the Reverse Split which will be filed August 27, 2026."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/460502d7-b0d3-43d8-a15a-5b2bb963bbbb"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/27/3352053/0/en/calcimedica-announces-one-for-five-reverse-stock-split.html",
+    "title": "CalciMedica Announces One-for-Five Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/08/27/3352053/0/en/calcimedica-announces-one-for-five-reverse-stock-split.html",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "author": "CalciMedica, Inc.",
+    "highlights": [
+     "LA JOLLA, Calif., Aug. 27, 2026 (GLOBE NEWSWIRE) -- CalciMedica Inc. (\u201cCalciMedica\u201d or the \u201cCompany\u201d) (Nasdaq: CALC), a clinical-stage biopharmaceutical company developing novel calcium release-activated calcium (CRAC) channel inhibition therapies for serious inflammatory, immunologic, and cardiopulmonary diseases, today announced that it will effect a reverse stock split of its issued and outstanding common stock, at a ratio of 1-for-5, effective at 5:00 p.m. ET on August 28, 2026.\n\nCalciMedica\u2019s common stock will begin trading on the Nasdaq Capital Market on a split-adjusted basis commencing upon market open on August 31, 2026 under CalciMedica\u2019s existing trading symbol \u201cCALC\u201d with a new CUSIP number, 38942Q301. The reverse stock split was approved by CalciMedica\u2019s stockholders at CalciMedica\u2019s Annual Meeting of Stockholders held on August 19, 2026, with the final ratio subsequently determined by CalciMedica\u2019s Board of Directors. The reverse stock split is intended to bring CalciMedica into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n...\noutstanding stock options, restricted stock units and warrants in proportion to the ratio of ... reverse stock split and ... proportionate increase in the exercise prices ... stock options and warrants ... respective terms and ... s proxy statement for its Annual Meeting of Stockholders as filed with ... Securities and Exchange Commission on ... 23, ... 26 (the \u201cProxy Statement"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/3e0ebfd8-c2ff-49ff-8824-093120f731be"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/valion-bio-announces-reverse-stock-split-1213064",
+    "title": "Valion Bio Announces Reverse Stock Split",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/valion-bio-announces-reverse-stock-split-1213064",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "author": "Valion Bio, Inc.",
+    "highlights": [
+     "SAN ANTONIO, TX / ACCESS Newswire / August 27, 2026 / Valion Bio, Inc. (Nasdaq:VBIO) (\"Valion Bio\" or the \"Company) announced today that its Board of Directors has declared a 1-for-25 reverse stock split of the Company's issued and outstanding shares of common stock. The purpose of the reverse stock split is to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market (\"Nasdaq\").\n\nThe reverse stock split was approved by the stockholders of the Company at a special meeting of the Company held on August 14, 2026. The reverse stock split will become effective on August 31, 2026 (the \"Effective Date\") at 12:01 AM Eastern Time. The Company's common stock is expected to begin trading on a split-adjusted basis when the markets open on August 31, 2026, under the current Nasdaq trading symbol \"VBIO.\"\n\nThe new CUSIP for the Company's common stock following the reverse split will be 918942202."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/13090.jpg?v=2"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/financial-services-latest-news/stock-split-list/",
+    "title": "All Stock Split  News and Press Releases from PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/financial-services-latest-news/stock-split-list/",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "All Stock Split News and Press Releases from PR Newswire\n\n# Stock Split\n\nA subcategory of Financial Services & Investing-specific stories, this section offers news and announcements related to specific stocks that have split, or are expected to split.\n\n## Latest \n\n \n\n### Sep 24, 2026, 16:29 ET Aberdeen Intermediate Income Fund (MIN) Announces Upcoming Reverse Stock Split \n\nThe Board of Trustees of Aberdeen Intermediate Income Fund (NYSE: MIN) has approved a 1-for-6 reverse stock split of the Fund's issued and...\n\n \n\n### Sep 24, 2026, 16:27 ET Aberdeen Government Markets Income Fund (MGF) Announces Upcoming Reverse Stock Split \n\nThe Board of Trustees of Aberdeen Government Markets Income Fund (NYSE: MGF) has approved a 1-for-5 reverse stock split of the Fund's issued and...\n\n \n\n### Sep 24, 2026, 13:12 ET AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT \n\nAgroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative, fully vertically integrated agricultural technology company designing, building, ...\n\n \n\n### Sep 23, 2026, 08:04 ET Nauticus Robotics Announces 1-for-6 Reverse Stock Split \n\nNauticus Robotics, Inc. (NASDAQ: KITT, \"Nauticus\" or the \"Company\") today announced that it will proceed with a 1-for-6 reverse stock split (\"Reverse ...\n\n \n\n### Sep 15, 2026, 19:00 ET Dolby Laboratories, Inc. Grants Inducement Equity Awards Under Its 2026 Inducement Stock Plan \n\nDolby Laboratories, Inc. (NYSE: DLB) (\"Dolby\"), a leader in immersive entertainment, today announced it has granted inducement awards under its 2026...\n\n### Sep 15, 2026, 17:32 ET Three Lions Acquisition Corp. Announces the Separate Trading of Its Ordinary Shares and Warrants, Commencing on or About September 17, 2026 \n\nThree Lions Acquisition Corp. (the \"Company\") announced today that, commencing on or about Thursday, September 17, 2026, holders of the units sold in ...\n\n### Sep 14, 2026, 05:00 ET Solidion Technology Announces Stock Buyback Program \n\nSolidion Technology, Inc. (NASDAQ: STI) (\"Solidion Technology\" or \"the Company\"), an advanced battery technology solutions provider, today announced...\n\n### Sep 09, 2026, 17:15 ET Lument Finance Trust Announces Completion of Reverse Stock Split \n\nLument Finance Trust, Inc. (NYSE: LFT) (\"we\", \"LFT\" or \"the Company\") announced today that its previously announced 1-for-10 reverse stock split of...\n\n### Sep 08, 2026, 16:24 ET B&R Technology Merger Corp. Announces the Separate Trading of its Class A Ordinary Shares and Warrants, Commencing September 10, 2026 \n\nB&R Technology Merger Corp. (Nasdaq: BRTMU) (the \"Company\") announced today that, commencing September 10, 2026, holders of the units sold in the...\n\n### Sep 03, 2026, 09:15 ET Xiao-I Corporation Announces ADS Ratio Change with Marketplace Effective Date on September 8, 2026 \n\nXiao-I Corporation (Nasdaq: AIXI) (the \"Company\") today announced that it plans to change the ratio of its American Depositary Shares (\"ADSs\") to its ...\n\n### Sep 03, 2026, 07:00 ET CytoSorbents Announces Reverse Stock Split \n\nCytoSorbents Corporation (NASDAQ: CTSO), a leader in the treatment of life-threatening conditions in the intensive care unit and cardiac surgery...\n\n### Sep 02, 2026, 10:00 ET Shengfeng Development Limited Announces 1-for-15 Reverse Stock Split with Marketplace Effective Date on September 8, 2026 \n\nShengfeng Development Limited (\"Shengfeng\" or the \"Company\") (NASDAQ: SFWL), a contract logistics company providing customers with integrated...\n\n### Sep 01, 2026, 16:01 ET COLLPLANT ANNOUNCES REVERSE SHARE SPLIT \n\nCollPlant Biotechnologies Ltd. (Nasdaq: CLGN) (\"CollPlant\" or the \"Company\"), today announced that its Board of Directors has approved a one-for-ten...\n\n### Sep 01, 2026, 08:00 ET Decibel Announces Commencement of Trading Following its 15:1 Share Consolidation \n\nDecibel Cannabis Company Inc. (the \"Company\" or \"Decibel\") (TSXV: DB) (OTCQB: DBCCF), a leading Canadian branded cannabis company with a growing...\n\n### Aug 31, 2026, 08:00 ET AWH Stockholders Approve Reverse Stock Split, a Prerequisite to a U.S. Exchange Listing \n\nAscend Wellness Holdings, Inc. (\"AWH,\" \"Ascend,\" or the \"Company\") (CSE: AAWH-U) (OTCQX: AAWH), a multi-state, vertically integrated cannabis...\n\n### Aug 27, 2026, 07:30 ET CME Group to Launch E-mini Equity Factor Futures on September 21 \n\nCME Group, the world's leading derivatives marketplace, today announced plans to expand its equity product suite with the launch of E-mini Equity...\n\n### Aug 24, 2026, 11:36 ET Vision Marine Technologies Announces Reverse Stock Split \n\nVision Marine Technologies Inc. (NASDAQ: VMAR; TSXV: VMAR) (\"Vision Marine\" or the \"Company\") today announced that the Company's board of directors...\n\n### Aug 18, 2026, 22:54 ET CREDIT SUISSE HIGH YIELD CREDIT FUND ANNOUNCES BOARD APPROVAL OF A REVERSE SHARE SPLIT \n\nCredit Suisse High Yield Credit Fund (NYSE American: DHY) (the \"Fund\") announced today that the Fund's Board of Trustees (the \"Board\") has approved a ...\n\n### Aug 13, 2026, 16:30 ET Hyperscale Data Announces Date and Ratio of Reverse Stock Split \n\nHyperscale Data, Inc. (NYSE American: GPUS), a diversified holding company (\"Hyperscale Data,\" or the \"Company\"), today announces the date of...\n\n### Aug 10, 2026, 16:01 ET MySize Announces Reverse Stock Split \n\nMySize, Inc. (NASDAQ: MYSZ) (\"MySize\" or the \"Company\"), a fashion technology company focused on AI-driven sizing solutions, omnichannel e-commerce,...\n\n \n\n### Aug 06, 2026, 17:39 ET GLOBE LIFE INC. DECLARES DIVIDEND \n\nGlobe Life Inc. (NYSE: GL) announced that its Board of Directors has declared a quarterly dividend of $0.33 per share on all of the outstanding...\n\n### Aug 06, 2026, 13:50 ET /C O R R E C T I O N -- Elong Power Holding Limited/ \n\nElong Power Holding Limited (Nasdaq: ELPW) (the \"Company\"), a provider of high power battery technologies for commercial and specialty alternative...\n\n### Aug 04, 2026, 09:31 ET SU Group Holdings Limited Announces Reverse Stock Split \n\nSU Group Holdings Limited (Nasdaq: SUGP) (\"SU Group\" or the \"Company\"), an integrated security-related engineering services company in Hong Kong,...\n\n \n\n### Aug 03, 2026, 16:05 ET SU GROUP HOLDINGS LIMITED RECEIVES NASDAQ STAFF DELISTING DETERMINATION AND INTENDS TO REQUEST HEARING \n\nSU Group Holdings Limited (Nasdaq: SUGP) (\"SU Group\" or the \"Company\"), an integrated security-related services company in Hong Kong, today announced ...\n\n### Jul 31, 2026, 14:50 ET Change in the number of shares and votes in AB Electrolux \n\nDuring July 2026, at the request of shareholders in accordance with the clause in the Articles of Association, conversion of 1,662,933 Class A shares ...\n\n## Contact PR Newswire\n\n- Call PR Newswire at 888-776-0942 (Call%20PR%20Newswire%20at%20888-776-0942) from 8 AM - 9 PM ET \n\n- Submit via privacy@cision.com\n- Call Privacy toll-free: 877-297-8921 (+8772978921)"
+    ],
+    "image": "https://www.prnewswire.com/content/dam/prnewswire/common/prn_facebook_sharing_logo.jpg"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/27/3351902/0/en/nexalin-technology-announces-reverse-stock-split.html",
+    "title": "Nexalin Technology Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/08/27/3351902/0/en/nexalin-technology-announces-reverse-stock-split.html",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "author": "Nexalin Technology, Inc.",
+    "highlights": [
+     "HOUSTON, TX, Aug. 27, 2026 (GLOBE NEWSWIRE) -- Nexalin Technology, Inc. (Nasdaq: NXL) (the \u201cCompany\u201d or \u201cNexalin\u201d), announces that its board of directors has approved a 1-for-30 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on August 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cNXL\u201d on August 31, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cNXL\u201d following the reverse stock split, with a new CUSIP number of 65345B300. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/7f481b55-16b6-4c8a-8356-30d54079a605"
+   }
+  ],
+  "searchTime": 1655.8,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_cusip": "not stated",
+    "event_type": "not stated",
+    "source_notice_date": "not stated",
+    "identifier_in_source": "JAGX",
+    "terms": "not stated",
+    "market_effective_date": "not stated",
+    "effective_as_stated": "not stated",
+    "new_symbol": "not stated"
+   },
+   "grounding": [
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+       "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)"
+      },
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+       "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

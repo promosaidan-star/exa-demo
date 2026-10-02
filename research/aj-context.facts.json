@@ -1,0 +1,198 @@
+{
+ "key_facts": [
+  {
+   "fact": "Sukhm Kang is an Exa FDE calling from the SF office, about 2 to 3 months in; his previous FDE-titled job was 'more of like infra engineer' and Exa is his first sales-involved role.",
+   "source": "Gmail thread 1a0d994cc377fa82 (message 1a0d995b89dd7fdc), transcript lines 1-3 and 159-163",
+   "confidence": "high"
+  },
+  {
+   "fact": "Sukhm named no customers and no verticals; he gave a hedged figure of 'maybe around 5000' enterprise customers and 'maybe 10 or 11' FDEs (transcribed as FTEs).",
+   "source": "Gmail thread 1a0d994cc377fa82, transcript lines 114-124",
+   "confidence": "medium"
+  },
+  {
+   "fact": "FDE vs AE split per Sukhm: the AE handles contracting and the relationship; the FDE is 'the main technical point of contact'; FDEs are 'heavily involved in the pre-sales, especially in the technical evaluations' and help customers tune the queries they send to Exa.",
+   "source": "Gmail thread 1a0d994cc377fa82, transcript lines 152-173",
+   "confidence": "high"
+  },
+  {
+   "fact": "Sukhm tied competitive technical evaluations to AJ's resume ('similar to what you mentioned on your resume'); the Sales_Engineering resume summary opens 'Sales engineer who wins technical evaluations'.",
+   "source": "Gmail thread 1a0d994cc377fa82 line 122-124; C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\Upload\\Sales_Engineering\\Aidan_Walsh_Resume.pdf",
+   "confidence": "medium"
+  },
+  {
+   "fact": "The benchmark post AJ praised on the call is 'Introducing Exa Agent Ultra - A New Frontier for Deep Research' (Sep 25, 2026). It compares against Opus 5.5, GPT-6 Astra and Perplexity, and lists finance use cases incl. market mapping for due diligence, KYC compliance research, company enrichment and portfolio monitoring. Sukhm said many people worked on it.",
+   "source": "https://exa.ai/blog/exa-agent-ultra",
+   "confidence": "medium"
+  },
+  {
+   "fact": "Jenna's demo brief asks AJ to 'walk through everything you'd plan to show to the customer' and gives '~30 minutes to walk us through your customer framing, the live Exa demo, and the business impact'; the exercise is capped at 4 hours.",
+   "source": "Gmail thread 1a0da9548e25e1f3",
+   "confidence": "high"
+  },
+  {
+   "fact": "On the call AJ said 'almost 3 years' in trading tech, 'primary analyst for 5 clients', a CRD 'rotation of over 200 clients', and told the Adroit to HedgeServ drop-copy integration story: FIX spec 'over 50%' larger, delivered 'a month ahead'. He did not tell the trading-pipeline story.",
+   "source": "Gmail thread 1a0d994cc377fa82, transcript lines 6-50, 93-100, 129-132",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa has two applications from AJ to the same posting: 8/28 (Forward_Deployed_AI resume) and 9/20 (Sales_Engineering resume); the intro invite came from the 9/20 one.",
+   "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\application_log.csv rows 381, 3692, 4205",
+   "confidence": "high"
+  },
+  {
+   "fact": "The 8/28 Why-Exa essay contains two now-wrong facts: 'the last two years building an ML trading system' and 'three years' at Charles River.",
+   "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\APPLICATION_ESSAYS.md lines 80-84",
+   "confidence": "high"
+  },
+  {
+   "fact": "The 9/20 essays centre on the Adroit pre-go-live harness that lists every unmapped value, and on 'Finding the failure nobody has noticed yet'.",
+   "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\APPLICATION_ESSAYS.md lines 4939-4951",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Sales_Engineering resume Exa holds claims 17 data feeds and 1,028 tests for AJ-Algo-Trader; the prep script says several dozen feeds and about 970 tests.",
+   "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\Upload\\Sales_Engineering\\Aidan_Walsh_Resume.pdf; C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\Interview_Prep\\Exa_Capstone_Pipeline_Script_2026-09-25.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "71.4% means the pod's closed FIX L1 case count rose 231 to 396 (2023 to 2024) after AJ joined the queue; his personal share was 226 of 396 (57%), about 4x his three teammates' average, and this is interview-only.",
+   "source": "C:\\Users\\ajwal\\.claude\\projects\\C--Users-ajwal\\memory\\aj_crd_case_closure_numbers.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Adroit FIX spec revisions were Adroit revising its own spec to expand the product, not HedgeServ changing; the HedgeServ integration reached client UAT (not go-live) ahead of schedule.",
+   "source": "C:\\Users\\ajwal\\.claude\\projects\\C--Users-ajwal\\memory\\aj_adroit_fix_spec_revisions.md; resume_job_search.md line 106",
+   "confidence": "high"
+  },
+  {
+   "fact": "Canonical facts: CRD two and a half years; just under three years of trading tech; MS in progress, class of 2027; trading system is paper-trading, never production; five CRD clients; Adroit full-time, Integration Specialist.",
+   "source": "C:\\Users\\ajwal\\.claude\\projects\\C--Users-ajwal\\memory\\feedback_essay_facts_and_style.md; aj_crd_primary_fix_analyst_five_clients.md; aj_adroit_full_time.md; aj_adroit_title.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "AJ's weak spot is invisible process (jumps to the cause silently, declines long stories, asks no questions back); on the same day at Alpha FMC he could not answer GET vs POST vs PUT.",
+   "source": "C:\\Users\\ajwal\\.claude\\projects\\C--Users-ajwal\\memory\\aj_troubleshooting_visibility_pattern.md; Gmail thread 1a0d994cc377fa82 line 371-373",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Exa search endpoint is POST https://api.exa.ai/search with 'x-api-key' or 'Authorization: Bearer' auth; parameters include query, type, numResults, category, includeDomains, excludeDomains, startPublishedDate, endPublishedDate, contents.",
+   "source": "https://exa.ai/docs/reference/search",
+   "confidence": "high"
+  },
+  {
+   "fact": "On AJ's machine: Python 3.11.9 with streamlit 1.59.1, pandas, plotly, requests, httpx, anthropic SDK, google-genai, python-pptx. exa_py, fastapi and flask are not installed. Node 24.18 plus a global n8n CLI are present; Docker is absent; R 4.6.0 is installed but not on PATH.",
+   "source": "Local Bash inventory on C:\\Users\\ajwal, 2026-09-29",
+   "confidence": "high"
+  },
+  {
+   "fact": "No Exa API key was found in the checked .env files; AJ-Algo-Trader/.env holds Alpaca, Gemini and Marketaux keys only (no Anthropic key).",
+   "source": "C:\\Users\\ajwal\\Documents\\AJ-Algo-Trader\\.env (key names only)",
+   "confidence": "high"
+  },
+  {
+   "fact": "Deloitte work (2021-2022) was researching private investment assets for SEC/PCAOB independence conflicts and running independence audits: an entity-research pain point that matches Exa's published KYC and company-enrichment use cases.",
+   "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\_build_scripts\\build_cvs.py lines 64-67; https://exa.ai/blog/exa-agent-ultra",
+   "confidence": "medium"
+  }
+ ],
+ "uncertainties": [
+  "The call transcript is auto-transcribed and garbled (HedgeServ appears as 'Tetcher', FDEs as 'FTEs', Exa Agent Ultra as 'ex-Asian ultra'); Sukhm's '5000 customers / 10 or 11 FDEs' figures were hedged by him and may be mis-transcribed.",
+  "I could not prove which resume file Exa received on 8/28: the likely candidate is the Somerville-header build (which says HedgeServ 'production go-live', '>1000% reduction', 'Apr 2026 - Present'), but a Cambridge-header 'LLM Applications in Capital Markets' build also existed that day.",
+  "The 8/28 'proud of' and 'what motivates you' essays were not saved verbatim; only the application-log summary exists.",
+  "Several claims on the resume Exa holds have no confirmation record in memory: the $225M Tradeweb FIX tag discrepancy, '10+ leading institutional clients', '30+ releases', Readystate, 'Five years ... Fortune-500 clients', the retrieval-backed knowledge-base assistant. AJ should confirm them before repeating any.",
+  "The 'rotation of over 200 clients' at CRD and the 'a month ahead' HedgeServ timing appear only in AJ's spoken words on the call; an earlier resume session had dropped the one-month version as unconfirmed.",
+  "The Exa Agent Ultra benchmark numbers came through a summarizing fetch tool; re-read https://exa.ai/blog/exa-agent-ultra directly before quoting any percentage.",
+  "Ryan Ahern's title and whether he has read either resume or the essays are unknown; Sukhm gave no information about this round.",
+  "The prep doc's Glassdoor description of Exa's process (second call plus take-home, then a trial workday) was not verified by me; Jenna's email only describes this 30-minute demo round.",
+  "n8n's global CLI binary exists, but I did not verify that it starts or that any workflow is running; Lovable credits were exhausted as of 9/16 per memory.",
+  "The Providence Investment Management summers (AJ's claim of 'best performing in 08 and 09') have unconfirmed years and duties."
+ ],
+ "verification": {
+  "checks": [
+   {
+    "claim": "1. Sukhm Kang is an Exa FDE calling from the SF office, about 2 to 3 months in; his previous FDE-titled job was 'more of like infra engineer' and Exa is his first sales-involved role.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Gmail msg 1a0d995b89dd7fdc (thread 1a0d994cc377fa82) lines 1-3 ('calling from our San Francisco office... about like 2 months ish'), 105 ('great for the last 3 months'), 159-163 ('called for the point engineer, but I was honestly more of like infro engineer... this is my 1st job where I'm involved in the sales process'). Name spelled 'Sukum' in transcript; 'Sukhm Kang' comes from application_log.csv row 4205 and Jenna's 9/25 reply confirming sukhm@exa.ai (thread 1a0d9e49f50b563e)."
+   },
+   {
+    "claim": "2. Sukhm named no customers and no verticals; hedged 'maybe around 5000' enterprise customers and 'maybe 10 or 11' FDEs (transcribed FTEs).",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Gmail msg 1a0d995b89dd7fdc lines 115-117 ('maybe around 5000 uh, enterprise customers at Excel, but there's maybe 10 or 11 FTEs at Excel'). No customer or vertical named anywhere in the Exa segment (lines 1-175)."
+   },
+   {
+    "claim": "3. AE handles contracting and the relationship; FDE is 'the main technical point of contact'; FDEs are 'heavily involved in the pre-sales, especially in the technical evaluations' and help customers tune the queries they send to Exa.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Gmail msg 1a0d995b89dd7fdc lines 152-173. Nuance: Sukhm called the query work 'providing implementation support... looking at the customer's queries that they're putting into XA' and grouped it with pre-sales."
+   },
+   {
+    "claim": "5. Benchmark post is 'Introducing Exa Agent Ultra - A New Frontier for Deep Research' (Sep 25, 2026), compares against Opus 5.5, GPT-6 Astra and Perplexity, lists finance use cases incl. market mapping for due diligence, KYC compliance research, company enrichment and portfolio monitoring; Sukhm said many people worked on it.",
+    "verdict": "wrong",
+    "correction": "Title, date and Opus 5.5 / GPT-6 Astra are right, but the third competitor is named 'Perplexity Agent'. The 'Financial services' section lists exactly three examples: market maps for diligence ('every company that does battery recycling in Europe, adding founders, funding, and customers for each'), KYC research across filings, press, court records and regulator sites synthesized into one cited record, and monitoring portfolio companies for signals (layoff, CFO change, new facility). Company/list enrichment is listed under 'Go-to-market teams', not finance; 'entity enrichment' also appears as the framing of the WANDR benchmark ('due diligence and legal research'). Benchmark lines read directly from raw HTML: WANDR +12.6% over Opus 5.5, +103% over Perplexity, +213% over GPT-6 Astra at half Opus 5.5's cost per task; DeepSearchQA +4.7% / +10.1% / +21.0%; WideSearch +5.2% / +7.7% / +14.1%; Find-All Company +1579% / +2069% / +2401%. Sukhm's words: 'a lot of people were working on that exact blog' (transcript lines 88-90).",
+    "source": "https://exa.ai/blog/exa-agent-ultra (raw HTML fetched with curl 2026-09-29, lines 45-79 of extracted text); Gmail msg 1a0d995b89dd7fdc lines 83-92"
+   },
+   {
+    "claim": "6. Jenna's brief asks AJ to 'walk through everything you'd plan to show to the customer' and gives '~30 minutes to walk us through your customer framing, the live Exa demo, and the business impact'; capped at 4 hours.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Gmail thread 1a0da9548e25e1f3 (jenna@exa.ai, 2026-09-25 22:00 UTC). Also says the demo is 'focused on Exa's API product' and to book within 3 business days."
+   },
+   {
+    "claim": "7. On the call AJ said 'almost 3 years' in trading tech, 'primary analyst for 5 clients', a CRD 'rotation of over 200 clients', told the Adroit-HedgeServ story (FIX spec 'over 50%' larger, 'a month ahead'); did not tell the trading-pipeline story.",
+    "verdict": "confirmed",
+    "correction": "Quotes are accurate (lines 6, 33, 38-39, 94, 131-132), but the timing phrase is 'deliver a month ahead of your life', most likely a garble of 'go-live'. That conflicts with the canonical record that HedgeServ reached client UAT, not go-live. AJ also framed the 50% as spec size, while memory says supported trade coverage grew 50%+. The pipeline story was not told to Sukhm, but was told the same morning at Alpha FMC (lines 342-349).",
+    "source": "Gmail msg 1a0d995b89dd7fdc lines 6-50, 93-100, 129-132; memory aj_adroit_fix_spec_revisions.md"
+   },
+   {
+    "claim": "11. The Sales_Engineering resume Exa holds claims 17 data feeds and 1,028 tests; the prep script says several dozen feeds and about 970 tests.",
+    "verdict": "confirmed",
+    "correction": "Caveat: the on-disk PDF was rewritten 2026-09-21 11:14 ET, after the 9/20 submission. But the 9/02 backup (Upload/_backup_pre_fable_20260828/Sales_Engineering_Aidan_Walsh_Resume_PRESENT_20260902.pdf) has the same '17 external data feeds' and '1,028 tests green in CI', so the 9/20 upload almost certainly did too. Exa also holds the 8/28 Forward_Deployed_AI resume, which says '10+ feeds' and gives no test count.",
+    "source": "C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\Upload\\Sales_Engineering\\Aidan_Walsh_Resume.pdf; the 9/02 backup PDF above; C:\\Users\\ajwal\\Downloads\\Tailored_CVs\\Interview_Prep\\Exa_Capstone_Pipeline_Script_2026-09-25.md lines 9 and 13"
+   },
+   {
+    "claim": "13. The Adroit FIX spec revisions were Adroit revising its own spec to expand the product, not HedgeServ; the HedgeServ integration reached client UAT (not go-live) ahead of schedule.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "C:\\Users\\ajwal\\.claude\\projects\\C--Users-ajwal\\memory\\aj_adroit_fix_spec_revisions.md; resume_job_search.md line 106 ('reached client UAT, not go-live... Never write go-live/delivered'); application_log.csv row 1245 (SE track corrected to UAT wording 9/02)"
+   },
+   {
+    "claim": "14. Canonical facts: CRD two and a half years; just under three years trading tech; MS in progress, class of 2027; trading system is paper-trading, never production; five CRD clients; Adroit full-time, Integration Specialist.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "memory feedback_essay_facts_and_style.md; aj_crd_primary_fix_analyst_five_clients.md; aj_adroit_full_time.md; aj_adroit_title.md. AJ also said 'expected graduation is May 2027' on the Alpha FMC call (transcript line 232)."
+   },
+   {
+    "claim": "16. Exa search endpoint is POST https://api.exa.ai/search with 'x-api-key' or 'Authorization: Bearer'; params include query, type, numResults, category, includeDomains, excludeDomains, startPublishedDate, endPublishedDate, contents.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/reference/search (WebFetch plus raw HTML via curl, HTTP 200, 2026-09-29). Extra detail: type = instant | fast | auto (default) | deep-lite | deep | deep-reasoning; category = company | publication | news | personal site | financial report | people; numResults 1-100 (default 10); contents supports text, highlights, summary, livecrawlTimeout, maxAgeHours, snapshotAsOf, subpages; also outputSchema, systemPrompt, userLocation, stream. Official SDK is exa-py (pip install exa-py), which reads EXA_API_KEY; keys are made at dashboard.exa.ai/api-keys."
+   },
+   {
+    "claim": "17. Python 3.11.9 with streamlit 1.59.1, pandas, plotly, requests, httpx, anthropic SDK, google-genai, python-pptx; exa_py, fastapi, flask not installed; Node 24.18 plus global n8n CLI; Docker absent; R 4.6.0 installed but not on PATH.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "My own Bash inventory 2026-09-29: Python 3.11.9; streamlit 1.59.1, pandas 2.2.3, plotly 6.8.0, requests 2.34.2, httpx 0.27.2, anthropic 0.120.2, google-genai 2.16.0, python-pptx 1.0.2; exa-py/fastapi/flask not installed; node v24.18.0; n8n at AppData/Roaming/npm/n8n, and 'n8n --version' returns 2.39.5; no docker on PATH; R and Rscript not on PATH, but C:\\Program Files\\R\\R-4.6.0 exists."
+   },
+   {
+    "claim": "18. No Exa API key in the checked .env files; AJ-Algo-Trader/.env holds Alpaca, Gemini and Marketaux keys only (no Anthropic key).",
+    "verdict": "wrong",
+    "correction": "No Exa key and no Anthropic key are right. I checked AJ-Algo-Trader/.env, ml-trader/.env and the user-level EXA_API_KEY variable (unset). The 'only' part is wrong: AJ-Algo-Trader/.env has 16 populated names: ALPACA_API_KEY, ALPACA_SECRET_KEY, ALPACA_BASE_URL, ALPHAVANTAGE_API_KEY, SENTIMENT_SCORER, GEMINI_API_KEY, EDGAR_IDENTITY, REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT, FRED_API_KEY, FMP_API_KEY, MARKETAUX_API_TOKEN, SENTIMENT_API_MODEL, LSEG_APP_API_KEY, WRDS_USERNAME. FMP, FRED and Alpha Vantage could add structured market data next to Exa in a finance demo.",
+    "source": "C:\\Users\\ajwal\\Documents\\AJ-Algo-Trader\\.env (names and set/empty status only; values not read out); C:\\Users\\ajwal\\Documents\\ml-trader\\.env"
+   }
+  ],
+  "missing": [
+   "Which resume Exa's interviewers will see is contested. The 9/25 prep email (Gmail msg 1a0d8a0be58583a8) attached 'Aidan_Walsh_Resume_EXA_Forward_Deployed_AI.pdf (the 8/28 application resume)' as the Exa resume on file. Log row 4205 says the intro came from the 9/20 Sales_Engineering application, and log row 4993 (the demo reschedule) tags Forward_Deployed_AI. The two resumes give different pipeline numbers (FDE: '10+ feeds', capstone '2026 - Present'; SE: 17 feeds, 1,028 tests). AJ should have both open and use one set of numbers.",
+   "Pricing for the business-impact slide, from https://exa.ai/pricing (read 2026-09-29): Search $7 per 1k requests (up to 10 results, +$1 per 1k for each extra result); Deep Search $12 per 1k; Deep-Reasoning $15 per 1k; Contents $1 per 1k pages; Monitors $15 per 1k; Answer $5 per 1k; Agent $0.012 to $1.00 per run. The free Starter tier gives $10 of credits a month plus a $10 onboarding bonus with no card needed, which is enough for the demo. Enterprise adds zero data retention, SOC 2 Type II and HIPAA, a custom MSA/DPA, SSO/SCIM, up to 1,000 results per search, custom indexes and premium Exa Connect data providers.",
+   "Named customers on https://exa.ai/customers: Firefox, monday.com, HubSpot, Cognition (Devin), CodeRabbit, OpenRouter, 11x, HockeyStack, Anara, WebFX, WhyHow.AI, StackAI, Obvious. None is a bank or asset manager, so a financial-services pitch cannot name an Exa finance customer from that page. The closest analogs are Obvious ('companies show up in Exa that we hadn't found anywhere else') and HubSpot (enrichment coverage).",
+   "Product lineup from the site nav: Search API, Contents API, Agent API, Monitors API, Websets, Exa Connect. Monitors, which runs searches on a schedule and sends updates by webhook, fits the blog's portfolio-monitoring example directly. Exa Snapshot (blog Sep 17, 2026, 'A New Way to Search the Past') and the contents.snapshotAsOf and maxAgeHours parameters support the point-in-time angle AJ's prep script already mentions.",
+   "Build path details: no Exa key exists yet, so AJ has to create an account and key himself at dashboard.exa.ai/api-keys. The SDK is exa-py (not installed; pip install exa-py). Plain requests or httpx calls work too. Exa also runs a hosted MCP server at https://mcp.exa.ai/mcp (MCP is a standard way for AI agents to call tools).",
+   "Spoken-versus-written HedgeServ mismatch to fix before Friday. On the Sukhm call AJ said 'a month ahead of [garbled, probably go-live]' and 'fix spec by over 50%'. The canonical record is that HedgeServ reached the client UAT milestone early and that supported trade coverage grew 50%+. He should say 'UAT a month early' to Ryan.",
+   "Sukhm suggested AJ ask 'the next person who interviews you' whether FDEs feel stressed (transcript lines 142-144), so that is a ready question for Ryan. He also said FDEs run long-running internal projects alongside customer work (lines 125-129), that the company is growing fast and just moved offices (lines 106-109), and that he copes with the workload using AI and agents (lines 133-135).",
+   "Ryan Ahern's name does not appear in the 10/2 6:30-7:00 PM ET invite email (Gmail 1a0e984b96dfee2d), which lists only AJ as a guest. The name comes only from the Ashby booking per log row 4993, and his title is unknown.",
+   "Claims checked outside the 12. Claim 4 confirmed: the SE summary 'Sales engineer who wins technical evaluations' dates from the 8/28 SE track build (log row 402), and the transcript's 'typical evaluations' is probably 'technical'. Claim 8 partly unverifiable: both applications went to posting c542d672 (rows 381, 3692), but 'invite came from the 9/20 one' is only the log's own note and is contradicted by row 4993 and the 9/25 email. Claim 9 confirmed: the FDE resume dates the capstone '2026 - Present', so 'last two years' is overstated, and CRD is canonically 2.5 years. Claim 10 confirmed (essays lines 4939-4951). Claim 12 confirmed: 226/396 = 57%, peers 76/55/39 average 56.7, about 4.0x, but only 3.0x the next closest. Claim 15 confirmed (Alpha FMC lines 371-373). Claim 19: build_cvs.py lines 64-67 match, but the KYC link is the researcher's interpretation, and 'company enrichment' is a go-to-market use case in the blog, not a finance one."
+  ]
+ }
+}

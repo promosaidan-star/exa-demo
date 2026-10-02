@@ -1,0 +1,295 @@
+{
+ "saved_at": "2026-10-02 13:14:52",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Jaguar Health, Inc. (Nasdaq: JAGX): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Jaguar Health, Inc. (Nasdaq: JAGX), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 7320,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "950378816df4b72a5feeb34e0630da68",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+    "title": "Jaguar Health, Inc. Announces Reverse Stock Split",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "Jaguar Health, Inc. Announces Reverse Stock Split\n\n# Jaguar Health, Inc. Announces Reverse Stock Split\n\n Tuesday, 15 September 2026 09:00 AM \n\n#### Company Update \n\nReverse split approved at April 2026 Special Meeting of Stockholders\n\nShares of Jaguar Health common stock to begin trading on split-adjusted basis on September 17, 2026\n\nSAN FRANCISCO, CA / ACCESS Newswire / September 15, 2026 / Jaguar Health, Inc. (Nasdaq:JAGX) (\"Jaguar\" or the \"Company\") today announced that the Company will effect a reverse stock split of its issued and outstanding voting common stock (\"Common Stock\"), at an exchange ratio of 1-for-15, on Thursday, September 17, 2026 (the \"Effective Date\") in order to support the Company's compliance with Nasdaq's listing standards. The Company's Common Stock will begin trading on a split-adjusted basis when the market opens on the Effective Date and will remain listed on The Nasdaq Capital Market under the symbol \"JAGX\". The new CUSIP number for the Company's Common Stock following the reverse stock split is 47010C854.\n\nThe effectuation of the reverse stock split follows the approval of a proposal submitted to Jaguar stockholders at the Company's April 2026 Special Meeting of Stockholders (the \"Special Meeting\"). This proposal is described in detail in the Company's definitive proxy statement on Schedule 14A relating to the Special Meeting filed with the Securities and Exchange Commission (the \"SEC\") on March 24, 2026. Stockholders may obtain a free copy of the proxy statement and other documents filed by Jaguar with the SEC at http://www.sec.gov. The proxy statement is also available on the Company's corporate website.\n\nWhen the reverse stock split becomes effective, every fifteen (15) shares of the Company's Common Stock immediately prior to the Effective Date shall automatically be reclassified into one (1) share of Common Stock, without any change in the par value per share, and this change will be reflected on Nasdaq's website and other stock quote platforms. No fractional shares will be issued as a result of the reverse stock split. Stockholders who otherwise would be entitled to receive a fractional share in connection with the reverse stock split will receive a cash payment in lieu thereof.\n\nEquiniti Trust Company, LLC is acting as exchange agent for the reverse stock split and will send instructions to stockholders of record who hold stock certificates regarding the exchange of their certificates for post-reverse stock split shares of Common Stock. Stockholders who hold their shares in brokerage accounts or \"street name\" are not required to take any action to effect the exchange of their shares."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc. (JAGX)\n...\n## Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc. (JAGX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Jaguar Health, Inc. (JAGX) will effect a one-for-fifteen (1-15) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, September 17, 2026. In conjunction with the reverse split, the CUSIP number will change to 47010C854. If you would like to register as a market maker in JAGX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://jaguar-health-inc.suite.accessnewswire.com/browse/pr",
+    "title": "Press Releases |\n                                        Company Media Room of\n                Jaguar Health, Inc.",
+    "url": "https://jaguar-health-inc.suite.accessnewswire.com/browse/pr",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Company remains sharply focused on its ongoing rare disease intestinal failure global development program for microvillus inclusion disease (MVID) and SBS for crofelemer powder for oral solution, targeting an NDA filing for MVID mid-2027\n\n Jaguar Health, Inc. Announces Reverse Stock Split \n\nReverse split approved at April 2026 Special Meeting of Stockholders\n\nShares of Jaguar Health common stock to begin trading on split-adjusted basis on September 17, 2026\n...\n26 \n\n Jaguar ... Announces Conversion of Series O Convertible Preferred Stock Issued as ... time Stock Dividend\n...\nPress Release Apr 27, 2026 \n\nReverse split approved at April 2026 Special Meeting of Stockholders\n\nShares of Jaguar Health common stock to begin trading on split-adjusted basis on April 30, 2026"
+    ]
+   },
+   {
+    "id": "https://jaguar-health-inc.suite.accessnewswire.com/",
+    "title": "Company Media Room of\n                Jaguar Health, Inc.",
+    "url": "https://jaguar-health-inc.suite.accessnewswire.com/",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Reverse split approved at April 2026 Special Meeting of Stockholders\n\nShares of Jaguar Health common stock to begin trading on split-adjusted basis on September 17, 2026\n...\nPress Release Jun 25, 2026 \n\n Jaguar Health Announces Conversion of Series O Convertible Preferred Stock Issued as Recent One-time Stock Dividend\n...\nPress Release Apr 27, 2026 \n\nReverse split approved at April 2026 Special Meeting of Stockholders\n\nShares of Jaguar Health common stock to begin trading on split-adjusted basis on April 30, 2026\n...\nPress Release Apr 20, 2026 \n\n Jaguar Health Reports Approval of All Proposals"
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1585608/000119312526400348/d155719d424b5.htm",
+    "title": "424B5",
+    "url": "https://www.sec.gov/Archives/edgar/data/1585608/000119312526400348/d155719d424b5.htm",
+    "publishedDate": "2026-09-24T13:57:22.000Z",
+    "highlights": [
+     "To Prospectus Supplement dated May 23, 2024 \n\n(To Prospectus Dated May ... 2024) \n\nJAGUAR HEALTH, INC. \n\nUp to $9,824,188\n...\nThis supplement No. 8 (this \u201cSupplement) amends and supplements certain information contained in the prospectus supplement, dated May 2 ... , 2 ... , as amended by supplement No ... 1, dated ... \u201cATM Prospect ... (the \u201cBase ... on Form S ... No. 3 ... ) (the \u201cRegistration Statement\u201d), which relate ... the offer and sale of shares of voting common stock ... . (\u201cwe ... or the \u201cCompany\u201d), ... Common Stock\u201d), in ... \u201cat- ... -market\u201d offering (the \u201cATM Program\u201d) pursuant to the ATM Agreement (as defined below). The\n...\nOn December 10, 2021, we established the ATM Program to which the Prospectus relates, and through which we may offer and sell, from time to time through Ladenburg Thalmann & Co. Inc. (\u201cLadenburg\u201d or \u201cManager\u201d), acting as the Company\u2019s sales agent, shares of our Common Stock. In connection therewith, we entered into that certain At The Market Offering Agreement (as amended and may be further amended from time to time, the \u201cATM Agreement\u201d), dated December 10, 2021, as amended on each of February 2, 2022 and May 23, 2024 by and between the Company and Ladenburg, and on July 17, 2024, November 13, 2024, February 4, 2025 and August 14, 2025 by and among the Company, Ladenburg and Lucid Capital Markets, LLC (\u201cLucid\u201d). Lucid\u2019s term as sales agent under the ATM Agreement expired on December 31, 2025, and Ladenburg became the sole sales agent under the ATM Agreement as of January 1, 2026. \n\nAs previously reported, on March 31, 2025, we became subject to General Instruction I.B.6 of Form S-3, which limits the amounts that we may sell under the Registration Statement of which this Supplement and the Prospectus are a part. The aggregate market value of our Common Stock held by non-affiliates as of September 23, 2026 pursuant to General Instruction I.B.6 of Form S-3 is approximately $44,172,183, which was calculated based on 1,281,839 outstanding shares of our Common Stock held by non-affiliates at a price of $34.46 per share, which was the closing price of our Common Stock on September 22, 2026. As of the date hereof, we have sold an aggregate of approximately $4,899,873 worth of shares of our Common Stock pursuant to General Instruction I.B.6 of Form S-3 during the prior 12-month calendar period that ends on and includes the date hereof. As a result of the limitations of General Instruction I.B.6 of Form S-3 and the sales to date under the Prospectus, and in accordance with the terms of the ATM Agreement, the aggregate offering price of the shares of Common Stock that we may sell from time to time through the Manager pursuant to the Prospectus is approximately $9,824,188. \n\nExcept as modified by this Supplement, the terms of the ATM Program remain unchanged, and the ATM Agreement remains in full force and effect. Our Common Stock trades on the Nasdaq under the symbol \u201cJAGX.\u201d On September 23, 2026, the last reported sale price of our Common Stock on the Nasdaq was $8.91 per share."
+    ]
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-to-hold-investor-webcast-august-19-regarding-q2-2026-fi-1208457",
+    "title": "Jaguar Health to Hold Investor Webcast August 19 Regarding Q2 2026 Financials & Corporate Updates",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-to-hold-investor-webcast-august-19-regarding-q2-2026-fi-1208457",
+    "publishedDate": "2026-08-18T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "Jaguar Health to Hold Investor Webcast August 19 Regarding Q2 2026 Financials & Corporate Updates\n\n# Jaguar Health to Hold Investor Webcast August 19 Regarding Q2 2026 Financials & Corporate Updates\n...\nfile its Earnings Report on August ... on Form 10- ... ended June ... 0, 2026\n...\n**SAN FRANCISCO, CA / ACCESS Newswire / August 18, 2026 / **Jaguar Health, Inc. (NASDAQ:JAGX) today announced that the company will conduct an investor webcast on Wednesday, August 19, 2026 at 4:30 p.m. Eastern to review second-quarter 2026 financials and provide corporate updates."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-satisfies-conditions-for-receipt-of-non-dilutive-2-mill-1201596",
+    "title": "Jaguar Health Satisfies Conditions for Receipt of Non-Dilutive $2 Million Holdback Payment from Future Pak for Commercial License to Mytesi and Canalevia-CA1",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-satisfies-conditions-for-receipt-of-non-dilutive-2-mill-1201596",
+    "publishedDate": "2026-08-05T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "SAN FRANCISCO, CA / ACCESS Newswire / August 5, 2026 / Jaguar Health, Inc. (NASDAQ:JAGX) (\"Jaguar\") today announced that its wholly-owned subsidiary Napo Pharmaceuticals, Inc. (collectively, with Jaguar Health, Inc., \"Jaguar\") has satisfied the conditions required to receive payment of the non-dilutive $2 million holdback amount from Future Pak, LLC (\"Future Pak\") related to the U.S. commercial licensing agreement Jaguar entered in January 2026 with a Future Pak affiliate. As announced, Jaguar was provided with a partial upfront fee of $16 million of non-dilutive capital upon closing of the agreement. Per the terms of the agreement, the additional $2 million portion of the upfront fee (\"the Holdback Amount\") is due to Jaguar upon Jaguar's completion of specified post-closing conditions, which the company has met.\n\nUpon the closing of the agreement, Future Pak became the exclusive marketer for Mytesi (crofelemer), Jaguar's FDA-approved novel prescription drug for the symptomatic relief of noninfectious diarrhea in adult patients with HIV/AIDS on antiretroviral therapy, and Canalevia-CA1, Jaguar's crofelemer prescription drug for the treatment of chemotherapy-induced diarrhea in dogs. As announced in March 2026, Jaguar received an additional $3 million payment from Future Pak related to the agreement and, per the terms of the agreement, Jaguar has the remaining opportunity to receive up to $17 million in additional milestone payments and other future payments.\n...\na commercial stage pharmaceuticals company ... developing novel proprietary prescription medicines sustainably derived ... plants from rainforest ... for people and animals with gastrointestinal ... companies Napo Pharmaceuticals, Inc. (Napo) ... Napo Therapeutics S ... commercialization of novel crofelemer powder for oral solution ... the treatment of rare and orphan gastrointestinal disorders with ... failure, including microvillus inclusion disease and short bowel syndrome."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/commercial-launch-initiated-for-neonorm-dog-jaguar-healths-non-prescr-1211993",
+    "title": "Commercial Launch Initiated for Neonorm Dog, Jaguar Health's Non-Prescription Product for Support of Normal Stool Consistency and GI Fluid Balance in Dogs",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/commercial-launch-initiated-for-neonorm-dog-jaguar-healths-non-prescr-1211993",
+    "publishedDate": "2026-08-26T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "SAN FRANCISCO, CA / ACCESS Newswire / August 26, 2026 / Jaguar Health, Inc. (NASDAQ:JAGX) (\"Jaguar\") today announced the initiation of the commercial launch of Neonorm Dog, a new extension of Jaguar's Neonorm franchise for companion and production animals. Neonorm Dog is designed to provide dog owners with access to a plant-based, non-prescription product intended to support normal stool consistency and GI fluid balance in dogs.\n...\nJaguar expects Neonorm Dog to be available through select online and animal health retail channels shortly, including Amazon and Chewy. The launch of Neonorm Dog is intended to broaden Jaguar's commercial footprint in the companion animal market and extend consumer awareness of the Neonorm brand. Dogs represent one of the largest companion animal populations in the United States and Europe, and Jaguar believes Neonorm Dog may create an opportunity to reach pet owners, veterinarians, and animal health retailers seeking non-antibiotic, plant-based options to support digestive health.\n...\na commercial stage pharmaceuticals company ... on developing novel proprietary prescription medicines sustainably derived from plants from ... Napo Pharmaceuticals ... Inc. ( ... of novel crofele ... of rare and orphan gastrointestinal disorders with ... failure, including microvillus inclusion disease"
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+    "title": "All Randomized Pediatric Patients to Continue in the Single-Blind Extension Phase of Jaguar Health's Pivotal Clinical Trial of Crofelemer for Microvillus Inclusion Disease (MVID) with Intestinal Failure (IF)",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/all-randomized-pediatric-patients-to-continue-in-the-single-blind-ext-1218995",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "SAN FRANCISCO, CA / ACCESS Newswire / September 10, 2026 / Jaguar Health, Inc. (NASDAQ:JAGX) (Jaguar) family company Napo Pharmaceuticals (Napo) today announced that all randomized pediatric MVID patients in Napo's pivotal crossover clinical trial have entered the single-blind extension phase to receive blinded doses of crofelemer to support longer-term safety and efficacy for crofelemer powder for oral solution as adjunctive therapy to parenteral support (PS). The trial is ongoing at multiple centers in the United States, the European Union, and the United Arab Emirates. This trial is expected to support a New Drug Application (NDA) filing for the treatment of the MVID indication in mid-2027.\n...\n\"Our IF program is expected to continue to provide clinical milestones, including an NDA filing for MVID and the completion of a Phase 2 study in SBS-IF by mid-2027. The totality of our IF program with the same powder for liquid crofelemer formulation is the subject of business development discussions with the potential to bring in non-dilutive funds from potential licensee partners,\" said Lisa Conte, Jaguar's founder, president, and CEO. \"Upon completion of the trial, data from this study may serve as the basis for a Breakthrough Therapy Designation application. Because MVID is a devastating ultrarare pediatric disorder with a lethal natural history - and an estimated worldwide prevalence of only 200 patients - a trial of crofelemer in just a small number of MVID patients is expected to be clinically meaningful and significant.\"\n...\nJaguar Health, Inc. (Jaguar) is a commercial stage pharmaceuticals company focused on developing novel proprietary prescription medicines sustainably derived from plants from rainforest areas for people and animals with gastrointestinal distress. Jaguar family companies Napo Pharmaceuticals, Inc. (Napo) and Napo Therapeutics S.p.A. focus on the development and commercialization of novel crofelemer powder for oral solution for the treatment of rare and orphan gastrointestinal disorders with intestinal failure, including microvillus inclusion disease and short bowel syndrome."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+    "title": "Preliminary Results of Open-Label Study in Adult Short Bowel Syndrome Patients with Intestinal Failure (SBS-IF) with Jaguar Health's Crofelemer Accepted for Presentation at Annual American College of Gastroenterology Meeting",
+    "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/preliminary-results-of-open-label-study-in-adult-short-bowel-syndrome-1228098",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "author": "Jaguar Health, Inc.",
+    "highlights": [
+     "SAN FRANCISCO, CA / ACCESS Newswire / September 29, 2026 / Jaguar Health, Inc. (Nasdaq:JAGX) (Jaguar) family company Napo Pharmaceuticals (Napo) today announced the acceptance of an abstract on preliminary results of an ongoing open-label study of the company's crofelemer powder for oral solution in adult patients with short bowel syndrome with intestinal failure (SBS-IF) for presentation at the American College of Gastroenterology Annual Scientific Meeting (ACG 2026). ACG 2026 takes place October 9-14, 2026 in Nashville, Tennessee.\n...\nJaguar's IF program is expected to continue to provide clinical milestones, including a planned New Drug Application (NDA) filing for MVID in mid-2027."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/subaccounts/share/10533.jpg?v=0"
+   }
+  ],
+  "searchTime": 1880.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "source_notice_date": "2026-09-15",
+    "event_type": "reverse split",
+    "terms": "1-for-15",
+    "identifier_in_source": "JAGX",
+    "effective_date": "2026-09-17",
+    "new_identifier": "47010C854",
+    "effective_as_stated": "Thursday, September 17, 2026"
+   },
+   "grounding": [
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/jaguar-health-inc.-announces-reverse-stock-split-1220907",
+       "title": "Jaguar Health, Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+       "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

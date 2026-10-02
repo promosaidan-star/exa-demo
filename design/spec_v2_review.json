@@ -1,0 +1,897 @@
+{
+ "skill": {
+  "findings": [
+   {
+    "call": "Section 4 preamble (transport)",
+    "field": "raw HTTP through exa_client.py with the x-api-key header",
+    "what_spec_does": "Every call goes through the existing exa_client.py over raw HTTP. The stated reason is that exa-py 'silently adds 10,000 characters of full text to search()'.",
+    "what_skill_says": "SKILL.md accepts either x-api-key or Bearer auth, and http-requests.md gives raw HTTP as a first-class route. sdks.md says the search() text default applies only when you do not pass contents. It also says get_contents() behaves differently.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep raw HTTP. Reword the reason to: 'exa-py's get_contents adds full text even when I ask only for highlights, which bills two content types, and it drops the per-URL error tags. search() adds text only when you pass no contents. With raw HTTP, the body on screen is exactly what was sent.' exa_client passes the body through untouched, so the corrected bodies below are what goes over the wire."
+   },
+   {
+    "call": "Call 1 (issuer channel)",
+    "field": "query",
+    "what_spec_does": "'Press release from CDT Equity Inc. (Nasdaq: CDT) announcing a reverse stock split, with the split ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP'",
+    "what_skill_says": "search.md (Structured Output) and prompting-and-patterns.md say the query is retrieval intent only, 'never the field list or the keep/drop rules'. The field list belongs in outputSchema. Recency goes in the query as words.",
+    "verdict": "violates",
+    "fix_or_justification": "Use 'CDT Equity Inc. (Nasdaq: CDT) reverse stock split press release, September 2026, new CUSIP 20678X700'. Rule for rows.json: put an identifier in the query only when both vendors agree on it, so the query never leans toward one vendor's disputed value."
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "type: deep-lite",
+    "what_spec_does": "deep-lite, justified as 'the docs recommend deep types when outputSchema has 3 or more fields'. The 7:00 script line repeats that justification.",
+    "what_skill_says": "models-and-modes.md and common-mistakes.md: 'Do not choose a deep variant only because you want structured output.' A compact schema stays on auto. The type that goes with a wide schema, or with fields that take more than one search to fill, is `deep`. deep-lite is for 'lightweight synthesis'. SKILL.md: type defaults to auto, and you need a task reason to send another mode.",
+    "verdict": "violates",
+    "fix_or_justification": "Default both calls to \"type\": \"auto\". Each call fills its fields from one page, and compare.py does the reconciling, not the search. On Wednesday, run the identical body with only type changed to deep-lite. Switch only on measured field accuracy. Default line: 'Auto is Exa's default, and each call fills its fields from one page, so I started there. On Wednesday I ran the identical body on deep-lite and I only switch on measured field accuracy.' If deep-lite wins, say: 'deep-lite filled N fields that auto left not stated on these rows, which is the more-than-one-search case your guidance names.' Both outcomes are unverified until Wednesday. Update the timebox to 8 s and the cost to $0.007 per call at list (unverified whether outputSchema adds to it). Delete the '3 or more fields' line from the script."
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "numResults: 10",
+    "what_spec_does": "Sets numResults to 10 because keyless probes at 5 missed CDT's alert, and 10 is the most the base price covers.",
+    "what_skill_says": "SKILL.md: numResults defaults to 10. 'Do not restate server defaults', so omit it unless you need a different count as a deliberate product decision. common-mistakes.md lists a boilerplate numResults as the top over-specification.",
+    "verdict": "violates",
+    "fix_or_justification": "Omit it. The server default already gives 10. If Ryan asks: 'I left it at the default of 10. My probes at 5 missed CDT's exchange alert, so I deliberately did not lower it.'"
+   },
+   {
+    "call": "Call 1 (issuer channel)",
+    "field": "includeDomains (wires, nasdaq.com/press-release, finance.yahoo.com, plus the IR site for bonds)",
+    "what_spec_does": "Uses a hard allowlist of issuer wires, set in code from channels.json. finance.yahoo.com is included as a syndication mirror (a site that re-posts the original release) and is tagged by code. The spec calls this 'Ryan's own Pydantic AI fix'.",
+    "what_skill_says": "SKILL.md and search.md: set includeDomains only when the user explicitly asks for a hard allowlist and supplies or approves its contents. Otherwise express source preferences in the query or systemPrompt. Paths and wildcards are supported. The prompting-and-patterns tool pattern warns against hardcoding filters 'the user never asked for'.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Say: 'The allowlist is a compliance control the customer supplies and approves: primary wires plus each issuer's IR site from their security master. It is fixed in code so neither the model nor the user can widen it. That's the point you raised in Pydantic AI issue 6082 about models putting domain filters into the query. The two mirror entries are there because originals did not always surface in my probes, and code tags anything from a mirror, so a mirror-only field never counts as corroborated.' Also: stop calling it 'Ryan's fix', because that PR was closed. Add www.nasdaq.com/press-release next to the bare entry. It is unverified whether the bare host matches www. Tag nasdaq.com/press-release as a mirror too. Put the IR sites (ir.53.com, newsroom.bankofamerica.com) in channels.json. On Wednesday, record which domain each winning citation came from."
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "startPublishedDate: 2026-08-29",
+    "what_spec_does": "Sets a hard window of the break date minus 30 days, so an older split at the same issuer cannot win.",
+    "what_skill_says": "SKILL.md and search.md: date filters are only for a bounded window the task states and must enforce. They are 'hard filters that drop undated and misdated pages'. Recency otherwise belongs in the query.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Recommended: drop it from the live bodies. Put 'September 2026' in the query and the rule 'use only notices dated on or after 2026-08-29' in systemPrompt. Have compare.py enforce the window on source_notice_date, the date printed on the notice. The spec's own probes show publishedDate is an estimate, and exchange alert pages are the likeliest to be undated. Line: 'I don't use the date filter on the live path, because publishedDate is estimated and the filter drops undated pages. The window is in the systemPrompt, and code enforces it on the date printed on the notice.' If Wednesday shows an older CDT event crowding the results, restore the filter and say: 'The ticket names one event, so a 30-day evidence window is a product rule, and I accept that it can drop an undated page because code also checks the printed date.'"
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "additionalQueries",
+    "what_spec_does": "Adds a second search angle built from the CUSIP. The spec admits the field is deep-only and says to drop it on a 400.",
+    "what_skill_says": "The skill never documents additionalQueries. It gates every field beyond query, type and contents.highlights: 'add it only when the user's task explicitly requires it'. Per the OpenAPI spec in research, the field is valid on deep types only, so it is invalid on auto.",
+    "verdict": "violates",
+    "fix_or_justification": "Drop it. Put the agreed CUSIP in the query text instead. If deep-lite wins the bake-off, test additionalQueries as a separate arm later, never in the same run as the type change, so the table isolates one variable."
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "systemPrompt",
+    "what_spec_does": "Names the one issuer, ignores every other company, copies dates verbatim, lets a later notice win, writes 'not stated' and never infers.",
+    "what_skill_says": "search.md: keep/drop rules, verification rules, source preferences and what to do when a field cannot be verified ('omit or null, never a guess') belong in systemPrompt. A follow-up rule edits systemPrompt, not query.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep it, with three additions that belong here and not in the query: (1) the date rule ('use only notices dated on or after 2026-08-29'); (2) the source preference ('prefer the issuer's original release over a syndicated copy'); (3) for bonds, 'report only the series with CUSIP 316773 DD9 (coupon and maturity from rows.json); if a release covers several series, ignore the others'. That last rule matters for BAC's two-series release."
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "outputSchema (8 flat required string fields)",
+    "what_spec_does": "Declares 8 properties at one level, with no citation or confidence fields, and descriptions instead of enums.",
+    "what_skill_says": "search.md: 'Keep schemas small and explicit. A handful of named fields'. prompting-and-patterns.md: 'Prefer 1 to 5 root fields'. It also says not to ask for citation fields that Exa already provides, and to keep contents.highlights on so fields are filled from page text.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Trim to 6 fields. Drop event_type, because the row already carries the event hint. Drop new_symbol, because code swaps new_cusip for new_symbol only on ticker-change rows. Widen identifier_in_source to cover bonds ('Ticker, CUSIP, or for a bond the coupon and maturity, as printed'). Line: 'Six flat fields, and each one feeds exactly one rule in compare.py. I cut two from my first draft because your guidance says keep schemas to a handful, and there are no citation or confidence fields because grounding already returns them.'"
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "outputSchema.identifier_in_source (used as identity check 2)",
+    "what_spec_does": "If the extracted identifier does not match the row, the whole record is marked 'wrong security'.",
+    "what_skill_says": "The skill says to keep verification rules in systemPrompt and read citations from output.grounding. Separately, red-team review 1 notes the check is circular: the systemPrompt names CDT, so the model can echo it.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Keep it as a secondary sanity check only. Present the grounding check as the primary guard: every cited URL must be inside the allowlist, and the cited page's own title or highlights must contain the identifier, checked by code. Line: 'It's a secondary check only. The real identity guard is code reading the cited page's own text, because a model can echo the name I put in the prompt.'"
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "contents.highlights {query, maxCharacters: 1000}",
+    "what_spec_does": "Uses object-form highlights with a custom field-list query and a 1,000-character cap.",
+    "what_skill_says": "SKILL.md: highlights 'should be set to true by default'. 'Do not add maxCharacters or other highlight options without an explicit budget requirement.' prompting-and-patterns.md: on /search, bare true 'auto-selects an appropriate excerpt length per page, anchored to the search query, so there is nothing to tune'.",
+    "verdict": "violates",
+    "fix_or_justification": "Use \"contents\": {\"highlights\": true}. If asked: 'On search, highlights anchor to my query already, and I have no token budget that needs a cap, so I didn't tune them.'"
+   },
+   {
+    "call": "Call 1 and Call 2",
+    "field": "omitted: maxAgeHours, category, endPublishedDate, text, summary, stream, userLocation",
+    "what_spec_does": "Leaves out freshness controls, category, the end date and every other content type.",
+    "what_skill_says": "SKILL.md: omit category unless the user explicitly asks for category-constrained retrieval. Set maxAgeHours only when page content must be current. Pick one of text, highlights or summary.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep them out. Change the stated reason for no category from 'not needed with an allowlist' to 'Exa's guidance says category is only for explicit category-constrained retrieval, and the query already says what I want'."
+   },
+   {
+    "call": "Call 1 bond variant (BAC, FITB)",
+    "field": "query",
+    "what_spec_does": "'Press release from Fifth Third Bancorp announcing the redemption of its notes with CUSIP 316773 DD9, with the redemption date and redemption price'",
+    "what_skill_says": "The query is retrieval intent only. The field list goes in outputSchema.",
+    "verdict": "violates",
+    "fix_or_justification": "Use 'Fifth Third Bancorp press release announcing redemption of its senior notes, CUSIP 316773 DD9, September 2026'. The series rule goes in systemPrompt, and the IR site comes from the security master's issuer record into includeDomains."
+   },
+   {
+    "call": "Call 2 (market channel)",
+    "field": "query",
+    "what_spec_does": "'Nasdaq Equity Corporate Actions Alert for CDT Equity Inc. (CDT) announcing a reverse stock split and a CUSIP change, with the effective date'",
+    "what_skill_says": "The query is retrieval intent only, with no field list.",
+    "verdict": "violates",
+    "fix_or_justification": "Use 'Nasdaq Trader equity corporate actions alert for CDT Equity Inc. (CDT) reverse stock split and CUSIP change, September 2026'."
+   },
+   {
+    "call": "Call 2 (market channel)",
+    "field": "includeDomains: [nasdaqtrader.com] for Nasdaq names, [sec.gov] for NYSE names and bonds",
+    "what_spec_does": "Locks the market channel to the exchange's own site, or to SEC filings.",
+    "what_skill_says": "A hard allowlist is allowed only when the user requests it and supplies or approves the list.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Line: 'The market channel is defined as the exchange's or the SEC's own notice, so the customer's channel config locks it to nasdaqtrader.com for Nasdaq names and sec.gov for bonds and NYSE names.' For bonds, the 8-K exhibit is usually the issuer's own release filed again. So rename that channel 'SEC filing (issuer, legally filed)', and have code show 'Same-issuer confirmation' instead of 'Corroborated' when both citations carry the issuer's text. On Wednesday, confirm that the bare nasdaqtrader.com entry matches www.nasdaqtrader.com."
+   },
+   {
+    "call": "Call 3 (stale-page repair, /contents)",
+    "field": "urls",
+    "what_spec_does": "Hard-codes the CTNT alert URL.",
+    "what_skill_says": "contents.md: urls is the primary way to pass known URLs. Always inspect statuses, because HTTP 200 does not mean every URL succeeded.",
+    "verdict": "conforms",
+    "fix_or_justification": "Have code take the URL from Call 2's raw results before the identity guard runs. A 'Page Not Available' page contains no ticker, so the guard would otherwise drop it before the stale detector sees it. This also gives a free-form row a URL. Keep reading statuses verbatim."
+   },
+   {
+    "call": "Call 3",
+    "field": "maxAgeHours: 0",
+    "what_spec_does": "Forces a live crawl of the one stale page.",
+    "what_skill_says": "contents.md and prompting-and-patterns.md: maxAgeHours controls crawl freshness. Set 0 'only when the app truly requires live crawling'. It is not a publication filter, and it is never sent with livecrawl or snapshotAsOf.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Line: 'Code fires this only when Exa's stored copy is a placeholder, so I pay for a live crawl on one known URL instead of on every search result. That's the content-must-be-current case in your freshness guidance.'"
+   },
+   {
+    "call": "Call 3",
+    "field": "livecrawlTimeout: 12000",
+    "what_spec_does": "Sets a 12-second cap on the live crawl.",
+    "what_skill_says": "contents.md: 'Set livecrawlTimeout whenever live crawling matters so slow pages do not block the whole request.'",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep it. Keep the exa_client timeout override at 20 s for this call, because the default for a type-less body is 15 s."
+   },
+   {
+    "call": "Call 3",
+    "field": "highlights {query, maxCharacters} stacked with summary {query, schema}",
+    "what_spec_does": "Requests two content types for the same page.",
+    "what_skill_says": "SKILL.md and contents.md: 'Pick one of highlights, text, or summary. Do not stack them.' maxCharacters needs an explicit budget. summary needs an explicit reason for Exa-side per-page synthesis.",
+    "verdict": "violates",
+    "fix_or_justification": "Send summary with the schema only, and drop the highlights. The Wednesday fallback, if summary fails alongside maxAgeHours 0, is a highlights object with a query only (the object form with a query is the skill's recommendation on /contents) and no maxCharacters."
+   },
+   {
+    "call": "Call 3",
+    "field": "summary {query, schema}",
+    "what_spec_does": "Re-extracts the fields from the repaired page and returns them as a JSON string.",
+    "what_skill_says": "summary only when Exa-side per-result synthesis is explicitly required. It adds one LLM call per page.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Line: 'On a known URL, /contents has no outputSchema, so a per-page summary with my schema is the one content type I buy, to get the same fields compare.py needs. Nothing is stacked on it, and the page link is the citation.' Use the trimmed 6-field schema, and parse the string in code. Unverified until Wednesday."
+   },
+   {
+    "call": "Call 3",
+    "field": "content fields at the top level (no contents wrapper)",
+    "what_spec_does": "Puts the content options at the top level of the /contents body.",
+    "what_skill_says": "contents.md and common-mistakes.md: on /contents, text, highlights and summary are top-level fields. On /search they are nested inside contents.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep it. It is a good 10-second talking point on the shape difference between the two endpoints."
+   },
+   {
+    "call": "Call 4 (replay)",
+    "field": "endPublishedDate: 2026-09-28T11:30:00Z",
+    "what_spec_does": "Adds a publish-date cutoff and calls the result a 'no-hindsight replay'.",
+    "what_skill_says": "search.md: date filters are for a task-stated bounded window that must be enforced. snapshot.md: a published-date filter never returns an earlier version of a page. Only snapshotAsOf does that, and it bounds content, not ranking.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Relabel it 'publication-date-bounded replay'. Line: 'The replay's whole question is what was published before the ticket opened, so it's a bounded window that must be enforced. I don't call it no-hindsight, because page content and ranking are still today's. Snapshot is the stricter check.' It inherits every Call 1 and Call 2 fix."
+   },
+   {
+    "call": "Call 5 (Snapshot audit, /contents)",
+    "field": "urls, snapshotAsOf (top level), highlights {query}",
+    "what_spec_does": "Fetches the two cited URLs as stored at ticket open, with query-steered highlights and no freshness controls.",
+    "what_skill_says": "snapshot.md: snapshotAsOf goes at the top level on /contents and is never combined with maxAgeHours or livecrawl. Expect CONTENT_NOT_CACHED in statuses. prompting-and-patterns.md: on /contents, highlights use the object form with a query.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep it. If the stored nasdaqtrader copy is the placeholder, show that as the honest reason Snapshot exists, not as proof the alert was knowable. Drop the phrase 'research preview' unless Wednesday's re-check finds it: the skill describes the limits (5-month window, 100 requests then sales) without that label."
+   },
+   {
+    "call": "Call 6 (Monitor)",
+    "field": "search.numResults: 10",
+    "what_spec_does": "Restates 10 inside the monitor search.",
+    "what_skill_says": "monitors.md lists numResults as optional. SKILL.md: do not restate server defaults.",
+    "verdict": "violates",
+    "fix_or_justification": "Omit it."
+   },
+   {
+    "call": "Call 6 (Monitor)",
+    "field": "search.includeDomains",
+    "what_spec_does": "Uses wires plus sec.gov.",
+    "what_skill_says": "The allowlist rule is the same as Call 1. monitors.md lists only query, numResults and contents, and the research OpenAPI spec adds includeDomains and excludeDomains.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Use the same compliance line as Call 1, and add the issuer's IR site (ir.53.com). Monitor search accepts no systemPrompt, type or date filters, so the issuer and series constraints go in the query, and the identity guard runs on the webhook payload."
+   },
+   {
+    "call": "Call 6 (Monitor)",
+    "field": "outputSchema (the Call 1 single-object schema)",
+    "what_spec_does": "Reuses the 8-field single-object schema.",
+    "what_skill_says": "Keep schemas small, and arrays must declare items. The monitor schema must hold what one run can return.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Replace it with an events array of 5 fields (6 properties in total, within the 10-property cap). Line: 'The webhook opens tickets, so it needs fields, and one daily run can find more than one event, so it's a short events array.'"
+   },
+   {
+    "call": "Call 6 (Monitor)",
+    "field": "name, trigger {interval, 1d}, metadata, webhook {url, events}, contents.highlights true",
+    "what_spec_does": "Standard create shape with a public HTTPS webhook.",
+    "what_skill_says": "monitors.md: use search, not searchParams, and trigger, not a schedule string. Store webhookSecret immediately.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep it. It stays shown as JSON only, never run live."
+   },
+   {
+    "call": "Call 6 ZDR caveat, Section 9 'Monitors', Section 11 early warning",
+    "field": "ZDR coverage of Monitors",
+    "what_spec_does": "Says 'ask Exa whether Monitors are covered' and plans to use Monitors 'once ZDR coverage is confirmed'.",
+    "what_skill_says": "SKILL.md: 'Websets and Monitors are not ZDR. If a use case requires ZDR, stay on the ZDR surfaces.'",
+    "verdict": "violates",
+    "fix_or_justification": "Under ZDR, the production early warning is the scheduled /search body below. Show the Monitor as the option for teams that accept non-ZDR. Line: 'Exa's own guidance says Monitors aren't covered by ZDR, and these queries reveal holdings, so under ZDR the daily watch runs as a scheduled search from the customer's scheduler.'"
+   },
+   {
+    "call": "Deliberately not used: /answer",
+    "field": "reason given",
+    "what_spec_does": "'/answer: not covered by ZDR, and these queries reveal holdings. It also has no per-field grounding.'",
+    "what_skill_says": "SKILL.md lists /answer as a ZDR surface. answer.md: prefer /search when the app needs the result list itself and explicit contents control per result.",
+    "verdict": "violates",
+    "fix_or_justification": "Drop the ZDR reason. Say: 'I need the result list itself so code can run the identity guard, and per-field grounding with confidence. /answer gives one answer with a citation list, and your guidance says to prefer search when the app needs the results.'"
+   },
+   {
+    "call": "Deliberately not used: findSimilar, livecrawl, Websets, category",
+    "field": "exclusions",
+    "what_spec_does": "Leaves these out on purpose and says so.",
+    "what_skill_says": "SKILL.md: findSimilar is deprecated, maxAgeHours replaces livecrawl, Websets is for existing integrations only, and category needs an explicit request.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep. Reword the category reason as in the omitted-fields finding above."
+   },
+   {
+    "call": "Slide 2 and Section 9 security answers",
+    "field": "ZDR claim ('available for Search and Contents, the only two endpoints used'; 'does not cover /answer')",
+    "what_spec_does": "States that Contents is ZDR-covered and Answer is not, and that only two endpoints are used.",
+    "what_skill_says": "SKILL.md lists /search, /answer and /agent as ZDR, and Websets and Monitors as not. Contents is not named.",
+    "verdict": "violates",
+    "fix_or_justification": "Say: 'Search, which carries every live query, is covered by ZDR in all of Exa's guidance. The one-URL repair uses Contents, and I'd confirm its coverage with you because two Exa pages list it differently. Monitors are not ZDR, so under ZDR the watch runs as scheduled searches.' Also drop 'the only two endpoints used', because section 11 adds Agent and Batch."
+   },
+   {
+    "call": "Section 11 production: Calls 1 and 2 under the ZDR team key",
+    "field": "endpoint choice",
+    "what_spec_does": "Runs /search under the ZDR team key.",
+    "what_skill_says": "SKILL.md: /search is ZDR. Default to /search for most integrations.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep. After the switch to auto, the rate limit is 10 QPS for /search. The 5 QPS deep-type limit and a shared limiter apply only if deep-lite wins the bake-off."
+   },
+   {
+    "call": "Section 11 Agent backfill",
+    "field": "effort: low, async, persist output.grounding",
+    "what_spec_does": "Plans an offline Agent run at fixed effort low.",
+    "what_skill_says": "agent.md: always set effort explicitly. Wait for a terminal status, then check completed vs failed or cancelled before reading output. Put known rows in input.data, not the query. Bound arrays with maxItems. budget only works with auto. Expose output.grounding.",
+    "verdict": "conforms",
+    "fix_or_justification": "Keep effort 'low' and add what the skill requires: the book goes in input.data, the output array gets maxItems, code reads output only when status is 'completed', and grounding is persisted at once (the 10-minute ZDR retention is from research, not the skill)."
+   },
+   {
+    "call": "Section 11 MCP / ops-copilot tool",
+    "field": "break_check(identifier, event_hint) with domains, window and schema fixed in code",
+    "what_spec_does": "The model passes only the identifier. Everything else comes from config.",
+    "what_skill_says": "prompting-and-patterns.md tool pattern: keep query the only required field, return highlights, and do not hardcode domain filters 'the user never asked for'.",
+    "verdict": "allowed_if_justified",
+    "fix_or_justification": "Line: 'Your tool guidance says don't hardcode filters the user never asked for. Here the customer did ask for them, so the model passes only the identifier and the approved list stays in code.'"
+   },
+   {
+    "call": "Section 7 script 7:00 hypothesis and decisions_for_aj item 2",
+    "field": "spoken reason for the search type",
+    "what_spec_does": "'I'm using deep-lite because the docs recommend a deep type for schemas with three or more fields.'",
+    "what_skill_says": "Exa's skill lists 'type: deep because the request has an outputSchema' as a common mistake.",
+    "verdict": "violates",
+    "fix_or_justification": "Replace it with a hypothesis AJ says out loud: 'I'm on auto, Exa's default, because each call fills its fields from one page. I expect the GlobeNewswire release on the left and Nasdaq alert 683 on the right in about three seconds. If a field comes back not stated, I check the bake-off to see whether deep-lite filled it.' The latency is unverified until Wednesday."
+   }
+  ],
+  "conflicts_with_research": [
+   "Which endpoints zero data retention (ZDR: Exa stores nothing from the request) covers. The skill (SKILL.md) lists /search, /answer and /agent, and says Websets and Monitors are not ZDR. research/exa-api.md, citing Exa's zero-data-retention docs page, lists Search, Contents and Agent, says Answer and Websets are not covered, and does not mention Monitors. Both are Exa sources, and they agree only on Search and Agent (in, with Websets out). What to trust: claim coverage only where they agree, and trust the skill's explicit 'Monitors are not ZDR' because it is stated outright and is the conservative reading. Safe phrasing for AJ: 'Search, which carries every live query, is ZDR-covered in all of Exa's guidance. Two Exa pages list Contents and Answer differently, so I'd confirm those with you rather than assume. Monitors are not ZDR, so under ZDR the daily watch runs as scheduled searches.' Never give 'no ZDR' as the reason for skipping /answer.",
+   "When to use a deep type with outputSchema. research/exa-api.md section 3 says deep types are 'the recommended default when you use outputSchema for more than about two items or three or more fields'. The skill says do not choose deep only because of structured output: a compact schema stays on auto, and `deep` (not deep-lite) is for a wide schema whose fields take more than one search to fill. Red-team review 0 found the research paraphrase dropped the docs' condition 'cannot be filled with a single search'. What to trust: the skill. Phrasing: 'Exa's guidance is auto unless the fields take more than one search to fill. Each of my calls fills its fields from one page, so I start on auto, and a measured bake-off decides whether deep-lite earns its cost.'",
+   "numResults in the default request. research/exa-api.md section 12 recommends num_results=10 as a demo-safe default. The skill says numResults defaults to 10 and must not be restated as boilerplate. What to trust: the skill. Omit it, and if asked, say the default of 10 was kept on purpose because probes at 5 missed an alert.",
+   "additionalQueries. The research documents it from the OpenAPI spec (deep types only, 1 to 10 strings; the exa-py docstring says max 5). The skill never mentions it and gates every field beyond query, type and highlights. What to trust: the research for whether the field exists (it is invalid on auto), and the skill for whether to send it (don't, unless measured). Phrasing: 'I tested a second query angle only as a separate arm; the live body is query, type, contents and the fields the task needs.'",
+   "Highlights options on /contents. The skill disagrees with itself: contents.md says 'use bare true' on /contents, while prompting-and-patterns.md says /contents has no search query to anchor to, so use the object form with a query. research/exa-api.md section 12 matches the object-with-query form. What to trust: prompting-and-patterns.md and the research, because they give the reason. Neither source supports maxCharacters without a stated budget, so drop it.",
+   "Whether to state type: auto. SKILL.md and search.md say sending type: auto explicitly is fine, while models-and-modes.md says to omit type rather than send it. The research treats auto as the default. This is inside the skill only, not a research conflict. Keep \"type\": \"auto\" in the bodies because the on-screen Request JSON and the bake-off table need the type to be visible. If asked: 'It's the default. I show it so the bake-off comparison is readable.'",
+   "Snapshot limits. The research says Snapshot supports only auto, fast and instant, rejects category, and cannot be combined with livecrawlTimeout or subpages. The skill lists only the exclusion of maxAgeHours and livecrawl, plus a 5-month window, 10 QPS, and 'after 100 Snapshot requests, contact sales'. These do not contradict each other, so trust both. The spec's 'research preview' label appears in neither the skill nor research/exa-api.md, so AJ should drop it unless Wednesday's re-check finds it, and say 'a rolling 5-month window, 100 requests before a sales conversation'.",
+   "Monitor search fields. The skill's monitors.md shows only query, optional numResults and optional contents, with webhook.url. The research, from the OpenAPI spec, adds includeDomains, excludeDomains and webhook.events. The skill is intentionally minimal, so this is not a real contradiction. Trust the research for field validity, and label the Monitor body 'valid per the OpenAPI spec, not created live'.",
+   "Agent details. The research lists effort 'ultra' and says budget is accepted with auto and ultra, plus ZDR limits (run data kept 10 minutes, no previousRunId, no Connect dataSources). The skill lists efforts minimal through xhigh plus auto, and budget with auto only, and is silent on the ZDR limits. For the backfill at fixed effort 'low' this does not matter. AJ should attribute the 10-minute ZDR retention to Exa's docs page, not to the skill."
+  ],
+  "recommended_request_bodies": "All bodies go through `app/exa_client.py` unchanged, as raw HTTP POST with the `x-api-key` header. Nothing below has been run with a key. Every latency, cost and result is unverified until Wednesday's keyed test.\n\n## Shared schema (Calls 1 and 2, and the Call 3 summary schema)\n\nSix flat fields. For a ticker-change row, code swaps `new_cusip` for `new_symbol` (\"New ticker as stated, or not stated\"). No citation or confidence fields, because `output.grounding` returns them.\n\n```json\n{\n  \"type\": \"object\",\n  \"required\": [\"identifier_in_source\", \"terms\", \"effective_as_stated\", \"market_effective_date\", \"new_cusip\", \"source_notice_date\"],\n  \"properties\": {\n    \"identifier_in_source\": {\"type\": \"string\", \"description\": \"Ticker, CUSIP, or for a bond the coupon and maturity, exactly as the source prints them\"},\n    \"terms\": {\"type\": \"string\", \"description\": \"Split or ADS ratio, or redemption price and the series redeemed, as stated\"},\n    \"effective_as_stated\": {\"type\": \"string\", \"description\": \"Effective date and time exactly as the source writes it\"},\n    \"market_effective_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated\"},\n    \"new_cusip\": {\"type\": \"string\", \"description\": \"New CUSIP as stated, or not stated\"},\n    \"source_notice_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD printed on the notice itself\"}\n  }\n}\n```\n\n## Call 1: issuer channel, CDT (live)\n\n`POST https://api.exa.ai/search`\n\n```json\n{\n  \"query\": \"CDT Equity Inc. (Nasdaq: CDT) reverse stock split press release, September 2026, new CUSIP 20678X700\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"globenewswire.com\", \"prnewswire.com\", \"businesswire.com\", \"accessnewswire.com\", \"nasdaq.com/press-release\", \"www.nasdaq.com/press-release\", \"finance.yahoo.com\"],\n  \"systemPrompt\": \"You are checking a security master exception for an investment operations team. Use only announcements issued by CDT Equity Inc. (Nasdaq: CDT) about its reverse stock split, dated on or after 2026-08-29; ignore every other company and any earlier corporate action. Prefer the issuer's original release over a syndicated copy of it. If a later notice from the issuer updates an earlier one, use the later one. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.\",\n  \"outputSchema\": \"<shared 6-field schema above>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\nRemoved from v1, and why: `numResults` (restated the default of 10), `startPublishedDate` (window moved to systemPrompt, and code checks `source_notice_date`), `additionalQueries` (deep-only; the CUSIP moved into the query), highlights `query` and `maxCharacters` (the skill says bare true), `type: deep-lite` (moved to the bake-off arm). Code tags nasdaq.com/press-release and finance.yahoo.com as mirrors. Unverified: whether the bare `nasdaq.com/press-release` entry matches the www host.\n\n**Bake-off arm (Wednesday only):** the identical body with only `\"type\": \"deep-lite\"`. Nothing else changes, so the table isolates the type.\n\n## Call 1: issuer channel, FITB bond variant (live)\n\n```json\n{\n  \"query\": \"Fifth Third Bancorp press release announcing redemption of its senior notes, CUSIP 316773 DD9, September 2026\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"globenewswire.com\", \"prnewswire.com\", \"businesswire.com\", \"accessnewswire.com\", \"finance.yahoo.com\", \"ir.53.com\"],\n  \"systemPrompt\": \"You are checking a security master exception for an investment operations team. Use only announcements issued by Fifth Third Bancorp about the notes with CUSIP 316773 DD9 (<coupon> due <maturity>, from rows.json), dated on or after <break date minus 30 days, from rows.json>. If a release covers several series, report only this series and ignore the others. Prefer the issuer's original release over a syndicated copy. If a later notice updates an earlier one, use the later one. Copy dates exactly as written. Write not stated for any field the source does not give. Never infer.\",\n  \"outputSchema\": \"<shared 6-field schema above>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\n`ir.53.com` comes from the security master's issuer record. For BAC, the same slot holds `newsroom.bankofamerica.com`. Do not invent the coupon or maturity: fill them from the verified release on Wednesday.\n\n## Call 2: market channel, CDT (live, in parallel with Call 1)\n\n```json\n{\n  \"query\": \"Nasdaq Trader equity corporate actions alert for CDT Equity Inc. (CDT) reverse stock split and CUSIP change, September 2026\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"nasdaqtrader.com\"],\n  \"systemPrompt\": \"You are checking a security master exception for an investment operations team. Use only the exchange's corporate actions alert for CDT Equity Inc. (CDT), dated on or after 2026-08-29; ignore alerts for every other company. Copy dates exactly as written. Write not stated for any field the alert does not give. Never infer.\",\n  \"outputSchema\": \"<shared 6-field schema above>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\n## Call 2: market channel, FITB bond variant (live)\n\nThe channel label on screen is \"SEC filing (issuer, legally filed)\". When both citations carry the issuer's own text, code shows \"Same-issuer confirmation\", not \"Corroborated\".\n\n```json\n{\n  \"query\": \"Fifth Third Bancorp Form 8-K announcing redemption of senior notes, September 2026\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"sec.gov\"],\n  \"systemPrompt\": \"You are checking a security master exception for an investment operations team. Use only SEC filings by Fifth Third Bancorp about the notes with CUSIP 316773 DD9 (<coupon> due <maturity>, from rows.json), dated on or after <break date minus 30 days, from rows.json>. If a filing covers several series, report only this series. Copy dates exactly as written. Write not stated for any field the filing does not give. Never infer.\",\n  \"outputSchema\": \"<shared 6-field schema above>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\nExpected for the Call 1 plus Call 2 pair on auto (unverified): about 1 s search plus about 2 s synthesis per call, so roughly 3 s of wall time in parallel. The cost is $0.007 per call at list, $0.014 for the pair; whether outputSchema adds to that is unknown until the first live costDollars. The timebox is 8 s.\n\n## Call 3: stale-page repair (live, only when triggered)\n\n`POST https://api.exa.ai/contents`. Code takes the URL from Call 2's raw results, before the identity guard runs.\n\n```json\n{\n  \"urls\": [\"https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677\"],\n  \"maxAgeHours\": 0,\n  \"livecrawlTimeout\": 12000,\n  \"summary\": {\n    \"query\": \"What corporate action does this alert announce, for which security, effective when, and with what new CUSIP?\",\n    \"schema\": \"<shared 6-field schema above>\"\n  }\n}\n```\n\nThe summary comes back as a JSON string that code parses. Read `statuses[]` verbatim, and show `source: crawled` or the error tag. Unverified: summary plus `maxAgeHours: 0` together. Fallback body if that fails (still one content type, no maxCharacters):\n\n```json\n{\n  \"urls\": [\"https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677\"],\n  \"maxAgeHours\": 0,\n  \"livecrawlTimeout\": 12000,\n  \"highlights\": {\"query\": \"effective date, split ratio, new CUSIP, new symbol\"}\n}\n```\n\n## Call 4: publication-date-bounded replay (pre-cached; live optional)\n\nThis is the corrected Call 1 or Call 2 body plus one field. Example for Call 2:\n\n```json\n{\n  \"query\": \"Nasdaq Trader equity corporate actions alert for CDT Equity Inc. (CDT) reverse stock split and CUSIP change, September 2026\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"nasdaqtrader.com\"],\n  \"endPublishedDate\": \"2026-09-28T11:30:00Z\",\n  \"systemPrompt\": \"<same as Call 2>\",\n  \"outputSchema\": \"<shared 6-field schema above>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\nSay out loud: this bounds publication date, not page content or ranking. For the POC, the stricter check is a Snapshot arm: `\"contents\": {\"highlights\": true, \"snapshotAsOf\": \"<ticket open time>\"}` on type auto. It is unverified whether that combines with outputSchema and includeDomains, and it falls under the 100-request Snapshot limit.\n\n## Call 5: Snapshot audit copy (pre-run, cached, never live)\n\n```json\n{\n  \"urls\": [\"<CDT GlobeNewswire release URL from Call 1>\", \"https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-683\"],\n  \"snapshotAsOf\": \"2026-09-28T11:30:00Z\",\n  \"highlights\": {\"query\": \"effective date, split ratio, new CUSIP\"}\n}\n```\n\nThis is unchanged from v1 and already conforms. Check `statuses` for CONTENT_NOT_CACHED.\n\n## Call 6: Monitor (shown as JSON, not run; non-ZDR option only)\n\n```json\n{\n  \"name\": \"held-issuer watch: Fifth Third Bancorp\",\n  \"search\": {\n    \"query\": \"Fifth Third Bancorp announces redemption, tender offer or exchange offer for its notes or preferred shares\",\n    \"includeDomains\": [\"prnewswire.com\", \"businesswire.com\", \"globenewswire.com\", \"ir.53.com\", \"sec.gov\"],\n    \"contents\": {\"highlights\": true}\n  },\n  \"trigger\": {\"type\": \"interval\", \"period\": \"1d\"},\n  \"outputSchema\": {\n    \"type\": \"object\",\n    \"required\": [\"events\"],\n    \"properties\": {\n      \"events\": {\n        \"type\": \"array\",\n        \"items\": {\n          \"type\": \"object\",\n          \"required\": [\"identifier_in_source\", \"event_type\", \"terms\", \"market_effective_date\", \"source_notice_date\"],\n          \"properties\": {\n            \"identifier_in_source\": {\"type\": \"string\", \"description\": \"CUSIP, or coupon plus maturity, or ticker, as printed\"},\n            \"event_type\": {\"type\": \"string\", \"description\": \"redemption, tender offer, exchange offer, or other\"},\n            \"terms\": {\"type\": \"string\", \"description\": \"Price, amount and series, as stated\"},\n            \"market_effective_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD the action takes effect, or not stated\"},\n            \"source_notice_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD printed on the notice\"}\n          }\n        }\n      }\n    }\n  },\n  \"metadata\": {\"team\": \"security-master\", \"issuer\": \"FITB\"},\n  \"webhook\": {\"url\": \"https://<customer ticket bridge>/exa-monitor\", \"events\": [\"monitor.run.completed\"]}\n}\n```\n\n## Production early warning under ZDR: scheduled /search (replaces the Monitor for ZDR customers)\n\nThis runs daily from the customer's own scheduler. Monitors are not ZDR per Exa's skill.\n\n```json\n{\n  \"query\": \"Fifth Third Bancorp announces redemption, tender offer or exchange offer for its notes or preferred shares\",\n  \"type\": \"auto\",\n  \"includeDomains\": [\"prnewswire.com\", \"businesswire.com\", \"globenewswire.com\", \"ir.53.com\", \"sec.gov\"],\n  \"startPublishedDate\": \"<last successful run time minus 7 days>\",\n  \"systemPrompt\": \"Report only actions announced by Fifth Third Bancorp on its own notes or preferred shares. Ignore every other issuer. Copy dates exactly as written. Write not stated for any field the source does not give. Never infer.\",\n  \"outputSchema\": \"<the Call 6 events schema>\",\n  \"contents\": {\"highlights\": true}\n}\n```\n\n`startPublishedDate` is justified here because the job's stated window is \"new since the last run\", and the 7-day overlap absorbs mis-dated pages. Code also dedupes by URL against tickets already opened."
+ },
+ "rev": {
+  "written_to": "C:\\Users\\ajwal\\Documents\\exa-demo\\design\\spec_v2.md",
+  "change_log": [
+   {
+    "issue": "Red 0-0 (major): endPublishedDate replay overclaims 'no hindsight'",
+    "what_changed": "Call 4 renamed 'publication-date-bounded replay' everywhere, with three leaks named out loud (content and ranking are today's, and dates are estimated). Snapshot on type auto (contents.snapshotAsOf plus outputSchema, no category, no maxAgeHours) is now the strict arm. The 300 Snapshot requests are placed in the enterprise trial ask. POC criterion 8 measures how much the replay leaks."
+   },
+   {
+    "issue": "Red 0-1 (major): deep-lite justified by misreading '3+ fields'",
+    "what_changed": "Calls 1 and 2 default to type auto. deep-lite becomes a bake-off arm with an identical body. The '3 or more fields' line is deleted from the script and from the parameter notes. The spoken reason now matches Exa's guidance, and additionalQueries is removed."
+   },
+   {
+    "issue": "Red 0-2 (major): bond 'market channel' is the issuer agreeing with itself; BAC two-series merge risk",
+    "what_changed": "The bond channel is renamed 'SEC filing (issuer, legally filed)', and code shows a new 'Same-issuer confirmation' chip. A series rule naming the CUSIP, coupon and maturity goes in the bond systemPrompt, and code rejects any other series. BAC's two-series release becomes a unit test. The script says trustee and DTC notices sit behind logins."
+   },
+   {
+    "issue": "Red 0-3 (major): CTNT stale moment unrecorded and filtered out by the identity guard",
+    "what_changed": "The stale detector now runs on raw results before the guard, keyed on the nasdaqtrader ECA URL pattern and placeholder text, and takes its URL from Call 2's raw results, so free-form rows are covered too. CTNT runs only if the detector actually fires, and is otherwise described. The Sep 29 observation is labeled keyless MCP only, and the line is reworded to 'Exa's stored copy was a placeholder page'. Pre-flight never presses the repair."
+   },
+   {
+    "issue": "Red 0-4 (major): with-block executor blocks past the timebox",
+    "what_changed": "Section 5 specifies one module-level ThreadPoolExecutor and bans with-blocks. Late threads are left to finish and write to cache/. test_timebox.py mocks a 20 s call and checks that control returns in about 8 s."
+   },
+   {
+    "issue": "Red 0-5 (major): too many scenes; 15-minute rehearsal",
+    "what_changed": "The live demo is cut to three scenes: CDT with the failure drill as a second run, FITB, and Ryan's row. CTNT is conditional. Run all, the bake-off, Snapshot and the Monitor move to a 60-second tour on Screen 3. Rehearsal is now 35 minutes, including an interrupted run, plus a 20-minute explain-the-code pass."
+   },
+   {
+    "issue": "Red 0-6 (major): enterprise spend reads as a tiny account",
+    "what_changed": "Section 8 sizes the expansion at list prices: 5,000 issuers is about $27K a year as Monitors or about $8.8K as ZDR scheduled searches, and backfills cost $0.025 per security. Break Check is framed as the wedge. No contract size is guessed, and the sizing becomes Q2 in section 13."
+   },
+   {
+    "issue": "Red 0-7 (minor): 'CDT' matches Central Daylight Time",
+    "what_changed": "The identity guard now matches exchange-prefixed tickers, the CUSIP or the legal name. A bare ticker is amber only, and a test covers '10:00 a.m. CDT'."
+   },
+   {
+    "issue": "Red 0-8 (minor): Run all bursts past the 5 QPS deep limit",
+    "what_changed": "A shared BoundedSemaphore(4) in exa_client now covers all rows and channels, with request starts at least 250 ms apart. The x-exa-queued and x-exa-queue-ms headers are logged. The spoken line is corrected."
+   },
+   {
+    "issue": "Red 0-9 (minor): single CACHE_DIR cannot separate golden and working; /contents mispriced",
+    "what_changed": "There are now eight exact exa_client changes: a GOLDEN_DIR constant, reads from golden first and then working, writes to cache/ only with an atomic replace, a saved_from key, a timeout override, the limiter, /contents priced as pages times content types times $0.001, the queue headers, and a docstring fix."
+   },
+   {
+    "issue": "Red 0-10 (minor): Monitor cannot carry systemPrompt; single-object schema",
+    "what_changed": "The Monitor puts issuer and series constraints in the query and uses a 5-field events array (6 properties). The identity guard runs on the webhook payload."
+   },
+   {
+    "issue": "Red 0-11 (minor): 'only two endpoints used' conflicts with Monitors and Agent",
+    "what_changed": "The claim is dropped. The safe ZDR phrasing (Search covered, Contents to confirm, Monitors not ZDR, Agent covered, Batch to confirm) now appears on slide 2 and in section 9."
+   },
+   {
+    "issue": "Red 0-12 (minor): Snapshot copy may be the placeholder",
+    "what_changed": "Call 5 now says that if the stored copy is the placeholder, it is kept and shown as the reason Snapshot exists, never as proof the alert was knowable."
+   },
+   {
+    "issue": "Red 0-13 (minor): nasdaq.com/press-release www host; IR sites",
+    "what_changed": "www.nasdaq.com/press-release is added and tagged as a mirror. ir.53.com and newsroom.bankofamerica.com go in channels.json. Wednesday's task list includes recording each winning citation's domain and checking that www hosts match."
+   },
+   {
+    "issue": "Red 0-14 (minor): 'Vendor A is wrong' escalation",
+    "what_changed": "The CDT next step now reads: load for the Sep 29 open, then check whether Vendor A's legal-effective date is being mapped into our market-effective field. If so, it is our precedence rule, not a vendor ticket. compare.py gains draft_followup_note to choose between the two."
+   },
+   {
+    "issue": "Red 1-0 (major): microcap rows do not fit a large IG manager; volume check undercuts the count",
+    "what_changed": "The customer is now a manager running index and total-market equity alongside IG credit (option a). The volume sanity check is rewritten to support 12 to 20 breaks honestly, as plausible but unproven, and becomes the first discovery question."
+   },
+   {
+    "issue": "Red 1-1 (major): minutes do not fit 7:00 to 9:30 for one analyst",
+    "what_changed": "The queue is now shared by a 3 to 4 analyst team (450 to 600 analyst-minutes). Value leads with 'breaks still open at 9:30', with percent-of-window math. Analyst time is second."
+   },
+   {
+    "issue": "Red 1-2 (major): no-hindsight overclaimed, tied to the point-in-time story",
+    "what_changed": "Same fix as 0-0. The paper-trading hook is now an optional line that names the replay's leaks. The spec also requires checking the printed dates before saying 'already public at 7:30'."
+   },
+   {
+    "issue": "Red 1-3 (major): identifier check is circular",
+    "what_changed": "The grounding check is now the primary guard: the cited URL must be in the allowlist and among kept results, and code confirms the cited page's own text contains the identifier. identifier_in_source is demoted to a secondary check, with a spoken line explaining why."
+   },
+   {
+    "issue": "Red 1-4 (major): identity undefined for bonds; Nov 1 is a Sunday",
+    "what_changed": "A bond identity key (issuer, coupon, maturity, CUSIP when printed) is added to rows.json, the schema description and the guard. compare.weekend_flag flags FITB's Sunday date, and the FITB beat mentions it."
+   },
+   {
+    "issue": "Red 1-5 (major): why Exa and not a scraper",
+    "what_changed": "Slide 2 bullet and a spoken line: the long tail of IR sites, bond redemptions and 8-Ks, found from one plain-language search. Section 10 adds a 'where a scraper would do as well' subsection. The Parallel head-to-head is in the POC."
+   },
+   {
+    "issue": "Red 1-6 (major): spend figure works against the pitch",
+    "what_changed": "Slide 3 and section 8 lead with land-and-expand. Per-call spend is a footnote, the expansion is sized at list prices, and enterprise sizing becomes a question for Ryan."
+   },
+   {
+    "issue": "Red 1-7 (major): escalation logic shaky",
+    "what_changed": "Same fix as 0-14. The optional Adroit unmapped-values harness line is added, and workflow step 7 now separates vendor error from mapping."
+   },
+   {
+    "issue": "Red 1-8 (major): demo overloaded; beats lack hypotheses and 'if different' lines",
+    "what_changed": "Every beat in section 7, including the queue, drill, Ryan's row, CTNT and the tour, now has hypothesis, action, result and 'if it comes back different, I check X next'. The beat texts are stored in rows.json and shown on the beat panel. The directive's scene choice (CDT, FITB, Ryan's pick) overrides this reviewer's suggested CDT, CTNT, FITB."
+   },
+   {
+    "issue": "Red 1-9 (major): credibility line reaches too far",
+    "what_changed": "The line is replaced with the exact-scope wording: FIX connectivity analyst for buy-side clients, trades busted, worked with data services, did not own the security master. It does not say 'always' and names no clients."
+   },
+   {
+    "issue": "Red 1-10 (major): live code walk-through risk",
+    "what_changed": "evidence.py is kept flat with one function per step, and every function is listed. A 20-minute explain-out-loud pass is added. Prepared one-sentence answers cover POST, x-api-key, the running thread at timeout, the body-hash cache, build time and the module-level pool."
+   },
+   {
+    "issue": "Red 1-11 (major): timebox fails two ways in Streamlit",
+    "what_changed": "There is a module-level executor, and a polling loop calls wait(timeout=0.5) with an on_tick callback that updates st.empty() timers. Simulate timeout now delays the real worker, and Wednesday includes one genuinely slow call."
+   },
+   {
+    "issue": "Red 1-12 (major): Run all exceeds the deep limit",
+    "what_changed": "Same fix as 0-8: a shared limiter of 4 with 250 ms spacing and a corrected spoken line."
+   },
+   {
+    "issue": "Red 1-13 (major): POC ignores security review",
+    "what_changed": "Week 0 is now security review (InfoSec, SOC 2 and DPA, ZDR enablement, and asking the account executive whether a ZDR trial exists). Week 1 is a public-universe eval that sends no holdings. The customer replay moves after ZDR is on."
+   },
+   {
+    "issue": "Red 1-14 (major): no manual baseline",
+    "what_changed": "Section 8 adds a measured manual baseline table (CDT, CTNT, FITB; n=3, one person, likely understated because he knows the answers). It also appears on Screen 3 beside the bake-off and on slide 3."
+   },
+   {
+    "issue": "Red 1-15 (minor): 'only two endpoints' inaccurate",
+    "what_changed": "Same fix as 0-11. Batch coverage is marked 'confirm'."
+   },
+   {
+    "issue": "Red 1-16 (minor): exa-py claim overstated",
+    "what_changed": "The reason is reworded to: get_contents adds text even with highlights, and search() adds text only when no contents are passed. The exa_client docstring fix is listed as change 8."
+   },
+   {
+    "issue": "Red 1-17 (minor): credit for Ryan's work off",
+    "what_changed": "'Ryan's own fix' is removed. The spec now says 'the point you raised in Pydantic AI issue 6082' and 'the Exa capability in the Pydantic AI harness you worked on'. Section 13 carries a note on accurate credit."
+   },
+   {
+    "issue": "Red 1-18 (minor): permanent sidebar line false in saved mode",
+    "what_changed": "Changed to 'Every source page is retrieved by Exa, live or from a labeled saved run.'"
+   },
+   {
+    "issue": "Red 1-19 (minor): '25x misstated NAV' overstated",
+    "what_changed": "Changed to: price and quantity fall out of step by the split factor, which trips the NAV tolerance check, costs an investigation and possibly a late NAV. Updated in section 1 and on slide 1."
+   },
+   {
+    "issue": "Red 1-20 (minor): FITB mixes break and early warning",
+    "what_changed": "FITB is now framed as an ordinary break with a future date. Early warning is the case where neither vendor has the event yet (workflow step 9 and the FITB next-step line)."
+   },
+   {
+    "issue": "Red 1-21 (minor): slide jargon undefined",
+    "what_changed": "Each term is defined where it appears: NAV, CUSIP, EDGAR, Nasdaq Trader, golden copy, SOC 2 Type II, loaded cost, shadow week, ZDR and POC. '/answer' is replaced with 'Exa's answer endpoint' in the buyer-facing text."
+   },
+   {
+    "issue": "Red 1-22 (minor): budget owner misplaced",
+    "what_changed": "The Head of Investment Operations is now the economic champion, market data or vendor management owns the contract, and InfoSec is the gate. All three are added to the sign-off list."
+   },
+   {
+    "issue": "Red 1-23 (minor): honest build-time answer",
+    "what_changed": "Prepared answer: about four hours of build and rehearsal, plus the research beforehand and about an hour on the manual baseline. It says AI tools were used as the posting expects and every call was reviewed, and it flags that the last clause is true only after the explain-the-code pass."
+   },
+   {
+    "issue": "Skill: transport reason (conforms, reword)",
+    "what_changed": "Raw HTTP is kept, with the reworded exa-py reason in section 4 and in the exa_client docstring change."
+   },
+   {
+    "issue": "Skill: Call 1 query carried field list (violates)",
+    "what_changed": "The query now carries retrieval intent only, plus the agreed CUSIP and 'September 2026'. The rows.json rule adds an identifier to the query only when both vendors agree on it."
+   },
+   {
+    "issue": "Skill: type deep-lite for structured output (violates)",
+    "what_changed": "Both calls default to auto, and deep-lite is a Wednesday arm with an identical body and an explicit switch rule. The timebox is 8 s and the cost $0.007 per call. The spoken lines for both outcomes are written out."
+   },
+   {
+    "issue": "Skill: numResults 10 restated default (violates)",
+    "what_changed": "Omitted from Calls 1, 2 and 6, with a prepared answer on why the default was not lowered."
+   },
+   {
+    "issue": "Skill: includeDomains hard allowlist (allowed_if_justified)",
+    "what_changed": "The compliance-control justification line is added. The www entry is added and tagged as a mirror. IR sites go in channels.json, and Wednesday records which domain each citation came from."
+   },
+   {
+    "issue": "Skill: startPublishedDate on live path (allowed_if_justified)",
+    "what_changed": "Dropped from the live bodies. The window moves to the systemPrompt, and compare.in_window enforces it on source_notice_date. The restore-if-crowded fallback and its line are written out."
+   },
+   {
+    "issue": "Skill: additionalQueries (violates)",
+    "what_changed": "Dropped. It will be tested only as a separate later arm if deep-lite wins."
+   },
+   {
+    "issue": "Skill: systemPrompt (conforms, add three rules)",
+    "what_changed": "Added the date rule, the prefer-original-release rule, and the bond series rule (CUSIP, coupon and maturity from rows.json)."
+   },
+   {
+    "issue": "Skill: outputSchema 8 fields (allowed_if_justified)",
+    "what_changed": "Trimmed to 6 fields (event_type and new_symbol dropped; new_symbol is swapped in by code for ticker changes). identifier_in_source is widened to cover bonds, and a justification line is added."
+   },
+   {
+    "issue": "Skill: identifier_in_source as identity check (allowed_if_justified)",
+    "what_changed": "Now a secondary check only. The grounding check against the cited page's text is primary, and a spoken line explains why."
+   },
+   {
+    "issue": "Skill: highlights object with query and maxCharacters (violates)",
+    "what_changed": "Changed to bare highlights: true on all /search bodies, with a prepared answer."
+   },
+   {
+    "issue": "Skill: category omission reason (conforms, reword)",
+    "what_changed": "The reason is reworded to 'only for explicit category-constrained retrieval'."
+   },
+   {
+    "issue": "Skill: FITB bond query carried field list (violates)",
+    "what_changed": "Changed to retrieval intent only. The series rule is in the systemPrompt, and the IR site comes from the issuer record."
+   },
+   {
+    "issue": "Skill: Call 2 query carried field list (violates)",
+    "what_changed": "Changed to 'Nasdaq Trader equity corporate actions alert for CDT Equity Inc. (CDT) reverse stock split and CUSIP change, September 2026'."
+   },
+   {
+    "issue": "Skill: Call 2 market allowlist (allowed_if_justified)",
+    "what_changed": "The channel-definition line is added. The bond channel is renamed and the same-issuer chip is added. Wednesday checks that the www host matches."
+   },
+   {
+    "issue": "Skill: Call 3 urls (conforms, take from raw results)",
+    "what_changed": "The URL now comes from Call 2's raw results before the guard, which also gives free-form rows a URL."
+   },
+   {
+    "issue": "Skill: Call 3 maxAgeHours 0 (allowed_if_justified)",
+    "what_changed": "The justification line on paying for one live crawl only when the detector fires is added."
+   },
+   {
+    "issue": "Skill: Call 3 highlights stacked with summary (violates)",
+    "what_changed": "Now summary with the schema only. The fallback is a highlights object with a query and no maxCharacters."
+   },
+   {
+    "issue": "Skill: Call 3 summary (allowed_if_justified)",
+    "what_changed": "The justification line is added. The summary uses the 6-field schema, is parsed in code, and is labeled unverified. Cost is corrected to $0.001."
+   },
+   {
+    "issue": "Skill: Call 4 endPublishedDate (allowed_if_justified)",
+    "what_changed": "Relabeled with the bounded-window line. It inherits all Call 1 and Call 2 fixes."
+   },
+   {
+    "issue": "Skill: Call 5 Snapshot (conforms; drop 'research preview')",
+    "what_changed": "Kept. The 'research preview' label is dropped unless Wednesday finds it, and the limits are quoted as a 5-month window, 10 QPS and 100 requests."
+   },
+   {
+    "issue": "Skill: Monitor numResults (violates)",
+    "what_changed": "Omitted."
+   },
+   {
+    "issue": "Skill: Monitor includeDomains (allowed_if_justified)",
+    "what_changed": "Same compliance line as Call 1. ir.53.com is added, the constraints go in the query, and the guard runs on the webhook payload."
+   },
+   {
+    "issue": "Skill: Monitor outputSchema (allowed_if_justified)",
+    "what_changed": "Replaced with a 5-field events array (6 properties), with a justification line."
+   },
+   {
+    "issue": "Skill: Monitors ZDR coverage (violates)",
+    "what_changed": "Monitors are now stated as not ZDR. A scheduled /search body is the production default under ZDR, and the Monitor is the non-ZDR option. Updated in sections 4, 9 and 11."
+   },
+   {
+    "issue": "Skill: /answer 'not ZDR' reason (violates)",
+    "what_changed": "The ZDR reason is dropped. The new reason is that the app needs the result list and per-field grounding."
+   },
+   {
+    "issue": "Skill: slide 2 ZDR claim (violates)",
+    "what_changed": "Replaced with the agreed-only phrasing: Search covered, Contents to confirm, Monitors not ZDR."
+   },
+   {
+    "issue": "Skill: Agent backfill (conforms, add requirements)",
+    "what_changed": "Added: input.data for the book, maxItems on the output array, read output only when completed, persist grounding at once. The 10-minute retention is attributed to Exa's ZDR docs page."
+   },
+   {
+    "issue": "Skill: MCP tool hardcoded filters (allowed_if_justified)",
+    "what_changed": "The 'customer did ask for them' line is added in section 11 and in the slide 3 packaging line."
+   },
+   {
+    "issue": "Skill: 7:00 script type reason (violates)",
+    "what_changed": "The CDT hypothesis now uses the auto line with the three-second expectation and the 'check the bake-off' fallback, labeled unverified."
+   },
+   {
+    "issue": "Directions 1 to 12 (customer, value, wedge, three scenes, auto default, replay naming, four-part beats, credibility scope, reliability, rehearsal and answers, file-by-function layout, section 13)",
+    "what_changed": "All applied. The files now live under data\\ (the config\\ folder and ticket.py are gone; note templates move into compare.py). Section 13 has 20 questions, with the first three marked for when time is short."
+   }
+  ],
+  "decisions_for_aj": [
+   "Direction 1 (decided, overrule if you disagree): the customer is a US asset manager running index and total-market equity plus investment-grade credit, with a 3 to 4 analyst team on one queue. The Head of Investment Operations is the economic champion, market data or vendor management owns the contract, and InfoSec is the gate. Fund administrators and outsourcers are the expansion path. The $100B to $200B size is still an assumption you must be willing to defend.",
+   "Direction 2: value leads with 'breaks still open at 9:30', with analyst time second and every number labeled an assumption. On Wednesday you time yourself resolving CDT, CTNT and FITB by hand BEFORE looking at Break Check's answer (n=3, one person), which takes about 45 to 75 minutes outside the four-hour budget.",
+   "Direction 3: Break Check is pitched as the wedge through InfoSec and ZDR. The expansion is sized at list prices (about $27K a year in Monitors or $8.8K in scheduled searches for 5,000 issuers), no contract size is guessed, and the sizing is question 2 for Ryan.",
+   "Direction 4: the live demo is three scenes: CDT with the failure drill as a second run, FITB, and a row Ryan names. CTNT runs only if the stale detector fires live on Friday. In pre-flight, run CTNT's Call 2 only and never press the repair.",
+   "Direction 5: auto plus outputSchema is the default and deep-lite is the Wednesday challenger. The switch rule written into the spec: deep-lite wins only if it fills more fields correctly across the rows and gets none wrong that auto got right. Ties stay on auto.",
+   "Direction 6: the replay is called a 'publication-date-bounded replay' with its leaks named, and Snapshot on auto is the strict check in the enterprise trial ask. Decide whether to add the optional paper-trading line at that answer (never say 'production', and skip the feed and test counts).",
+   "Direction 7: every beat has hypothesis, action, result and 'if different, I check X next', stored in rows.json and shown on screen.",
+   "Direction 8: the credibility line uses exact scope. Add 'an order on a retired CUSIP rejects' as something you saw only if you actually saw it in FIX traffic at Charles River.",
+   "Direction 9: the reliability design and the eight exact changes to app\\exa_client.py (golden-first reads, writes to cache/ only, timeout override, shared limiter of 4 with 250 ms spacing, /contents pricing, queue headers, docstring) are yours to approve before the build.",
+   "Direction 10: rehearsal is 35 minutes (including one interrupted run) plus a 20-minute explain-the-code pass. The build-time answer now also mentions the research beforehand and the manual baseline hour. Confirm you are comfortable saying that, and that 'I reviewed every call myself' will be true by Friday.",
+   "Direction 11: the file layout uses data\\rows.json and data\\channels.json (not config\\). ticket.py is folded into compare.py (draft_ticket_note, draft_followup_note).",
+   "Direction 12: section 13 has 20 questions. The first three are Pydantic issue 6082 setup mistakes, sizing an enterprise commitment when the first workload is small, and which verticals NYC goes after first.",
+   "Create the Exa account and key yourself (today or Wednesday morning), set a $5 per-key budget, and finish onboarding for the $10 bonus. Nothing in the spec is verified until you do.",
+   "Fill in FITB's coupon and maturity from the verified release on Wednesday. The spec deliberately leaves them as placeholders.",
+   "Keep or cut the IMMP row, which is now on screen only. Keep it only if you can explain without notes why an ADS ratio change hits the ADS line and not the ordinary shares. Otherwise swap in VerifyMe (VRME, CUSIP 92346X305).",
+   "Decide whether to show the optional Adroit line at the CDT next step ('the same unmapped-field problem I built a pre-go-live harness for').",
+   "Re-verify every row fact on its primary page on Wednesday before saying it out loud: CDT's release and alert 683 (including printed dates), CTNT alert 677, BAC 06051GLX5 and its two-series release, and the FITB 316773 DD9 8-K and the Nov 1 date and wording.",
+   "Leave out the observation that Exa's hosted MCP tool still lists deprecated parameters, or raise it only as a curious question at the end. It targets code Ryan works on.",
+   "Choose whether to watch Exa's Snapshot webinar (Thu Oct 1, 1 PM ET) in case the limits change."
+  ],
+  "not_fixed": [
+   "Skill finding (in-skill conflict): models-and-modes.md says to omit type rather than send auto. The spec keeps \"type\": \"auto\" visible on purpose so the on-screen Request JSON and the bake-off table are readable, and it has a prepared answer for this. SKILL.md itself says stating auto is fine.",
+   "Skill guidance says prefer 1 to 5 root fields, and the schema has 6. This is kept on purpose, per the allowed_if_justified finding: each field feeds one compare.py rule, and a justification line is written out.",
+   "Red 0-5 said pick CTNT or FITB, and red 1-8 said the live path should be CDT, CTNT and FITB. The decided direction (CDT, FITB and Ryan's row, with CTNT conditional) was followed instead.",
+   "Red 1-0 offered option (b), keep the IG manager and lead with bonds. Option (a), a total-market index manager, was chosen per direction 1, so the bond rows are not the lead.",
+   "Red 1-2 asked to confirm that both CDT sources were public at 7:30 AM Sep 28. This cannot be verified without Wednesday's check, so the spec says to check the printed dates first rather than asserting it.",
+   "Zero data retention coverage for Contents and Answer is left unresolved, because Exa's skill and Exa's ZDR docs page disagree. The spec claims coverage only for Search (and Agent), asks Ryan about the rest (Q9), and switches the repair off under ZDR if Contents is not covered.",
+   "Every latency, cost, result and API behavior in the spec is still unverified: whether outputSchema adds cost, whether summary works with maxAgeHours 0, www host matching, whether Snapshot combines with outputSchema, and real timings. No key exists until AJ creates one, so nothing was run.",
+   "The 12 to 20 breaks-a-day range stays an unproven assumption. The public volume check can make it plausible but cannot prove it, and it is left as the first discovery question.",
+   "The build timeline puts about three hours of build before 55 minutes of rehearsal, which is tight. If the build overruns, the cut list applies, and rehearsal time should not be traded away."
+  ]
+ },
+ "checks": [
+  {
+   "checker": "issues-resolved",
+   "verdict": "spec_v2.md is close to ready. I checked all 39 red-team issues (15 from the api-feasibility reviewer, 24 from interview-objections). 31 are fully resolved. The other 8 are half resolved or resolved in a way that creates a new problem: 0-0/1-2 (POC criterion 8), 0-3 (timing of the CTNT capture), 0-5/1-8 (clock math for the CTNT scene and the unlabeled results), 0-11/1-15 (new ZDR overclaim), 1-3 (the repair path skips the primary guard), 1-5 (no demo moment specific to Exa) and 1-21 (slide jargon left undefined). The scan found no em dashes and no former client names. \"Production\" is never used about AJ's trading system; it appears only for the customer's deployment, and line 286 explicitly says \"paper-trading research system\". Every demo beat has all four parts, but \"Under the hood\" merges action and result and gives no expected result. The failure-drill result is also not labeled unverified. Checked against Exa's own guidance (build-with-exa 0.2.0), there is one new exposure Ryan could catch: prompting-and-patterns.md says \"Prefer 1 to 5 root fields\", while the spec ships 6 root fields and claims the schema was trimmed to what the guidance allows. I also verified the arithmetic (all correct), the weekdays (Nov 1, 2026 is a Sunday; Sep 29 is a Tuesday), the rate of about 3.7 Nasdaq alerts a day (688 alerts over 184 trading days), and the prices and limits against exa-api.md. Fix the 4 majors below before Wednesday's keyed run. The minors can be fixed during the build.",
+   "remaining": [
+    {
+     "severity": "major",
+     "where": "Section 4 'Why six fields (the line)' (line 118) and the 'What changed' paragraph (line 7: 'trimmed to what Exa's build guidance ... allows ... a 6-field schema')",
+     "problem": "New problem that Ryan could check directly. Exa's own prompting-and-patterns.md says 'Prefer: 1 to 5 root fields'. The spec has 6 root fields but tells Ryan the schema was cut to meet the guidance ('your guidance says keep schemas to a handful'). If he opens the guidance, the claim fails.",
+     "exact_fix": "Line 7: replace 'a 6-field schema' with 'a 6-field flat schema (one more than the 1 to 5 root fields Exa's patterns page prefers; the reason is in section 4)'. Line 118: replace the whole line with: **Why six fields (the line):** \"Your patterns guidance prefers one to five root fields. I'm at six flat strings because each one feeds exactly one rule in compare.py, and I cut two from my first draft to get here. If Wednesday's run shows fields coming back empty, identifier_in_source goes first, because code already checks identity against the cited page's own text. There are no citation or confidence fields because grounding already returns them.\" (Unverified until Wednesday: whether six fields fill as well as five.) The two cut: `event_type` (the row already carries the event hint) and `new_symbol` (swapped in by code only on ticker-change rows)."
+    },
+    {
+     "severity": "major",
+     "where": "Section 4 evidence.py step 1 (line 221, second trigger) and Call 3 (lines 227 to 249); evidence.py repair()",
+     "problem": "New gap created by resolving 1-3 and 0-3. Call 3 returns only a summary and no page text, so the grounding check can never run on repaired fields (the spec calls that check the primary guard). The detector's second trigger ('every field not stated and a candidate exchange URL exists') can also pick an unguarded nasdaqtrader URL, which may be another issuer's alert. That would put a wrong-issuer record on screen and break the 'zero wrong-issuer citations' promise.",
+     "exact_fix": "Step 1: delete the clause 'or when every field comes back \"not stated\" and a candidate exchange URL exists'. Add after the Call 3 'Response fields used' paragraph: \"**Identity check on the repair.** Code compares the parsed summary's identifier_in_source with the row's CUSIP, exchange-prefixed ticker and legal name. The check means something here because the summary query names no issuer, so the model has nothing to echo. If they do not match, the repair is discarded and the break goes to the analyst with the link. Repaired fields get the chip 'Stale source repaired, one source' and never count as corroborated until the analyst opens the link.\" Add to test_evidence.py: 'a repaired summary naming another issuer is discarded'."
+    },
+    {
+     "severity": "major",
+     "where": "Section 12 build table row 2:20 to 2:50 ('the CTNT capture'), section 5 pre-flight, and red-team 0-3 fix ('capture immediately if the key exists')",
+     "problem": "Half resolved. Pre-flight correctly says never to run the repair, because a live crawl may refresh Exa's stored copy. But Wednesday's 'CTNT capture' does not say whether it runs Call 3. If it does, it may erase the Friday state the conditional scene depends on. The 0-3 fix to capture as early as possible is also missing.",
+     "exact_fix": "Replace 'the CTNT capture' in the 2:20 to 2:50 row with: 'the CTNT capture: run CTNT's Call 2 only and save it. Never run Call 3 on Wednesday, because a live crawl may refresh Exa's stored copy and erase Friday's state. If Friday's repair fails, the stale copy stays flagged and the break goes to the analyst with its link. If the detector does not fire on Wednesday, cut the scene and describe CTNT in one sentence, using the Sep 29 MCP observation labeled as such.' Add under 'Before the clock starts': 'If the key exists before Wednesday, run CTNT's Call 2 at once and keep the file. Every day of delay is another chance that Exa refreshes the page.'"
+    },
+    {
+     "severity": "major",
+     "where": "Section 7 Scene 3 (lines 539 to 544); red-team 1-5",
+     "problem": "Half resolved. The scraper answer is on slide 2 and in section 10, but the script still has no demo moment that is specific to Exa. Ryan's pick is the natural moment, and nothing ties it to 'one plain-language query, no per-site rules'.",
+     "exact_fix": "Add to Scene 3 after the Hypothesis bullet: \"- **The Exa point, before pressing Check:** 'This is the scraper question answered live. I have written no rule for this issuer's site. The same plain-language query and the same approved domain list find its release wherever it was posted.' After the result, point at the source-class tag to show which wire or IR site it came from.\""
+    },
+    {
+     "severity": "minor",
+     "where": "Slide 2 Enterprise fit (line 471) and section 9 ZDR answer (line 646)",
+     "problem": "Resolving 0-11 and 1-15 created a new overclaim. 'Search, which carries every live lookup, is ZDR-covered in all of Exa's guidance' is wrong in two ways. The Call 3 repair is a live /contents lookup. And AJ read two Exa sources, not 'all' guidance.",
+     "exact_fix": "Slide 2: 'Search, which carries every routine lookup, is ZDR-covered in both Exa sources I read. The occasional one-page repair uses Contents, which one of those sources does not list, so I'd confirm it.' Line 646: replace the first sentence with 'Search, which carries every routine query, is covered by ZDR in both Exa sources I read.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 7 'Conditional, 60 seconds taken from the tour' (line 546)",
+     "problem": "The tour (13:45 to 14:45) is only 60 seconds long. Taking 60 seconds from it deletes the bake-off, which is the measured reason for auto that Ryan will probe.",
+     "exact_fix": "**Conditional, 60 seconds taken from Slide 3 (which drops from five minutes to four): CTNT stale-page repair.**"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 7 'Under the hood' beat (line 554) and failure-drill Result (line 526)",
+     "problem": "Under the hood merges action and result and gives no expected result, so there is nothing to check the 'if different' line against. The failure-drill result is stated as fact, with no 'unverified' label, even though the timebox has never run.",
+     "exact_fix": "Replace line 554 with: \"- **Action:** open the call log, the bake-off table with the manual baseline beside it, one line of evidence.py ('Search finds, code verifies identity, the analyst decides') and the early-warning JSON ('Scheduled search under ZDR; Monitors for teams that accept non-ZDR'). Run all, the Snapshot panel and the replay stay here for questions. - **Result (expected, unverified until Wednesday):** two calls per exception at about $0.007 each and about 3 s wall time, queue headers showing no wait, and the bake-off row that shows why the default is auto.\" Line 526: start with '**Result (expected, unverified until Wednesday's timebox test):**'."
+    },
+    {
+     "severity": "minor",
+     "where": "Slides 1 and 2 (lines 457 to 471); red-team 1-21",
+     "problem": "Half resolved. Several terms are still undefined on the slides: 'breaks' and 'reverse split' (slide 1), and 'system of record', '8-K filings', 'DTCC' and 'synchronous' (slide 2).",
+     "exact_fix": "Slide 1: 'clears one shared queue of breaks (rows where the two licensed data vendors disagree) before the 9:30 open' and 'CDT Equity's 1-for-25 reverse split (every 25 old shares become 1 new share)'. Slide 2: 'Licensed feeds stay the system of record (the official source the firm books from). Bloomberg, LSEG, ICE and DTCC (the US settlement and depository utility) remain the source of truth.' Also 'bond redemptions and 8-K filings (a company's SEC report of a major event)', and replace 'One synchronous call returns' with 'One call, answered while you wait, returns'."
+    },
+    {
+     "severity": "minor",
+     "where": "Slide 3 first and third bullets (lines 474, 476)",
+     "problem": "A projection is stated as fact on the slide ('the same team clears the queue before the open'). The per-exception spend is also unlabeled, even though whether outputSchema adds cost is unknown until a keyed call.",
+     "exact_fix": "'With a 3 to 5 minute review per break (an assumption), the same team would clear the queue before the open on a base-case day; the POC shadow week measures it.' and 'about $0.015 per exception on auto at list price (whether structured output adds to that is confirmed Wednesday), so under $100 a year for the queue.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 4 Call 1, 'type: auto' bullet (line 141)",
+     "problem": "This is a result stated as fact before it exists. 'On Wednesday I ran the identical body on deep-lite' is past tense, and nothing has run yet.",
+     "exact_fix": "\"Auto is Exa's default, and each call fills its fields from one page, so I started there. I ran the identical body on deep-lite and I only switch on measured field accuracy.\" (Say the second sentence only after Wednesday's bake-off has actually run. Until then say: 'I'm testing the identical body on deep-lite and will switch only on measured field accuracy.')"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 9 success criterion 8 (line 635)",
+     "problem": "Resolving 0-0 and 1-2 created a new problem. Agreement between the Snapshot arm and the replay arm measures how leaky the method is, not the customer's value. As a pass/fail gate, it can fail a POC that otherwise succeeds.",
+     "exact_fix": "8. **Reported, not a pass condition:** how often the Snapshot arm and the replay arm agree on fields, with each disagreement explained. This measures how much the replay leaks."
+    },
+    {
+     "severity": "minor",
+     "where": "'What changed' paragraph (line 7: 'no restated defaults')",
+     "problem": "Every body sends \"type\": \"auto\", which is a restated default. Exa's models-and-modes.md says 'omit type entirely rather than sending it' (SKILL.md says sending it is fine). The summary contradicts the bodies.",
+     "exact_fix": "Replace 'no restated defaults' with 'no restated defaults except `type: \"auto\"`, sent only so the bake-off bodies differ by one line (Exa's pages differ on whether to send it)'."
+    },
+    {
+     "severity": "minor",
+     "where": "Section 4 'Why raw HTTP and not exa-py' (line 95) and exa_client change 8",
+     "problem": "'adds full text' overstates the case to someone who worked on exa-py integrations. Per exa-api.md gotcha 2, get_contents adds 10,000 characters of text whenever no text, summary or extras is passed.",
+     "exact_fix": "\"exa-py's get_contents adds 10,000 characters of text whenever I don't pass text, summary or extras, even when I ask only for highlights. That bills two content types, and it drops the per-URL error tags. search() adds text only when you pass no contents. With raw HTTP, the body on screen is exactly what was sent.\""
+    },
+    {
+     "severity": "minor",
+     "where": "Section 8 onboarding backfill (line 609) vs section 11 bulk jobs (line 708)",
+     "problem": "Internal inconsistency. Section 8 prices one Agent run per security ($75 for 3,000 securities). Section 11 puts the whole book in input.data and calls rows-per-run a POC question.",
+     "exact_fix": "Line 609: '- Onboarding backfills: low-effort Agent runs at $0.025 each, with the new fund's book in input.data. How many securities one run handles well is a POC question, so the cost per onboarding ranges from under $1 (100 securities a run) to about $75 (one a run) for a 3,000-security fund.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 5 'Shared limiter' (line 407) and exa_client change 5 (line 438)",
+     "problem": "Run all can queue calls behind the 4-slot limiter while their own 8 s timebox is already running, which would produce amber fallbacks in the reliability moment. Change 5 also contradicts itself: 'only around requests.post(), including retries' would hold a slot through up to 10 s of retry sleep.",
+     "exact_fix": "Add to 'Shared limiter': 'Run all sends rows one at a time through run_row (each row's two calls in parallel), so no call waits on the limiter inside its own timebox.' Change 5: 'Hold the semaphore around each requests.post() attempt only, and release it during a retry wait.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Screen 2 (line 74) vs channel config table (line 209)",
+     "problem": "The NYSE market-column label differs between the two places. The Same-issuer confirmation logic is described only for bonds, although an NYSE 8-K is also the issuer's own text.",
+     "exact_fix": "Line 74: 'For bonds the market column is labeled \"SEC filing (issuer, legally filed)\"; for NYSE names, \"SEC filing, 8-K (issuer, legally filed)\". For both, code shows \"Same-issuer confirmation\" when both citations carry the issuer's own text.' Use the same NYSE label in the table at line 209."
+    },
+    {
+     "severity": "minor",
+     "where": "Section 4 evidence.py step 3, grounding check (line 223)",
+     "problem": "The primary guard needs the cited page's title or bare highlights to contain the identifier. Nobody has checked whether nasdaqtrader alert titles or highlights include the issuer name or CUSIP. If they do not, the hero row's correct fields turn amber on stage.",
+     "exact_fix": "Append to step 3: 'Unverified until Wednesday: whether bare highlights on nasdaqtrader alert pages include the issuer's name or CUSIP. If CDT's correct citations fail this check, the fallback is one /contents call on the cited URL with highlights {\"query\": \"<legal name> <CUSIP>\"} ($0.001, inside the timebox), and the check reads that text.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 8 volume sanity check (line 594)",
+     "problem": "'most of those touch the book' is unsupported. Nasdaq alerts also cover warrants, units and delistings that an index book would not hold.",
+     "exact_fix": "'For a firm whose total-market products hold most listed US names, many of those touch the book (some alerts cover warrants, units and delistings it would not hold).'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 3 sidebar 'Timebox seconds' (line 49) and section 12 row 2:20 to 2:50 ('one genuinely slow call')",
+     "problem": "The 8 s timebox is not tied to any measured latency, and the 'genuinely slow call' has no defined body, so the real-slow-call test (1-11) cannot be reproduced.",
+     "exact_fix": "Line 49: 'Timebox seconds. Default 8 on auto, reset on Wednesday to about twice the measured 95th-percentile wall time for the pair (unverified until then); 12 only if deep-lite wins.' Row 2:20: 'one genuinely slow call: the CDT Call 2 body with type deep-reasoning (Exa lists 12 to 40 s, $0.015) under the 8 s timebox; pass = the screen returns in about 8 s.'"
+    },
+    {
+     "severity": "minor",
+     "where": "Section 7 Scene 3 free-form row (lines 539 to 544) vs the rows.json rule (line 97)",
+     "problem": "A free-form row has no rows.json entry, so its evidence window has to come from today's date, which breaks the 'never now()' rule as written. It also has no saved run, so a slow call shows a red badge, and the script has no line for that.",
+     "exact_fix": "Add to Scene 3: 'A free-form row's evidence window is computed from today's date. It has no saved run to match, so the cache-key rule does not apply. If different, a timeout: the column shows red, \"no saved run\", with the reason. Say: \"That's the timebox doing its job; I'd rerun it once and otherwise hand the link search to the analyst.\"'"
+    }
+   ]
+  },
+  {
+   "checker": "api-and-skill",
+   "verdict": "Nothing blocks the demo. I checked every JSON body in spec_v2.md field by field against Exa's live OpenAPI spec (https://exa.ai/docs/exa-spec.yaml, \"Exa Public API\" 2.0.0, fetched 2026-09-29) and the build-with-exa skill 0.2.0. All field names are real. Content options sit in the right place: inside \"contents\" on /search, at the top level on /contents. There are no invalid combinations. Snapshot is never sent with maxAgeHours, livecrawl, livecrawlTimeout, subpages or category. The Monitor body uses search and trigger, and every one of its fields exists in CreateSearchMonitorParameters, including search.includeDomains. The shared schema has 6 properties at 1 level, and the events schema has 6 properties at 2 levels, so both fit the 10-property, 2-level cap. The one guidance problem Ryan could catch is that 6 root fields exceeds the skill's stated preference of \"1 to 5 root fields\", and the spec's own line says it follows that guidance. Two Monitor fields (metadata, webhook.events) have no one-sentence reason. A few wording claims should be tightened: additionalQueries on auto, \"every live lookup\" is ZDR, the list of hosts to check for www matching, and the cost wording. The exa_client.py changes are sound in design and match the actual file (which has a single CACHE_DIR, no threading import, no timeout parameter, and prices /contents at $0.007 through PRICE_BY_TYPE). Six places would still not work as written. (1) The new os.replace write can raise on Windows and break the rule that call() always returns an envelope. (2) The timebox fallback has no way to carry its reason text. (3) The semaphore text contradicts itself about retries. (4) The /contents price formula counts a body with no content keys as $0. (5) The queue headers are strings. (6) The repair and Run all paths run outside the timebox. Every latency, cost and result in the spec stays unverified until Wednesday's keyed test.",
+   "remaining": [
+    {
+     "severity": "major",
+     "where": "spec_v2.md section 4, 'Shared schema' block and 'Why six fields (the line)' (line 101 and line 118); also section 4 'What code does next' step 4 (line 224) and section 12 evidence.py list (check_identifier_field, line 804)",
+     "problem": "The skill's references/prompting-and-patterns.md says 'Prefer: 1 to 5 root fields'. The schema has 6 root fields, and the spoken line claims the schema follows Exa's guidance ('your guidance says keep schemas to a handful'). Ryan can quote the 1-to-5 line back. The spec already calls identifier_in_source 'a secondary sanity check only' and says the model can echo the prompt's issuer name, so that field is the weakest one to keep. The count stays inside the OpenAPI cap (10 properties, 2 levels), so this is a guidance problem, not a validation error.",
+     "exact_fix": "Replace the schema intro with: \"Five flat fields. For a ticker-change row, code swaps `new_cusip` for `new_symbol` (\\\"New ticker as stated, or not stated\\\"). No citation, confidence or identifier fields: `output.grounding` already returns citations and confidence, and identity is checked by code against the cited page's own text.\"\nSchema: {\"type\": \"object\", \"required\": [\"terms\", \"effective_as_stated\", \"market_effective_date\", \"new_cusip\", \"source_notice_date\"], \"properties\": {\"terms\": {\"type\": \"string\", \"description\": \"Split or ADS ratio, or redemption price and the series redeemed, as stated\"}, \"effective_as_stated\": {\"type\": \"string\", \"description\": \"Effective date and time exactly as the source writes it\"}, \"market_effective_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated\"}, \"new_cusip\": {\"type\": \"string\", \"description\": \"New CUSIP as stated, or not stated\"}, \"source_notice_date\": {\"type\": \"string\", \"description\": \"YYYY-MM-DD printed on the notice itself\"}}}\nNew line: \"Five flat fields, and each one feeds exactly one rule in compare.py. Your guidance says prefer one to five root fields, so I cut three from my first draft: event_type, because the row already carries the event hint; new_symbol, because code swaps it in only on ticker-change rows; and identifier_in_source, because a model can echo the name I put in the prompt, so identity is checked by code against the cited page's text instead.\"\nDelete step 4 in 'What code does next' and the `check_identifier_field(output, row)` entry in section 12, and renumber the window check to step 4."
+    },
+    {
+     "severity": "major",
+     "where": "spec_v2.md section 5, 'Exact changes to app\\exa_client.py' item 3 (line 436), and section 12 `_write_cache` entry (line 781)",
+     "problem": "In today's file, _write_cache() is called in call() with no try/except, so any OSError raises out of call(). That breaks the file's core promise that every call returns an envelope. On Windows, os.replace() raises PermissionError when another thread has the target file open, for example a fallback read in _read_cache during Run all. If two threads write the same request with a fixed temp name, they also overwrite each other's temp file. On the on-time path, a live success would surface as a crashed future instead of a green badge.",
+     "exact_fix": "3. **Write target.** `_write_cache()` writes only to `CACHE_DIR`. It writes to a temp file named per thread, `path.with_name(f\"{path.stem}.{os.getpid()}.{threading.get_ident()}.tmp\")`, then calls `os.replace()` to move it into place, so a late thread never leaves a half-written file. The whole write is wrapped in `try/except OSError`. On failure the temp file is removed and the live envelope is still returned, with `cache_write_error` set, because a failed save must never turn a live success into a crash."
+    },
+    {
+     "severity": "major",
+     "where": "spec_v2.md section 5, 'At the deadline' bullet (line 405), and section 12 `run_row` entry (line 799)",
+     "problem": "exa_client has no function that reads a saved run with a caller-supplied reason. The only route is search(body, cache_only=True), which returns error \"\" (from_cache(\"\") in the current file). As written, the amber badge's 'reason: live call still running past 8 s' has nowhere to come from, and a row with no saved run would show a red badge with an empty reason.",
+     "exact_fix": "**At the deadline** (8 s on auto; 12 s only if deep-lite wins), for each channel not back, `run_row()` calls `exa_client.search(body, cache_only=True)` and sets `envelope[\"error\"] = f\"live call still running past {timebox_s} s\"` on the envelope it gets back. That envelope's `source` (\"cache\" or \"none\") and `saved_from` (\"golden\" or \"working\") drive the badge. The other channel renders live. Partial results beat a spinner."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 5, 'Exact changes' item 5 (line 438)",
+     "problem": "'Hold the semaphore only around requests.post(), including retries' contradicts itself. If the slot is held across the retry loop, it is also held through time.sleep() waits of up to 5 s, which blocks the other channels. If it is held only around requests.post(), retries also need to pass through the 250 ms start-spacing. The current file also does not import threading.",
+     "exact_fix": "5. **Shared limiter.** Add `import threading`, a module-level `_LIMIT = threading.BoundedSemaphore(4)`, and a start-spacing lock (at least 250 ms between request starts). Every attempt, including each retry, acquires `_LIMIT` and passes the spacing lock immediately before its own `requests.post()`, and releases `_LIMIT` as soon as that post returns or raises. No slot is held during a retry's `time.sleep()`."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 5, 'Exact changes' item 6 (line 439)",
+     "problem": "The formula counts content keys that are present, so a /contents body with no text, highlights or summary prices at $0. Exa's server default on /contents is full text (per the skill's prompting-and-patterns.md). A key sent as false would also be counted. The Run all totals and the call log would also add the saved cost of cached runs as if it had been spent again.",
+     "exact_fix": "6. **/contents pricing.** In `_envelope()`, when `costDollars` is missing and the endpoint is `/contents`, price it as `len(body.get(\"urls\") or body.get(\"ids\") or []) * max(1, sum(1 for k in (\"text\", \"highlights\", \"summary\") if body.get(k))) * 0.001`. The max(1, ...) covers Exa's default of full text when no content type is named. Today it wrongly falls back to the /search price of $0.007. /search keeps `PRICE_BY_TYPE`. Run all totals and the call log's dollar column sum `cost_dollars` only where `source == \"live\"`."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 5, 'Exact changes' item 7 (line 440), and item 8 (line 441)",
+     "problem": "In the OpenAPI spec, x-exa-queued is the string \"true\" or \"false\" and x-exa-queue-ms is a string. requests' resp.headers is a case-insensitive dict and has to be copied to plain values before json.dumps. The current _envelope() and from_cache() have no parameters for headers or saved_from, and the module docstring's 'WHAT AN ENVELOPE LOOKS LIKE' block, which Ryan will read, would go stale.",
+     "exact_fix": "7. **Queue headers.** Copy `x-request-id`, `x-exa-queued` and `x-exa-queue-ms` from `resp.headers` into plain values: `queued = resp.headers.get(\"x-exa-queued\") == \"true\"`, `queue_ms = int(resp.headers.get(\"x-exa-queue-ms\") or 0)`. Store them in the cache record and pass them to `_envelope()` as new keyword arguments, so every envelope carries `queued`, `queue_ms` and `saved_from` (empty for live). The call log shows whether a request waited in Exa's rate-limit queue.\n8. **Docstring.** Correct the module docstring's SDK sentence to the reworded exa-py reason in section 4 (search() adds text only when you pass no contents; get_contents adds text even with highlights). Update 'HOW ONE CALL FLOWS' to say the fallback reads cache_golden then cache, and add `saved_from`, `queued` and `queue_ms` to 'WHAT AN ENVELOPE LOOKS LIKE'."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 12 evidence.py `repair(url)` entry (line 805), and section 7 CTNT conditional beat (line 548)",
+     "problem": "The repair button runs Call 3 with a 20 s request timeout. On failure it then runs the fallback body with another 20 s timeout. The spec does not route this through EXECUTOR or the polling timebox, so a slow Nasdaq page could freeze the Streamlit screen for 40 s or more on stage, which is exactly the hang the timebox exists to prevent.",
+     "exact_fix": "- `repair(url, timebox_s=15, on_tick=None)`: submit Call 3 to `EXECUTOR`, loop `wait(timeout=0.5)` calling `on_tick` so the timer counts on screen, and at the deadline stop waiting and show the stale copy flagged with reason \"live re-fetch still running past 15 s\". Only if Call 3 returns an error inside the timebox, submit the highlights-only fallback body under the same remaining deadline. Parse the summary."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 3 Screen 3 'Run all' bullet (line 88)",
+     "problem": "The spec does not say how Run all feeds rows to EXECUTOR(max_workers=4). If all rows are submitted at once, 10 futures queue on 4 workers. A timebox measured from submit would then fire for calls that never started, and saved runs would show even though Exa is healthy.",
+     "exact_fix": "- **Run all** button: calls `run_row()` for one row at a time (never all rows submitted at once), so each row's two calls start together and its timebox measures real call time; every request still passes the shared limiter. Status chips (Corroborated, Same-issuer confirmation, Explained difference, Single-source field, Stale source repaired, Conflict, escalate) and totals (calls, live dollars, median and max latency)."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4, Call 6 'Why' bullets (after line 374)",
+     "problem": "The Monitor body sends `metadata` and `webhook.events`, and neither has a one-sentence reason. The skill's rule is that every field beyond the minimum needs a stated task reason. The spec also leaves out a true, relevant point from Exa's OpenAPI description of POST /monitors: Monitors do their own date-based filtering since the last run and their own semantic deduplication. The scheduled search has to do both in code.",
+     "exact_fix": "Add these bullets under **Why:**\n- `metadata`: \"Exa echoes it back in every webhook delivery, so the ticket bridge routes the run to the security-master queue and the right issuer without parsing the query.\"\n- `webhook.events: [\"monitor.run.completed\"]`: \"The bridge opens tickets only from finished runs, so it subscribes to nothing else; the default is all events.\"\n- \"Per Exa's API spec, a Monitor fetches only content since its last run and dedupes semantically on its own; the scheduled search does both in code, with the 7-day overlap and URL dedupe.\""
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4, Call 1 'No additionalQueries' bullet (line 145)",
+     "problem": "The OpenAPI spec says additionalQueries 'Only works with a deep-search type'. It does not say whether auto rejects it (400) or ignores it, so 'invalid on auto' is stronger than the source supports.",
+     "exact_fix": "- **No `additionalQueries`.** Exa's API spec says it only works with the deep types, so on auto it would at best do nothing. The agreed CUSIP moved into the query. If deep-lite wins, `additionalQueries` gets tested later as its own arm, never in the same run as the type change."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4, Call 1 'includeDomains' bullet (line 143) vs the CDT body (line 128)",
+     "problem": "The line says the allowlist is 'primary wires plus each issuer's IR site from their security master', but the CDT body has no IR site. If Ryan compares the two, the line looks untrue. No CDT IR domain is known, and it must not be invented.",
+     "exact_fix": "Replace the first quoted sentences with: \"The allowlist is a compliance control the customer supplies and approves: primary wires, plus the issuer's IR site when their security master has one (FITB and BAC do; the CDT row has none), plus two tagged mirrors. It is fixed in code so neither the model nor the user can widen it.\""
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4, line 185 (nasdaqtrader www note) and section 10 'Untested until AJ has a key' (line 679)",
+     "problem": "The Wednesday www-host check covers only nasdaq.com/press-release and nasdaqtrader.com. The same bare-host question applies to sec.gov (8-K exhibits are served from www.sec.gov/Archives) and to the wire hosts (www.globenewswire.com, www.prnewswire.com, www.businesswire.com). The OpenAPI text only says an entry 'can be a hostname'. A miss on sec.gov would empty the whole bond market channel.",
+     "exact_fix": "Line 185: \"Unverified until Wednesday: that bare host entries (`nasdaqtrader.com`, `sec.gov` and the wire domains) match their `www.` hosts. If one does not, add the www entry for that host.\" Section 10 bullet: \"whether the bare `nasdaq.com/press-release`, `nasdaqtrader.com`, `sec.gov` and wire-domain entries match their www hosts;\""
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 6 Slide 2 'Enterprise fit' bullet (line 471)",
+     "problem": "'Search, which carries every live lookup' is not quite true. The stale-page repair (Call 3) is a live lookup on /contents, and the skill's ZDR note lists only /search, /answer and /agent as ZDR surfaces.",
+     "exact_fix": "- **Enterprise fit:** these lookups reveal holdings, so production runs under Zero Data Retention (ZDR: Exa keeps nothing from the request). Search, which carries both channel lookups, is ZDR-covered in all of Exa's guidance; the one-page repair uses Contents, whose coverage I would confirm first. Exa states SOC 2 Type II (an independently audited report on security controls), with reports at trust.exa.ai."
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4, 'Expected for the Call 1 plus Call 2 pair' (line 212) and Call 3 'Cost' (line 264); section 4 'Response fields used' (line 152)",
+     "problem": "The OpenAPI spec prices /search dynamically ($0.007 minimum, $0.015 maximum) and its costDollars object has a 'summary' line for synthesized output, so outputSchema may add cost. The research lists both '/contents $1/1k pages per content type' and 'AI page summaries $1/1k pages', so a summary on /contents could be $0.001 or $0.002. The OpenAPI spec also says searchTime may exclude the structured-output synthesis phase, so it must not be quoted as latency.",
+     "exact_fix": "Line 212 cost sentence: \"Cost $0.007 per call at list, $0.014 for the pair (unverified). Exa's API spec prices /search dynamically between $0.007 and $0.015 and has a costDollars.summary line for synthesized output, so the first live `costDollars` shows whether outputSchema adds to it.\"\nLine 264: \"**Cost:** $0.001 to $0.002 at list for the one page (Exa lists a per-content-type contents price and a separate AI page summary price; which applies is unverified), plus any live-crawl charge, shown by the first live `costDollars`.\"\nAdd to line 152: \"Latency on screen is exa_client's `elapsed_ms` (end to end); `searchTime` is logged but can exclude the synthesis phase, per Exa's API spec.\""
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 12 timeboxed steps table, first row 'Done when' cell (line 733)",
+     "problem": "The section 4 bodies carry string placeholders (\"outputSchema\": \"<shared 6-field schema above>\", \"schema\": \"<...>\", \"<coupon> due <maturity>\"). If a body matches section 4 'exactly', the placeholder string goes out as outputSchema. The OpenAPI spec requires an object there, so the call returns a 400.",
+     "exact_fix": "Bodies print and match section 4, with every `<placeholder>` replaced: `outputSchema` and `summary.schema` are the schema object (never a string), and the FITB coupon, maturity and window dates come from rows.json"
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 4 'What code does next' step 3 (line 223), applied to Call 3 output",
+     "problem": "Call 3 returns only a summary string and the page title (no highlights and no output.grounding). The grounding check, 'the cited page's own title or highlights must contain the identifier', therefore cannot run on repaired fields, and the spec does not say what the chip shows for them.",
+     "exact_fix": "Add as step 6: \"**Repaired fields.** A Call 3 record has no grounding and no highlights. Code checks that the URL is the one the stale detector took from this row's raw results and that the parsed `new_cusip`, if stated, is a valid 9-character CUSIP. The chip reads \\\"Stale source repaired: fields from Exa's page summary, page link is the citation, analyst confirms\\\", and the fields never count as corroborated on their own.\""
+    },
+    {
+     "severity": "minor",
+     "where": "spec_v2.md section 12 tests, `test_exa_client.py` and `test_timebox.py` (lines 845 and 848)",
+     "problem": "As written, the tests would read and write the real cache\\ and cache_golden\\ folders, which could pollute Wednesday's frozen runs. A 20-second mocked call also makes test_timebox take more than 20 s, because it has to wait for the late thread before it can check where that thread wrote.",
+     "exact_fix": "- `test_exa_client.py`: monkeypatch `CACHE_DIR` and `GOLDEN_DIR` to pytest `tmp_path` folders; fallback reads golden before working cache; live writes go only to the working folder; /contents pricing is pages times content types with a minimum of one; the timeout override is passed through; a failed cache write still returns a live envelope.\n- `test_timebox.py`: with both cache folders monkeypatched to `tmp_path`, a mocked 3-second call under a 1-second timebox returns control in about 1 second with the saved run and the reason text, and after the late thread finishes its file exists in the working folder only."
+    }
+   ]
+  }
+ ],
+ "patch": {
+  "applied": [
+   "File edited: C:\\Users\\ajwal\\Documents\\exa-demo\\design\\spec_v2.md. I searched it afterwards and it has no em dashes or en dashes.",
+   "Fix 21 (api-and-skill, schema cut to 5 fields): new schema intro and schema with identifier_in_source removed. The 'Why five fields' line replaces the 'Why six fields' line. Step 4 of 'What code does next' is deleted and the window check is now step 4. check_identifier_field is removed from section 12. For consistency I also changed every '<shared 6-field schema above>' placeholder to 5-field, plus 'The six fields above', '(the six fields)', Scene 1's 'six schema fields' and section 10's '6-field outputSchema'.",
+   "Fix 1 (issues-resolved), line 7 part only, adapted: the 'What changed' paragraph now says 'a 5-field flat schema (inside the 1 to 5 root fields Exa's patterns page prefers; the reason is in section 4)'. See skipped for the rest of fix 1.",
+   "Fix 12: 'no restated defaults' now reads 'no restated defaults except type: \"auto\", sent only so the bake-off bodies differ by one line (Exa's pages differ on whether to send it)'. This matches SKILL.md line 56, which says stating auto is fine.",
+   "Fix 2: removed the second stale-detector trigger. Added the 'Identity check on the repair' paragraph after Call 3's 'Response fields used'. Added the test_evidence case 'a repaired summary naming another issuer is discarded'. Adaptation: fix 21 removes identifier_in_source from the shared schema, and the guidance allows at most 5 root fields, so Call 3's summary schema now swaps effective_as_stated for identifier_in_source (still 5 fields). This is labeled in the spec as a design choice for AJ to confirm. build_repair_body and the Call 3 body placeholder were updated to match.",
+   "Fix 28 (repaired fields): added as step 5, not step 6, because step 4 was deleted. It combines the URL-provenance check, the CUSIP-validity check and the repair identity check. The two proposed chip texts are merged into one: 'Stale source repaired, one source: fields from Exa's page summary, page link is the citation, analyst confirms'.",
+   "Fix 3: the 2:20 to 2:50 row now says to capture CTNT with Call 2 only and never run Call 3 on Wednesday, with the fallback and cut rules. 'Before the clock starts' now says to run CTNT's Call 2 at once if the key exists early.",
+   "Fix 4: added 'The Exa point, before pressing Check' to Scene 3.",
+   "Fix 5: slide 2 now says 'ZDR-covered in both Exa sources I read', with the Contents caveat. The section 9 ZDR answer's first sentence now reads 'every routine query ... both Exa sources I read'.",
+   "Fix 6: the conditional heading now says the 60 seconds come from Slide 3 (five minutes down to four).",
+   "Fix 7: 'Under the hood' is split into Action and Result, with the result labeled expected and unverified. The failure-drill Result is labeled unverified until Wednesday's timebox test.",
+   "Fix 8: defined breaks, reverse split, system of record, DTCC and 8-K filings, and replaced 'synchronous' with 'One call, answered while you wait'.",
+   "Fix 9: slide 3's projection is labeled an assumption measured by the shadow week, and the cost is labeled list price with structured-output cost confirmed Wednesday.",
+   "Fix 10: the type-auto bullet is reworded, with the note on what to say before and after the bake-off.",
+   "Fix 11: success criterion 8 is now 'Reported, not a pass condition'.",
+   "Fix 13: the exa-py line now says 10,000 characters are added whenever text, summary or extras are not passed (checked against exa-api.md gotcha 2).",
+   "Fix 14: the line 609 onboarding backfill now reads 'under $1 to about $75 per onboarding'.",
+   "Fixes 15 and 24: the Run all one-row-at-a-time sentence was added to 'Shared limiter'. Change 5 was replaced with fix 24's version (import threading, a slot held per attempt only, no slot held during retry sleep), which covers fix 15's change-5 text.",
+   "Fix 16: Screen 2 labels for bonds and NYSE, with 'Same-issuer confirmation' for both. The NYSE row in the channel table now uses 'SEC filing, 8-K (issuer, legally filed)'.",
+   "Fix 17: the unverified note on nasdaqtrader highlights, with the $0.001 /contents fallback, is appended to step 3.",
+   "Fix 18: volume check now says 'many of those touch the book', with warrants, units and delistings noted.",
+   "Fix 19: the sidebar timebox is tied to the measured p95 wall time. The slow-call test is defined as the CDT Call 2 body on deep-reasoning (12 to 40 s, $0.015, checked in exa-api.md) under the 8 s timebox.",
+   "Fix 20: free-form row mechanics added to Scene 3 (window from today's date, no saved run, red badge line).",
+   "Fix 22: change 3 now uses a per-thread temp file, os.replace, try/except OSError and cache_write_error. The section 12 _write_cache entry was updated to match.",
+   "Fix 23: 'At the deadline' now uses search(body, cache_only=True) with the error text set, and source/saved_from drive the badge. The section 12 run_row entry was updated to match (checked that exa_client uses source values 'live', 'cache' and 'none').",
+   "Fix 25: Run all bullet on Screen 3 now calls run_row one row at a time, and its total is 'live dollars'.",
+   "Fix 26: change 6 now uses max(1, ...) pricing, and totals sum only live cost. The section 12 _envelope entry was updated.",
+   "Fix 27: change 7 now converts headers to plain values and adds kwargs to _envelope(). Change 8 now also covers the 'HOW ONE CALL FLOWS' and 'WHAT AN ENVELOPE LOOKS LIKE' docstring updates.",
+   "Fix 29 (repair timebox): the section 12 repair() entry is replaced with the EXECUTOR and polling version (15 s timebox, fallback within the remaining deadline).",
+   "Fix 30 (Call 6 Why): added bullets for metadata, webhook.events and Monitor dedupe versus the scheduled search.",
+   "Fix 31: additionalQueries bullet reworded to 'at best do nothing'.",
+   "Fix 32: includeDomains quote now says the IR site is included when the security master has one (FITB and BAC do, CDT has none), plus two tagged mirrors.",
+   "Fix 33 (www hosts): the line 185 note and the section 10 bullet now cover sec.gov and the wire domains.",
+   "Fix 34: pair cost now notes dynamic pricing of $0.007 to $0.015 and costDollars.summary. Call 3 cost is now $0.001 to $0.002. Added the elapsed_ms versus searchTime note to 'Response fields used'. For consistency I also changed the repair row of the cost summary table to $0.001 to $0.002.",
+   "Fix 35: the Done-when cell for the first row of the build table now requires every placeholder replaced and the schemas sent as objects.",
+   "Fix 36 (tests): test_exa_client.py and test_timebox.py now use tmp_path folders, a 3 s mocked call under a 1 s timebox, and include the failed-cache-write case."
+  ],
+  "skipped": [
+   "Fix 1 (issues-resolved, keep 6 fields, new line 118 text): skipped. Keeping six root fields contradicts Exa's skill, which says 'Prefer: 1 to 5 root fields' (references/prompting-and-patterns.md line 182). Fix 21 (api-and-skill) solves the same problem within the guidance, so I applied it instead. Only fix 1's line 7 edit was applied, reworded to say 5 fields.",
+   "Fix 33 (api-and-skill, slide 2 'Enterprise fit' wording 'ZDR-covered in all of Exa's guidance'): skipped. Fix 5 flags exactly that phrase as an overclaim, since AJ read two Exa sources and not all of Exa's guidance, and saying 'all' would break the no-invented-facts rule. Fix 5's wording ('both Exa sources I read', with the Contents caveat) was applied instead and covers fix 33's Contents point.",
+   "Partial, for AJ to confirm: fix 2's repair identity check needs identifier_in_source, and fix 21 removes it from the shared schema. To keep the check within 5 root fields, Call 3's summary schema swaps effective_as_stated for identifier_in_source. That is my own merge decision, and it is labeled in the spec at C:\\Users\\ajwal\\Documents\\exa-demo\\design\\spec_v2.md in the Call 3 section, under 'The repair schema'.",
+   "Not changed: the '14:45 to 19:45. Slide 3.' timing header in section 7. Fix 6 changes only the conditional heading, and that heading already says Slide 3 drops to four minutes when the CTNT scene runs."
+  ]
+ }
+}

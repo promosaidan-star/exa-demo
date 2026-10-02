@@ -1,0 +1,46 @@
+{
+ "saved_at": "2026-09-29 09:40:13",
+ "endpoint": "/contents",
+ "body": {
+  "urls": [
+   "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677"
+  ],
+  "maxAgeHours": 0,
+  "livecrawlTimeout": 12000,
+  "highlights": {
+   "query": "Cheetah Net Supply Chain Service Inc. (CTNT) reverse stock split: effective date, ratio and new CUSIP"
+  }
+ },
+ "elapsed_ms": 1179,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "a68b460548e812aa22ec2199469f9e59",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677",
+    "title": "Equity Corporate Actions Alert #2026 - 677 Information Regarding the Reverse Stock Split and CUSIP Number Change for Cheetah Net Supply Chain Service Inc. (CTNT)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677",
+    "author": null,
+    "highlights": [
+     "Split and CUSIP Number Change for Cheetah Net Supply Chain Service Inc. (CTNT)\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | Cheetah Net Supply Chain Service Inc. (CTNT) will effect a one-for-one hundred and fifty (1-150) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to 16307X400. If you would like to register as a market maker in CTNT, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ],
+    "image": "https://www.nasdaqtrader.com/images/trader-logo-stacked.png"
+   }
+  ],
+  "statuses": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-677",
+    "status": "success",
+    "source": "crawled"
+   }
+  ],
+  "costDollars": {
+   "total": 0.001,
+   "contents": {
+    "highlights": 0.001
+   }
+  },
+  "searchTime": 679.3374080001377
+ }
+}

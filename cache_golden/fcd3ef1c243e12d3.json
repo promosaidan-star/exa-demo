@@ -1,0 +1,255 @@
+{
+ "saved_at": "2026-10-02 13:06:41",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Bank of America Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5: reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Bank of America Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5, either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 6436,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "b9b17f9aae1d2a1e811e852d00b30a5f",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+    "title": "Fixed/Floating Rate Senior Notes, due September 2027",
+    "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n September 4, 2026 at 4:20 PM Eastern \n\nBank of America Announces Redemptions of five hundred million dollars$500,000,000 Floating Rate Senior Notes and one billion five hundred million dollars$1,500,000,000 five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all five hundred million dollars$500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L X five CUSIP No. 06051GLX5) (the \u201cFloating Rate Notes\u201d), and all one billion five hundred million dollars$1,500,000,000 principal amount outstanding of its five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L V nine CUSIP No. 06051GLV9) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n...\nBank of America Announces Redemptions of five hundred million dollars$500,000,000 Floating Rate Senior ... 1,5 ... ,000,000 five point nine ... .933% Fixed/Floating Rate Senior Notes, Due September\n...\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all five hundred million dollars$500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L X five CUSIP No. 06051GLX5) (the \u201cFloating Rate Notes\u201d), and all one billion five hundred million dollars$1,500,000,000 principal amount outstanding of its five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L V nine CUSIP No. 06051GLV9) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date."
+    ],
+    "image": "https://newsroom.bankofamerica.com/content/dam/newsroom/images/banners/GettyImages-505722134.jpg"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n...\nions of $ ... ,00 ... ,000 ... and $1,50 ... ,00 ... ,00 ... 5.933% Fixed/Floating Rate Senior Notes, Due September\n...\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n\nPayment of the redemption price for the Notes will be made through the facilities of The Depository Trust Company. The Bank of New York Mellon Trust Company, N.A. is the trustee and paying agent for the Notes."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931186&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "title": "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\n# Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n...\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all CAD425,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FY5, ISIN: CA060505FY50) (the \"Floating Rate Notes\"), and all CAD1,000,000,000 principal amount outstanding of its 1.978% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FZ2, ISIN: CA060505FZ26) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date. \n\nPayment of the redemption price for the Notes will be made in accordance with the applicable procedures of CDS Clearing and Depository Services Inc. The Bank of New York Mellon Trust Company, N.A. is the trustee and Computershare Advantage Trust Company of Canada (f/k/a BNY Trust Company of Canada) is the paying agent for the Notes."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931168&p=facebook"
+   },
+   {
+    "id": "https://www.stocktitan.net/news/BAC/bank-of-america-announces-redemptions-of-cad425-000-000-floating-87ghu926rndq.html",
+    "title": "Bank of America to Redeem CAD1B Notes Sept. 15 | BAC Stock News",
+    "url": "https://www.stocktitan.net/news/BAC/bank-of-america-announces-redemptions-of-cad425-000-000-floating-87ghu926rndq.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "# Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027 \n\nBank of America will fully redeem CAD1.425 billion of Canadian dollar senior notes one year before their scheduled 2027 maturity.\n...\nBank of America (BAC) will redeem on September 15, 2026 all CAD425 million Floating Rate Senior Notes and all CAD1 billion 1.978% Fixed/Floating Rate Senior Notes, both originally due September 2027.\n...\nCHARLOTTE, N.C.\n\n, Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all \n\nCAD425,000,000\n\n principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FY5, ISIN: CA060505FY50) (the \"Floating Rate Notes\"), and all \n\nCAD1,000,000,000\n\n principal amount outstanding of its \n\n1.978%\n\n Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FZ2, ISIN: CA060505FZ26) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\n \n\nThe redemption price for each series of the Notes will be equal to \n\n100%\n\n of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date. \n\nPayment of the redemption price for the Notes will be made in accordance with the applicable procedures of CDS Clearing and Depository Services Inc. The Bank of New York Mellon Trust Company, N.A. is the trustee and Computershare Advantage Trust Company of \n\nCanada\n\n (f/k/a BNY Trust Company of \n\nCanada\n\n) is the paying agent for the Notes.\n...\n### What did Bank of America (BAC) announce about its Canadian dollar senior notes due September 2027?\n\n Bank of America announced it will redeem on September 15, 2026 all CAD425 million Floating Rate Senior Notes and all CAD1 billion 1.978% Fixed/Floating Rate Senior Notes, both originally due in September 2027.\n...\nThe redemption price for each series of Bank of America\u2019s notes will be 100% of the principal amount of that series, plus accrued and unpaid interest to, but excluding, the redemption date of ... 15, 2026.\n...\nseries of the Bank of ... notes will cease to accrue on ... , 2 ... 6. After that date, holders will no longer earn coupon payments on these securities.\n...\n### Which specific Bank of America (BAC) senior notes are being fully redeemed in Canada?\n\n Bank of America is redeeming all outstanding CAD425,000,000 Floating Rate Senior Notes (CUSIP 060505FY5, ISIN CA060505FY50) and all CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes (CUSIP 060505FZ2, ISIN CA060505FZ26), both due September 2027."
+    ],
+    "image": "https://www.stocktitan.net/news_covers/Bank_of_America_Announces_Redemptions_of_CAD425_000_000_Floating_Rate_Senior_Notes_and_CAD1_000_000__1501323.webp"
+   },
+   {
+    "id": "https://www.marketscreener.com/news/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-ce785bdbdf8ef023",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 | MarketScreener",
+    "url": "https://www.marketscreener.com/news/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-ce785bdbdf8ef023",
+    "publishedDate": "2026-09-07T00:00:00.000Z",
+    "author": "Acquiremedia",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 | MarketScreener\n\n# Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 \n\nPublished on 09/07/2026 at 05:07 am EDT\n\n BANK OF AMERICA CORPORATION \n\n-0.57%\n\n$500,000,000\n\n Floating Rate Senior Notes and \n\n$1,500,000,000\n\n 5.933% Fixed/Floating Rate Senior Notes, Due \n\nSeptember 2027\n\nBank of America Corporation\n\n announced today that it will redeem on \n\nSeptember 15, 2026\n\n all five hundred million dollars$500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due \n\nSeptember 2027\n\n (C U S I P Number zero six zero five one G L X fiveCUSIP No. 06051GLX5) (the 'Floating Rate Notes'), and all one billion five hundred million dollars$1,500,000,000 principal amount outstanding of its five point nine three three percent5.933% Fixed/Floating Rate Senior Notes, due \n\nSeptember 2027\n\n (C U S I P Number zero six zero five one G L V nineCUSIP No. 06051GLV9) (the 'Fixed/Floating Rate Notes' and, together with the Floating Rate Notes, the 'Notes').\n\n The redemption price for each series of the Notes will be equal to one hundred percent100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of \n\nSeptember 15, 2026\n\n. Interest on each series of the Notes will cease to accrue on the redemption date.\n\n Payment of the redemption price for the Notes will be made through the facilities of \n\nThe Depository Trust Company\n\n. \n\nThe Bank of New York Mellon Trust Company\n\n, N AN.A. is the trustee and paying agent for the Notes.\n...\nBank of America Corporation\n\n stock (N Y S E B A CNYSE: BAC) is listed on the New York Stock Exchange.\n\n Forward-looking statements"
+    ],
+    "image": "https://www.marketscreener.com/images/twitter_MS_fdblanc.png"
+   },
+   {
+    "id": "https://investingnews.com/bank-of-america-announces-redemptions-of-500000000-floating-rate-senior-notes-and-1500000000-5-933-fixed-floating-rate-senior-notes-due-september-2027/",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 | INN",
+    "url": "https://investingnews.com/bank-of-america-announces-redemptions-of-500000000-floating-rate-senior-notes-and-1500000000-5-933-fixed-floating-rate-senior-notes-due-september-2027/",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 | INN\n\n# Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n...\nBank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% FixedFloating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"FixedFloating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\n \n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n\nPayment of the redemption price for the Notes will be made through the facilities of The Depository Trust Company. The Bank of New York Mellon Trust Company, N.A. is the trustee and paying agent for the Notes."
+    ],
+    "image": "https://investingnews.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTg1ODg1NS9vcmlnaW4ucG5nIiwiZXhwaXJlc19hdCI6MTgzNDgyNTIxOX0.cBVUy2sasvxLR5NTr0bPLuWJNxfsXjBDtCUD28kRSJM/image.png?width=210"
+   },
+   {
+    "id": "https://finance.yahoo.com/markets/stocks/articles/bank-america-announces-redemptions-500-202000324.html",
+    "title": "Bank of America Announces Redemptions ...",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/bank-america-announces-redemptions-500-202000324.html",
+    "author": "PR Newswire      September 4, 2026   3 min read",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n...\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\"). \n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date."
+    ],
+    "image": "https://s.yimg.com/lo/mysterio/api/eb8e68232e0ecdeba435c52f443820934decee4908668aac41f319db8e379edb/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fprnewswire.com%2Feec19350ebd0b1bc2f0e7006b264a369.jpg"
+   },
+   {
+    "id": "https://www.centralcharts.com/en/news/5756855-bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixed-floating-rate-senior-notes-due-september-2027",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.centralcharts.com/en/news/5756855-bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixed-floating-rate-senior-notes-due-september-2027",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n...\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n\nPayment of the redemption price for the Notes will be made through the facilities of The Depository Trust Company. The Bank of New York Mellon Trust Company, N.A. is the trustee and paying agent for the Notes.\n...\napproximately 15,000 ATMs (automated teller machines) and award-winning digital banking with approximately 60 million verified digital ... . Bank of America is a global leader in wealth management, corporate and investment banking and ... across a broad range of asset classes, ... corporations, governments, institutions and individuals ... . As the #1 small business lender in ... ), Bank of ... -leading support ... business households through ... innovative, easy ... clients through operations ... and more than ... . Bank of America Corporation stock (NYSE: BAC)"
+    ],
+    "image": "https://www.centralcharts.com/medias/social/news/og-news.png"
+   },
+   {
+    "id": "https://www.pubt.io/view/EEFFB1195CBB0C653440E85C24B96395979A5BD2",
+    "title": "Bank of America Corporation (via Public) / Primary Offering Prospectus (Form 424B2)",
+    "url": "https://www.pubt.io/view/EEFFB1195CBB0C653440E85C24B96395979A5BD2",
+    "publishedDate": "2026-09-30T00:00:00.000Z",
+    "highlights": [
+     "09/30 ... 2026\n...\n# Primary Offering Prospectus (Form 424B2)\n\n This pricing supplement, which is not complete and may be changed, relates to an effective Registration Statement under the Securities Act of 1933. This pricing supplement and the accompanying prospectus supplement and prospectus are not an offer to sell these notes in any country or jurisdiction where such an offer would not be permitted. \n\n Preliminary Pricing Supplement - Subject to Completion \n\n (To Prospectus dated December 8, 2025 \n\n and Series P MTN Prospectus Supplement dated December 8, 2025) \n\n September 30, 2026 \n\n $___________ \n\n Fixed Rate Callable Notes, due October 19, 2046 \n\n \u25cfThe notes are senior unsecured debt securities issued by Bank of America Corporation (\"BAC\"). All payments and the return of the principal amount on the notes are subject to our credit risk. \n\n \u25cfThe notes will price on October 15, 2026. The notes will mature on October 19, 2046. At maturity, if the notes have not been previously redeemed, you will receive a cash payment equal to 100% of the principal amount of the notes, plus any accrued and unpaid interest. \n\n \u25cfInterest will be paid on October 19 of each year, commencing on October 19, 2027, with the final interest payment date occurring on the maturity date. \n\n \u25cfThe notes will accrue interest at the fixed rate of 6.75% per annum. \n\n \u25cfWe have the right to redeem all, but not less than all, of the notes on October 19, 2027, and on each subsequent Call Date (as defined on page PS-2). The redemption price will be 100% of the principal amount of the notes, plus any accrued and unpaid interest. \n\n \u25cfThe notes are issued in minimum denominations of $1,000 and whole multiples of $1,000 in excess of $1,000. \n\n \u25cfThe notes will not be listed on any securities exchange. \n\n \u25cfThe CUSIP number for the notes is 06055JUE7. \n\n Potential purchasers of the notes should consider the information in \"Risk Factors\" beginning on page PS-4 of this pricing supplement, page S-7 of the attached prospectus supplement, and page 7 of the attached prospectus.\n...\npassed upon the ... the accompanying prospectus ... to the contrary is\n...\nWe will deliver the notes in book-entry form only through The Depository Trust Company on or about October 19, 2026 against payment in immediately available funds. \n\n Series P MTN prospectus supplement dated December 8, 2025 and prospectus dated December 8, 2025 \n\n SUMMARY OF TERMS \n\n This pricing supplement supplements the terms and conditions in the prospectus, dated December 8, 2025, as supplemented by the Series P MTN prospectus supplement, dated December 8, 2025 (as so supplemented, together with all documents incorporated by reference, the \"prospectus\"), and should be read with the prospectus. \n\n \u2022 Title of the Series: \n\n Fixed Rate Callable Notes, due October 19, 2046 \n\n \u2022 Aggregate Principal Amount Initially Being Issued: \n\n \u2022 Issue Date: \n\n October 19, 2026 \n\n \u2022 CUSIP No.: \n\n 06055JUE7 \n\n \u2022 Maturity Date: \n\n October 19, 2046 \n\n \u2022 Minimum Denominations: \n\n $1,000 and multiples of $1,000 in excess of $1,000 \n\n \u2022 Ranking: \n\n Senior, unsecured \n\n \u2022 Day Count Fraction: \n\n 30/360 \n\n \u2022 Interest Periods: \n\n Annually. Each interest period (other than the first interest period, which will begin on the Issue Date) will begin on, and will include, an Interest Payment Date, and will extend to, but will exclude, the next succeeding Interest Payment Date (or the Maturity Date, as applicable). \n\n \u2022 Interest Payment Dates: \n\n October 19 of each year, beginning on October 19, 2027, with the final interest payment date occurring on the maturity date. \n\n \u2022 Interest Rates: \n\n The notes will accrue interest at the fixed rate of 6.75% per annum. \n\n \u2022 Call Dates: \n\n October 19 of each year, beginning on October 19, 2027, with the final Call Date occurring on October 19, 2045. \n\n \u2022 Optional Early Redemption: \n\n We have the right to redeem all, but not less than all, of the notes on October 19, 2027, and on each subsequent Call Date. The redemption price will be 100% of the principal amount of the notes, plus any accrued and unpaid interest. In order to call the notes, we will give notice at least five business days but not more than 60 calendar days before the specified Call Date. \n\n \u2022 Business Days: \n\n If any interest payment date, any Call Date, or the Maturity Date occurs on a day that is not a business day in New York, New York, then the payment will be postponed until the next business day in New York, New York. No additional interest will accrue on the notes as a result of such postponement, and no adjustment will be made to the length of the relevant interest period. \n\n \u2022 Repayment at Option of Holder: \n\n None \n\n \u2022 Record Dates for Interest Payments: \n\n For book-entry only notes, ... day in New York, New York prior to the applicable scheduled payment date ... If notes are not held in book-entry only form, the record dates will be the fifteenth calendar day preceding such applicable scheduled interest payment date, whether or not such record date is a ... day. \n\n \u2022 Events of Default\n...\n(as defined in the indenture relating to the notes) ... , as described under \"Description of Debt Securities of ... Corporation-Events of Default and Rights of Acceleration\" in the prospectus. Upon an event of default, ... will be entitled to receive only ... principal amount, ... accrued and unpaid interest ... the acceleration date. In case of an event of ... will not bear ... default interest rate. If a bankruptcy proceeding is \n\n PS-2 \n\n commenced in respect of ... claim may be limited, under the U.S. Bankruptcy Code, to the original public offering price of the ... . \n\n \u2022 Calculation Agent:\n...\n, Inc. \n\n \u2022 ... :\n...\n, all references\n...\n, many of which differ from those ... decision to purchase the notes ... be made only after carefully considering the risks of ... investment in the notes ... including those discussed below, with your ... in light of your particular circumstances. The notes are not an appropriate investment for you if you are not knowledgeable about significant elements of the notes or financial matters in general. \n\n Structure-related Risks \n\n The notes are subject to our early redemption. We may redeem all, but not less than all, of the notes on any Call Date on or after October 19, 2027. If you intend to purchase the notes, you must be willing to have your notes redeemed as early as that date. We are generally more likely to elect to redeem the notes during periods when the remaining interest to be accrued on the notes is to accrue at a rate that is greater than that which we would pay on our other interest bearing debt securities having a maturity comparable to the remaining term of the notes. No further payments will be made on the notes after they have been redeemed. \n\n If we redeem the notes prior to the maturity date, you may not be able to reinvest your proceeds from the redemption ... a return that is as high as the return ... the notes would have been if they had not been redeemed, or that has a similar level of risk."
+    ]
+   },
+   {
+    "id": "https://www.publicnow.com/view/3CEB8A1F556548DB050DCEA33F6B70AD821804A2",
+    "title": "Bank of America Corporation (via Public) / Primary Offering Prospectus (Form 424B2)",
+    "url": "https://www.publicnow.com/view/3CEB8A1F556548DB050DCEA33F6B70AD821804A2",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "us (Form 424B2)\n\n This pricing supplement, which is not complete and may be changed, relates to an effective Registration Statement under the Securities Act of 1933. This pricing supplement and the accompanying prospectus supplement and prospectus are not an offer to sell these notes in any country or jurisdiction where such an offer would not be permitted. \n\n Preliminary Pricing Supplement - Subject to Completion \n\n (To Prospectus dated December 8, 2025 \n\n and Series P MTN Prospectus Supplement dated December 8, 2025) \n\n September 29, 2026 \n\n $ \n\n Fixed Rate Callable Notes, due October 19, 2032 \n\n \u25cfThe notes are senior unsecured debt securities issued by Bank of America Corporation (\"BAC\"). All payments and the return of the principal amount on the notes are subject to our credit risk. \n\n \u25cfThe notes will price on October 15, 2026. The notes will mature on October 19, 2032. At maturity, if the notes have not been previously redeemed, you will receive a cash payment equal to 100% of the principal amount of the notes, plus any accrued and unpaid interest. \n\n \u25cfInterest will be paid on April 19 and October 19 of each year, commencing on April 19, 2027, with the final interest payment date occurring on the maturity date. \n\n \u25cfThe notes will accrue interest at the fixed rate of 6.00% per annum. \n\n \u25cfWe have the right to redeem all, but not less than all, of the notes on October 19, 2027, and on each subsequent Call Date (as defined on page PS-2). The redemption price will be 100% of the principal amount of the notes, plus any accrued and unpaid interest. \n\n \u25cfThe notes are issued in minimum denominations of $1,000 and whole multiples of $1,000 in excess of $1,000. \n\n \u25cfThe notes will not be listed on any securities exchange. \n\n \u25cfThe CUSIP number for the notes is 06055JUC1. \n\n Potential purchasers of the notes should consider the information in \"Risk Factors\" beginning on page PS-4 of this pricing supplement, page S-7 of the attached prospectus supplement, and page 7 of the attached prospectus. \n\n The notes: \n\n Are Not FDIC Insured \n\n Are Not Bank Guaranteed \n\n May Lose Value \n\n Per Note \n\n Total \n\n Public Offering Price (1) \n\n 100.00% \n\n Underwriting Discount (1)(2) \n\n 1.00% \n\n Proceeds (before expenses) to BAC \n\n 99.00% \n\n (1)Certain dealers who purchase the notes for sale to certain fee-based advisory accounts may forgo some or all of their selling concessions, fees or commissions. The price to public for investors purchasing the notes in these accounts may be as low as $990.00 (99.00%) per $1,000 in principal amount of the notes. See \"Supplemental Plan of Distribution-Conflicts of Interest\" in this pricing supplement. \n\n (2)We or one of our affiliates may pay varying selling concessions of up to 1.00% in connection with the distribution of the notes to other registered broker-dealers. \n\n The notes are unsecured and unsubordinated obligations and are not savings accounts, deposits, or other obligations of a bank. The notes are not guaranteed by Bank of America, N.A. or any other bank, and are not insured by the Federal Deposit Insurance Corporation or any other governmental agency, and involve investment risks. \n\n None of the Securities and Exchange Commission, nor any state securities commission, nor any other regulatory body has approved or disapproved of these notes or passed upon the adequacy or accuracy of this pricing supplement, the accompanying prospectus supplement, or the accompanying prospectus. Any representation to the contrary is a criminal offense. \n\n We will deliver the notes in book-entry form only through The Depository Trust Company on or about October 19, 2026 against payment in immediately available funds. \n\n Series P MTN prospectus supplement dated December 8, 2025 and prospectus dated December 8, 2025 \n\n SUMMARY OF TERMS \n\n This pricing supplement supplements the terms and conditions in the prospectus, dated December 8, 2025, as supplemented by the Series P MTN prospectus supplement, dated December 8, 2025 (as so supplemented, together with all documents incorporated by reference, the \"prospectus\"), and should be read with the prospectus. \n\n \u2022 Title of the Series: \n\n Fixed Rate Callable Notes, due October 19, 2032 \n\n \u2022 Aggregate Principal Amount Initially Being Issued: \n\n \u2022 Issue Date: \n\n October 19, 2026 \n\n \u2022 CUSIP No.: \n\n 06055JUC1 \n\n \u2022 Maturity Date: \n\n October 19, 2032 \n\n \u2022 Minimum Denominations: \n\n $1,000 and multiples of $1,000 in excess of $1,000 \n\n \u2022 Ranking: \n\n Senior, unsecured \n\n \u2022 Day Count Fraction: \n\n 30/360 \n\n \u2022 Interest Periods: \n\n Semi-annually. Each interest period (other than the first interest period, which will begin on the Issue Date) will begin on, and will include, an Interest Payment Date, and will extend to, but will exclude, the next succeeding Interest Payment Date (or the Maturity Date, as applicable). \n\n \u2022 Interest Payment Dates: \n\n April 19 and October 19 of each year, beginning on April 19, 2027, with the final interest payment date occurring on the maturity date. \n\n \u2022 Interest Rates: \n\n The notes will accrue interest at the fixed rate of 6.00% per annum. \n\n \u2022 Call Dates: \n\n April 19 and October 19 of each year, beginning on October 19, 2027, with the final Call Date occurring on April 19, 2032. \n\n \u2022 Optional Early Redemption: \n\n We have the right to redeem all, but not less than all, of the notes on October 19, 2027, and on each subsequent Call Date. The redemption price will be 100% of the principal amount of the notes, plus any accrued and unpaid interest. In order to call the notes, we will give notice at least five business days but not more than 60 calendar days before the specified Call Date. \n\n \u2022 Business Days: \n\n If any interest payment date, any Call Date, or the Maturity Date occurs on a day that is not a business day in New York, New York, then the payment will be postponed until the next business day in New York, New York. No additional interest will accrue on the notes as a result of such postponement, and no adjustment will be made to the length of the relevant interest period. \n\n \u2022 Repayment at Option of Holder: \n\n None \n\n \u2022 Record Dates for Interest Payments: \n\n For book-entry only notes, one business day in New York, New York prior to the applicable scheduled payment date. If notes are not held in book-entry only form, the record dates will be the fifteenth calendar day preceding such applicable scheduled interest payment date, whether or not such record date is a business day. \n\n \u2022 Events of Default and Rights of Acceleration: \n\n If an event of default (as defined in the indenture relating to the notes) occurs and is continuing, holders of the notes may accelerate the maturity of the notes, as described under \"Description of Debt Securities of Bank of America Corporation-Events of Default and Rights of Acceleration\" in the prospectus. Upon an event of default, you will be entitled to receive only your principal amount, and accrued and unpaid interest, if any, through the acceleration date. In case of an event of default, the notes will not bear a default interest rate. If a bankruptcy proceeding is \n\n PS-2 \n\n commenced in respect of us, your claim may be limited, under the U.S. Bankruptcy Code, to the original public offering price of the notes. \n\n \u2022 Calculation Agent:\n...\nStructure-related Risks \n\n The notes are subject to our early redemption. We may redeem all, but not less than all, of the notes on any Call Date on or after October 19, 2027. If you intend to purchase the notes, you must be willing to have your notes redeemed as early as that date. We are generally more likely to elect to redeem the notes during periods when the remaining interest to be accrued on the notes is to accrue at a rate that is greater than that which we would pay on our other interest bearing debt securities having a maturity comparable to the remaining term of the notes. No further payments will be made on the notes after they have been redeemed."
+    ]
+   }
+  ],
+  "searchTime": 1284.3,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_identifier": "not stated",
+    "source_notice_date": "2026-09-04",
+    "event_type": "redemption",
+    "identifier_in_source": "06051GLX5",
+    "terms": "100% of the principal amount of such series, plus accrued and unpaid interest",
+    "effective_date": "2026-09-15",
+    "effective_as_stated": "September 15, 2026"
+   },
+   "grounding": [
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Fixed/Floating Rate Senior Notes, due September 2027"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

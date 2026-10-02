@@ -1,0 +1,345 @@
+{
+ "saved_at": "2026-10-02 13:14:47",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by CDT Equity Inc. (Nasdaq: CDT): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for CDT Equity Inc. (Nasdaq: CDT), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 2676,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "fdac282fce0f76f48cc9577ea24d95c1",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "CDT Equity Inc ... Announces Reverse Stock Split\n...\nNAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)\n...\n## Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | CDT Equity Inc. (CDT) will effect a one-for-twenty five (1-25) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 20678X700. If you would like to register as a market maker in CDT, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/02/3354891/0/en/cdt-provides-capital-update-and-confirms-no-nasdaq-deficiencies.html",
+    "title": "CDT Provides Capital Update and Confirms No Nasdaq",
+    "url": "https://www.globenewswire.com/news-release/2026/09/02/3354891/0/en/cdt-provides-capital-update-and-confirms-no-nasdaq-deficiencies.html",
+    "publishedDate": "2026-09-02T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 02, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201c CDT\u201d or the \u201c Company\u201d) today announced that, following the recent issuance of shares and the exercise of pre-funded warrants, the Company had 13,693,866 shares of Common Stock issued and outstanding as of August 31, 2026. Based on the closing price of CDT\u2019s Common Stock on August 31, 2026, the Company had a market capitalisation of approximately $23.0 million.\n\nCDT\u2019s stockholders\u2019 equity, as reported in its Quarterly Report on Form 10-Q for the quarter ended June 30, 2026, was approximately $103 million. Following the recent issuances and related corporate actions, CDT also confirms that it no longer has any outstanding deficiencies with The Nasdaq Stock Market LLC.\n...\nThis press release contains certain forward-looking statements within the meaning of the federal securities laws. All statements other than statements of historical facts contained in this press release, including statements regarding CDT's future results of operations and financial position, CDT's business strategy, prospective product candidates, product approvals, research and development cost timing and likelihood of success, plans and objectives of management for future operations, future results of current and anticipated studies and business endeavors with third parties, and future results of current and anticipated product candidates, are forward-looking statements. These forward-looking statements generally are identified by the words \u201cbelieve,\u201d \u201cproject,\u201d \u201cexpect,\u201d \u201canticipate,\u201d \u201cestimate,\u201d \u201cintend,\u201d \u201cstrategy,\u201d \u201cfuture,\u201d \u201copportunity,\u201d \u201cplan,\u201d \u201cmay,\u201d \u201cshould,\u201d \u201cwill,\u201d \u201cwould,\u201d \u201cwill be,\u201d \u201cwill continue,\u201d \u201cwill likely result,\u201d and similar expressions. These forward-looking statements are subject to a number of risks, uncertainties and assumptions, including, but not limited to; the effect that the reverse stock split may have on the price of the Company\u2019s common stock; the ability or inability to maintain the listing of CDT's securities on Nasdaq; the ability to recognize the anticipated benefits of the business combination completed in September 2023, which may be affected by, among other things, competition; the ability of the combined company to grow and manage growth economically and hire and retain key employees; the risks that CDT's product candidates in development fail clinical trials or are not approved by the U.S. Food and Drug Administration or other applicable authorities on a timely basis or at all; changes in applicable laws or regulations; the possibility that CDT may be adversely affected by other economic, business, and/or competitive factors; and other risks and uncertainties identified in other filings made by CDT with the U.S. Securities and Exchange Commission. Moreover, CDT operates in a very competitive and rapidly changing environment. Because forward-looking statements are inherently subject to risks and uncertainties, some of which cannot be predicted or quantified and some of which are beyond CDT's control, you should not rely on these forward-looking statements as predictions of future events."
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/25/3350247/0/en/cdt-announces-investment-in-pep-d-expanding-into-the-fast-growing-us-peptide-market.html",
+    "title": "CDT Announces Investment in Pep'd, Expanding into the",
+    "url": "https://www.globenewswire.com/news-release/2026/08/25/3350247/0/en/cdt-announces-investment-in-pep-d-expanding-into-the-fast-growing-us-peptide-market.html",
+    "publishedDate": "2026-08-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Aug. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201c CDT\u201d or the \u201c Company\u201d), today announced that it has entered into a SAFE note with Pep'd Inc. (\u201c Pep'd\u201d), a US-based peptide company, expanding CDT's exposure to the growing US peptide market (the \u201c Transaction\u201d). Upon Pep\u2019d closing an Equity Financing, this SAFE will automatically convert into a number of shares of Safe Preferred Stock, depending on the Pep\u2019d Capitalization at that time and a Valuation Cap of $10,000,000.\n...\nCDT Equity Inc. (NASDAQ: CDT) is a data-driven biopharmaceutical development company focused on identifying, enhancing, and advancing high-potential therapeutic assets through scientific innovation and strategic partnerships. Originally established as Conduit Pharmaceuticals, the company has evolved into a broader, more agile platform that leverages artificial intelligence, solid-form chemistry, and efficient asset repositioning to accelerate the development of novel treatments. Looking ahead, CDT are committed to creating shareholder value through licensing, strategic M&A, and positioning the company as a platform for transformative innovation.\n...\nThis press release contains certain forward-looking statements within the meaning of the federal securities laws. All statements other than statements of historical facts contained in this press release, including statements regarding CDT's future results of operations and financial position, CDT's business strategy, prospective product candidates, product approvals, research and development cost timing and likelihood of success, plans and objectives of management for future operations, future results of current and anticipated studies and business endeavors with third parties, and future results of current and anticipated product candidates, are forward-looking statements. These forward-looking statements generally are identified by the words \u201cbelieve,\u201d \u201cproject,\u201d \u201cexpect,\u201d \u201canticipate,\u201d \u201cestimate,\u201d \u201cintend,\u201d \u201cstrategy,\u201d \u201cfuture,\u201d \u201copportunity,\u201d \u201cplan,\u201d \u201cmay,\u201d \u201cshould,\u201d \u201cwill,\u201d \u201cwould,\u201d \u201cwill be,\u201d \u201cwill continue,\u201d \u201cwill likely result,\u201d and similar expressions. These forward-looking statements are subject to a number of risks, uncertainties and assumptions, including, but not limited to; the effect that the reverse stock split may have on the price of the Company\u2019s common stock; the ability or inability to maintain the listing of CDT's securities on Nasdaq; the ability to recognize the anticipated benefits of the business combination completed in September 2023, which may be affected by, among other things, competition; the ability of the combined company to grow and manage growth economically and hire and retain key employees; the risks that CDT's product candidates in development fail clinical trials or are not approved by the U.S. Food and Drug Administration or other applicable authorities on a timely basis or at all; changes in applicable laws or regulations; the possibility that CDT may be adversely affected by other economic, business, and/or competitive factors; and other risks and uncertainties identified in other filings made by CDT with the U.S. Securities and Exchange Commission. Moreover, CDT operates in a very competitive and rapidly changing environment. Because forward-looking statements are inherently subject to risks and uncertainties, some of which cannot be predicted or quantified and some of which are beyond CDT's control, you should not rely on these forward-looking statements as predictions of future events."
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/",
+    "title": "CDT Provides Capital Update and Confirms No Nasdaq",
+    "url": "https://www.globenewswire.com/",
+    "highlights": [
+     "Press Release & News Distribution | GlobeNewswire\n\n# Press Release Distribution\n\n Reach media, investors, and consumers with targeted distribution options from GlobeNewswire. Build awareness, shape your presence in AI answers, and earn more media coverage. \n\n#### The blueprint for AI-visible press releases\n\nAI doesn\u2019t just read press releases. It interprets, prioritizes, and decides which sources get surfaced in answers.\n\nThe SOAR Content Framework\u2122 defines the four signals that consistently influence AI visibility: Structure, Originality, Authority, and Recency. Based on one of the largest AI visibility studies in the industry, SOAR gives communicators a practical model for building press releases that AI can understand, trust, and cite.\n\nBuilt into GlobeNewswire, SOAR helps ensure your news is optimized before it\u2019s measured, tracked, or amplified.\n\n## Secure Earned Media at Scale with Syndicated Articles\n\n Answer Engine Optimization (AEO) depends on more than a single announcement. AI systems reward brands that create multiple credible touchpoints across the web. By extending your release into journalist\u2011style articles featured in multiple trusted publications, you reinforce every facet of your story, increase discoverability, and signal clear topical authority to AI models deciding what, and who, to cite. \n\n## AI Optimization is as Essential as Spell Check \n\n The AI Press Release Optimizer improves visibility in answer-engine responses and citations by recommending nuanced edits and explaining why they matter. \n\n This isn\u2019t a press release grader. It\u2019s content optimization built for authority and clarity in AI-mediated discovery. Typical tools check PR basics like headline length, keywords, quotes, and links. The AI Press Release Optimizer goes further by recommending nuanced changes and explaining why each change improves Answer Engine visibility using the SOAR Content Framework\u2122. \n\n#### Notified + Profound \n\n Track your news across ChatGPT, Gemini, and other AI answer engines. \n\n- GlobeNewswire Analytics includes Profound\u2019s exclusive AI citation data, providing real-time insight on how often your press releases are cited and surfaced in AI search. \n- See how your news shows up in AI-generated answers, giving you actionable insights to improve the visibility, accuracy, and reach of your next release.\n- New Case Study: Discover how to optimize your content so it ranks in AI-driven answers, based on insights from 200,000+ press releases and 13 million AI citations.\n\n#### Find the right journalists\u2014faster.\n\nConnect with the media contacts who actually cover your story and boost your earned media results.\n\nUnlike basic Boolean tools, Smart Search uses context and semantic search to uncover relevant journalists that traditional searches miss.\n\nWith Personalized Pitch, you can skip mass emails and send smarter, data-informed outreach in minutes.\n\n#### Share your financial story with confidence\n\nEnsure every earnings release and regulatory filing is timely and optimized for visibility across financial markets, search, and AI platforms."
+    ],
+    "entities": [
+     {
+      "id": "https://exa.ai/library/organization/ccf2drycsjm",
+      "type": "company",
+      "version": 1,
+      "properties": {
+       "name": "Marketwired (now Notified)",
+       "foundedYear": 1998,
+       "description": "Marketwired is now GlobeNewswire by Notified.\n\nMarketwired was a newswire service and distributor of company press releases headquartered in Toronto, Canada. In 2016, Marketwired was acquired by Nasdaq, where it was integrated into GlobeNewswire, a global provider of press release distribution and regulatory filing.",
+       "workforce": {
+        "total": 71
+       },
+       "headquarters": {
+        "address": "2321 Rosecrans Avenue, El Segundo, CA 90245, US",
+        "city": "El Segundo",
+        "postalCode": null,
+        "country": "United States"
+       },
+       "financials": {
+        "revenueAnnual": 13333333,
+        "fundingTotal": 26150000,
+        "fundingLatestRound": {
+         "name": "Non equity assistance",
+         "date": "2013-01-01",
+         "amount": null
+        }
+       },
+       "webTraffic": {
+        "visitsMonthly": 1298936,
+        "countryRank": 21471,
+        "avgDurationSeconds": 82,
+        "history": [
+         {
+          "value": 1496317,
+          "dateFrom": "2026-04",
+          "dateTo": "2026-04"
+         },
+         {
+          "value": 1458165,
+          "dateFrom": "2026-05",
+          "dateTo": "2026-05"
+         },
+         {
+          "value": 1665181,
+          "dateFrom": "2026-06",
+          "dateTo": "2026-06"
+         },
+         {
+          "value": 1624763,
+          "dateFrom": "2026-07",
+          "dateTo": "2026-07"
+         },
+         {
+          "value": 1470777,
+          "dateFrom": "2026-08",
+          "dateTo": "2026-08"
+         },
+         {
+          "value": 1298936,
+          "dateFrom": "2026-09",
+          "dateTo": "2026-09"
+         }
+        ]
+       },
+       "research": null
+      }
+     }
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "title": "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)\n...\n## Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | SHF Holdings, Inc. (SHFS) will effect a one-for-twelve (1-12) reverse split of its Class A Common Stock. The reverse stock split will become effective on Wednesday, September 30, 2026. In conjunction with the reverse split, the CUSIP number will change to 824430409. If you would like to register as a market maker in SHFS, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "title": "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)\n...\n## Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | VerifyMe, Inc. (VRME) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 92346X305. If you would like to register as a market maker in VRME, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "title": "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)\n...\n## Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | GMEX ROBOTICS CORPORATION (GMEX) will effect a one-for-nine (1-9) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.8064 to $0.000001 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G3514S161. If you would like to register as a market maker in GMEX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)\n...\n## Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release Press Release | New Fortress Energy Inc. (NFE) will effect a one-for-fifty (1-50) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 644393308. Furthermore, on June 18, 2026, New Fortress Energy Inc. announced that its UK Restructuring Plan had been approved. As a result of the restructuring, additional post-split Class A common stock and a new preferred securitywill be issued to existing NFE creditors. The newly issued preferred stock (NFEGP) is expected to list on the Nasdaq Global Select Market on September 14, 2026, subject to closing of the transaction. The details for the preferred security listing are as follows: Company Name/Issue: New Fortress Energy Inc. Series A Mandatorily Convertible Preferred Stock CUSIP#: 643926207 Symbol: NFEGP Anticipated Marketplace Effective Date: September 14, 2026 If you would like to register as a market maker in NFE or NFEGP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-696",
+    "title": "Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-696",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM)\n...\n## Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | BGM Group Ltd (BGM) will effect a one-for-thirty (1-30) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0001 to $0.003 will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to G7307E131. If you would like to register as a market maker in BGM, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 319.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "identifier_in_source": "CDT",
+    "source_notice_date": "2026-09-25",
+    "effective_as_stated": "September 28, 2026, at 5:00 pm, Eastern Time",
+    "event_type": "reverse split",
+    "terms": "1-for-25",
+    "effective_date": "2026-09-29",
+    "new_identifier": "20678X700"
+   },
+   "grounding": [
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+       "title": "CDT Equity Inc. Announces Reverse Stock Split"
+      },
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+       "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

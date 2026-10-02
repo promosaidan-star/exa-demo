@@ -1,0 +1,28 @@
+{
+ "saved_at": "2026-09-29 09:18:11",
+ "endpoint": "/search",
+ "body": {
+  "query": "Exa search API",
+  "type": "instant",
+  "numResults": 1
+ },
+ "elapsed_ms": 865,
+ "data": {
+  "requestId": "0eb558afadd85d4e759f7dade8b3ce61",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://exa.ai/docs/reference/search",
+    "title": "",
+    "url": "https://exa.ai/docs/reference/search"
+   }
+  ],
+  "searchTime": 263.6,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  }
+ }
+}

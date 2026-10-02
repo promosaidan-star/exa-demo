@@ -1,0 +1,261 @@
+{
+ "saved_at": "2026-10-02 13:14:53",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by New Fortress Energy Inc. (Nasdaq: NFE): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for New Fortress Energy Inc. (Nasdaq: NFE), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 8574,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "1d12b9a67573fb18f4385b38750f2de8",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)\n...\n## Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release Press Release | New Fortress Energy Inc. (NFE) will effect a one-for-fifty (1-50) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 644393308. Furthermore, on June 18, 2026, New Fortress Energy Inc. announced that its UK Restructuring Plan had been approved. As a result of the restructuring, additional post-split Class A common stock and a new preferred securitywill be issued to existing NFE creditors. The newly issued preferred stock (NFEGP) is expected to list on the Nasdaq Global Select Market on September 14, 2026, subject to closing of the transaction. The details for the preferred security listing are as follows: Company Name/Issue: New Fortress Energy Inc. Series A Mandatorily Convertible Preferred Stock CUSIP#: 643926207 Symbol: NFEGP Anticipated Marketplace Effective Date: September 14, 2026 If you would like to register as a market maker in NFE or NFEGP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "title": "NextNRG Announces 1-for-10 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "NextNRG, Inc.",
+    "highlights": [
+     "Miami, FL, Sept. 10, 2026 (GLOBE NEWSWIRE) -- NextNRG, Inc. (Nasdaq: NXXT) (\"NextNRG\" or the \"Company\"), a pioneer in AI-driven energy innovation transforming how energy is produced, managed and delivered, today announced that it will effect a 1-for-10 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 14, 2026 at 12:00 a.m. (Eastern Time).\n\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cNXXT\u201d and will begin trading on a split-adjusted basis when the market opens on September 14, 2026. The new CUSIP number for the common stock following the reverse stock split will be 652941204. At the effective time of the reverse stock split, every 10 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 168.4 million shares to approximately 16.8 million shares, without giving effect to rounding. The reverse stock split will also apply to the Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/467287f0-fabc-4c2d-a951-3bb8bec81e97"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/10/3359981/9069/en/ocean-power-technologies-announces-reverse-stock-split.html",
+    "title": "Ocean Power Technologies Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/10/3359981/9069/en/ocean-power-technologies-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "Ocean Power Technologies, Inc.",
+    "highlights": [
+     "MONROE TOWNSHIP, N.J., Sept. 10, 2026 (GLOBE NEWSWIRE) -- Ocean Power Technologies, Inc. (\u201cOPT\u201d or the \u201cCompany\u201d) (NYSE American: OPTT), a leader in maritime operational infrastructure and autonomous ocean systems, today announced a 1-for-30 reverse stock split (\u201cReverse Split\u201d) of the Company\u2019s common stock (\u201cCommon Stock\u201d). The Common Stock will begin trading on a split-adjusted basis on the NYSE American commencing at the market open on September 14, 2026. The Reverse Split is being effected in order to increase the price per share of the Common Stock to, among other things, improve its marketability and liquidity. The new CUSIP number for the Common Stock following the Reverse Split will be 674870 605.\n\nAs a result of the Reverse Split, each 30 shares of the issued and outstanding Common Stock will be automatically combined and converted into one issued and outstanding share of Common Stock. No fractional shares will be issued as a result of the Reverse Split. Stockholders who otherwise would be entitled to a fractional share will automatically be entitled to receive one whole share of Common Stock for each such fractional share.\n...\ns pro-rata percentage ownership will ... result of the ... and no further ... required by stockholders. All of the Company\u2019s current outstanding warrants to purchase shares of Common Stock and other derivatives automatically adjust per their ... to reflect the Reverse ... Immediately after the Reverse ... will be approximately ... million shares of Common Stock issued and outstanding.\n...\nof the effective ... 25 per ... of a share of ... multiplied by the Reverse ... Split ratio factor of 30, resulting in ... adjusted purchase price of $ ... 50 per ... -thousandth of a share of Preferred Stock, subject to further adjustment"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/37cacdbe-8798-448b-acbc-529b6949576c"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "title": "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)\n...\n## Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Thursday, September 10, 2026. ETF Reverse Stock Splits effective Thursday, September 10, 2026 Ticker Fund Name Split Ratio Current CUSIP New CUSIP QBTZ Defiance Daily Target 2x Short QBTS ETF 1-5 88636W148 88636Y540 OKLL Defiance Daily Target 2x Long OKLO ETF 1-5 88636V678 88636Y524 RGTZ Defiance Daily Target 2x Short RGTI ETF 1-5 88636V652 88636Y516 SMCZ Defiance Daily Target 2X Short SMCI ETF 1-2 88636W262 88636Y482 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "title": "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)\n...\n17\n...\n## Equity Corporate Actions Alert #2 ... 26 - 66 ... Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Linkage Global Inc. (UZX) will effect a one-for-twenty three (1-23) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0025 to $0.0575 will become effective on Monday, September 21, 2026. In conjunction with the reverse split, the CUSIP number will change to G5500B136. If you would like to register as a market maker in UZX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-635",
+    "title": "Equity Corporate Actions Alert #2026 - 635 Information Regarding the Reverse Stock Split and CUSIP Number Change for Megan Holdings Limited (MGN)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-635",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 635 (UPDATED: Effective date revised) Information Regarding the Reverse Stock Split and CUSIP Number Change for Megan Holdings Limited (MGN)\n...\n## Equity Corporate Actions Alert #2026 - 635 (UPDATED: Effective date revised) Information Regarding the Reverse Stock Split and CUSIP Number Change for Megan Holdings Limited (MGN) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | The previously announced 1-40 reverse split and CUSIP change for Megan Holdings Limited (MGN) has been postponed at the company's request. An updated notice will be posted once updated timing has been confirmed. The CUSIP number will revert to G5980E105 on 9/9/2026, on an unadjusted basis. The reverse stock split will become effective on a date to be announced at a revised rate of 1-30. In conjunction with the reverse split, the CUSIP number will change to G5980E113. If you would like to register as a market maker in MGN, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "title": "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\nTuesday, September 29, 2026\n\n## Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | Kustom Entertainment, Inc. (KUST) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to 25382T705. If you would like to register as a market maker in KUST, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "title": "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)\n...\n## Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | VerifyMe, Inc. (VRME) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 92346X305. If you would like to register as a market maker in VRME, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/18/3364657/0/en/delixy-holdings-limited-announces-1-for-5-reverse-share-split-effective-september-28-2026.html",
+    "title": "Delixy Holdings Limited Announces 1-for-5 Reverse Share",
+    "url": "https://www.globenewswire.com/news-release/2026/09/18/3364657/0/en/delixy-holdings-limited-announces-1-for-5-reverse-share-split-effective-september-28-2026.html",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "author": "Delixy Holdings Limited",
+    "highlights": [
+     "SINGAPORE, Sept. 18, 2026 (GLOBE NEWSWIRE) -- Delixy Holdings Limited (NASDAQ: DLXY) (\u201cDLXY\u201d or \u201cwe,\u201d \u201cour,\u201d or the \u201cCompany\u201d), a Singapore-based company engaged in the trading of oil-related products, today announced that on August 12, 2026, its board of directors approved a reverse split of its Class A ordinary shares, par value US$0.000005 each (the \u201cClass A Ordinary Shares\u201d), and Class B ordinary shares, par value US$0.000005 each (the \u201cClass B Ordinary Shares,\u201d and together with the Class A Ordinary Shares, the \u201cOrdinary Shares\u201d), on a one-for-five basis (the \u201cReverse Share Split\u201d). The Company\u2019s Class A Ordinary Shares will begin trading on the Nasdaq Stock Market LLC (\u201cNasdaq\u201d) on a post-split basis on September 28, 2026 under the symbol \u201cDLXY\u201d under a new CUSIP number \u2013 G2703G 111.\n\nAs a result of the Reverse Share Split, each five (5) issued and outstanding Class A Ordinary Shares will be combined into one (1) Class A Ordinary Share, and each five (5) issued and outstanding Class B Ordinary Shares will be combined into one (1) Class B Ordinary Share, automatically and without any action by shareholders. The Reverse Share Split will result in a proportional increase in par value from US$0.000005 per share to US$0.000025 per share and an adjustment of the Company\u2019s authorized share capital (which remains unchanged at US$2,500) to 90,000,000 Class A Ordinary Shares and 10,000,000 Class B Ordinary Shares, each with a par value of US$0.000025. After giving effect to the Reverse Share Split, the Company expects to have approximately 1,434,800 Class A Ordinary Shares and 1,835,200 Class B Ordinary Shares issued and outstanding. The Reverse Share Split is intended to increase the market price per share of the Company\u2019s Ordinary Shares to allow the Company to maintain its Nasdaq listing.\n...\nThe Reverse Share Split was authorized by the Company\u2019s shareholders at the general meeting held on February 23, 2026, at which the shareholders approved the consolidation of the Company\u2019s Ordinary Shares within a specified range and authorized the board of directors to determine the final ratio, which the board fixed at one-for-five on August 12, 2026.\n\nTranshare Corporation, the Company\u2019s transfer agent, will act as the exchange agent for the Reverse Share Split. Ordinary Shares held in book-entry form or through a bank, broker or other nominee will be adjusted automatically to give effect to the Reverse Share Split, and no action is required by those shareholders. Registered shareholders holding physical share certificates may (but are not required to) surrender their certificates to the transfer agent for reissuance in the post-split amount. Please contact Transhare Corporation for further information at (303) 662-1112."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/c8b55142-b726-46e6-84c7-711d707d27c7"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "title": "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)\n...\n## Equity Corporate Actions ... #2026 - ... Regarding the Reverse Stock Split, Par ... and CUSIP Number Change for GMEX\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | GMEX ROBOTICS CORPORATION (GMEX) will effect a one-for-nine (1-9) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.8064 to $0.000001 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G3514S161. If you would like to register as a market maker in GMEX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 6081.2,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "event_type": "reverse split",
+    "new_identifier": "644393308",
+    "effective_date": "2026-09-14",
+    "effective_as_stated": "Monday, September 14, 2026",
+    "identifier_in_source": "NFE",
+    "source_notice_date": "2026-09-10",
+    "terms": "one-for-fifty (1-50)"
+   },
+   "grounding": [
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

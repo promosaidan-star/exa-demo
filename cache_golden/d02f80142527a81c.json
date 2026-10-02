@@ -1,0 +1,259 @@
+{
+ "saved_at": "2026-10-02 13:14:48",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Cheetah Net Supply Chain Service Inc. (Nasdaq: CTNT): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Cheetah Net Supply Chain Service Inc. (Nasdaq: CTNT), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3638,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "2520c76aa9ebd794ff430ee7b69265c0",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+    "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov",
+    "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+    "publishedDate": "2026-09-21T07:00:00.000Z",
+    "highlights": [
+     "3.03 \u2014 ... to Rights of Security\n...\nAs previously disclosed in the Company\u2019s Definitive Information Statement on Schedule 14C filed with the U.S. Securities and Exchange Commission on July 6, 2026, on June 16, 2026, the board of directors (the \u201c Board\u201d) of Cheetah Net Supply Chain Service Inc., a Delaware corporation (the \u201c Company\u201d), approved and adopted one or more potential amendments (the \u201c Proposed Amendments\u201d) to the Certificate of Incorporation of the Company (the \u201c Certificate of Incorporation\u201d) to effect one or more reverse stock splits of the Company\u2019s issued and outstanding shares of common stock, par value $0.0001 per share (the \u201c Common Stock\u201d), consisting of Class A common stock, par value $0.0001 per share (\u201c Class A Common Stock\u201d), and Class B common stock, par value $0.0001 per share (\u201c Class B Common Stock\u201d), at such ratio or ratios as shall be determined by the Board in its sole discretion, provided that the aggregate ratio of all such reverse stock splits shall not exceed 1-for-2,000, to be effected within eighteen months following the approval of the Company\u2019s stockholders. On the same day, holders of a majority of the voting power of the issued and outstanding capital stock of the Company approved and adopted the Proposed Amendments and the reverse stock splits by written consent in lieu of a meeting of stockholders.\n\nFollowing the approval of the Company\u2019s stockholders, on August 11, 2026, the Board approved a reverse stock split (the \u201c Reverse Stock Split\u201d) of the Common Stock at a ratio of 1-for-150 (the \u201c Reverse Stock Split Ratio\u201d). To implement the Reverse Stock Split, the Company filed a Certificate of Amendment to the Certificate of Incorporation with the Secretary of State of the State of Delaware on September 15, 2026. The Certificate of Amendment became effective at 8:00 a.m., Eastern Time, on September 21, 2026 (the \u201c Effective Time\u201d). At the Effective Time, every 150 shares of Common Stock outstanding were automatically combined into one new share of Common Stock. No fractional shares were issued in connection with the Reverse Stock Split; any fractional shares resulting from the Reverse Stock Split were rounded up to the nearest whole share at the participant level. The par value per share of the Common Stock remained unchanged. The Company\u2019s Class A Common Stock is expected to begin trading on a post-split basis on The Nasdaq Capital Market at the market open on September 28, 2026, under the existing trading symbol \u201cCTNT\u201d and a new CUSIP number, 16307X400.\n\nAs of September 22, 2026, the Company had 199,805,935 shares of Class A Common Stock and 203,456 shares of Class B Common Stock issued and outstanding, in each case on a pre-split basis. After giving effect to the Reverse Stock Split and subject to adjustment for the treatment of fractional shares, such amounts correspond to approximately 1,332,040 shares of Class A Common Stock and approximately 1,357 shares of Class B Common Stock on a post-split basis. Additionally, at the Effective Time, proportionate adjustments were made to the Company\u2019s Amended and Restated 2024 Stock Incentive Plan based on the Reverse Stock Split Ratio, including adjustments to the number of shares available for awards and the exercise price of outstanding awards."
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/15/3361970/0/en/cheetah-net-supply-chain-service-inc-enters-into-agreement-to-acquire-joypak-supply-llc.html",
+    "title": "Cheetah Net Supply Chain Service Inc. Enters into Agreement",
+    "url": "https://www.globenewswire.com/news-release/2026/09/15/3361970/0/en/cheetah-net-supply-chain-service-inc-enters-into-agreement-to-acquire-joypak-supply-llc.html",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "author": "Cheetah Net Supply Chain Services Inc",
+    "highlights": [
+     "Inc. Enters into\n...\nIRVINE, Calif., Sept. 15, 2026 (GLOBE NEWSWIRE) -- Cheetah Net Supply Chain Service Inc. (\u201cCheetah\u201d or the \u201cCompany\u201d) (Nasdaq CM: CTNT) today announced that it has entered into a Membership Interest Purchase Agreement (the \u201cAgreement\u201d) to acquire 100% of the membership interests of JoyPak Supply LLC (\u201cJoyPak\u201d), a Nevada limited liability company, primarily engaged in the sale of consumer, beauty, personal care and other everyday-use products, from a Delaware limited liability company and a Texas limited liability company (collectively, the \u201cSellers\u201d) (the \u201cAcquisition\u201d).\n\nThe aggregate purchase price for the Acquisition is $788,000, which will be paid in cash. The closing of the Acquisition is expected to occur within four weeks of the execution of the Agreement, subject to the completion of the Company\u2019s due diligence review and other closing conditions.\n\nFollowing the completion of the Acquisition, JoyPak will become a wholly owned subsidiary of the Company. The Company believes that the Acquisition will further diversify its product mix, and enable the Company to enter the consumer, beauty, personal care and other everyday-use product categories. The Acquisition is also expected to support the Company\u2019s broader business diversification efforts and long-term growth strategy.\n...\nCheetah Net Supply Chain Service Inc. ... international trading. The ... acquisition of Super ... and strategic acquisitions, ... opportunities to diversify ... expand its product and ... offerings and develop"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/83732049-4a20-46f0-8c58-a3700e5372a2"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/13/3345015/0/en/cheetah-net-supply-chain-service-inc-announces-second-quarter-2026-results.html",
+    "title": "Cheetah Net Supply Chain Service Inc. Announces Second",
+    "url": "https://www.globenewswire.com/news-release/2026/08/13/3345015/0/en/cheetah-net-supply-chain-service-inc-announces-second-quarter-2026-results.html",
+    "author": "Cheetah Net Supply Chain Services Inc",
+    "highlights": [
+     "IRVINE, Calif., Aug. 13, 2026 (GLOBE NEWSWIRE) -- Cheetah Net Supply Chain Service Inc. (\u201cCheetah\u201d or the \u201cCompany\u201d) (Nasdaq CM: CTNT), a provider of logistics and warehousing services and international trading services, today reported results for the quarter ended June 30, 2026 and provided a corporate update.\n...\n\u201cWe also continued to streamline our operating structure and allocate resources toward businesses that we believe offer stronger long-term potential. During the quarter, we completed the disposal of Edward Transit Express Group, Inc. to optimize the Company\u2019s business structure, reduce ongoing operating and management costs, and focus resources on higher-priority opportunities.\u201d\n...\n____________________ * Retrospectively restated for effect of the Company\u2019s amended and restated articles of incorporation and bylaws and share reverse split on April 20, 2026. See also Note 16."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/83732049-4a20-46f0-8c58-a3700e5372a2"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "title": "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)\n...\n## Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Thursday, September 10, 2026. ETF Reverse Stock Splits effective Thursday, September 10, 2026 Ticker Fund Name Split Ratio Current CUSIP New CUSIP QBTZ Defiance Daily Target 2x Short QBTS ETF 1-5 88636W148 88636Y540 OKLL Defiance Daily Target 2x Long OKLO ETF 1-5 88636V678 88636Y524 RGTZ Defiance Daily Target 2x Short RGTI ETF 1-5 88636V652 88636Y516 SMCZ Defiance Daily Target 2X Short SMCI ETF 1-2 88636W262 88636Y482 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "title": "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX) \n\nThursday, September 17, 2026\n\n## Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Linkage Global Inc. (UZX) will effect a one-for-twenty three (1-23) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0025 to $0.0575 will become effective on Monday, September 21, 2026. In conjunction with the reverse split, the CUSIP number will change to G5500B136. If you would like to register as a market maker in UZX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)\n...\n## Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release Press Release | New Fortress Energy Inc. (NFE) will effect a one-for-fifty (1-50) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 644393308. Furthermore, on June 18, 2026, New Fortress Energy Inc. announced that its UK Restructuring Plan had been approved. As a result of the restructuring, additional post-split Class A common stock and a new preferred securitywill be issued to existing NFE creditors. The newly issued preferred stock (NFEGP) is expected to list on the Nasdaq Global Select Market on September 14, 2026, subject to closing of the transaction. The details for the preferred security listing are as follows: Company Name/Issue: New Fortress Energy Inc. Series A Mandatorily Convertible Preferred Stock CUSIP#: 643926207 Symbol: NFEGP Anticipated Marketplace Effective Date: September 14, 2026 If you would like to register as a market maker in NFE or NFEGP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-659",
+    "title": "Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-659",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN)\n...\n## Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Professional Diversity Network, Inc. (IPDN) will effect a one-for-thirty (1-30) reverse split of its Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 74312Y509. If you would like to register as a market maker in IPDN, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-681",
+    "title": "Equity Corporate Actions Alert #2026 - 681 Information Regarding the Reverse Stock Split, Ratio Change and CUSIP Number Change for Immutep Limited (IMMP)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-681",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 681 Information Regarding the Reverse Stock Split, Ratio Change and CUSIP Number Change for Immutep Limited (IMMP)\n...\n## Equity Corporate Actions Alert #2026 - 681 Information Regarding the Reverse Stock Split, Ratio Change and CUSIP Number Change for Immutep Limited (IMMP) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release ADR Notice | Immutep Limited (IMMP) will effect a one-for-twenty (1-20) reverse split of its American Depositary Shares and ratio change from one (1) American Depositary Share representing ten (10) Ordinary Shares (1:10) to one (1) American Depositary Share representing two hundred (200) Ordinary Shares (1:200). The reverse stock split and ADS ratio change will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to 45257L207. If you would like to register as a market maker in IMMP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "title": "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)\n...\n## Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | GMEX ROBOTICS CORPORATION (GMEX) will effect a one-for-nine (1-9) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.8064 to $0.000001 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G3514S161. If you would like to register as a market maker in GMEX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 1927.9,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_identifier": "16307X400",
+    "effective_as_stated": "8:00 a.m., Eastern Time, on September 21, 2026",
+    "source_notice_date": "2026-09-21",
+    "effective_date": "2026-09-28",
+    "event_type": "reverse split",
+    "identifier_in_source": "CTNT",
+    "terms": "1-for-150"
+   },
+   "grounding": [
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1951667/000110465926109828/tm2625304d1_8k.htm",
+       "title": "Cheetah Net Supply Chain Service Inc. - SEC.gov"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "saved_at": "2026-10-02 13:15:00",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by The Procter & Gamble Company (NYSE: PG): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for The Procter & Gamble Company (NYSE: PG), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3104,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "9989cb8ea324a331f778859bbfdfc5d7",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "title": "TruGolf Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "Salt Lake City, Utah, Sept. 25, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings, Inc. (NASDAQ: TRUG), today announced a 1-for-10 reverse split of its Class A common stock. Beginning on September 29, 2026, the Company\u2019s Class A common stock will continue to trade on The Nasdaq Capital Market on a split adjusted basis under the trading symbol \u201cTRUG\u201d but will trade under the following new CUSIP number: 243733607.\n\nAs a result of the reverse stock split, every 10 shares of Class A common stock issued and outstanding as of the effective date will be automatically combined into one share of Class A common stock. No fractional shares will be issued if, as a result of the reverse stock split, a stockholder would otherwise become entitled to a fractional share because the number of shares of Class A common stock they hold before the reverse stock split is not evenly divisible by the split ratio. Instead, each stockholder will be entitled to receive a cash payment in lieu of a fractional share.\n\nThe reverse stock split will reduce the number of shares of outstanding Class A common stock from approximately 12.44 million shares, the number of shares outstanding as of the date hereof, to approximately 1.24 million shares. The par value of the Class A common stock will remain unchanged and the number of authorized shares of Class A common stock will be proportionately reduced to 10 million shares. The reverse split affects all stockholders uniformly and will not alter any common stockholder\u2019s percentage interest in the Company\u2019s equity, except to the extent that the reverse split results in some common stockholders owning a fractional share as described above."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "title": "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)\n...\n## Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | VerifyMe, Inc. (VRME) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 92346X305. If you would like to register as a market maker in VRME, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-708",
+    "title": "Equity Corporate Actions Alert #2026 - 708 Information Regarding the Change of Control of Aureus Greenway Holdings Inc. (PUSA)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-708",
+    "publishedDate": "2026-10-01T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 708 Information Regarding the Change of Control of Aure ... Holdings Inc. (PUSA)\n...\nControl of Aure ... Greenway Holdings Inc\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Operations (tradedesk@nasdaq.com) at +1 212 231 5100 Resources: Press Release | The Change of Control of Aureus Greenway Holdings Inc. (PUSA) closed October 1, 2026. As a result, the company's Common Stock (PUSA) will undergo a corporate name change. The CUSIP and symbol will remain the same. The corporate name change will become effective on October 2, 2026. The details of the name change are follows: Current Company Name & Issue Type: Aureus Greenway Holdings Inc. Common Stock New Company Name & Issue Type: Powerus Corporation Common Stock CUSIP: 05156D102 Symbol: PUSA Marketplace Effective Date: October 2, 2026 |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "title": "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)\n...\nRegarding the Reverse Stock Split, Par Value ... USIP Number Change for Link\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Linkage Global Inc. (UZX) will effect a one-for-twenty three (1-23) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0025 to $0.0575 will become effective on Monday, September 21, 2026. In conjunction with the reverse split, the CUSIP number will change to G5500B136. If you would like to register as a market maker in UZX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "title": "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)\n...\n## Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | SHF Holdings, Inc. (SHFS) will effect a one-for-twelve (1-12) reverse split of its Class A Common Stock. The reverse stock split will become effective on Wednesday, September 30, 2026. In conjunction with the reverse split, the CUSIP number will change to 824430409. If you would like to register as a market maker in SHFS, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-679",
+    "title": "Equity Corporate Actions Alert #2026 - 679 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Delixy Holdings Limited (DLXY)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-679",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 679 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Delixy Holdings Limited (DLXY)\n...\nActions Alert #2026 - 679 ... Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Delix ... Holdings Limited (DLXY) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Delixy Holdings Limited (DLXY) will effect a one-for-five (1-5) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.000005 to $0.000025 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G2703G111. If you would like to register as a market maker in DLXY, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc. (JAGX)\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Jaguar Health, Inc. (JAGX) will effect a one-for-fifteen (1-15) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, September 17, 2026. In conjunction with the reverse split, the CUSIP number will change to 47010C854. If you would like to register as a market maker in JAGX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)\n...\nSplit and CUS\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release Press Release | New Fortress Energy Inc. (NFE) will effect a one-for-fifty (1-50) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 644393308. Furthermore, on June 18, 2026, New Fortress Energy Inc. announced that its UK Restructuring Plan had been approved. As a result of the restructuring, additional post-split Class A common stock and a new preferred securitywill be issued to existing NFE creditors. The newly issued preferred stock (NFEGP) is expected to list on the Nasdaq Global Select Market on September 14, 2026, subject to closing of the transaction. The details for the preferred security listing are as follows: Company Name/Issue: New Fortress Energy Inc. Series A Mandatorily Convertible Preferred Stock CUSIP#: 643926207 Symbol: NFEGP Anticipated Marketplace Effective Date: September 14, 2026 If you would like to register as a market maker in NFE or NFEGP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | ---"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-615",
+    "title": "Equity Corporate Actions Alert #2026 - 615 Information Regarding the Reverse Stock Split and CUSIP Number Change for Change Agents Corporation (CHGA)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-615",
+    "publishedDate": "2026-08-31T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 615 Information Regarding the Reverse Stock Split and CUSIP Number Change for Change Agents Corporation (CHGA)\n...\n## Equity Corporate Actions Alert #2026 - 615 Information Regarding the Reverse Stock Split and CUSIP Number Change for Change Agents Corporation (CHGA) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Change Agents Corporation (CHGA) will effect a one-for-twenty (1-20) reverse split of its common stock. The reverse stock split will become effective on Monday, August 31, 2026. In conjunction with the reverse split, the CUSIP number will change to 05344R401. If you would like to register as a market maker in CHGA, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "title": "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\nTuesday, September 29, 2\n...\nReverse Stock Split and C ... Number Change for K\n...\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | Kustom Entertainment, Inc. (KUST) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to 25382T705. If you would like to register as a market maker in KUST, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 1555.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "source_notice_date": "not stated",
+    "new_identifier": "not stated",
+    "effective_date": "not stated",
+    "terms": "not stated",
+    "identifier_in_source": "not stated",
+    "event_type": "none found",
+    "effective_as_stated": "not stated"
+   },
+   "grounding": []
+  }
+ }
+}

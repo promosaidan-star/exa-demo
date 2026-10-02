@@ -1,0 +1,257 @@
+{
+ "saved_at": "2026-10-02 13:14:55",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Microsoft Corporation (Nasdaq: MSFT): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Microsoft Corporation (Nasdaq: MSFT), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 7781,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "715fb6735931e16510545070a45d87da",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+    "title": "Microsoft announces quarterly dividend increase - Source",
+    "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "author": "Microsoft Source",
+    "highlights": [
+     "REDMOND, Wash. \u2014 Sept. 15, 2026 \u2014 Microsoft Corp. on Tuesday announced that its board of directors declared a quarterly dividend of $0.98 per share, reflecting a 7 cent or 8% increase over the previous quarter\u2019s dividend. The dividend is payable Dec. 10, 2026, to shareholders of record on Nov. 19, 2026. The ex-dividend date will be Nov. 19, 2026.\n\nIn addition, the company announced the 2026 Annual Shareholders Meeting will be held Dec. 8, 2026. Shareholders at the close of business on Sept. 30, 2026, the record date, will be entitled to vote their shares."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "title": "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)\n...\n## Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Thursday, September 10, 2026. ETF Reverse Stock Splits effective Thursday, September 10, 2026 Ticker Fund Name Split Ratio Current CUSIP New CUSIP QBTZ Defiance Daily Target 2x Short QBTS ETF 1-5 88636W148 88636Y540 OKLL Defiance Daily Target 2x Long OKLO ETF 1-5 88636V678 88636Y524 RGTZ Defiance Daily Target 2x Short RGTI ETF 1-5 88636V652 88636Y516 SMCZ Defiance Daily Target 2X Short SMCI ETF 1-2 88636W262 88636Y482 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "title": "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-686",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME)\n...\n## Equity Corporate Actions Alert #2026 - 686 Information Regarding the Reverse Stock Split and CUSIP Number Change for VerifyMe, Inc. (VRME) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | VerifyMe, Inc. (VRME) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 92346X305. If you would like to register as a market maker in VRME, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "title": "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)\n...\n## Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | SHF Holdings, Inc. (SHFS) will effect a one-for-twelve (1-12) reverse split of its Class A Common Stock. The reverse stock split will become effective on Wednesday, September 30, 2026. In conjunction with the reverse split, the CUSIP number will change to 824430409. If you would like to register as a market maker in SHFS, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)\n...\n## Equity Corporate Actions Alert #2026 - 688 ... Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | OneMedNet Corp (ONMD) will effect a one-for-ten (1-10) reverse split of its Class A Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 68270C202. If you would like to register as a market maker in ONMD, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "title": "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-665",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 665 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX)\n...\n## Equity Corporate Actions Alert #2026 - 66 ... Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for Linkage Global Inc. (UZX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Linkage Global Inc. (UZX) will effect a one-for-twenty three (1-23) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0025 to $0.0575 will become effective on Monday, September 21, 2026. In conjunction with the reverse split, the CUSIP number will change to G5500B136. If you would like to register as a market maker in UZX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "title": "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\nTuesday, September 29, 2026\n\n## Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | Kustom Entertainment, Inc. (KUST) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to 25382T705. If you would like to register as a market maker in KUST, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-659",
+    "title": "Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-659",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN)\n...\n## Equity Corporate Actions Alert #2026 - 659 Information Regarding the Reverse Stock Split and CUSIP Number Change for Professional Diversity Network, Inc. (IPDN) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Professional Diversity Network, Inc. (IPDN) will effect a one-for-thirty (1-30) reverse split of its Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 74312Y509. If you would like to register as a market maker in IPDN, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "title": "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-683",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT)\n...\n## Equity Corporate Actions Alert #2026 - 683 Information Regarding the Reverse Stock Split and CUSIP Number Change for CDT Equity Inc. (CDT) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | CDT Equity Inc. (CDT) will effect a one-for-twenty five (1-25) reverse split of its Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 20678X700. If you would like to register as a market maker in CDT, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 1297.5,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "identifier_in_source": "not stated",
+    "new_identifier": "not stated",
+    "event_type": "none found",
+    "effective_as_stated": "not stated",
+    "terms": "not stated",
+    "effective_date": "not stated",
+    "source_notice_date": "2026-09-15"
+   },
+   "grounding": [
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

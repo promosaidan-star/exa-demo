@@ -1,0 +1,424 @@
+{
+ "saved_at": "2026-10-02 13:06:41",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by OneMedNet Corp (Nasdaq: ONMD): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for OneMedNet Corp (Nasdaq: ONMD), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 7267,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "232e205537a3e3bb020a5c2d84e42962",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)\n...\n## Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | OneMedNet Corp (ONMD) will effect a one-for-ten (1-10) reverse split of its Class A Common Stock. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to 68270C202. If you would like to register as a market maker in ONMD, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+    "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)",
+    "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)\n...\n# OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)\n\n OneMedNet Corporation Announces 1-for-10 Reverse Stock Split \n\n MINNEAPOLIS, Minn.- September 25, 2026- OneMedNet Corporation (Nasdaq: ONMD) (the \"Company,\" \"we,\" or \"our\"), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \"Reverse Stock Split\"), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company's stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company's board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest. \n\n The Company's common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company's existing trading symbol \"ONMD\" with the new CUSIP number 68270C 202. \n\n At the effective time of the Reverse Stock Split, every ten (10) shares of the Company's issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company's equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n...\nStock Transfer & ... for the Reverse ... Split. Stock ... their shares electronically ... not required to take any action to receive post-split shares ... shares through a bank, broker ... have their positions adjusted to reflect the Reverse Stock Split ... such broker's"
+    ]
+   },
+   {
+    "id": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+    "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)",
+    "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+    "publishedDate": "2026-09-30T00:00:00.000Z",
+    "highlights": [
+     "the information contained in ... with the information from ... Current Report on Form 8- ... filed with the Securities and Exchange ... on September 29, 2026 (the \"Current Report\"). Accordingly, ... the Current Report to this ... . \n\n Effective at 12:01 a.m. Eastern Time on September 29, 2026, the Company amended its Third Amended and Restated Certificate of Incorporation filed with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split of the Company's common stock (the \"Reverse Split\"). Unless otherwise noted, the share information in this prospectus supplement have been adjusted to give effect to the Reverse Split.\n...\nOn September 26, 2026, as approved by the stockholders of OneMedNet Corporation (the \"Company\") on September 18, 2026, the Company filed a Certificate of Amendment (the \"Amendment\") to its Third Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split (the \"Reverse Stock Split\") of the Company's issued and outstanding common stock, $0.0001 par value per share (the \"Common Stock\"), to be effective as of 12:01 a.m. Eastern Time on September 29, 2026 (the \"Effective Time\"). The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market. \n\n At the Effective Time, every 10 shares of issued and outstanding Common Stock will be automatically combined and reclassified into one issued and outstanding share of Common Stock. No fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of Common Stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share.\n...\nFollowing the Reverse Stock Split, the shares of Common Stock will continue to trade on The Nasdaq Capital Market under the symbol \"ONMD\". The new CUSIP number for the Common Stock following the Reverse Stock Split will be 68270C 202. \n\n The foregoing description of the Amendment does not purport to be complete and is qualified in its entirety by the full text of the Amendment, a copy of which is filed as Exhibit 3.1 to this Current Report on Form 8-K and is incorporated herein by reference.\n...\nOneMedNet Corporation Announces 1-for-10 Reverse Stock Split \n\n MINNEAPOLIS, Minn.- September 25, 2026- OneMedNet Corporation (Nasdaq: ONMD) (the \"Company,\" \"we,\" or \"our\"), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \"Reverse Stock Split\"), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company's stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company's board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest. \n\n The Company's common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company's existing trading symbol \"ONMD\" with the new CUSIP number 68270C 202. \n\n At the effective time of the Reverse Stock Split, every ten (10) shares of the Company's issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company's equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms. \n\n No fractional shares ... be issued in connection with the Reverse Stock Split. Any fractional shares of common stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share. The Reverse Stock Split will affect all stockholders uniformly and will not alter any stockholder's relative interest in ... Company's equity securities, except for any adjustments for fractional shares. \n\n Continental Stock Transfer & Trust Company is acting as the exchange agent and transfer agent for the Reverse Stock Split. Stockholders holding their shares electronically are not required to take any action to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to such broker's particular processes.\n...\nOneMedNet Corporation"
+    ]
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+    "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "OneMedNet Corporation",
+    "highlights": [
+     "OneMedNet Corporation Announces 1-for-10 Reverse Stock\n\n# OneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\n September 25, 2026 11:50 ET | Source: OneMedNet Corporation \n\nMINNEAPOLIS, Sept. 25, 2026 (GLOBE NEWSWIRE) -- OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\nThe Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n...\nContinental Stock Transfer & Trust Company is acting as the exchange ... and transfer agent for the Reverse Stock Split. Stock ... holding their shares electronically are not required to take any ... to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a356ae1d-a3c0-49e3-81b5-f19be76513d0"
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+    "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary",
+    "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+    "publishedDate": "2026-09-30T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "OneMedNet Corp's prospectus supplement identifies up to 1,168,054 shares of common stock. It reports that a 1-for-10 reverse stock split took effect at 12:01 a.m. Eastern Time on September 29, 2026: each 10 issued and outstanding shares became one share. The company said the split was intended to bring ONMD into compliance with Nasdaq Capital Market's minimum bid price requirement.\n\nThe current report gives approximately 60,125,902 shares outstanding as of September 27, 2026, and approximately 6,012,591 after the split. A company press release separately gives approximately 59,286,450 shares outstanding as of September 24, 2026, and approximately 5,928,645 after the split. The split leaves the authorized share count, $0.0001 par value and voting rights unchanged; it proportionately adjusts equity plan shares and the shares and exercise prices underlying outstanding awards, warrants and other equity instruments. Fractional shares are rounded up to the nearest whole share.\n...\nEffective at 12:01 a.m. Eastern Time on September 29, 2026, the Company amended its Third Amended and Restated Certificate of Incorporation filed with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split of the Company\u2019s common stock (the \u201cReverse Split\u201d). Unless otherwise noted, the share information in this prospectus supplement have been adjusted to give effect to the Reverse Split.\n...\nOn September 26, 2026, as approved by the stockholders of OneMedNet Corporation (the \u201cCompany\u201d) on September 18, 2026, the Company filed a Certificate of Amendment (the \u201cAmendment\u201d) to its Third Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split (the \u201cReverse Stock Split\u201d) of the Company\u2019s issued and outstanding common stock, $0.0001 par value per share (the \u201cCommon Stock\u201d), to be effective as of 12:01 a.m. Eastern Time on September 29, 2026 (the \u201cEffective Time\u201d). The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n\nAt the Effective Time, every 10 shares of issued and outstanding Common Stock will be automatically combined and reclassified into one issued and outstanding share of Common Stock. No fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of Common Stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share.\n\nThe Reverse Stock Split does not change the authorized number of shares or the par value of the Common Stock nor modify any voting rights of the Common Stock. Proportionate adjustments will be made to all outstanding equity awards, warrants or convertible securities. The Reverse Stock Split will proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity awards, in each case in accordance with their terms.\n\nThe Reverse Split will reduce the number of shares of outstanding Common Stock from approximately 60,12 ... ,902 shares, the number of shares outstanding as of September 27, 2026, ... approximately 6,01 ... ,59 ... shares of Common Stock. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nFollowing the Reverse Stock Split, the shares of Common Stock will continue to trade on The Nasdaq Capital Market under the symbol \u201cONMD\u201d. The new CUSIP number for the Common Stock following the Reverse Stock Split will be 68270C 202.\n...\n\u201cContingent and effective as of 12:01 a.m. Eastern time on September 29, 2026 (the \u201c Effective Time\u201d), each ten (10) shares of the Corporation\u2019s Common Stock, ... $0.0001 per share (the \u201c Common ... to the Effective Time shall, automatically and without ... on the part of the ... thereof, be combined and converted into one (1) share of Common ... , of the Corporation (the ... Reverse Split\u201d). Notwithstanding the ... preceding sentence, no ... shares will be ... in connection with the Reverse Split. Stock ... entitled to receive fractional shares, will be entitled to\n...\nOneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\nMINNEAPOLIS, Minn.\u2013 September 25, 2026\u2013 OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\n The Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nNo fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of common stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share. The Reverse Stock Split will affect all stockholders uniformly and will not alter any stockholder\u2019s relative interest in the Company\u2019s equity securities, except for any adjustments for fractional shares.\n\nContinental Stock Transfer & Trust Company is acting as the exchange agent and transfer agent for the Reverse Stock Split. Stockholders holding their shares electronically are not required to take any action to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to such broker\u2019s particular processes."
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+    "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+    "publishedDate": "2026-09-29T12:30:21.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "OneMedNet Corp. (ONMD) will implement a 1-for-10 reverse stock split effective at 12:01 a.m. Eastern Time on September 29, 2026; each 10 issued and outstanding common shares will become one share. The company says the split is intended to bring it into compliance with the Nasdaq Capital Market\u2019s minimum bid price requirement.\n\nThe corporate-action description estimates outstanding shares will change from approximately 60,125,902 as of September 27, 2026, to approximately 6,012,591 after the split. The accompanying announcement separately gives approximately 59,286,450 shares as of September 24, 2026, and approximately 5,928,645 after the split. Fractional shares will be rounded up; authorized shares, par value and voting rights will not change.\n...\nequity instruments receive proportionate share ... count and exercise-price adjustments\n...\nOn September 26, 2026, as approved by the stockholders of OneMedNet Corporation (the \u201cCompany\u201d) on September 18, 2026, the Company filed a Certificate of Amendment (the \u201cAmendment\u201d) to its Third Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split (the \u201cReverse Stock Split\u201d) of the Company\u2019s issued and outstanding common stock, $0.0001 par value per share (the \u201cCommon Stock\u201d), to be effective as of 12:01 a.m. Eastern Time on September 29, 2026 (the \u201cEffective Time\u201d). The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n\nAt the Effective Time, every 10 shares of issued and outstanding Common Stock will be automatically combined and reclassified into one issued and outstanding share of Common Stock. No fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of Common Stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share.\n\nThe Reverse Stock Split does not change the authorized number of shares or the par value of the Common Stock nor modify any voting rights of the Common Stock. Proportionate adjustments will be made to all outstanding equity awards, warrants or convertible securities. The Reverse Stock Split will proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity awards, in each case in accordance with their terms.\n\nThe Reverse Split will reduce the number of shares of outstanding Common Stock from approximately 60,125,902 shares, the number of shares outstanding as of September 27, 2026, to approximately 6,012,591 shares of Common Stock. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nFollowing the Reverse Stock Split, the shares of Common Stock will continue to trade on The Nasdaq Capital Market under the symbol \u201cONMD\u201d. The new CUSIP number for the Common Stock following the Reverse Stock Split will be 68270C 202.\n...\nOneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\nMINNEAPOLIS, Minn.\u2013 September 25, 2026\u2013 OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\n The Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nNo fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of common stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share. The Reverse Stock Split will affect all stockholders uniformly and will not alter any stockholder\u2019s relative interest in the Company\u2019s equity securities, except for any adjustments for fractional shares.\n\nContinental Stock Transfer & Trust Company is acting as the exchange agent and transfer agent for the Reverse Stock Split. Stockholders holding their shares electronically are not required to take any action to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to such broker\u2019s particular processes."
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+    "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary",
+    "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "The company implemented a 1-for-10 reverse stock split effective at 12:01 a.m. Eastern Time on September 29, 2026, following stockholder approval on September 18, 2026. Every 10 outstanding shares became one share, and fractional entitlements are rounded up. The authorized share count, par value and voting rights remain unchanged; equity awards, warrants and other equity instruments are proportionately adjusted under their terms. The company said the split was intended to bring it into compliance with Nasdaq Capital Market's minimum bid price requirement. Split-adjusted trading was expected to begin at market open under ONMD.\n...\nEffective at 12:01 a.m. Eastern Time on September 29, 2026, the Company amended its Third Amended and Restated Certificate of Incorporation filed with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split of the Company\u2019s common stock (the \u201cReverse Split\u201d). Unless otherwise noted, the share information in this prospectus supplement have been adjusted to give effect to the Reverse Split.\n...\nOn September 26, 2026, as approved by the stockholders of OneMedNet Corporation (the \u201cCompany\u201d) on September 18, 2026, the Company filed a Certificate of Amendment (the \u201cAmendment\u201d) to its Third Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split (the \u201cReverse Stock Split\u201d) of the Company\u2019s issued and outstanding common stock, $0.0001 par value per share (the \u201cCommon Stock\u201d), to be effective as of 12:01 a.m. Eastern Time on September 29, 2026 (the \u201cEffective Time\u201d). The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n\nAt the Effective Time, every 10 shares of issued and outstanding Common Stock will be automatically combined and reclassified into one issued and outstanding share of Common Stock. No fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of Common Stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share.\n\nThe Reverse Stock Split does not change the authorized number of shares or the par value of the Common Stock nor modify any voting rights of the Common Stock. Proportionate adjustments will be made to all outstanding equity awards, warrants or convertible securities. The Reverse Stock Split will proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity awards, in each case in accordance with their terms.\n\nThe Reverse Split will reduce the number of shares of outstanding Common Stock from approximately 60,125,902 shares, ... number of shares outstanding as of September 27, 2026 ... ,01 ... ,59 ... shares of Common Stock. The Reverse Stock Split will ... proportionately adjust the number of shares available under the Company\u2019s equity incentive plans ... the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nFollowing the Reverse Stock Split, the shares of Common Stock will continue to trade on The Nasdaq Capital Market under the symbol \u201cONMD\u201d. The new CUSIP number for the Common Stock following the Reverse Stock Split will be 68270C 202.\n...\n\u201cContingent and effective as of 12:0 ... a.m. ... time on September 29, 20 ... 6 (the \u201c Effective Time\u201d), each ten ( ... 0) shares of the Corporation\u2019s Common Stock, ... value $0.0001 per share (the \u201c Common ... \u201d), issued and ... Effective Time shall, automatically and without any ... on the part of the ... thereof, be combined and converted into one (1) share of Common ... , of the Corporation (the ... Reverse Split\u201d). Notwithstanding the ... in connection with ... Reverse Split. ... receive fractional shares, will be entitled to\n...\nOneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\nMINNEAPOLIS, Minn.\u2013 September 25, 2026\u2013 OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\n The Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n\nNo fractional shares will be issued in connection with the Reverse Stock Split. Any fractional shares of common stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share. The Reverse Stock Split will affect all stockholders uniformly and will not alter any stockholder\u2019s relative interest in the Company\u2019s equity securities, except for any adjustments for fractional shares.\n\nContinental Stock Transfer & Trust Company is acting as the exchange agent and transfer agent for the Reverse Stock Split. Stockholders holding their shares electronically are not required to take any action to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to such broker\u2019s particular processes."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/onmd_424B.webp"
+   },
+   {
+    "id": "https://ebs.publicnow.com/view/FB3A3FCEB8D0741E435E91990983DC666DD2F64A",
+    "title": "Onemednet Corporation (via Public) / Proxy Results, Management Change/Compensation (Form 8-K)",
+    "url": "https://ebs.publicnow.com/view/FB3A3FCEB8D0741E435E91990983DC666DD2F64A",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "highlights": [
+     "On September 18, 2026, OneMedNet Corporation (the \"Company\") held its 2026 Annual Meeting of Stockholders (the \"Annual Meeting\") as a virtual meeting online via live audio webcast, at which the Company's stockholders approved an amendment and restatement of the OneMedNet Corporation Amended and Restated 2022 Equity Incentive Plan (as amended and restated, the \"2022 Plan\"). The 2022 Plan was amended to increase the number of authorized shares under the 2022 Plan by 1,000,000 shares. The 2022 Plan became effective immediately upon stockholder approval at the Annual Meeting. \n\n A summary of the material terms of the 2022 Plan is set forth in the Company's definitive proxy statement for the Annual Meeting filed with the Securities and Exchange Commission on August 19, 2026 (the \"Proxy Statement\"). The summaries of the 2022 Plan set forth above and in the Proxy Statement are qualified in their entirety by reference to the full text of the 2022 Plan, a copy of which is filed as Exhibit 10.1 to this Current Report on Form 8-K and incorporated herein by reference.\n...\n| Votes For | Votes Against | Abstentions | Broker Non\n...\n| --- | --- | ---\n...\n| 4 ... ,660,4 ... 8,7 ... ,30\n...\nProposal 3. Approval of the OneMedNet Corporation Amended and Restated 2022 Equity Incentive Plan to increase the available share reserve by 1,000,000 shares. \n\n| Votes For | Votes Against | Abstentions | Broker Non-Votes |\n| --- | --- | --- | --- |\n| 34,528,269 | 1,868,479 | 95,735 | 5,348,969 |\n\n Proposal 4. Approval of an amendment to the Company's third amended and restated certificate of incorporation, as amended, to effect a reverse stock split of our common stock at a ratio ranging from any whole number between 1-for-5 and 1-for-20, as determined by the Board of Directors in its discretion. \n\n| Votes For | Votes Against | Abstentions | Broker Non-Votes |\n| --- | --- | --- | --- |\n| 41,068,200 | 739,329 | 33,923 | - |"
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-9ab33552da3e.html",
+    "title": "OneMedNet holders approve 1-for-5 to 1-for-20 split | ONMD 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-9ab33552da3e.html",
+    "publishedDate": "2026-09-23T21:00:14.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "# OneMedNet holders approve 1- ... -5 to 1- ... -20 split |\n...\nThe board may choose a whole-number reverse-split ratio from 1-for-5 through 1-for-20 under the\n...\nOneMedNet Corporation (ONMD) stockholders approved an amendment to the Amended and Restated 2022 Equity Incentive Plan, increasing its authorized share count by 1,000,000 shares; the amendment became effective immediately upon approval. Stockholders also approved a charter amendment to effect a reverse stock split at a whole-number ratio from 1-for-5 to 1-for-20, with the ratio determined by the Board of Directors in its discretion.\n...\nStockholders approved authority for a reverse split, with the Board choosing the ratio; if carried out, it would reduce the share count and raise the per-share price proportionally without changing company value by itself.\n...\n### Key Figures\n\n Increase in authorized plan shares: 1,000,000 shares Reverse stock split ratio range: 1-for-5 to 1-for-20 Votes represented: 41,841,452 votes +3 more \n\n 6 metrics \n\n Increase in authorized plan shares 1,000,000 shares 2022 Equity Incentive Plan; effective immediately upon stockholder approval \n\n Reverse stock split ratio range 1-for-5 to 1-for-20 Any whole-number ratio, as determined by the Board of Directors in its discretion \n\n Votes represented 41,841,452 votes Represented in person or by proxy at the September 18, 2026 annual meeting \n\n Votes entitled represented 70.57% At the annual meeting; represented a quorum \n\n Votes for plan amendment 34,528,269 votes 2022 Equity Incentive Plan proposal \n\n Votes for reverse-split amendment 41,068,200 votes Charter amendment proposal\n...\nAI-generated questions and answers. How Rhea-AI works. Not financial advice.\n\n What plan change did ONMD stockholders approve? \n\n They approved an increase of 1,000,000 authorized shares under the 2022 Equity Incentive Plan, effective immediately upon stockholder approval at the September 18, 2026 annual meeting. \n\n What reverse stock split ratio did ONMD stockholders approve? \n\n Stockholders approved the charter amendment to effect a reverse stock split at any whole-number ratio between 1-for-5 and 1-for-20, as determined by the Board of Directors in its discretion. \n\n How many votes did ONMD's reverse-split proposal receive? \n\n The amendment received 41,068,200 votes for, 739,329 votes against, and 33,923 abstentions. \n\n Available on EDGAR 09/23/2026 - 05:00 PM Accepted by SEC EDGAR 09/23/2026 - 05:00 PM Learn about SEC filing dates\n...\nOn September 18, 2026, OneMedNet Corporation (the \u201cCompany\u201d) held its 2026 Annual Meeting of Stockholders (the \u201cAnnual Meeting\u201d) as a virtual meeting online via live audio webcast, at which the Company\u2019s stockholders approved an amendment and restatement of the OneMedNet Corporation Amended and Restated 2022 Equity Incentive Plan (as amended and restated, the \u201c2022 Plan\u201d). The 2022 Plan was amended to increase the number of authorized shares under the 2022 Plan by 1,000,000 shares. The 2022 Plan became effective immediately upon stockholder approval at the Annual Meeting.\n...\nProposal 3. Approval of the OneMedNet Corporation Amended and Restated 2022 Equity Incentive Plan to increase the available share reserve by 1,000,000 shares.\n...\nProposal 4. Approval of an amendment to the Company\u2019s third amended and restated certificate of incorporation, as amended, to effect a reverse stock split of our common stock at a ratio ranging from any whole number between 1-for-5 and 1-for-20, as determined by the Board of Directors in its discretion.\n\n| Votes For | Votes Against | Abstentions | Broker Non-Votes |\n| --- | --- | --- | --- |\n| 41,068,200 | 739,329 | 33,923 | \u2014 |"
+    ]
+   },
+   {
+    "id": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+    "title": "Form  424B3      OneMedNet Corp",
+    "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+    "publishedDate": "2026-09-30T00:00:00.000Z",
+    "highlights": [
+     "Effective at 12:01 a.m. Eastern Time on September 29, 2026, the Company amended its Third Amended and Restated Certificate of Incorporation filed with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split of the Company\u2019s common stock (the \u201cReverse Split\u201d). Unless otherwise noted, the share information in this prospectus supplement have been adjusted to give effect to the Reverse Split.\n...\nOn September 26, 2026, as approved by the stockholders of OneMedNet Corporation (the \u201cCompany\u201d) on September 18, 2026, the Company filed a Certificate of Amendment (the \u201cAmendment\u201d) to its Third Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware to effect a 1-for-10 reverse stock split (the \u201cReverse Stock Split\u201d) of the Company\u2019s issued and outstanding common stock, $0.0001 par value per share (the \u201cCommon Stock\u201d), to be effective as of 12:01 a.m. Eastern Time on September 29, 2026 (the \u201cEffective Time\u201d). The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n...\nFollowing the Reverse Stock Split, the shares of Common Stock will continue to trade on The Nasdaq Capital Market under the symbol \u201cONMD\u201d. The new CUSIP number for the Common Stock following the Reverse Stock Split will be 68270C 202.\n...\nthe Company issued a press release announcing\n...\nOneMedNet Corporation Announces 1-for-10 Reverse Stock Split\n\nMINNEAPOLIS, Minn.\u2013 September 25, 2026\u2013 OneMedNet Corporation (Nasdaq: ONMD) (the \u201cCompany,\u201d \u201cwe,\u201d or \u201cour\u201d), a leading provider of first-party (direct-from-source) regulatory decision-grade, AI-driven Real-World Data (RWD), today announced that it will implement a 1-for-10 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d), effective at 12:01 a.m. Eastern Time on September 29, 2026. The Reverse Stock Split was approved by the Company\u2019s stockholders at its Annual Meeting of Stockholders held on September 18, 2026, with the final ratio, within the range approved by stockholders, subsequently determined by the Company\u2019s board of directors. The Reverse Stock Split is intended to bring the Company into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market, and to broaden investor interest.\n\n The Company\u2019s common stock is expected to begin trading on a split-adjusted basis when the markets open on September 29, 2026 under the Company\u2019s existing trading symbol \u201cONMD\u201d with the new CUSIP number 68270C 202.\n\nAt the effective time of the Reverse Stock Split, every ten (10) shares of the Company\u2019s issued and outstanding common stock will be automatically combined and converted into one issued and outstanding share of common stock without any change in the par value per share. The Reverse Split will reduce the number of shares of outstanding common stock from approximately 59,286,450 shares, the number of shares outstanding as of September 24, 2026, to approximately 5,928,645 shares of common stock. The total authorized number of shares will not be reduced. The Reverse Stock Split will also proportionately adjust the number of shares available under the Company\u2019s equity incentive plans and the exercise price and number of shares underlying outstanding restricted stock units, warrants, and other equity instruments, in each case in accordance with their terms.\n...\nissued in connection with the Reverse Stock Split. Any fractional shares of common stock resulting from the Reverse Stock Split will be rounded up to the nearest whole share. The Reverse Stock Split will affect all stockholders uniformly and will not alter any stockholder\u2019s relative interest in the Company\u2019s equity securities, except for any adjustments for fractional shares.\n\nContinental Stock Transfer & Trust Company is acting as the exchange agent and transfer agent for the Reverse Stock Split. Stockholders holding their shares electronically are not required to take any action to receive post-split shares. Stockholders owning shares through a bank, broker or other nominee will have their positions adjusted to reflect the Reverse Stock Split, subject to such broker\u2019s particular processes."
+    ],
+    "image": "http://www.streetinsider.com/images/silogo-new.png"
+   }
+  ],
+  "searchTime": 4760.3,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "effective_as_stated": "12:01 a.m. Eastern Time on September 29, 2026",
+    "source_notice_date": "2026-09-25",
+    "terms": "1-for-10",
+    "event_type": "reverse split",
+    "effective_date": "2026-09-29",
+    "new_identifier": "68270C 202",
+    "identifier_in_source": "ONMD"
+   },
+   "grounding": [
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-688",
+       "title": "Equity Corporate Actions Alert #2026 - 688 Information Regarding the Reverse Stock Split and CUSIP Number Change for OneMedNet Corp (ONMD)"
+      },
+      {
+       "url": "https://www.publicnow.com/view/6B72AA348ABCBD0AF545887D910CF257E610ABD3",
+       "title": "Onemednet Corporation (via Public) / OneMedNet Corporation Announces 1-for-10 Reverse Stock Split (Form 8-K)"
+      },
+      {
+       "url": "https://ebs.publicnow.com/view/6FE2660AFD624249DF483F30C9ED0CD589E9171C",
+       "title": "Onemednet Corporation (via Public) / Supplemental Prospectus (Form 424B3)"
+      },
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369231/0/en/onemednet-corporation-announces-1-for-10-reverse-stock-split.html",
+       "title": "OneMedNet Corporation Announces 1-for-10 Reverse Stock"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-8718fdc8c19b.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/8-k-one-med-net-corp-reports-material-event-87018ed7e487.html",
+       "title": "OneMedNet Sets 1-for-10 Reverse Split for Sept. 29 | ONMD 8-K Filing"
+      },
+      {
+       "url": "https://www.stocktitan.net/sec-filings/ONMD/424b3-one-med-net-corp-prospectus-filed-pursuant-to-rule-424-b-3-180a53c00969.html",
+       "title": "OneMedNet completes 1-for-10 reverse stock split | ONMD Prospectus Summary"
+      },
+      {
+       "url": "https://www.streetinsider.com/SEC+Filings/Form+424B3+OneMedNet+Corp/27124747.html",
+       "title": "Form  424B3      OneMedNet Corp"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

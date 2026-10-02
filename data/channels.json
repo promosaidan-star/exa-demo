@@ -1,0 +1,82 @@
+{
+  "_about": "Channel config. The customer approves these domain lists; code reads them and neither the model nor the user can widen them. Every text here is fixed, never computed from today's date, so request bodies stay identical and saved runs keep matching.",
+
+  "wires": ["globenewswire.com", "prnewswire.com", "businesswire.com", "accessnewswire.com"],
+
+  "asset_classes": {
+    "nasdaq_equity": {
+      "label": "Nasdaq-listed equity",
+      "exchange_prefix": "Nasdaq",
+      "issuer_label": "Issuer channel: press-release wires",
+      "market_label": "Market channel: Nasdaq corporate actions alert",
+      "market_domains": ["nasdaqtrader.com"],
+      "subject_template": "{issuer} (Nasdaq: {ticker})",
+      "issuer_query_template": "Press release from {issuer} (Nasdaq: {ticker}) announcing a {event}, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+      "market_query_template": "Nasdaq Equity Corporate Actions Alert for {issuer} ({ticker}) {event} and CUSIP change, with the effective date"
+    },
+    "nyse_equity": {
+      "label": "NYSE-listed equity",
+      "exchange_prefix": "NYSE",
+      "issuer_label": "Issuer channel: press-release wires",
+      "market_label": "Market channel: SEC filing, 8-K (issuer, legally filed)",
+      "market_domains": ["sec.gov"],
+      "subject_template": "{issuer} (NYSE: {ticker})",
+      "issuer_query_template": "Press release from {issuer} (NYSE: {ticker}) announcing a {event}, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+      "market_query_template": "{issuer} Form 8-K about its {event}, with the effective date and the new CUSIP"
+    },
+    "corporate_bond": {
+      "label": "Corporate bond",
+      "exchange_prefix": "",
+      "issuer_label": "Issuer channel: wires and the issuer's own newsroom",
+      "market_label": "Market channel: SEC filing (issuer, legally filed)",
+      "market_domains": ["sec.gov"],
+      "subject_template": "{issuer} notes with CUSIP {cusip}",
+      "issuer_query_template": "Press release from {issuer} announcing the {event} of its notes with CUSIP {cusip}, with the redemption date and redemption price",
+      "market_query_template": "{issuer} SEC filing about the {event} of notes with CUSIP {cusip}"
+    }
+  },
+
+  "ir_sites": {
+    "BAC": ["newsroom.bankofamerica.com"]
+  },
+
+  "source_classes": {
+    "globenewswire.com": "issuer wire",
+    "prnewswire.com": "issuer wire",
+    "businesswire.com": "issuer wire",
+    "accessnewswire.com": "issuer wire",
+    "newsroom.bankofamerica.com": "issuer IR site",
+    "nasdaqtrader.com": "exchange",
+    "sec.gov": "SEC filing"
+  },
+
+  "channel_kinds": {
+    "issuer": "the issuer's own announcements",
+    "market": "the exchange's or the SEC's official notices"
+  },
+
+  "system_prompt_template": "You are checking a security master exception for an investment operations team. Use only {kind} about {subject}; ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+
+  "repair_query_template": "{issuer} ({ticker}) {event}: effective date, ratio and new CUSIP",
+  "repair_max_age_hours": 0,
+  "repair_livecrawl_timeout_ms": 12000,
+
+  "free_form_start_published": "2026-08-20T00:00:00Z",
+
+  "event_choices": ["reverse stock split", "forward stock split", "ticker change", "ADS ratio change", "redemption"],
+
+  "output_schema": {
+    "type": "object",
+    "required": ["identifier_in_source", "event_type", "terms", "effective_as_stated", "market_effective_date", "new_cusip", "new_symbol", "source_notice_date"],
+    "properties": {
+      "identifier_in_source": {"type": "string", "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"},
+      "event_type": {"type": "string", "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"},
+      "terms": {"type": "string", "description": "Split or ratio terms, or redemption price and amount, as stated"},
+      "effective_as_stated": {"type": "string", "description": "Effective date and time exactly as the source writes it"},
+      "market_effective_date": {"type": "string", "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"},
+      "new_cusip": {"type": "string", "description": "New CUSIP as stated, or not stated"},
+      "new_symbol": {"type": "string", "description": "New ticker as stated, or not stated"},
+      "source_notice_date": {"type": "string", "description": "YYYY-MM-DD printed on the notice itself"}
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+ "saved_at": "2026-10-02 13:06:39",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by New Fortress Energy Inc. (Nasdaq: NFE): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for New Fortress Energy Inc. (Nasdaq: NFE), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 4633,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "1c9c7bd79fdcbe78240cf94e39557705",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)\n...\n## Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release Press Release | New Fortress Energy Inc. (NFE) will effect a one-for-fifty (1-50) reverse split of its Class A Common Stock. The reverse stock split will become effective on Monday, September 14, 2026. In conjunction with the reverse split, the CUSIP number will change to 644393308. Furthermore, on June 18, 2026, New Fortress Energy Inc. announced that its UK Restructuring Plan had been approved. As a result of the restructuring, additional post-split Class A common stock and a new preferred securitywill be issued to existing NFE creditors. The newly issued preferred stock (NFEGP) is expected to list on the Nasdaq Global Select Market on September 14, 2026, subject to closing of the transaction. The details for the preferred security listing are as follows: Company Name/Issue: New Fortress Energy Inc. Series A Mandatorily Convertible Preferred Stock CUSIP#: 643926207 Symbol: NFEGP Anticipated Marketplace Effective Date: September 14, 2026 If you would like to register as a market maker in NFE or NFEGP, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/NFE/8-k-new-fortress-energy-inc-reports-material-event-a78c9657e0a4.html",
+    "title": "New Fortress Energy erases $5.7B debt in overhaul | NFE 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/NFE/8-k-new-fortress-energy-inc-reports-material-event-a78c9657e0a4.html",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "New Fortress Energy Inc ... (NFE) completed a comprehensive ... ed restructuring that split its business into BrazilCo, holding the ... operations transferred to ... , and CoreCo, retaining the rest ... the assets. Approximately ... 7 billion of ... was extinguished, with\n...\nCoreCo raised $136.5 million of new financing via senior and junior term loans, BrazilCo paid about $74 million to CoreCo on intercompany obligations, and FLNG 2 Parent put in place a $400 million non\u2011recourse term loan and $200 million preferred equity. An amended $250 million letter of credit facility and new credit agreements set the post\u2011restructuring capital structure. Governance was overhauled through a 1\u2011for\u201150 reverse split, a new single\u2011class board elected by majority vote, replacement of most directors with new independents, and a revised director compensation program.\n...\nDebt extinguished: $5.7 billion New CoreCo Take-Back Term Loans: $571.3 million CoreCo Capital Raise: $136.5 million +5 more \n\n Debt extinguished $5.7 billion Third-party debt eliminated in the restructuring transaction \n\n New CoreCo Take-Back Term Loans $571.3 million Senior secured term loans issued to Plan Creditors \n\n CoreCo Capital Raise $136.5 million New financing from existing creditors at closing \n\n CoreCo Mandatorily Convertible Preferred liquidation preference $2.45 billion Preferred equity issued to Plan Creditors in the restructuring \n\n FLNG 2 Term Loan Facility $400 million Non-recourse senior secured term loans at FLNG 2 Parent \n\n FLNG 2 Preferred Interests $200 million Non-convertible preferred equity interests in FLNG 2 Parent \n\n New CoreCo LC Facility $250 million Committed amended and restated letter of credit facility \n\n Reverse stock split ratio 1-for-50 Reverse split of NFE common stock effective on Closing Date\n...\nreverse stock split financial \n\n\"effected a reverse stock split of the NFE common stock at a ratio of 1-for-50\"\n...\n% in each of ... three years before mandatory conversion ... on an as\u2011 ... convert on the ... common. \n\n What changes did NFE make to its capital structure and share count? \n\n NFE effected a 1\u2011for\u201150 reverse stock split of its common stock, with the CoreCo common stock continuing to trade on Nasdaq under \u201cNFE\u201d on a split\u2011adjusted basis on the Closing Date. It also authorized up to 2,639,716 shares of mandatorily convertible preferred stock and listed them under ticker \u201cNFEGP\u201d. \n\n How does the Financing Case describe NFE\u2019s post-transaction liquidity needs? \n\n A stressed Financing Case, tied to a $100 million minimum liquidity requirement, suggests CoreCo needs about $165 million of new capital, comprising $35 million pari passu debt, $100 million junior capital and a $50 million junior accordion that may not need to be fully drawn. \n\n What\n...\nOn September 11, 2026 (the \u201cClosing Date\u201d or the \u201cRestructuring Effective Date\u201d in relation to the Restructuring Plans (as defined herein)), New Fortress Energy Inc. (the \u201cCompany\u201d) consummated the previously announced comprehensive restructuring of the Company\u2019s principal funded ... obligations (the \u201cTransaction\u201d) pursuant to the restructuring plans promoted by each of two indirect subsidiaries of the Company under Part 26A of the UK Companies Act 2006 (together, the \u201cRestructuring Plans\u201d) and sanctioned by the High Court of Justice of ... and Wales on ... , 2026. On ... , 2026, the United States ... Court for the Southern District of New ... entered an order granting recognition of the Restructuring Plans in the United ... pursuant to chapter 15 of the ... Code.\n...\n(the \u201c\n...\n\u25e6 10,608,922 shares of the Company\u2019s Class A common stock (\u201cCoreCo common stock\u201d), representing 65% of the CoreCo common stock as of the Closing Date (giving effect to the Reverse Split (as defined below), but before giving effect to any incentive plan for directors, officers and other employees of the Company or any conversion of the CoreCo Mandatorily Convertible Preferred Stock), with existing stockholders retaining the other 35%;\n...\n, the Company issued 10, ... 4,936 shares ... Stock, and ... issued 200,000 FL ... 2 Preferred Interests, to ... itors pursuant to the Rest ... Plans and the RSA.\n...\nCoreCo will have the right to redeem or repurchase the CoreCo Mandatorily Convertible Preferred Stock (A) at any time and from time to time, in full or in part, with proceeds from (i) operating cash flows, (ii) asset sales, (iii) capital that is junior to the CoreCo Mandatorily Convertible Preferred Stock and (iv) to ... Co\u2019s resulting indebtedness would not exceed that outstanding as of the Closing Date, debt issuances, and (B) at any time, in full, with proceeds from one or more debt issuances, in each case of (A) and (B), at a redemption price equal to the then-current liquidation preference.\n\nThe CoreCo Mandatorily Convertible Preferred Stock issued on the Closing Date, together with any shares of CoreCo Mandatorily Convertible Preferred Stock issued pursuant to the Amended and Restated 2019 Omnibus Incentive Plan, will mandatorily convert on the third anniversary of the Closing Date into shares of CoreCo common stock representing 87% of the fully diluted CoreCo common stock outstanding as of the Closing Date (after giving effect to the shares of CoreCo common stock issued on the Closing Date and assuming the issuance in full of shares of CoreCo common stock reserved for issuance under the Amended and Restated 2019 Omnibus Incentive Plan). The initial conversion rate of 46.441271 shares of CoreCo common stock per share of CoreCo Mandatorily Convertible Preferred Stock will be subject to customary adjustments for stock splits, distributions, reorganizations and reclassifications, as well as to certain price-based anti-dilution adjustments for subsequent issuances of CoreCo common stock (or securities convertible into or exercisable for CoreCo common stock) made by the Company while the CoreCo Mandatorily Convertible Preferred Stock remains outstanding (subject to certain exempt issuances).\n\nThe CoreCo Mandatorily Convertible Preferred Stock is expected to begin trading on the Nasdaq Global Select Market under the ticker symbol \u201cNFEGP\u201d on September 11, 2026. The CUSIP number for the CoreCo Mandatorily Convertible Preferred Stock is 643926207.\n...\nAmong other amendments, the A&R Certificate of Incorporation effected a reverse stock split of the NFE common stock at a ratio of 1-for-50 (the \u201cReverse Split\u201d), which was previously approved by the Company\u2019s stockholders on June 17, 2026 and by the Board of Directors of the Company on May 6, 2026. The CoreCo common stock will continue to trade on the Nasdaq Global Select Market under the existing ticker symbol \u201cNFE\u201d and will begin trading on a split-adjusted basis when the market opens on the Closing Date. The new CUSIP number for the CoreCo common stock is 644393308. \n\nThe A&R Certificate of Incorporation includes a Certificate of Designation of Series A Mandatorily Convertible Preferred Stock (the \u201cCertificate of Designation\u201d), establishing the rights, preferences, powers, restrictions, and limitations of the CoreCo Mandatorily Convertible Preferred Stock. The Certificate of Designation became effective upon filing. The Certificate of Designation authorizes up to 2,639,716 shares of CoreCo Mandatorily Convertible Preferred Stock. The information contained in Item 3.02 of this Current Report relating to the CoreCo Mandatorily Convertible Preferred Stock is incorporated herein by reference."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/nfe_8-K.webp"
+   },
+   {
+    "id": "https://www.nasdaq.com/press-release/new-fortress-energy-inc-successfully-completes-restructuring-and-recapitalization",
+    "title": "New Fortress Energy Inc. Successfully Completes Restructuring and Recapitalization Transaction & Capital Raise Participation | Nasdaq",
+    "url": "https://www.nasdaq.com/press-release/new-fortress-energy-inc-successfully-completes-restructuring-and-recapitalization",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "highlights": [
+     "11, 2026 9:20am EDT\n\n NEW YORK--(BUSINESS WIRE)-- New Fortress Energy Inc. (NASDAQ: NFE) (together with its direct and indirect subsidiaries, \u201c NFE\u201d or the \u201c Company\u201d) is pleased to announce that it has successfully completed its restructuring and recapitalization transaction in relation to the consensual UK Restructuring Plan (the \" UK RP\") between its subsidiaries and certain of their creditors (the \u201c Plan Creditors\u201d). The UK RP was approved on June 18, 2026 and recognition of the UK RP was confirmed by the United States Bankruptcy Court for the Southern District of New York on June 26, 2026. The Company has now completed all steps, satisfied all conditions and obtained all necessary approvals in relation to the implementation of the UK RP and the Restructuring Effective Date occurred today. \n\n As a result of the completion of the transaction, the Company\u2019s Brazilian business and operations have been separated to establish two distinct, standalone enterprises, BrazilCo and \"New NFE\". The transaction provided for the extinguishment of ~$5.7 billion of third party debt with Plan Creditors receiving: (i) all of the equity of BrazilCo, (ii) preferred equity of \"New NFE\" with $2.45 billion of liquidation preference, (iii) 65% of the common equity of \"New NFE\" and (iv) ~$571.3 million of \"New NFE\" Term Loans. Plan Creditors with claims against FLNG 2 also received preferred equity relating to, and Term Loans with limited recourse to, the FLNG 2 assets. \n\n \"New NFE\" also raised $136.5 million of new financing that was funded on the Restructuring Effective Date. Certain Plan Creditors have the opportunity to participate in the new financing and should refer to the Company\u2019s Current Report on Form 8-K filed today with the U.S. Securities and Exchange Commission for more details and contact Houlihan Lokey at NFEfinancing@hl.com no later than 5:00 pm EDT on September 17, 2026 if they would like to participate. \n\n Having successfully streamlined and significantly deleveraged, \"New NFE\" is expected to be strategically positioned for sustainable growth. \n\n \u201cThis restructuring marks a new beginning for our company,\u201d said Wes Edens, CEO of New Fortress Energy. \n\n \u201cThe UK RP restructuring results in the \u201cNew NFE\u201d being a much simpler, more streamlined company. The Company owns a portfolio of critical LNG and power assets, including a substantial and growing LNG portfolio, terminal operations and logistics in Mexico and Puerto Rico and a 735mw power and turbine portfolio. These assets and operations produce significant cash flow today and when fully deployed in the coming months provide the opportunity for significant growth. As a result of this transaction our balance sheet has changed dramatically - overall corporate debt has been reduced from approximately $5.7 billion to approximately $700mm today. The closing today is a huge step forward for the Company and we are excited to bring a renewed focus on our mission of bringing cleaner and cheaper power to countries around the world.\u201d \n\n NFE is advised by Skadden, Arps, Slate, Meagher & Flom LLP and its affiliates as legal advisors, Houlihan Lokey Capital, Inc. and Alvarez & Marsal as financial advisors."
+    ],
+    "image": "https://www.nasdaq.com/sites/acquia.prod/files/2024/04/05/Nasdaq%20default%20share%20image.jpg?1992493549"
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/NFE/8-k-a-new-fortress-energy-inc-amends-material-event-report-4d7c1804f69c.html",
+    "title": "New Fortress liabilities fall to $3.45B after overhaul | NFE 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/NFE/8-k-a-new-fortress-energy-inc-amends-material-event-report-4d7c1804f69c.html",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "New Fortress Energy Inc. (NFE) filed an amended report providing unaudited pro forma financial statements reflecting its completed global debt restructuring and separation of its Brazil and Wyalusing land business into a new company (\u201cBrazilCo\u201d), with the remaining operations retained in \u201cCoreCo.\u201d The pro forma balance sheet shows a large reduction in reported liabilities after exchanging funded debt for BrazilCo equity, new CoreCo term loans, and substantial preferred and common equity issued to creditors. The filing also gives effect to a 1-for-50 reverse stock split and shows BrazilCo as discontinued operations for all presented periods.\n...\nAI-generated questions and answers. How Rhea-AI works. Not financial advice.\n\n What major transaction does NFE\u2019s 8-K/A report on? \n\n It reports unaudited pro forma financials for New Fortress Energy Inc. after completing a comprehensive restructuring of its principal funded debt and separating Brazil and Wyalusing land assets into an independent company, BrazilCo, with remaining operations retained in CoreCo. \n\n How much debt did NFE restructure or remove in this transaction? \n\n The company derecognized $6.18 billion of existing funded debt obligations, including accrued interest, and replaced them with a mix of new CoreCo term loans, BrazilCo equity, a new unsecured note and other consideration under lender-specific terms. \n\n How did the restructuring affect NFE\u2019s pro forma 2025 results (NFE)? \n\n Pro forma consolidated net income for 2025 is $1.09 billion, compared with a historical net loss of $1.83 billion, driven largely by a $1.35 billion gain on troubled debt restructuring and a $1.11 billion gain on debt extinguishment. \n\n What new securities did NFE issue to creditors in the restructuring? \n\n NFE issued 10,608,922 common shares (65% of post\u2011split common), $571.3 million of New CoreCo take\u2011back term loans, $36.5 million of new senior term loans, $103.0 million of junior term loans, and mandatorily convertible preferred stock with a $2.45 billion liquidation preference. \n\n How did the restructuring change NFE\u2019s balance sheet leverage? \n\n Total liabilities decline from $11.16 billion historically to $3.45 billion on the June 30, 2026 pro forma balance sheet, reflecting large funded debt removals and replacement with equity and mezzanine instruments. \n\n What is the impact of the reverse stock split on NFE\u2019s share count and EPS? \n\n NFE effected a 1-for-50 reverse stock split. For 2025, pro forma basic EPS changes from a historical $(331.25) per share to $1.10 per share after restructuring, based on a reduced pro forma weighted-average of about 16.18 million shares. \n\n How are Brazil operations treated in NFE\u2019s pro forma statements? \n\n The BrazilCo business qualifies as discontinued operations. The pro formas remove BrazilCo\u2019s assets, liabilities and results and present BrazilCo separately as discontinued operations for all periods, while Wyalusing land remains with CoreCo and is not treated as discontinued.\n...\nOn September 11, 2026 (the \u201cClosing Date\u201d or \u201cRestructuring Effective Date\u201d in relation to the Restructuring Plans (as defined herein)), New Fortress Energy Inc. (\u201cNFE,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cour\u201d and \u201cus\u201d) completed its previously announced comprehensive restructuring of the Company\u2019s principal funded debt obligations (the \u201cRestructuring Transaction\u201d) pursuant to the restructuring plans promoted by each of two indirect subsidiaries of the Company, (i) NFE Global Holdings Limited (\u201cNFE Global\u201d) and (ii) NFE Brazil Newco Limited (\u201cNFE Brazil Newco\u201d) (each, a \u201cPlanCo\u201d) under Part 26A of the UK Companies Act 2006 (for each PlanCo, the \u201cRestructuring Plan,\u201d and together, the \u201cRestructuring Plans\u201d) and sanctioned by the High Court of Justice in England and Wales (the \u201cHigh Court\u201d) on June 18, 2026. On June 29, 2026, the United States Bankruptcy Court for the Southern District of New York entered an order granting recognition of the Restructuring Plans in the United States pursuant to chapter 15 of the U.S. Bankruptcy Code. \n\nAs part of the Restructuring Transaction, the Company separated into two independent companies: one comprising the Company\u2019s businesses and assets in Brazil and land in Wyalusing, Pennsylvania (\u201cBrazilCo\u201d), and the other comprising the Company\u2019s remaining businesses and assets, which are retained by NFE (\u201cCoreCo\u201d). The Company\u2019s obligations were exchanged for a combination of consideration, including:\n...\n\u2022 2,454,936 shares of Series A mandatorily convertible preferred stock of CoreCo with an aggregate liquidation preference of $2.46 billion (the \u201cCoreCo Convertible Preferred Stock\u201d); \n\n\u2022 10,608,922 shares of CoreCo common stock, representing 65% of NFE common stock as of the Closing Date, after giving effect to the reverse stock split and before giving effect to any management incentive plan or conversion of the CoreCo Convertible Preferred Stock;\n...\nThe following unaudited pro forma condensed consolidated financial statements (which we refer to as the \u201cpro forma financial statements\u201d) have been prepared from the Company\u2019s historical consolidated financial statements, adjusted to give effect to the Restructuring Transaction. The unaudited pro forma condensed consolidated financial statements also give effect to the 1-for-50 reverse stock split effected on the Closing Date in connection with the Restructuring Transaction.\n...\nsheet as of June 30, 2026 reflects the Company\u2019s financial position as if the Restructuring Transaction had occurred on June 30, 2026. The unaudited pro forma condensed consolidated income statement for the six months ended June 30, 2026 and for the year ended December 31, 2025 give effect to the Restructuring Transaction as if it were completed on January 1, 2025. The unaudited pro forma condensed consolidated income statements for the six months ended June 30, 2026 and for the years ended December 31, 2025, 2024 and 2023 reflect BrazilCo as discontinued operations for all periods presented. The adjustments reflected in the \u201cBrazilCo Separation\u201d column represent the removal of assets, liabilities, equity and results of operations attributable to BrazilCo, which qualifies for discontinued operations presentation in accordance with ASC 205-20,\n...\n(c) Reflects the issuance of CoreCo Convertible Preferred Stock with an aggregate liquidation preference of $2,454.9 million. The CoreCo Convertible Preferred Stock is classified as mezzanine equity as it contains redemption features that may be outside the Company\u2019s control. The CoreCo Convertible Preferred Stock is recorded at its redemption value as the instrument is currently redeemable. The CoreCo Convertible Preferred Stock is initially recorded at its estimated fair value of $1,675.0 million, and, as the instrument is currently redeemable, an accretion adjustment of $779.9 million is immediately recorded to present the CoreCo Convertible Preferred Stock at redemption value. The $779.9 million accretion adjustment is recorded as a reduction to additional paid-in capital. The day one accretion is treated as a deemed dividend within equity and, accordingly, is not reflected in the unaudited pro forma condensed consolidated income statements in any period presented. Refer to Note 3 (r) for the impact on earnings per share.\n...\n(d) Reflects the issuance of 10,608,922 shares of CoreCo common stock to creditors in connection with the Restructuring Transaction, representing 65% of NFE common stock outstanding as of the Closing Date, after giving effect to the reverse stock split and before giving effect to any incentive plan or conversion of the CoreCo Convertible Preferred Stock. The issuance resulted in an increase of approximately $0.1 million to Class A common stock and $276.8 million to additional paid-in capital. Existing stockholders retained the remaining 35% of NFE common stock."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/nfe_8-K.webp"
+   },
+   {
+    "id": "https://investor.wedbush.com/wedbush/article/bizwire-2026-9-11-new-fortress-energy-inc-successfully-completes-restructuring-and-recapitalization-transaction-and-capital-raise-participation",
+    "title": "New Fortress Energy Inc. Successfully Completes Restructuring and Recapitalization Transaction & Capital Raise Participation",
+    "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-9-11-new-fortress-energy-inc-successfully-completes-restructuring-and-recapitalization-transaction-and-capital-raise-participation",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "author": "By:\n   New Fortress Energy Inc.  via\n   Business Wire",
+    "highlights": [
+     "New Fortress Energy Inc. (NASDAQ: NFE) (together with its direct and indirect subsidiaries, \u201c NFE\u201d or the \u201c Company\u201d) is pleased to announce that it has successfully completed its restructuring and recapitalization transaction in relation to the consensual UK Restructuring Plan (the \" UK RP\") between its subsidiaries and certain of their creditors (the \u201c Plan Creditors\u201d). The UK RP was approved on June 18, 2026 and recognition of the UK RP was confirmed by the United States Bankruptcy Court for the Southern District of New York on June 26, 2026. The Company has now completed all steps, satisfied all conditions and obtained all necessary approvals in relation to the implementation of the UK RP and the Restructuring Effective Date occurred today. \n\n As a result of the completion of the transaction, the Company\u2019s Brazilian business and operations have been separated to establish two distinct, standalone enterprises, BrazilCo and \"New NFE\". The transaction provided for the extinguishment of ~$5.7 billion of third party debt with Plan Creditors receiving: (i) all of the equity of BrazilCo, (ii) preferred equity of \"New NFE\" with $2.45 billion of liquidation preference, (iii) 65% of the common equity of \"New NFE\" and (iv) ~$571.3 million of \"New NFE\" Term Loans. Plan Creditors with claims against FLNG 2 also received preferred equity relating to, and Term Loans with limited recourse to, the FLNG 2 assets. \n\n \"New NFE\" also raised $136.5 million of new financing that was funded on the Restructuring Effective Date. Certain Plan Creditors have the opportunity to participate in the new financing and should refer to the Company\u2019s Current Report on Form 8-K filed today with the U.S. Securities and Exchange Commission for more details and contact Houlihan Lokey at NFEfinancing@hl.com no later than 5:00 pm EDT on September 17, 2026 if they would like to participate. \n\n Having successfully streamlined and significantly deleveraged, \"New NFE\" is expected to be strategically positioned for sustainable growth. \n\n \u201cThis restructuring marks a new beginning for our company,\u201d said Wes Edens, CEO of New Fortress Energy. \n\n \u201cThe UK RP restructuring results in the \u201cNew NFE\u201d being a much simpler, more streamlined company. The Company owns a portfolio of critical LNG and power assets, including a substantial and growing LNG portfolio, terminal operations and logistics in Mexico and Puerto Rico and a 735mw power and turbine portfolio. These assets and operations produce significant cash flow today and when fully deployed in the coming months provide the opportunity for significant growth. As a result of this transaction our balance sheet has changed dramatically - overall corporate debt has been reduced from approximately $5.7 billion to approximately $700mm today. The closing today is a huge step forward for the Company and we are excited to bring a renewed focus on our mission of bringing cleaner and cheaper power to countries around the world.\u201d \n\n NFE is advised by Skadden, Arps, Slate, Meagher & Flom LLP and its affiliates as legal advisors, Houlihan Lokey Capital, Inc. and Alvarez & Marsal as financial advisors."
+    ]
+   },
+   {
+    "id": "https://finviz.com/news/390872/new-fortress-energy-inc-announces-update-on-reverse-stock-split",
+    "title": "New Fortress Energy Inc. Announces Update on Reverse Stock Split",
+    "url": "https://finviz.com/news/390872/new-fortress-energy-inc-announces-update-on-reverse-stock-split",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "highlights": [
+     "New Fortress Energy Inc. Announces Update on Reverse Stock Split\n...\nNEW YORK--(BUSINESS WIRE)--New Fortress Energy Inc. (NASDAQ: NFE) (the \u201cCompany\u201d) today announced an update on the previously announced reverse stock split of the Company\u2019s Class A common stock, par value $0.01 per share, at a ratio of 1-for-50 (the \u201cReverse Stock Split\u201d). The Company expects trading of its Class A common stock to be halted prior to 8:00 p.m. Eastern Time on September 10, 2026. The Company\u2019s Class A common stock is expected to begin trading on a split-adjusted basis on the Nasdaq Global Select Market on September 14, 2026 under the existing ticker symbol \u201cNFE\u201d with a new CUSIP number of 644393308, subject to and contingent upon the completion of the Company\u2019s ongoing restructuring transaction.\n\n About New Fortress Energy Inc."
+    ]
+   },
+   {
+    "id": "https://secwatch.observer/filing/0001749723-26-000118",
+    "title": "NFE 8-K: New Fortress Energy completes comprehensive debt restructuring, splits into BrazilCo and CoreCo \u2014 secwatch.observer",
+    "url": "https://secwatch.observer/filing/0001749723-26-000118",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "highlights": [
+     "NFE 8-K: New Fortress Energy completes comprehensive debt restructuring, splits into BrazilCo and CoreCo \u2014 secwatch.observer\n\n# New Fortress Energy completes comprehensive debt restructuring, splits into BrazilCo and CoreCo\n...\n- On Sept 11, 2026, NFE consummated restructuring; creditors received 100% of BrazilCo equity, $571.3M new CoreCo term loans, and 10.6M common shares (65% of CoreCo).\n- Terminated all prior funded debt incl. 6.5% 2026 notes, 8.75% 2024 notes, Term Loan A/B, and Revolving Credit Agreement; liens released.\n- New $250M LC facility and $136.5M capital raise ($36.5M senior + $100M junior) provided; FLNG2 got $400M term loans and $200M preferred.\n- Existing stockholders retain 35% of CoreCo; Wesley Edens received pro rata share and bought additional 28,313 common and 6,671 preferred for $1.67M.\n- CoreCo issued 2,454,936 shares of Series A Mandatorily Convertible Preferred Stock."
+    ],
+    "image": "https://secwatch.observer/og-default.png"
+   },
+   {
+    "id": "https://www.stocktitan.net/news/NFE/new-fortress-energy-inc-announces-reverse-stock-a22sinlide2q.html",
+    "title": "New Fortress Energy Plans 1-for-50 Reverse Split | NFE Stock News",
+    "url": "https://www.stocktitan.net/news/NFE/new-fortress-energy-inc-announces-reverse-stock-a22sinlide2q.html",
+    "publishedDate": "2026-09-09T00:00:00.000Z",
+    "author": "New Fortress Energy Inc.",
+    "highlights": [
+     "# New Fortress Energy Inc. Announces Reverse Stock Split \n\nNFE will consolidate every 50 Class A shares into one on September 11, 2026 to address Nasdaq minimum bid price compliance.\n...\nThe balance of ... actually discloses, so the two ... , for example ... a trial that missed its main goal is described in upbeat language.\n\n 09/09/202 ... - 12:15 PM \n\n--(BUSINESS WIRE)-- New Fortress Energy Inc. (NASDAQ: NFE) (the \u201cCompany\u201d) today announced that its Board of Directors has approved a reverse stock split of the Company's Class A common stock, par value \n\n$0.01\n\n per share, at a ratio of 1-for-50 (the \"Reverse Stock Split\"). The Reverse Stock Split is intended to help the Company regain compliance with the minimum bid price requirement for continued listing of its Class A common stock on the Nasdaq Global Select Market.\n\n The Reverse Stock Split was approved by stockholders at the Company's 2026 Annual Meeting of Stockholders held on June 17, 2026, and is expected to become effective at 8:30 a.m. Eastern Time on September 11, 2026. The Company\u2019s Class A common stock is expected to begin trading on a split-adjusted basis on the Nasdaq Global Select Market on September 11, 2026 under the existing ticker symbol \" NFE\" with a new CUSIP number of 644393308, subject to and contingent upon the completion of the Company\u2019s ongoing restructuring transaction. \n\n At the effective time of the Reverse Stock Split, every 50 issued and outstanding shares of the Company\u2019s Class A common stock will be automatically combined into one share of Class A common stock. If the Reverse Stock Split were implemented as of July 31, 2026, the total number of outstanding shares would be reduced proportionately from approximately 285,634,650 to approximately 5,712,693, subject to adjustment for fractional shares. The number of authorized shares of Class A common stock and the par value per share of Class A common stock will not be changed. \n\n No fractional shares will be issued in connection with the Reverse Stock Split. Stockholders who would otherwise be entitled to receive fractional shares will receive a cash payment from Equiniti Trust Company, LLC, the Company's transfer agent, in lieu thereof. Proportionate adjustments will be made to the number of shares underlying the Company's outstanding equity awards, including stock options and restricted stock units, and to any other convertible securities, and to the exercise or conversion prices of such instruments. \n\n The Reverse Stock Split will not affect any stockholder's proportionate ownership interest in the Company, except for adjustments resulting from the treatment of fractional shares. \n\n About New Fortress Energy Inc. \n\n New Fortress Energy Inc. (NASDAQ: NFE) is a global energy infrastructure company founded to address energy poverty and accelerate the world\u2019s transition to reliable, affordable, and clean energy. The Company owns and operates natural gas and liquefied natural gas (LNG) infrastructure and an integrated fleet of ships and logistics assets to rapidly deliver turnkey energy solutions to ... markets. Collectively, the ... \u2019s assets and operations reinforce ... security, enable economic growth, enhance environmental stewardship and transform local industries and communities around the world."
+    ],
+    "image": "https://www.stocktitan.net/news_covers/New_Fortress_Energy_Inc_Announces_Reverse_Stock_Split_1502700.webp"
+   },
+   {
+    "id": "https://investor.wedbush.com/wedbush/article/bizwire-2026-9-10-new-fortress-energy-inc-announces-update-on-reverse-stock-split",
+    "title": "New Fortress Energy Inc. Announces Update on Reverse Stock Split",
+    "url": "https://investor.wedbush.com/wedbush/article/bizwire-2026-9-10-new-fortress-energy-inc-announces-update-on-reverse-stock-split",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "By:\n   New Fortress Energy Inc.  via\n   Business Wire",
+    "highlights": [
+     "New Fortress Energy Inc. Announces Update on Reverse Stock Split\n...\n09:32\n...\nNew Fortress Energy Inc. (NASDAQ: NFE) (the \u201cCompany\u201d) today announced an update on the previously announced reverse stock split of the Company\u2019s Class A common stock, par value $0.01 per share, at a ratio of 1-for-50 (the \u201cReverse Stock Split\u201d). The Company expects trading of its Class A common stock to be halted prior to 8:00 p.m. Eastern Time on September 10, 2026. The Company\u2019s Class A common stock is expected to begin trading on a split-adjusted basis on the Nasdaq Global Select Market on September 14, 2026 under the existing ticker symbol \u201cNFE\u201d with a new CUSIP number of 644393308, subject to and contingent upon the completion of the Company\u2019s ongoing restructuring transaction. \n\n About New Fortress Energy Inc. \n\n New Fortress Energy Inc. (NASDAQ: NFE"
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/news/NFE/new-fortress-energy-inc-announces-update-on-reverse-stock-6znp45brampr.html",
+    "title": "New Fortress Energy Expects 1-for-50 Reverse Split | NFE Stock News",
+    "url": "https://www.stocktitan.net/news/NFE/new-fortress-energy-inc-announces-update-on-reverse-stock-6znp45brampr.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "# New Fortress Energy Inc. Announces Update on Reverse Stock Split \n\nNew Fortress Energy outlines trading halt, split-adjusted trading date and new CUSIP for its contingent 1-for-50 reverse stock split.\n\n(High)\n\n 09/10/2026 - 09:32 AM \n\nNEW YORK\n\n--(BUSINESS WIRE)-- New Fortress Energy Inc. (NASDAQ: NFE) (the \u201cCompany\u201d) today announced an update on the previously announced reverse stock split of the Company\u2019s Class A common stock, par value \n\n$0.01\n\n per share, at a ratio of 1-for-50 (the \u201cReverse Stock Split\u201d). The Company expects trading of its Class A common stock to be halted prior to 8:00 p.m. Eastern Time on September 10, 2026. The Company\u2019s Class A common stock is expected to begin trading on a split-adjusted basis on the Nasdaq Global Select Market on September 14, 2026 under the existing ticker symbol \u201cNFE\u201d with a new CUSIP number of 644393308, subject to and contingent upon the completion of the Company\u2019s ongoing restructuring transaction.\n\n About New Fortress Energy Inc. \n\n New Fortress Energy Inc. (NASDAQ: NFE) is a global energy infrastructure company founded to address energy poverty and accelerate the world\u2019s transition to reliable, affordable, and clean energy. The Company owns and operates natural gas and liquefied natural gas (LNG) infrastructure and an integrated fleet of ships and logistics assets to rapidly deliver turnkey energy solutions to global markets. Collectively, the Company\u2019s assets and operations reinforce global energy security, enable economic growth, enhance environmental stewardship and transform local industries and communities around the world. \n\n Cautionary Statement ... Forward-Looking Statements"
+    ],
+    "image": "https://www.stocktitan.net/news_covers/New_Fortress_Energy_Inc_Announces_Update_on_Reverse_Stock_Split_1503294.webp"
+   }
+  ],
+  "searchTime": 1992.6,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "source_notice_date": "2026-09-10",
+    "event_type": "reverse split",
+    "effective_date": "2026-09-14",
+    "new_identifier": "644393308",
+    "terms": "one-for-fifty (1-50)",
+    "effective_as_stated": "Monday, September 14, 2026",
+    "identifier_in_source": "NFE"
+   },
+   "grounding": [
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-654",
+       "title": "Equity Corporate Actions Alert #2026 - 654 Information Regarding the Reverse Stock Split and CUSIP Number Change for New Fortress Energy Inc. (NFE)"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

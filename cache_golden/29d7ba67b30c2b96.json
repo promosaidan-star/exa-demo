@@ -1,0 +1,284 @@
+{
+ "saved_at": "2026-09-29 09:41:41",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from VerifyMe, Inc. (Nasdaq: VRME) announcing a reverse stock split, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com"
+  ],
+  "startPublishedDate": "2026-08-20T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about VerifyMe, Inc. (Nasdaq: VRME); ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3429,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "37af2499c86760da10d69fded360d017",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+    "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM",
+    "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "Monteverde & Associates PC",
+    "highlights": [
+     "- VerifyMe, Inc. (NASDAQ: VRME) related to its merger with Open World Ltd. subject to a shareholder vote on September 24, 2026. Upon completion of the proposed transaction, VerifyMe shareholders will own 10% of the combined company."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS753151/Monteverde-Associates-PC-Logo.jpg?id=OA2941718&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "title": "TruGolf Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "Salt Lake City, Utah, Sept. 25, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings, Inc. (NASDAQ: TRUG), today announced a 1-for-10 reverse split of its Class A common stock. Beginning on September 29, 2026, the Company\u2019s Class A common stock will continue to trade on The Nasdaq Capital Market on a split adjusted basis under the trading symbol \u201cTRUG\u201d but will trade under the following new CUSIP number: 243733607.\n\nAs a result of the reverse stock split, every 10 shares of Class A common stock issued and outstanding as of the effective date will be automatically combined into one share of Class A common stock. No fractional shares will be issued if, as a result of the reverse stock split, a stockholder would otherwise become entitled to a fractional share because the number of shares of Class A common stock they hold before the reverse stock split is not evenly divisible by the split ratio. Instead, each stockholder will be entitled to receive a cash payment in lieu of a fractional share."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "title": "La Rosa Holdings Announces 1-for-6 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "author": "La Rosa Holdings Corp.",
+    "highlights": [
+     "Celebration, FL, Sept. 03, 2026 (GLOBE NEWSWIRE) -- La Rosa Holdings Corp. (NASDAQ: LRHC) (\u201cLa Rosa\u201d or the \u201cCompany\u201d), a real estate and PropTech enterprise, today announced that it will effect a 1-for-6 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 8, 2026 at 12:01 a.m. (Eastern Time).\n\nLa Rosa\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cLRHC\u201d and will begin trading on a split-adjusted basis when the market opens on September 8, 2026. The new CUSIP number for the common stock following the reverse stock split will be 50172T509. At the effective time of the reverse stock split, every 6 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 3.4 million shares to approximately 569 thousand shares, without giving effect to rounding. The reverse stock split will also apply to Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f854f31e-8844-4c15-a86b-772ced2fcb2a"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "title": "CDT Equity Inc. Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369099/0/en/cdt-equity-inc-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "CDT Equity Inc.",
+    "highlights": [
+     "NAPLES, Fla. and CAMBRIDGE, United Kingdom, Sept. 25, 2026 (GLOBE NEWSWIRE) -- CDT Equity Inc. (Nasdaq: CDT) (\u201cCDT\u201d or the \u201cCompany\u201d), announces that its board of directors has approved a 1-for-25 reverse stock split of the Company\u2019s common stock, to ensure continued compliance with the Nasdaq bid-price rule. The Company\u2019s stockholders approved future reverse stock splits, their timing, and granted the board of directors authority to determine future exact split ratios.\n\nThe reverse stock split will become effective on September 28, 2026, at 5:00 pm, Eastern Time (the \u201cEffective Time\u201d), and the Company\u2019s common stock is expected to begin trading on a reverse stock split-adjusted basis on The Nasdaq Capital Market (\u201cNasdaq\u201d) at market open under the existing ticker symbol, \u201cCDT\u201d on September 29, 2026, the date which has been approved by Nasdaq for the effectiveness of such split.\n...\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cCDT\u201d following the reverse stock split, with a new CUSIP number of 20678X700. After the effectiveness of the reverse stock split, the number of outstanding shares of common stock will be reduced to approximately 1,013,515. No fractional shares will be issued in connection with the reverse stock split, and stockholders who would otherwise be entitled to a fractional share will receive a proportional cash payment."
+    ]
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/vision-marine-technologies-announces-reverse-stock-split-302858441.html",
+    "title": "Vision Marine Technologies Announces Reverse Stock Split",
+    "url": "https://www.prnewswire.com/news-releases/vision-marine-technologies-announces-reverse-stock-split-302858441.html",
+    "publishedDate": "2026-08-24T00:00:00.000Z",
+    "author": "Vision Marine Technologies, Inc",
+    "highlights": [
+     "MONTREAL , Aug. 24, 2026 /PRNewswire/ -- Vision Marine Technologies Inc. (NASDAQ: VMAR; TSXV: VMAR) (\"Vision Marine\" or the \"Company\") today announced that the Company's board of directors (the \"Board\") approved a 1-for-10 reverse stock split of the Company's common shares. The reverse stock split is expected to become effective when the market opens on August 26, 2026 (the \"Effective Date\") and the Company's common shares will begin trading on a split-adjusted basis under the existing trading symbol \"VMAR.\" The new CUSIP number for the Company's common shares following the reverse stock split will be 92840Q608.\n...\nThe primary purpose of the reverse stock split is to increase the per-share market price of the Company's common shares in an effort to regain compliance with the $1.00 minimum bid price requirement for continued listing on The Nasdaq Capital Market under Nasdaq Listing Rule 5550(a)(2). There can be no assurance that the reverse stock split will result in the Company regaining or maintaining compliance with this requirement. On August 20, 2026, the Board approved both the Effective Date of the reverse stock split as well as the ratio of the reverse stock split of 1-for-10."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1755161/Vision-Marine-Logo.jpg?id=OA2907138&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/financial-services-latest-news/stock-split-list/",
+    "title": "All Stock Split  News and Press Releases from PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/financial-services-latest-news/stock-split-list/",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "### Aug 24, 2026, 11:36 ET Vision Marine Technologies Announces Reverse Stock Split \n\nVision Marine Technologies Inc. (NASDAQ: VMAR; TSXV: VMAR) (\"Vision Marine\" or the \"Company\") today announced that the Company's board of directors..."
+    ],
+    "image": "https://www.prnewswire.com/content/dam/prnewswire/common/prn_facebook_sharing_logo.jpg"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/lument-finance-trust-announces-completion-of-reverse-stock-split-302874329.html",
+    "title": "Lument Finance Trust Announces Completion of Reverse Stock Split",
+    "url": "https://www.prnewswire.com/news-releases/lument-finance-trust-announces-completion-of-reverse-stock-split-302874329.html",
+    "publishedDate": "2026-09-09T00:00:00.000Z",
+    "author": "Lument Finance Trust, Inc.",
+    "highlights": [
+     "Lument Finance Trust Announces Completion of Reverse Stock Split\n\n Lument Finance Trust, Inc. \n\nSep 09, 2026, 17:15 ET\n\nNEW YORK, Sept. 9, 2026 /PRNewswire/ -- Lument Finance Trust, Inc. (NYSE: LFT) (\"we\", \"LFT\" or \"the Company\") announced today that its previously announced 1-for-10 reverse stock split of common stock was completed following the close of business today. The Company's common stock will continue to trade on the New York Stock Exchange under the symbol \"LFT\" and, starting on September 10, 2026, will trade on a post-split basis under a new CUSIP number: 55025L306.\n\nFollowing the close of business on September 9, 2026, every ten issued and outstanding shares of the Company's common stock were converted into one share of the Company's common stock. As a result of the reverse stock split, the number of outstanding shares of the Company's common stock was reduced from 52,564,062 to approximately 5,256,400."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS572283/LUMENT-FinanceTrust-Logo.jpg?id=OA2939649&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "title": "Republic Power Group Limited Announces 1-For-16 Reverse",
+    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "author": "Republic Power Group Limited",
+    "highlights": [
+     "Singapore, Sept. 23, 2026 (GLOBE NEWSWIRE) -- Republic Power Group Limited (NASDAQ: RPGL), today announced that it will effect a reverse share split of its Class A ordinary shares, par value $0.50 per share (the \u201cClass A Ordinary Shares\u201d) and Class B ordinary shares, par value $0.50 per share (the \u201cClass B Ordinary Shares\u201d), at a ratio of 1-for-16, to be effective at the open of business on September 25, 2026.\n\nOur Class A Ordinary Shares will begin trading on a reverse share split-adjusted basis at the opening of The Nasdaq Capital Market (\u201cNasdaq\u201d) on September 25, 2026. There is no public market for our Class B Ordinary Shares. Following the reverse share split, the Class A Ordinary Shares will have a new par value of $8.0 per share and will continue to trade on Nasdaq under the symbol \u201cRPGL\u201d with the new CUSIP number, G7523E139. The reverse share split is expected to lead the Company\u2019s Class A Ordinary Shares to trade at approximately 16 times the price per share at which it trades prior to the effectiveness of the reverse share split. The Company, however, cannot assure that the price of its Class A Ordinary Shares after the reverse split will reflect the 1-for-16 reverse split ratio, that the price per share following the effective time of the reverse split will be maintained for any period of time, or that the price will remain above the pre-split trading price. The reverse share split is intended for the Company to maintain compliance with the minimum bid price requirement of $1.00 per Class A Ordinary Share for continued listing on Nasdaq.\n...\nOn August 28, 2026, the board of directors of the Company approved the reverse share split of the Class A Ordinary Shares and Class B Ordinary Shares, at a ratio of 1-for-16."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/ffc82cac-8012-4a4f-8092-d5dedf0a7dd4"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/27/3352053/0/en/calcimedica-announces-one-for-five-reverse-stock-split.html",
+    "title": "CalciMedica Announces One-for-Five Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/08/27/3352053/0/en/calcimedica-announces-one-for-five-reverse-stock-split.html",
+    "publishedDate": "2026-08-27T00:00:00.000Z",
+    "author": "CalciMedica, Inc.",
+    "highlights": [
+     "LA JOLLA, Calif., Aug. 27, 2026 (GLOBE NEWSWIRE) -- CalciMedica Inc. (\u201cCalciMedica\u201d or the \u201cCompany\u201d) (Nasdaq: CALC), a clinical-stage biopharmaceutical company developing novel calcium release-activated calcium (CRAC) channel inhibition therapies for serious inflammatory, immunologic, and cardiopulmonary diseases, today announced that it will effect a reverse stock split of its issued and outstanding common stock, at a ratio of 1-for-5, effective at 5:00 p.m. ET on August 28, 2026.\n\nCalciMedica\u2019s common stock will begin trading on the Nasdaq Capital Market on a split-adjusted basis commencing upon market open on August 31, 2026 under CalciMedica\u2019s existing trading symbol \u201cCALC\u201d with a new CUSIP number, 38942Q301. The reverse stock split was approved by CalciMedica\u2019s stockholders at CalciMedica\u2019s Annual Meeting of Stockholders held on August 19, 2026, with the final ratio subsequently determined by CalciMedica\u2019s Board of Directors. The reverse stock split is intended to bring CalciMedica into compliance with the minimum bid price requirement for continued listing on the Nasdaq Capital Market.\n...\noutstanding stock options ... restricted stock units and warrants ... ratio of the reverse stock split ... the exercise prices of ... options and warrants ... s proxy statement for its Annual Meeting of Stockholders as filed with ... Securities and Exchange Commission on ... 26 (the \u201cProxy Statement"
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/3e0ebfd8-c2ff-49ff-8824-093120f731be"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/18/3364660/0/en/visionwave-holdings-inc-announces-1-for-20-reverse-stock-split-effective-september-22-2026.html",
+    "title": "VisionWave Holdings, Inc. Announces 1-for-20 Reverse Stock",
+    "url": "https://www.globenewswire.com/news-release/2026/09/18/3364660/0/en/visionwave-holdings-inc-announces-1-for-20-reverse-stock-split-effective-september-22-2026.html",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "author": "VisionWave Holdings, Inc.",
+    "highlights": [
+     "# VisionWave Holdings, Inc. Announces 1-for-20 Reverse Stock Split Effective September 22, 2026\n\n September 18, 2026 08:00 ET | Source: VisionWave Holdings, Inc. \n\nLOS ANGELES, Sept. 18, 2026 (GLOBE NEWSWIRE) -- VisionWave Holdings, Inc. (Nasdaq: VWAV) (\u201cVisionWave\u201d or the \u201cCompany\u201d), a defense technology and artificial intelligence company, today announced that it will effect a 1-for-20 reverse stock split of its issued and outstanding shares of common stock (the \u201cReverse Stock Split\u201d).\n\nThe Reverse Stock Split will become effective at 12:01 a.m., Eastern Time, on September 22, 2026. The Company\u2019s common stock will continue to trade on The Nasdaq Global Market under the symbol \u201cVWAV\u201d and is expected to begin trading on a split-adjusted basis when the market opens on September 22, 2026. The common stock will be assigned a new CUSIP number, 927950204.\n\nAt the Company\u2019s 2026 Annual Meeting of Stockholders held on September 1, 2026, the stockholders approved an amendment to the Company\u2019s Amended and Restated Certificate of Incorporation to effect a reverse stock split of the outstanding shares of common stock at a ratio of not more than 1-for-250, with the exact ratio and the timing thereof to be determined by the Board of Directors in its sole discretion. On September 3, 2026, the Board of Directors set the ratio at 1-for-20 and approved the filing of a Certificate of Amendment of Amended and Restated Certificate of Incorporation with the Secretary of State of the State of Delaware, which the Company filed on September 16, 2026."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a5316c97-32c7-4b3e-b330-b3fe019bd5c9"
+   }
+  ],
+  "searchTime": 1899.3,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "source_notice_date": "2026-09-10",
+    "new_cusip": "not stated",
+    "terms": "not stated",
+    "market_effective_date": "not stated",
+    "identifier_in_source": "VRME",
+    "effective_as_stated": "not stated",
+    "new_symbol": "not stated",
+    "event_type": "not stated"
+   },
+   "grounding": [
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/hareholder-alert-the-ma-class-action-firm-investigates-the-proxy-and-looming-shareholder-merger-vote-vrme-val-lab-and-fthm-302875656.html",
+       "title": "$HAREHOLDER ALERT: The M&A Class Action Firm Investigates the Proxy and Looming Shareholder Merger Vote --VRME, VAL, LAB and FTHM"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

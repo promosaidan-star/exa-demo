@@ -1,0 +1,242 @@
+{
+ "key_facts": [
+  {
+   "fact": "exa.ai/demos lists 10 demos, but the navigation bar on demos.exa.ai shows 19, including Adverse Media, Market Monitor, Morning Briefs, Candidate Sourcing, Network Planning, Token Savings, Grounding Comparison, Content Retrieval and Research Map.",
+   "source": "https://demos.exa.ai/chatbot-demo",
+   "confidence": "high"
+  },
+  {
+   "fact": "None of the current demos.exa.ai pages link to source code. Web-Grounded Chat and Company Enrichment likely match the exa-labs/chatbot-demo and exa-labs/company-enrichment-demo repos, but only by name and page routes.",
+   "source": "https://github.com/exa-labs/company-enrichment-demo",
+   "confidence": "medium"
+  },
+  {
+   "fact": "All five preset prompts in the Exa vs Native Search demo are finance or regulation: Fed NIC bank rankings, FCA Consumer Duty, Nvidia earnings brief, BLS CPI print, EU AI Act.",
+   "source": "https://demos.exa.ai/exa-vs-native-search",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa's public GitHub holds a 'mizuho-applet' (committed 2026-01-22 by an Exa employee with Devin). Its spec calls it a stock sentiment analyzer bank demo: professional finance sites vs Reddit, price chart, news momentum, key events.",
+   "source": "https://github.com/exa-labs/Demos/tree/HEAD/mizuho-applet",
+   "confidence": "high"
+  },
+  {
+   "fact": "No finance customer is named on the live /customers page. The 13 live stories are Firefox, monday.com, HubSpot, Cognition, CodeRabbit, OpenRouter, 11x, HockeyStack, Anara, WebFX, WhyHow.AI, StackAI and Obvious; a Fireworks story is reachable only through the sitemap.",
+   "source": "https://exa.ai/customers",
+   "confidence": "high"
+  },
+  {
+   "fact": "Anonymous private equity ($500B+ AUM, over 30% less analyst research time), investment banking (top-10 M&A adviser, 3x more qualified LP prospects) and consulting (30,000+ staff, 30-50% less research time) case studies now return 404. They are readable only in the Wayback Machine.",
+   "source": "https://web.archive.org/web/20260510024438/https://exa.ai/blog/private-equity-case-study",
+   "confidence": "high"
+  },
+  {
+   "fact": "monday.com story: 2.7M enrichments, 50% less research time per SDR/AE, top 10 leads per rep per day.",
+   "source": "https://exa.ai/customers/monday",
+   "confidence": "high"
+  },
+  {
+   "fact": "CodeRabbit story: 70-75% fewer web-search calls, Deep Search P50 7.1s and P95 11.1s, down from 30-45s with the prior provider.",
+   "source": "https://exa.ai/customers/coderabbit",
+   "confidence": "high"
+  },
+  {
+   "fact": "The enterprise page groups data into Software engineering, GTM, Finance (SEC filings, earnings calls, company websites, financial news), Scientific research, Healthcare and Legal, and sells forward-deployed engineers as an enterprise offering.",
+   "source": "https://exa.ai/enterprise",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Financial Markets docs page lists equity and credit research, KYC/KYB/adverse-media screening, portfolio and policy monitoring, and deal sourcing as uses.",
+   "source": "https://exa.ai/docs/search/data/financial.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa Snapshot (Sep 17, 2026, research preview) searches the web as it was on a chosen date and is pitched for quant backtesting. Pay-as-you-go covers a rolling 5-month window at 10 QPS, with sales contact required after 100 requests.",
+   "source": "https://exa.ai/docs/search/snapshot.md",
+   "confidence": "high"
+  },
+  {
+   "fact": "A live Snapshot webinar on Thu Oct 1, 2026 at 1 PM ET targets quant, forecasting and fintech teams, including trading backtests.",
+   "source": "https://exa.ai/webinars/exa-snapshot-live",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa's You.com comparison page admits You.com has a dedicated Finance Research endpoint with no Exa equivalent.",
+   "source": "https://exa.ai/versus/you",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa Connect's finance-related partners include Financial Datasets, Macrobond, Polymarket, Baselayer (KYB) and Crunchbase. DataBento and Alpha Vantage appear only as logos.",
+   "source": "https://exa.ai/connect",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Agent Ultra launch post has a Financial services section: diligence market maps, KYC research across filings and court records, and portfolio signal monitoring.",
+   "source": "https://exa.ai/blog/exa-agent-ultra",
+   "confidence": "high"
+  },
+  {
+   "fact": "The only dedicated use-case page on exa.ai is GTM.",
+   "source": "https://exa.ai/use-cases/gtm",
+   "confidence": "high"
+  },
+  {
+   "fact": "The Series C (May 20, 2026) was $250M at a $2.2B valuation led by a16z; Exa then cited 5,000+ companies and 400,000+ developers.",
+   "source": "https://exa.ai/blog/announcing-series-c",
+   "confidence": "high"
+  },
+  {
+   "fact": "The NYC Forward Deployed Engineer job post includes building and shipping demos, tutorials and sample applications.",
+   "source": "https://jobs.ashbyhq.com/exa/c542d672-691c-46c1-9741-856d66f2c2ea",
+   "confidence": "high"
+  },
+  {
+   "fact": "I found no public Exa demo, tutorial or case study covering fixed income, buy-side operations, trading-technology vendors, wealth management or energy markets.",
+   "source": "https://exa.ai/docs/llms.txt",
+   "confidence": "medium"
+  }
+ ],
+ "uncertainties": [
+  "The demos.exa.ai pages load their content in the browser. I read their page text and JavaScript files but did not run the demos, so which endpoint each demo uses is partly inferred (for example, Market Monitor running on the Monitors API).",
+  "Target users marked '(inferred)', such as telecom or infrastructure planners for Network Planning, are my reading of the demo, not Exa's stated audience.",
+  "The anonymous finance, consulting, CRM, search-engine, writing-assistant, Notion and Flatfile case studies now return 404. Exa may have withdrawn them on purpose, so AJ should not cite them as current without saying so.",
+  "The live Obvious story reuses the archived Flatfile story word for word, including the same CEO quote. The attribution changed between January 2026 and now.",
+  "The mizuho-applet folder name does not show that Mizuho is an Exa customer.",
+  "Search pricing differs by page: $7 per 1,000 on /products/search and /versus/serpapi, but $5 per 1,000 on /versus/google-search (last updated Mar 20, 2026).",
+  "Index size and user counts vary by page and date: 500B+ URLs tracked (May 2026 post) vs 1.4T URLs and 100B documents (Firefox, Aug 2026); 400,000+ developers (Series C) vs 500,000+ (enterprise page).",
+  "websets.exa.ai returned HTTP 429 behind a Vercel security check, so I could not read the Websets landing page.",
+  "Because of a quoting limit, section 6 has one direct quote and paraphrases the rest. Exact wording can be read at each URL.",
+  "Legora's industry comes from legora.com search results. Exa shows only its logo, with no story.",
+  "The gap analysis in section 5 rests on the pages and GitHub repos I could reach. Exa may have private or sales-only demos in these markets."
+ ],
+ "verification": {
+  "checks": [
+   {
+    "claim": "4. Exa's public GitHub holds a 'mizuho-applet' (committed 2026-01-22 by an Exa employee with Devin). Its spec calls it a stock sentiment analyzer bank demo: professional finance sites vs Reddit, price chart, news momentum, key events.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "GitHub API https://api.github.com/repos/exa-labs/Demos/commits?path=mizuho-applet (15 commits, all 2026-01-22, by Jonah Berman / jonah@exa.ai, most via devin-ai-integration[bot]; first commit co-authored by Claude Opus 4.5) and https://raw.githubusercontent.com/exa-labs/Demos/HEAD/mizuho-applet/CLAUDE.md (title 'Stock Sentiment Analyzer - Bank Demo'; sections: stock chart, professional sentiment, Reddit sentiment, comparison, news momentum, key events timeline). Repo is public; mizuho-applet is its only folder. Caveat: the shipped server.js does NOT match the spec, see missing items."
+   },
+   {
+    "claim": "5. No finance customer is named on the live /customers page. The 13 live stories are Firefox, monday.com, HubSpot, Cognition, CodeRabbit, OpenRouter, 11x, HockeyStack, Anara, WebFX, WhyHow.AI, StackAI and Obvious; a Fireworks story is reachable only through the sitemap.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers (13 /customers/ links, in that order, none in finance); https://exa.ai/sitemap.xml lists /customers/fireworks; https://exa.ai/customers/fireworks returns 200 (AI Infrastructure, research-assistant tutorial)."
+   },
+   {
+    "claim": "6. Anonymous PE ($500B+ AUM, over 30% less analyst research time), investment banking (top-10 M&A adviser, 3x more qualified LP prospects) and consulting (30,000+ staff, 30-50% less research time) case studies now return 404; readable only in the Wayback Machine.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Live https://exa.ai/blog/private-equity-case-study, /blog/investment-banking-case-study, /blog/consulting-case-study all returned HTTP 404 on 2026-09-29. Archived text read at https://web.archive.org/web/20260510024438/https://exa.ai/blog/private-equity-case-study ('reduced associate and analyst time spent on research by over 30%', $500B+ AUM, 200+ portfolio companies), https://web.archive.org/web/2026id_/https://exa.ai/blog/investment-banking-case-study ('top 10 M&A advisory investment bank by deal volume', '3x more qualified LP prospects'), https://web.archive.org/web/2026id_/https://exa.ai/blog/consulting-case-study (30,000+ professionals, '30-50% less time on research'). Precision note: PE figure applies to associates AND analysts; consulting says 'professionals/consultants', not 'staff'."
+   },
+   {
+    "claim": "7. monday.com story: 2.7M enrichments, 50% less research time per SDR/AE, top 10 leads per rep per day.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers/monday (raw HTML: '2.7M enrichments completed', '50% reduction in research time', 'Less research time per SDR/AE', 'top 10 leads for the day'). Quote is from Daniel Lereya, Chief Product and Technology Officer, monday.com."
+   },
+   {
+    "claim": "8. CodeRabbit story: 70-75% fewer web-search calls, Deep Search P50 7.1s and P95 11.1s, down from 30-45s with the prior provider.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/customers/coderabbit (raw HTML: '70-75% fewer web-search calls', 'P50 7.1 seconds and P95 11.1 seconds', prior provider 'About 30-45 seconds for some Deep Search-style questions'). Quote from David Loker, VP of AI, CodeRabbit. Page also says web search runs on roughly 7-10% of PRs."
+   },
+   {
+    "claim": "9. The enterprise page groups data into Software engineering, GTM, Finance (SEC filings, earnings calls, company websites, financial news), Scientific research, Healthcare and Legal, and sells forward-deployed engineers as an enterprise offering.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/enterprise (six groups exactly as stated; under 'Enterprise-ready from day one': 'Forward-deployed engineers: Work directly with Exa engineers on integration, evals, and retrieval quality.' Also lists custom data indexing, SOC 2 Type II, HIPAA with BAA, zero data retention, 'over 500,000 developers')."
+   },
+   {
+    "claim": "10. The Financial Markets docs page lists equity and credit research, KYC/KYB/adverse-media screening, portfolio and policy monitoring, and deal sourcing as uses.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/search/data/financial.md ('Use it for': Equity and credit research; KYC, KYB, and adverse-media screening; Portfolio and policy monitoring; Deal sourcing and private-market research)."
+   },
+   {
+    "claim": "11. Exa Snapshot (Sep 17, 2026, research preview) searches the web as it was on a chosen date and is pitched for quant backtesting. Pay-as-you-go covers a rolling 5-month window at 10 QPS, with sales contact required after 100 requests.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Split sourcing. The 10 QPS, rolling 5-month window and 'after 100 requests, talk to sales' are on https://exa.ai/docs/search/snapshot.md, which pitches 'backtest agents' but does NOT mention Sep 17, research preview, or quant. Those three come from https://exa.ai/blog/exa-snapshot (dated Sep 17, 2026; 'still a research preview'; section 'In finance and quantitative trading'; '400 billion webpage snapshots spanning 2 decades'). Cite both URLs."
+   },
+   {
+    "claim": "12. A live Snapshot webinar on Thu Oct 1, 2026 at 1 PM ET targets quant, forecasting and fintech teams, including trading backtests.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/webinars/exa-snapshot-live ('Thursday, October 1, 2026 · 10:00 AM PT / 1:00 PM ET'; 30 minutes; speakers Shyam Kumar, Head of Product, and Jan Van Der Vegt, ML Engineering; attendees include 'Quant, forecasting, and fintech teams'; customer uses include 'forecasting and trading backtests'). Primary audience listed first is RL/post-training and evals teams."
+   },
+   {
+    "claim": "13. Exa's You.com comparison page admits You.com has a dedicated Finance Research endpoint with no Exa equivalent.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/versus/you (FAQ: 'The Finance Research endpoint has no Exa equivalent'; also calls it 'a real differentiator for anyone building in that vertical'; Exa's counter is Exa Agent with effort levels)."
+   },
+   {
+    "claim": "14. Exa Connect's finance-related partners include Financial Datasets, Macrobond, Polymarket, Baselayer (KYB) and Crunchbase. DataBento and Alpha Vantage appear only as logos.",
+    "verdict": "wrong",
+    "correction": "The partner list is right but the cited page is not. Macrobond and Polymarket do NOT appear anywhere on https://exa.ai/connect (checked page HTML and its JS bundles). They are listed as self-serve Connect providers in the docs index and Connect overview, both priced Free. On /connect, Financial Datasets and Baselayer are Self-serve, Crunchbase is 'On request' (needs sales to enable, so not usable in a quick demo), and DataBento and Alpha Vantage appear only in the logo strip.",
+    "source": "https://exa.ai/connect ; https://exa.ai/docs/llms.txt (lines listing Polymarket and Macrobond under Exa Connect) ; https://exa.ai/docs/agent/connect/overview.md (pricing table: Polymarket Free, Macrobond Free, Financial Datasets $0.01/call) ; https://exa.ai/docs/agent/connect/additional-partners.md (Crunchbase on request)"
+   },
+   {
+    "claim": "17. The Series C (May 20, 2026) was $250M at a $2.2B valuation led by a16z; Exa then cited 5,000+ companies and 400,000+ developers.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/blog/announcing-series-c (by Will Bryk, CEO & Co-founder, May 20, 2026: '$250M at a $2.2B valuation led by a16z', 'over 400,000 developers', 'grown to over 5,000' companies; also names Cursor as a customer and Marcus Holm, President of LaunchDarkly, joining as CRO)."
+   },
+   {
+    "claim": "18. The NYC Forward Deployed Engineer job post includes building and shipping demos, tutorials and sample applications.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Ashby posting API https://api.ashbyhq.com/posting-api/job-board/exa (job c542d672-691c-46c1-9741-856d66f2c2ea, 'Forward Deployed Engineer', New York City, published 2026-08-13): 'Build and ship demos, tutorials, and sample applications that show what Exa can do'. The jobs.ashbyhq.com page itself is client-rendered and returned no text via curl."
+   },
+   {
+    "claim": "1. exa.ai/demos lists 10 demos, but the navigation bar on demos.exa.ai shows 19, including Adverse Media, Market Monitor, Morning Briefs, Candidate Sourcing, Network Planning, Token Savings, Grounding Comparison, Content Retrieval and Research Map.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/demos (10 cards linking to demos.exa.ai) and https://demos.exa.ai/chatbot-demo (19 nav links with those exact labels). Note nav labels differ from exa.ai/demos names (e.g. 'Web Chatbot' vs 'Web-Grounded Chat', 'Voice Search', 'Search Terminal')."
+   },
+   {
+    "claim": "3. All five preset prompts in the Exa vs Native Search demo are finance or regulation: Fed NIC bank rankings, FCA Consumer Duty, Nvidia earnings brief, BLS CPI print, EU AI Act.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://demos.exa.ai/exa-vs-native-search buttons plus page JS chunk /_next/static/chunks/app/exa-vs-native-search/page-3197fb2a2d40bfee.js (full prompts: Fed NIC 'Large Holding Companies' top five BHCs; FCA Consumer Duty dates and four outcomes; Nvidia latest quarter revenue, data-center revenue, guidance; BLS CPI and core CPI; EU AI Act GPAI obligations). Demo compares Exa against OpenAI and Anthropic native web search."
+   },
+   {
+    "claim": "2. None of the current demos.exa.ai pages link to source code. Web-Grounded Chat and Company Enrichment likely match exa-labs/chatbot-demo and exa-labs/company-enrichment-demo.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "Server HTML of all 19 demos.exa.ai routes contains no github.com link (checked 2026-09-29). https://api.github.com/repos/exa-labs/company-enrichment-demo exists (last push 2026-04-07, described as 'Company enrichment pipeline using Exa Answer API'); exa-labs/chatbot-demo exists (last push 2026-03-25). The repo-to-page match remains an inference."
+   },
+   {
+    "claim": "15. The Agent Ultra launch post has a Financial services section: diligence market maps, KYC research across filings and court records, and portfolio signal monitoring.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/blog/exa-agent-ultra (Sep 25, 2026; 'Financial services' examples: battery-recycling market map for diligence; KYC research across 'filings, press, court records, and regulator sites'; 'every portfolio company that announced a layoff, CFO change, or new facility this quarter')."
+   },
+   {
+    "claim": "16. The only dedicated use-case page on exa.ai is GTM.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/sitemap.xml (only /use-cases/gtm) and https://exa.ai/llms.txt ('Use Cases' section lists only GTM and enrichment plus Demos)."
+   },
+   {
+    "claim": "19. No public Exa demo, tutorial or case study covers fixed income, buy-side operations, trading-technology vendors, wealth management or energy markets.",
+    "verdict": "unverifiable",
+    "correction": "",
+    "source": "A negative claim cannot be proven from public pages. Partial counter-evidence: https://exa.ai/docs/search/data/financial.md names 'credit research' and quotes for futures, options and commodities; Macrobond (macro and financial time series) is a free Connect provider per https://exa.ai/docs/llms.txt. None of these is a demo or case study, so the claim is not refuted, only narrowed."
+   }
+  ],
+  "missing": [
+   "The mizuho-applet code does not match its own spec, so do not copy it. Its server.js compares professional news against Twitter/X (category 'tweet'), not Reddit, and calls search with type 'keyword' and useAutoprompt. The current OpenAPI spec (https://exa.ai/docs/exa-spec.yaml) lists only these search types: instant, fast, auto, deep-lite, deep, deep-reasoning (no 'keyword'). Its known categories are company, publication, news, personal site, financial report and people. It has no useAutoprompt parameter. Source: https://raw.githubusercontent.com/exa-labs/Demos/HEAD/mizuho-applet/server.js",
+   "Exa already runs finance-adjacent demos that the interviewer has likely seen. Adverse Media (https://demos.exa.ai/adverse-media-screen) is a KYC screen: one Exa deep search per topic across 8 topics (fraud, money laundering, sanctions, bribery, litigation, regulatory action, data breach, environmental), with presets Wirecard, FTX, Boeing and Wells Fargo. Market Monitor tracks company leadership, headcount, funding and valuation. Morning Briefs builds a daily signals digest. AJ's applet should do something visibly different from these.",
+   "Snapshot has hard limits a backtesting demo would hit (https://exa.ai/docs/search/snapshot.md). It rejects deep-lite, deep and deep-reasoning. It does not support the category parameter, so 'financial report' is out. Adding livecrawl, maxAgeHours or subpages gets INVALID_REQUEST. The cutoff bounds page content but not ranking, so results are not an exact replay of past search. Pay-as-you-go only reaches back 5 months, though the blog cites 400B snapshots over 2 decades.",
+   "The report skips current pricing, which settles its $5 vs $7 question (https://exa.ai/docs/reference/pricing.md). /search costs $4 per 1,000 on instant and $7 per 1,000 on fast/auto. deep-lite and deep cost $12 per 1,000, deep-reasoning $15. /contents is $1 per 1,000 pages, /answer $5 per 1,000 and /monitors $15 per 1,000. Agent costs $0.012 to $1.00 per fixed-effort run, and metered auto and ultra runs are capped at $5 and $20 by default. The free tier gives $10 of credits a month with no card, so a 4-hour demo build costs nothing.",
+   "Exa Connect partners (Macrobond, Polymarket, Financial Datasets, Baselayer) are reached only through the Agent API: add a dataSources array to POST /agent/runs. The plain Search API cannot use them (https://exa.ai/docs/agent/connect/overview.md). Pricing is inconsistent across pages. /connect says $0.005 to $0.03 per call. The docs list Similarweb at $0.30 per credit and Baselayer at $0.10 to $4.00 per order, and the pricing docs page gives Baselayer's floor as $0.15.",
+   "The Financial Markets docs page has demo-ready details the report left out (https://exa.ai/docs/search/data/financial.md). Search can return quotes and daily OHLCV (open, high, low, close, volume) price history for stocks, crypto, FX, futures, options and commodities. It also returns earnings call transcripts with speakers attributed, SEC filings, and economic releases. The category 'financial report' limits results to filings and reports.",
+   "The job post adds context the pitch should use (Ashby API, posting c542d672). Pay is $130K to $275K plus equity and bonus. The role covers everything from 'first cold outbound' to 'closed deal' and runs 'many sales and technical calls each week'. It is in-person in NYC. The post calls the person 'an engineer who sells and a seller who ships.' Exa is about 100 people.",
+   "Named people useful for the interview: Will Bryk (CEO and co-founder), Marcus Holm (CRO, formerly President of LaunchDarkly), and Shyam Kumar (Head of Product). Cursor is named as a customer in the Series C post but has no story on /customers (https://exa.ai/blog/announcing-series-c, https://exa.ai/webinars/exa-snapshot-live).",
+   "The archived finance case studies were built on products that have since been renamed or dropped. The IB study cites Websets and a 'research endpoint'. The current API spec has no /research path; multi-step research now runs through /agent/runs, and the site nav no longer lists Websets or Answer as products. When citing those studies, map the old names to the current products (https://exa.ai/docs/exa-spec.yaml).",
+   "The enterprise features that matter most to a finance buyer are on /enterprise but missing from the report: zero data retention, SOC 2 Type II, indexing of custom or private data, and SLAs. The archived PE study names zero data retention as a key requirement (https://exa.ai/enterprise)."
+  ]
+ }
+}

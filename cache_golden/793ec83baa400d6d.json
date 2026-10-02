@@ -1,0 +1,284 @@
+{
+ "saved_at": "2026-09-29 09:20:44",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from TruGolf Holdings, Inc. (Nasdaq: TRUG) announcing a reverse stock split, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com"
+  ],
+  "startPublishedDate": "2026-08-20T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about TruGolf Holdings, Inc. (Nasdaq: TRUG); ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3045,
+ "data": {
+  "requestId": "50be3120fa4c23ee0b3ea1433aad1797",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "title": "TruGolf Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "# TruGolf Announces Reverse Stock Split\n\n September 25, 2026 07:30 ET | Source: TruGolf Holdings, Inc. \n\nSalt Lake City, Utah, Sept. 25, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings, Inc. (NASDAQ: TRUG), today announced a 1-for-10 reverse split of its Class A common stock. Beginning on September 29, 2026, the Company\u2019s Class A common stock will continue to trade on The Nasdaq Capital Market on a split adjusted basis under the trading symbol \u201cTRUG\u201d but will trade under the following new CUSIP number: 243733607.\n\nAs a result of the reverse stock split, every 10 shares of Class A common stock issued and outstanding as of the effective date will be automatically combined into one share of Class A common stock. No fractional shares will be issued if, as a result of the reverse stock split, a stockholder would otherwise become entitled to a fractional share because the number of shares of Class A common stock they hold before the reverse stock split is not evenly divisible by the split ratio. Instead, each stockholder will be entitled to receive a cash payment in lieu of a fractional share."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-updates-shareholders-on-legal-action-brought-again-1202875",
+    "title": "Pomerantz LLP Updates Shareholders on Legal Action Brought Against TruGolf Holdings, Inc.  \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-updates-shareholders-on-legal-action-brought-again-1202875",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK CITY, NY / ACCESS Newswire / September 25, 2026 / Pomerantz LLP announces that a class action lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), toll-free, Ext. 7980. Those who inquire by e-mail are encouraged to include their mailing address, telephone number, and the number of shares purchased.\n...\nComplaint has been filed on behalf of ... , alleging that Defendants made materially ... and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, ... Company possessed information that would have allowed it to disclose the ... already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices ... s April 15, ... 026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately 52%, and the Company published additional irreconc ... counts for identical reporting dates; (5) TruGolf's proxy materials ... disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82 ... of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) TruGolf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-notifies-shareholders-of-class-action-filing-again-1202962",
+    "title": "Pomerantz LLP Notifies Shareholders of Class Action Filing Against TruGolf Holdings, Inc.  \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-notifies-shareholders-of-class-action-filing-again-1202962",
+    "publishedDate": "2026-09-26T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK CITY, NY / ACCESS Newswire / September 26, 2026 / Pomerantz LLP announces that a class action lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), toll-free, Ext. 7980. Those who inquire by e-mail are encouraged to include their mailing address, telephone number, and the number of shares purchased.\n...\nhas been filed on behalf of ... , alleging that ... and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A ... issuable upon conversion, the Company possessed information that would have allowed it to disclose ... already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issu ... s April 15, ... 026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately ... 2%, and the Company published additional irreconc ... share counts for ... reporting dates; (5) TruGolf's proxy materials ... disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately ... of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk ... 's April ... 6 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW ... related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-notifies-shareholders-of-lawsuit-filed-against-tru-1202964",
+    "title": "Pomerantz LLP Notifies Shareholders of Lawsuit Filed Against TruGolf Holdings, Inc.  \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-notifies-shareholders-of-lawsuit-filed-against-tru-1202964",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK CITY, NY / ACCESS Newswire / September 28, 2026 / Pomerantz LLP announces that a class action lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), toll-free, Ext. 7980. Those who inquire by e-mail are encouraged to include their mailing address, telephone number, and the number of shares purchased.\n...\nA class action Complaint has been filed on behalf of investors in TruGolf Class A common stock, alleging that Defendants made materially false and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, the Company possessed information that would have allowed it to disclose the shares already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices; (4) TruGolf's April 15, 2026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately 52%, and the Company published additional irreconcilable Class A share counts for identical reporting dates; (5) TruGolf's proxy materials failed to disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82% of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) ... Golf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/class-action-lawsuit-reminder-from-pomerantz-llp-for-investors-o-1202876",
+    "title": "Class Action Lawsuit Reminder from Pomerantz LLP for Investors of TruGolf Holdings, Inc.  \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/class-action-lawsuit-reminder-from-pomerantz-llp-for-investors-o-1202876",
+    "publishedDate": "2026-09-26T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK CITY, NY / ACCESS Newswire / September 26, 2026 / Pomerantz LLP announces that a class ... lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact ... Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), ... -free, Ext. 7980. Those who inquire by e ... mail are encouraged to include their mailing address, ... number, and the ... of shares purchased.\n...\nA class action Complaint has been filed on behalf of ... , alleging that Defendants made materially ... and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it ... \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, the Company possessed information that would have allowed it to disclose ... already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices ... s April 15, ... 026 Form 10-K overstated the number of its outstanding Class A shares by 4 ... 0,504 shares, or approximately 52%, and the Company published additional irreconc ... Class A share counts for identical reporting dates; (5) TruGolf's proxy materials failed ... disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82 ... of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) TruGolf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-issues-reminder-to-trugolf-holdings-inc.-sharehold-1202853",
+    "title": "Pomerantz LLP Issues Reminder to TruGolf Holdings, Inc.  Shareholders \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-issues-reminder-to-trugolf-holdings-inc.-sharehold-1202853",
+    "publishedDate": "2026-08-24T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "LLP Issues Reminder to TruGolf Holdings, Inc. Shareholders \u2013 TR\n...\nNEW YORK CITY, NY / ACCESS Newswire / August 24, 2026 / Pomerantz LLP announces that a class action lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), toll-free, Ext. 7980. Those who inquire by e-mail are encouraged to include their mailing address, telephone number, and the number of shares purchased.\n...\nA class action Complaint has been filed on behalf of ... in TruGolf Class A common ... , alleging that Defendants made materially false and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, the Company possessed information that would have allowed it to disclose the shares already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices; (4) TruGolf ... s April 15, ... 026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately 52%, and the Company published additional irreconcilable Class A share counts for identical reporting dates; (5) TruGolf's proxy materials ... to disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82% of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) TruGolf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-informs-investors-of-class-action-against-trugolf-1202936",
+    "title": "Pomerantz LLP Informs Investors of Class Action Against TruGolf Holdings, Inc.  \u2013 TRUG",
+    "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/pomerantz-llp-informs-investors-of-class-action-against-trugolf-1202936",
+    "publishedDate": "2026-08-21T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK CITY, NY / ACCESS Newswire / August 21, 2026 / Pomerantz LLP announces that a class action lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") (NASDAQ:TRUG). Such investors are advised to contact Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), toll-free, Ext. 7980. Those who inquire by e-mail are encouraged to include their mailing address, telephone number, and the number of shares purchased.\n...\nA class action Complaint has been filed on behalf of ... in TruGolf Class A common stock, alleging that Defendants made materially false and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, the Company possessed information that would have allowed it to disclose the shares already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices; (4) TruGolf's April 15, 2026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately 52%, and the Company published additional irreconcilable Class A share counts for identical reporting dates; (5) TruGolf's proxy materials failed to disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82% of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) TruGolf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://storage.googleapis.com/accesswire/logos/share/1542.jpg?v=0"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/23/3367889/0/en/trugolf-strengthens-its-leadership-through-changes-to-board-of-directors-and-c-suite.html",
+    "title": "TruGolf Strengthens its Leadership through Changes to Board",
+    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367889/0/en/trugolf-strengthens-its-leadership-through-changes-to-board-of-directors-and-c-suite.html",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "# TruGolf Strengthens its Leadership through Changes to Board of Directors and C-Suite\n\n September 23, 2026 17:40 ET | Source: TruGolf Holdings, Inc. \n\n TruGolf appoints Brenner Adams as Interim CEO in Place of resigning CEO and Director Chris Jones \n\n Names Jay Heller as New Director\n\nSALT LAKE CITY, UT, Sept. 23, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings Inc. (NASDAQ: TRUG) today announced the resignation of its founder, Chris Jones, as both Chief Executive Officer and as a director of the company. Brenner Adams, TruGolf\u2019s current Chairman of the Board, will serve as Interim Chief Executive Officer while the company undertakes an executive search for a long-term replacement. Mr. Adams, a seasoned executive and serial entrepreneur, brings extensive experience in both the gaming and sports markets, having worked on Microsoft\u2019s Xbox team, as Global Brand Director at Burton Snowboards, and as a senior officer at TruGolf prior to stepping into his current principal role as Chief Strategist at TrueMark, an AWS Advanced Tier Partner.\n\nTruGolf\u2019s Board of Directors also appointed Jay Heller as a new director, replacing Mr. Jones. Mr. Heller is the Chief Executive Officer of K Lab, a technology company building programmable payments infrastructure for institutional money movement. He brings 18 years of leadership experience at NASDAQ, where he served as Vice President and Head of Capital Markets & IPO Execution, overseeing more than 3,000 public listings, including the landmark market debuts of Coinbase, Airbnb, Rivian, and CoreWeave."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/investor-alert-pomerantz-law-firm-reminds-investors-with-losses-on-their-investment-in-trugolf-holdings-inc-of-class-action-lawsuit-and-upcoming-deadlines--trug-302889808.html",
+    "title": "INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Investment in TruGolf Holdings, Inc. of Class Action Lawsuit and Upcoming Deadlines - TRUG",
+    "url": "https://www.prnewswire.com/news-releases/investor-alert-pomerantz-law-firm-reminds-investors-with-losses-on-their-investment-in-trugolf-holdings-inc-of-class-action-lawsuit-and-upcoming-deadlines--trug-302889808.html",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "author": "Pomerantz LLP",
+    "highlights": [
+     "NEW YORK, Sept. 24, 2026 /PRNewswire/ -- Pomerantz LLP announces that a ... lawsuit has been filed against TruGolf Holdings, Inc. (\"TruGolf\" or the \"Company\") ... NASDAQ: TR ... ). Such investors are advised to ... Danielle Peyton at newaction@pomlaw.com or 646-581-9980, (or 888.4-POMLAW), ... free, Ext ... 980. Those who ... mail are encouraged to ... their mailing address, telephone ... , and the number of shares purchased.\n...\nA class action Complaint has been filed on behalf of ... in TruGolf Class A common stock, alleging that Defendants made materially false and/or misleading statements and/or failed to disclose material adverse facts concerning TruGolf's capital structure, Series A Convertible Preferred Stock, financial reporting, and Nasdaq listing compliance. Specifically, the Complaint alleges that Defendants misrepresented and/or failed to disclose that: (1) Series A preferred investors were continuously converting their preferred shares into increasing numbers of Class A shares at floating and ratcheting conversion prices, causing massive ongoing dilution that Defendants continued to describe as a contingent or hypothetical future risk; (2) because each conversion required a written notice delivered to TruGolf, the Company received real-time information concerning the conversion activity, the number of shares being issued, and the resulting dilution of its public shareholders; (3) although TruGolf stated that it was \"unable to quantify\" the maximum number of Class A shares issuable upon conversion, the Company possessed information that would have allowed it to disclose the shares already issued, remaining stated value, accrued dividends, then-effective conversion price, required share reserve, pending conversion notices, and potential issuances at representative market prices; (4) TruGolf's April 15, 2026 Form 10-K overstated the number of its outstanding Class A shares by 480,504 shares, or approximately 52%, and the Company published additional irreconcilable Class A share counts for identical reporting dates; (5) TruGolf's proxy materials failed to disclose the scale and foreseeable consequences of the Class A share issuances being authorized, including that the required share reserve would consume approximately 82% of the Company's remaining authorized Class A shares and expose the Company to continued dilution and Nasdaq listing risk; (6) TruGolf's April 30, 2026 Form 10-K amendment purported to identify every person known by the Company to beneficially own more than 5% of its stock while omitting the ATW-related investors whose outstanding Schedule 13G reported beneficial ownership of 9.9%; and (7) TruGolf failed to disclose the complete economic operation of the Series A Preferred Stock, including its alternate conversion prices, triggering-event provisions, default rate, floor price, five-year dividend make- whole provisions, and the number of discounted Class A shares issued through those provisions.\n\nThe Complaint alleges that this financing and the related misstatements caused TruGolf's Class A share count to more than double in less than five months, forced the Company to complete two reverse stock splits, and contributed to a decline of more than 98% in the split-adjusted price of TruGolf's Class A common stock."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS651528/Pomerantz-V3-Logo.jpg?id=OA2970260&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "title": "Republic Power Group Limited Announces 1-For-16 Reverse",
+    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "author": "Republic Power Group Limited",
+    "highlights": [
+     "# Republic Power Group Limited Announces 1-For-16 Reverse Share Split\n\n September 23 ... 10:30 ET | Source: Republic Power Group Limited \n\nSingapore, Sept. 23, 2026 (GLOBE NEWSWIRE) -- Republic Power Group Limited (NASDAQ: RPGL), today announced that it will effect a reverse share split of its Class A ordinary shares, par value $0.50 per share (the \u201cClass A Ordinary Shares\u201d) and Class B ordinary shares, par value $0.50 per share (the \u201cClass B Ordinary Shares\u201d), at a ratio of 1-for-16, to be effective at the open of business on September 25, 2026.\n\nOur Class A Ordinary Shares will begin trading on a reverse share split-adjusted basis at the opening of The Nasdaq Capital Market (\u201cNasdaq\u201d) on September 25, 2026. There is no public market for our Class B Ordinary Shares. Following the reverse share split, the Class A Ordinary Shares will have a new par value of $8.0 per share and will continue to trade on Nasdaq under the symbol \u201cRPGL\u201d with the new CUSIP number, G7523E139. The reverse share split is expected to lead the Company\u2019s Class A Ordinary Shares to trade at approximately 16 times the price per share at which it trades prior to the effectiveness of the reverse share split. The Company, however, cannot assure that the price of its Class A Ordinary Shares after the reverse split will reflect the 1-for-16 reverse split ratio, that the price per share following the effective time of the reverse split will be maintained for any period of time, or that the price will remain above the pre-split trading price. The reverse share split is intended for the Company to maintain compliance with the minimum bid price requirement of $1.00 per Class A Ordinary Share for continued listing on Nasdaq.\n...\nOn August 28, 2026, the board of directors of the Company approved the reverse share split of the Class A Ordinary Shares and Class B Ordinary Shares, at a ratio of 1-for-16."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/ffc82cac-8012-4a4f-8092-d5dedf0a7dd4"
+   }
+  ],
+  "searchTime": 963.6,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_cusip": "243733607",
+    "market_effective_date": "2026-09-29",
+    "effective_as_stated": "not stated",
+    "source_notice_date": "2026-09-25",
+    "identifier_in_source": "TRUG",
+    "new_symbol": "TRUG",
+    "terms": "1-for-10",
+    "event_type": "reverse split"
+   },
+   "grounding": [
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+       "title": "TruGolf Announces Reverse Stock Split"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

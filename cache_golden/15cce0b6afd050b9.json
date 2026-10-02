@@ -1,0 +1,41 @@
+{
+ "saved_at": "2026-09-29 09:19:57",
+ "endpoint": "/contents",
+ "body": {
+  "urls": [
+   "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-683"
+  ],
+  "maxAgeHours": 0,
+  "livecrawlTimeout": 12000,
+  "text": {
+   "maxCharacters": 1500
+  }
+ },
+ "elapsed_ms": 973,
+ "data": {
+  "requestId": "3735596986c72e8853ac27c4f2477a4e",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-683",
+    "title": "TraderNews.aspx?id=ECA2026-683",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-683",
+    "author": null,
+    "text": "\n \n \n \n \n \n \n"
+   }
+  ],
+  "statuses": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-683",
+    "status": "success",
+    "source": "crawled"
+   }
+  ],
+  "costDollars": {
+   "total": 0.001,
+   "contents": {
+    "text": 0.001
+   }
+  },
+  "searchTime": 421.56169599993154
+ }
+}

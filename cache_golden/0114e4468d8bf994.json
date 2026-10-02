@@ -1,0 +1,249 @@
+{
+ "saved_at": "2026-10-02 13:06:43",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Microsoft Corporation (Nasdaq: MSFT): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Microsoft Corporation (Nasdaq: MSFT), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 8607,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "4421b6241a60d4b16877a66c096216f6",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+    "title": "Microsoft announces quarterly dividend increase - Source",
+    "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "author": "Microsoft Source",
+    "highlights": [
+     "REDMOND, Wash. \u2014 Sept. 15, 2026 \u2014 Microsoft Corp. on Tuesday announced that its board of directors declared a quarterly dividend of $0.98 per share, reflecting a 7 cent or 8% increase over the previous quarter\u2019s dividend. The dividend is payable Dec. 10, 2026, to shareholders of record on Nov. 19, 2026. The ex-dividend date will be Nov. 19, 2026.\n\nIn addition, the company announced the 2026 Annual Shareholders Meeting will be held Dec. 8, 2026. Shareholders at the close of business on Sept. 30, 2026, the record date, will be entitled to vote their shares."
+    ]
+   },
+   {
+    "id": "https://www.marketwatch.com/investing/stock/msft",
+    "title": "Microsoft Corp. Stock Quote (U.S.: Nasdaq) - MSFT",
+    "url": "https://www.marketwatch.com/investing/stock/msft",
+    "highlights": [
+     "This subtle Microsoft change could be a big win for investors\n\nSep. 3, 2026 at 4:37 p.m. ET\nby Hannah Pedone\n\nRead full story\n...\nMicrosoft CEO Nadella Sells $43 Million of Stock\n\nSep. 3, ... 33 p.m. ET\nby Barron's\n...\nMicrosoft Spotlights AI and Cloud With New Reporting Structure ... It\u2019s a Big Deal"
+    ],
+    "image": "https://images.mktw.net/im-99415322"
+   },
+   {
+    "id": "https://exa.ai/library/markets/stock/MSFT",
+    "title": "Microsoft Corporation (MSFT) | Currently at $514.45 (+0.32%) | Oct 2, 2026",
+    "url": "https://exa.ai/library/markets/stock/MSFT",
+    "publishedDate": "2026-10-02T12:00:00.000Z",
+    "highlights": [
+     "# MSFT \u2014 Microsoft Corporation\n\nMicrosoft Corporation (MSFT) is currently at $514.45, up +$1.65 (+0.32%) today, as of October 2, 2026.\n\n## Today's Trading\n\n- Open: $519.77\n- High: $522.50\n- Low: $513.66\n- Close: $514.45\n- Volume: 7.42M\n\n## Previous Close\n\n- Close: $512.80\n\n## Other markets listing MSFT\n\nMSFT is not unique across markets. These listings share the symbol:\n\n- LON:MSFT \u2014 LS 1x Microsoft Tracker ETP Securities (United Kingdom)\n  https://exa.ai/library/markets/stock/LON:MSFT\n- AMS:MSFT \u2014 1X MSFT (Amsterdam)\n  https://exa.ai/library/markets/stock/AMS:MSFT\n- TRT:MSFT \u2014 Microsoft CDR (CAD Hedged) (Toronto)\n  https://exa.ai/library/markets/stock/TRT:MSFT"
+    ]
+   },
+   {
+    "id": "https://www.marketbeat.com/stocks/NASDAQ/MSFT/",
+    "title": "Microsoft (MSFT) Stock Price, News & Analysis",
+    "url": "https://www.marketbeat.com/stocks/NASDAQ/MSFT/",
+    "highlights": [
+     "## MSFT Stock News Headlines\n...\nThe SEC Just Opened The Floodgates\u2026 The SEC removed the 25 year old Pattern Day Trader rule in June 2026, cutting the minimum to open a trading ac...StocksToTrade| Sponsored\n...\n3e, ... /\\\" style ... -weight: ... \\\"\\u0 ... a\\u0"
+    ]
+   },
+   {
+    "id": "https://finance.yahoo.com/quote/MSFT.TO/news/",
+    "title": "Microsoft Corporation (MSFT.TO) Latest Stock News & ...",
+    "url": "https://finance.yahoo.com/quote/MSFT.TO/news/",
+    "highlights": [
+     "### Microsoft Signed a 20-Year AI Power Deal With Chevron. Is Power Becoming the New Chip Shortage?"
+    ],
+    "image": "https://pinhole.finance.yahoo.com/chart/MSFT.TO/__screenshot",
+    "favicon": "https://s.yimg.com/cv/apiv2/finance/YF_Favicon_32.png"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "title": "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)\n...\n## Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Thursday, September 10, 2026. ETF Reverse Stock Splits effective Thursday, September 10, 2026 Ticker Fund Name Split Ratio Current CUSIP New CUSIP QBTZ Defiance Daily Target 2x Short QBTS ETF 1-5 88636W148 88636Y540 OKLL Defiance Daily Target 2x Long OKLO ETF 1-5 88636V678 88636Y524 RGTZ Defiance Daily Target 2x Short RGTI ETF 1-5 88636V652 88636Y516 SMCZ Defiance Daily Target 2X Short SMCI ETF 1-2 88636W262 88636Y482 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "title": "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-689",
+    "publishedDate": "2026-09-28T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS)\n...\n## Equity Corporate Actions Alert #2026 - 689 Information Regarding the Reverse Stock Split and CUSIP Number Change for SHF Holdings, Inc. (SHFS) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | SHF Holdings, Inc. (SHFS) will effect a one-for-twelve (1-12) reverse split of its Class A Common Stock. The reverse stock split will become effective on Wednesday, September 30, 2026. In conjunction with the reverse split, the CUSIP number will change to 824430409. If you would like to register as a market maker in SHFS, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-649",
+    "title": "Equity Corporate Actions Alert #2026 - 649 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal (RKLZ, IONZ, AVXX, RCAX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-649",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 649 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal (RKLZ, IONZ, AVXX, RCAX)\n...\n## Equity Corporate Actions Alert #2026 - 649 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal (RKLZ, IONZ, AVXX, RCAX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Wednesday, September 9, 2026. Ticker Fund Name Split Ratio Current CUSIP New CUSIP AVXX Defiance Daily Target 2x Long AVAV ETF 1-5 88636W114 88636Y532 RKLZ Defiance Daily Target 2x Short RKLB ETF 1-5 88636W171 88636Y565 IONZ Defiance Daily Target 2x Short IONQ ETF 1-10 88636W247 88636Y490 RCAX Defiance Daily Target 2x Long RCAT ETF 1-5 88636W718 88636Y599 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |"
+    ]
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/IPDN/8-k-professional-diversity-network-inc-reports-material-event-8b85d367a554.html",
+    "title": "Professional Diversity Network sets 1-for-30 reverse split | IPDN 8-K Filing",
+    "url": "https://www.stocktitan.net/sec-filings/IPDN/8-k-professional-diversity-network-inc-reports-material-event-8b85d367a554.html",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "Professional Diversity Network, Inc. (IPDN) implemented a 1-for-30 reverse stock split of its outstanding common stock, effective at 5:30 p.m. Eastern Time on September 11, 2026, pursuant to a charter amendment approved by stockholders and the board of directors. The company\u2019s common stock will begin trading on the Nasdaq Capital Market on a split-adjusted basis at the opening of trading on September 14, 2026, under ticker IPDN and new CUSIP 74312Y509.\n...\n### Key Figures\n\n Reverse stock split ratio: 1-for-30 Pre-split shares outstanding: 19,974,323 shares Post-split shares expected: Approximately 665,811 shares +4 more \n\n 7 metrics \n\n Reverse stock split ratio 1-for-30 Every 30 shares consolidated into 1 share at the effective time \n\n Pre-split shares outstanding 19,974,323 shares Common stock issued and outstanding as of September 9, 2026 \n\n Post-split shares expected Approximately 665,811 shares Expected outstanding immediately following the reverse stock split \n\n Effective time of reverse split 5:30 p.m. Eastern Time, September 11, 2026 Time the reverse stock split becomes effective \n\n Split-adjusted trading start date September 14, 2026 Date IPDN common stock begins trading on a split-adjusted basis \n\n CUSIP number after split 74312Y509 New CUSIP for IPDN common stock post-split \n\n Par value per share $0.0001 per share Par value of IPDN common stock remains unchanged by the split\n...\n\"The new CUSIP number for the Common Stock is 74312Y509.\"\n...\nAI-generated ... and answers. How Rhea\n...\nWhat did IPDN announce regarding ... stock structure in ... ? \n\n IPDN announced a 1-for-30 reverse stock split of its outstanding common stock, effective at 5 ... p.m. Eastern Time on September 11, 2026, with trading on a split-adjusted basis on the Nasdaq Capital Market beginning September 14, 2026.\n...\nSeptember 9, 2026, approximately 66 ... ,811 shares of common ... issued and outstanding ... following the 1-for-30 reverse stock split, subject to adjustments from rounding up fractional shares. \n\n Will IPDN stockholders\u2019 ownership percentage change due to the reverse split? \n\n The reverse stock split ... apply uniformly to all holders and \u201c ... not alter any ... ownership interest,\u201d except\n...\nDN reverse stock split affect authorized shares or par value? \n\n The reverse stock split will ... . \n\n How are IPDN warrants and equity awards affected by the reverse stock split? \n\n The reverse stock split triggers proportionate adjustments to the number of shares issuable upon exercise or conversion of IPDN\u2019s outstanding equity awards, options, warrants and similar securities, and to the related exercise or conversion prices, including common warrants issued on August 13, 2026. \n\n What is the new CUSIP and exchange listing for IPDN after the split? \n\n After the reverse stock split, IPDN\u2019s common stock will continue trading on the Nasdaq Capital Market under ticker IPDN but will have a new CUSIP number 74312Y509 once the split becomes effective and trading is split-adjusted.\n...\nOn September 11, 2026, Professional Diversity Network, Inc., a Delaware corporation (the \u201cCompany\u201d), acting pursuant to authority received at a special meeting of its stockholders on July 13, 2026 (the \u201cSpecial Meeting\u201d) and by its board of directors on August 26, 2026, filed with the Secretary of State of the State of Delaware a certificate of amendment (the \u201cCharter Amendment\u201d) to the Company\u2019s certificate of incorporation, as amended (the \u201cCertificate of Incorporation\u201d). The Charter Amendment effected a one-for-thirty reverse stock split (the \u201cReverse Stock Split\u201d) of the Company\u2019s outstanding shares of common stock, par value $0.0001 per share (the \u201cCommon Stock\u201d), effective as of 5:30 p.m. Eastern Time on September 11, 2026 (the \u201cEffective Time\u201d).\n\nThe Reverse Stock Split will not change the total number of shares of Common Stock that the Company is authorized to issue or the par value per share of the Common Stock. No fractional shares will be issued in connection with the Reverse Stock Split. All of shares of post-split Common Stock were rounded up to the nearest whole number of such shares. The Reverse Stock Split will result in proportionate adjustments to the number of shares of Common Stock issuable upon the exercise or conversion of the Company\u2019s outstanding equity awards, options, warrants and other securities convertible into or exercisable or exchangeable for Common Stock, as well as the applicable exercise or conversion prices, in each case in accordance with the terms of the applicable plans, agreements or securities. In particular, the Reverse Stock Split constitutes a \u201cShare Combination Event\u201d under the common warrants issued by the Company on August 13, 2026 (the \u201cCommon Warrants\u201d), as disclosed in the Company\u2019s Current Report on Form 8-K filed with the Securities and Exchange Commission on August 13, 2026. Accordingly, the exercise price of, and the number of shares of Common Stock issuable upon exercise of, the Common Warrants will be adjusted pursuant to the Share Combination Event provisions of the Common Warrants. The Company will notify the holders of the Common Warrants of the applicable adjustments in accordance with the notice provisions of the Common Warrants.\n\nThe new CUSIP number for the Common Stock is 74312Y509. The Common Stock will begin trading on the Nasdaq Capital Market on a split-adjusted basis at the start of trading on September 14, 2026.\n...\nReverse Stock Split\n\nCHICAGO, September 10, 2026 \u2014 Professional Diversity Network, Inc. (NASDAQ: IPDN) (the \u201cCompany\u201d) today announced that it will effect a 1-for-30 reverse stock split of its outstanding common stock.\n\nThe reverse stock split is expected to become effective at 5:30 p.m. Eastern Time on September 11, 2026, and the Company\u2019s common stock is expected to begin trading on a split-adjusted basis on the Nasdaq Capital Market at the opening of trading on September 14, 2026.\n\nThe Company\u2019s common stock will continue to trade under the ticker symbol \u201cIPDN\u201d and will trade under a new CUSIP number following the effectiveness of the reverse stock split.\n...\nNo fractional shares will be issued in connection with the reverse stock split. Any fractional share resulting from the reverse stock split will be rounded up to ... nearest whole share. Based on the 19,974,323 shares of common stock issued and outstanding as of September 9, 2026, approximately 665,811 shares of common stock are expected to be issued and outstanding immediately following the reverse stock split, subject to adjustment as a result of the rounding of fractional shares.\n\nThe reverse stock split will apply uniformly to all holders of the Company\u2019s common stock and will not alter any stockholder\u2019s percentage ownership interest in the Company, except for immaterial adjustments that may result from the treatment of fractional shares."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/ipdn_8-K.webp"
+   },
+   {
+    "id": "https://www.stocktitan.net/news/AIXI/xiao-i-corporation-announces-ads-ratio-change-with-marketplace-5bnsennnnur5.html",
+    "title": "Xiao-I Plans 1-for-7 ADS Ratio Change Sept. 8 | AIXI Stock News",
+    "url": "https://www.stocktitan.net/news/AIXI/xiao-i-corporation-announces-ads-ratio-change-with-marketplace-5bnsennnnur5.html",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "Xiao-I Corporation (AIXI) will change its American Depositary Share (ADS) ratio from one ADS representing sixty ordinary shares to one ADS representing four hundred and twenty ordinary shares, which has the same effect for ADS holders as a one-for-seven reverse ADS split, effective September 8, 2026.\n\nADSs will continue trading on Nasdaq under ticker AIXI on a post-reverse basis from the market open that day, with a new CUSIP of 98423X407. Ordinary shares are not affected. Every seven existing ADSs will automatically convert into one new ADS, and fractional ADSs will be sold for cash proceeds distributed to holders.\n...\nExisting ADS ratio: 1 ADS = 60 ordinary shares New ADS ratio: 1 ADS = 420 ordinary shares Reverse ADS split: 1-for-7 +3 more \n\n 6 metrics \n\n Existing ADS ratio 1 ADS = 60 ordinary shares Prior ADS ratio \n\n New ADS ratio 1 ADS = 420 ordinary shares Effective September 8, 2026 \n\n Reverse ADS split 1-for-7 Equivalent effect for ADS holders \n\n Marketplace effective date September 8, 2026 Post-reverse ADS split trading expected at market open \n\n Automatic exchange 7 ADSs for 1 new ADS Exchange occurs automatically on the Effective Date \n\n New CUSIP 98423X407 ADSs following the reverse ADS split\n...\n, Sept. 3, 2026 /PRNewswire/ -- Xiao-I Corporation (Nasdaq: AIXI) (the \"Company\") today announced that it plans to change the ratio of its American Depositary Shares (\"ADSs\") to its ordinary shares from one (1) ADS representing sixty (60) ordinary shares to one (1) ADS representing four hundred and twenty (420) ordinary shares. For the Company's ADS holders, the change in the ADS ratio will have the same effect as a one-for-seven reverse ADS split.\n\nThe Company's ADSs are expected to begin trading on The Nasdaq Stock Market on a post-reverse ADS split basis under the same ticker symbol, \" AIXI,\" effective at the open of business on September 8, 2026 (the \"Effective Date\"). The new CUSIP number for the Company's ADSs following the reverse ADS split is expected to be 98423X407.\n\nThe ordinary shares of the Company will not be affected by ... . No ordinary shares will be ... canceled in connection ... holders of the Company's ... will be unaffected ... the new ADS ratio.\n\nThe exchange of every seven (7) then-held ADSs for one (1) new ADS will occur automatically on the Effective Date, with the then-held ADSs being canceled and new ADSs being issued by Citibank, N.A., as depositary. No action is required by ADS holders to effect the exchange.\n\nFractional new ADSs will not be issued in connection with the change in the ADS ratio. Instead, fractional entitlements to new ADSs will be aggregated and sold by the depositary, and the net cash proceeds from the sale, after deduction of applicable fees, taxes and expenses, will be distributed to the applicable ADS holders in accordance with the terms of the deposit agreement.\n\n About Xiao-I Corporation\n...\n### What ADS ratio change did Xiao-I (AIXI) announce for its shares?\n\n Xiao-I will change its ADS ratio from one ADS for sixty ordinary shares to one ADS for four hundred and twenty ordinary shares. For ADS holders, the company states this will have the same effect as a one-for-seven reverse ADS split. \n\n### When does Xiao-I (AIXI) reverse ADS split become effective on Nasdaq?\n\n The ADS ratio change, described as having the effect of a one-for-seven reverse ADS split, is expected to become effective at the open of business on September 8, 2026. From that date, Xiao-I ADSs will trade on Nasdaq on a post-reverse basis.\n...\nOn the effective date, every seven then-held ADSs will automatically be exchanged for one new ADS. The existing ADSs will be canceled and new ADSs issued by Citibank, N.A., as depositary. No action is required from ADS holders to complete the exchange.\n...\n### What will be the new CUSIP for Xiao-I (AIXI) ADSs after the reverse split?\n\n Following the change in the ADS ratio, Xiao-I ADSs are expected to trade under a new CUSIP number 98423X407. The ticker symbol AIXI on Nasdaq will remain the same, but the CUSIP will identify the post-reverse ADSs."
+    ],
+    "image": "https://www.stocktitan.net/news_covers/Xiao_I_Corporation_Announces_ADS_Ratio_Change_with_Marketplace_Effective_Date_on_September_8_2026_1500847.webp"
+   }
+  ],
+  "searchTime": 2088.6,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "effective_as_stated": "not stated",
+    "effective_date": "not stated",
+    "event_type": "none found",
+    "terms": "not stated",
+    "source_notice_date": "not stated",
+    "new_identifier": "not stated",
+    "identifier_in_source": "not stated"
+   },
+   "grounding": [
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+       "title": "Microsoft announces quarterly dividend increase - Source"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

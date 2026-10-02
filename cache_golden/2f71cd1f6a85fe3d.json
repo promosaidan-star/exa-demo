@@ -1,0 +1,312 @@
+{
+ "saved_at": "2026-09-29 09:20:56",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from Bank of America announcing the redemption of its Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5, with the redemption date and redemption price",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "newsroom.bankofamerica.com"
+  ],
+  "startPublishedDate": "2026-08-05T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about Bank of America Floating Rate Senior Notes due September 2027, CUSIP 06051GLX5; ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 2991,
+ "data": {
+  "requestId": "f3cd6c066012be9e7d4c79dd238ccc7d",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n September 4, 2026 at 4:20 PM Eastern \n\nBank of America Announces Redemptions of five hundred million dollars$500,000,000 Floating Rate Senior Notes and one billion five hundred million dollars$1,500,000,000 five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all five hundred million dollars$500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L X five CUSIP No. 06051GLX5) (the \u201cFloating Rate Notes\u201d), and all one billion five hundred million dollars$1,500,000,000 principal amount outstanding of its five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L V nine CUSIP No. 06051GLV9) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n...\nions of five hundred ... 933% ... Senior Notes,\n...\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all five hundred million dollars$500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L X five CUSIP No. 06051GLX5) (the \u201cFloating Rate Notes\u201d), and all one billion five hundred million dollars$1,500,000,000 principal amount outstanding of its five point nine three three percent 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five one G L V nine CUSIP No. 06051GLV9) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date."
+    ],
+    "image": "https://newsroom.bankofamerica.com/content/dam/newsroom/images/banners/GettyImages-505722134.jpg"
+   },
+   {
+    "id": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of-cad425-000-000-floating.html",
+    "title": "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of-cad425-000-000-floating.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\n September 4, 2026 at 4:15 PM Eastern \n\nBank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all four hundred twenty five million Canadian Dollars CAD425,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five zero five F Y five CUSIP No. 060505FY5, I S I N C A zero six zero five zero five F Y five zero ISIN: CA060505FY50) (the \u201cFloating Rate Notes\u201d), and all one billion Canadian Dollars CAD1,000,000,000 principal amount outstanding of its one point nine seven eight percent 1.978% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five zero five F Z two CUSIP No. 060505FZ2, I S I N C A zero six zero five zero five F Z two six ISIN: CA060505FZ26) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n...\nBank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\nCHARLOTTE, North Carolina N.C. \u2013 Bank of America Corporation announced today that it will redeem on September 15, 2026 all four hundred twenty five million Canadian Dollars CAD425,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five zero five F Y five CUSIP No. 060505FY5, I S I N C A zero six zero five zero five F Y five zero ISIN: CA060505FY50) (the \u201cFloating Rate Notes\u201d), and all one billion Canadian Dollars CAD1,000,000,000 principal amount outstanding of its one point nine seven eight percent 1.978% Fixed/Floating Rate Senior Notes, due September 2027 (C U S I P Number zero six zero five zero five F Z two CUSIP No. 060505FZ2, I S I N C A zero six zero five zero five F Z two six ISIN: CA060505FZ26) (the \u201cFixed/Floating Rate Notes\u201d and, together with the Floating Rate Notes, the \u201cNotes\u201d).\n\nThe redemption price for each series of the Notes will be equal to one hundred percent 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date."
+    ],
+    "image": "https://newsroom.bankofamerica.com/content/dam/newsroom/images/banners/FIN008.jpg"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n# Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n Bank of America Corporation \n\nSep 04, 2026, 16:20 ET\n\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n...\nfor the Notes will be made through the ... of The Depository Trust Company. The Bank of New York Mellon Trust Company, ... .A. is the trustee ... for the Notes."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931186&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "title": "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\n# Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\n Bank of America Corporation \n\nSep 04, 2026, 16:15 ET\n\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all CAD425,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FY5, ISIN: CA060505FY50) (the \"Floating Rate Notes\"), and all CAD1,000,000,000 principal amount outstanding of its 1.978% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FZ2, ISIN: CA060505FZ26) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931168&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news/bank-of-america-corporation/",
+    "title": "Bank of America Corporation News and Press Releases | PR Newswire",
+    "url": "https://www.prnewswire.com/news/bank-of-america-corporation/",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "highlights": [
+     "### Sep 04, 2026, 16:20 ET Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027 \n\nBank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating...\n\n### Sep 04, 2026, 16:15 ET Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027 \n\nBank of America Corporation announced today that it will redeem on September 15, 2026 all CAD425,000,000 principal amount outstanding of its Floating ...\n\n \n\n### Aug 18, 2026, 14:00 ET BofA ... ,00 ... to American Red ... to Support Fire Recovery \n\nFunding will help provide emergency shelter, meals and recovery support for families and communities impacted"
+    ],
+    "image": "https://www.prnewswire.com/content/dam/prnewswire/common/prn_facebook_sharing_logo.jpg"
+   },
+   {
+    "id": "https://newsroom.bankofamerica.com/content/newsroom/press-releases.html",
+    "title": "Press Releases",
+    "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases.html",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "highlights": [
+     "and Ohio\n\n September 17, 2026 at 4:00 AM Eastern \n\n \n\n September 15, 2026 at 12:35 PM Eastern \n\n September 4, 2026 at 4:20 PM Eastern \n\n September 4, 2026 at 4:15 PM Eastern \n\nBank of America Announces Redemptions of four hundred twenty-five million Canadian dollars CAD425,000,000 Floating Rate Senior Notes and one billion Canadian dollars CAD1,000,000,000 one point nine seven eight percent 1.978% Fixed/Floating Rate Senior Notes, Due September 2027"
+    ],
+    "image": "https://newsroom.bankofamerica.com/content/dam/newsroom/images/banners/Logo%20900x452.jpg"
+   },
+   {
+    "id": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-declares-preferred-stock-dividends-payable-in-oc.html",
+    "title": "Bank of America Declares Preferred Stock Dividends Payable in October and November 2026",
+    "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-declares-preferred-stock-dividends-payable-in-oc.html",
+    "publishedDate": "2026-09-18T00:00:00.000Z",
+    "highlights": [
+     "Bank of America Declares Preferred Stock Dividends Payable in October and November 2026\n\n September 18, 2026 at 4:15 PM Eastern \n\nBank of America Declares Preferred Stock Dividends Payable in October and November 2026\n\nCHARLOTTE, North Carolina N.C. - Bank of America Corporation today announced the Board of Directors has authorized regular cash dividends on the outstanding shares or depositary shares of the following series of preferred stock:\n...\n| six point six two five percent 6.625% Fixed-Rate Reset Non-Cumulative Preferred Stock, Series OO | sixteen dollars and five six two five zero zero zero cents$16.5625000 | October 15 | November 2 |\n...\n| four point three seven five percent 4.375% Fixed-Rate Reset Non-Cumulative Preferred Stock, Series RR | ten dollars and nine three seven five zero zero zero cents$10.9375000 | October 1 | October 27 |\n...\nsix point one two five percent ... Reset Non-Cumulative Preferred ... , Series TT | fifteen dollars ... three one two five ... zero zero cents$15.3125000 | October 1 | October 27 |\n...\n0 | October ... 26 |\n...\nCHARLOTTE, North Carolina N.C. - Bank of America Corporation today announced the Board of Directors has authorized regular cash dividends on the outstanding shares or depositary shares of the following series of preferred stock:\n...\npoint six two five percent ... 25% ... dollars and five six two five zero zero zero cents$16.5625000 | October 15 | November 2 |\n...\n| four point three seven five percent 4.375% Fixed-Rate Reset Non-Cumulative Preferred Stock, Series RR | ten dollars and nine three seven five zero zero zero cents$10.9375000 | October 1 | October 27 |\n| six point one two five percent 6.125% Fixed-Rate Reset Non-Cumulative Preferred Stock, Series TT | fifteen dollars and three one two five zero zero zero cents$15.3125000 | October 1 | October 27 |\n| six point two five zero percent 6.250% Fixed-Rate Reset Non-Cumulative Preferred Stock, Series UU | fifteen dollars and six two five zero zero zero zero cents$15.6250000 | October 1 | October 26 |"
+    ],
+    "image": "https://newsroom.bankofamerica.com/content/dam/newsroom/images/banners/FIN001.jpg"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/northwest-bancshares-inc-announces-redemption-of-subordinated-notes-302853159.html",
+    "title": "Northwest Bancshares, Inc. Announces Redemption of Subordinated Notes",
+    "url": "https://www.prnewswire.com/news-releases/northwest-bancshares-inc-announces-redemption-of-subordinated-notes-302853159.html",
+    "publishedDate": "2026-08-17T00:00:00.000Z",
+    "author": "Northwest Bancshares, Inc.",
+    "highlights": [
+     "COLUMBUS, Ohio, Aug. 17, 2026 /PRNewswire/ -- Northwest Bancshares, Inc., (the \"Company\"), (Nasdaq: NWBI) today announced the redemption on September 15, 2026, of all of its outstanding 4.000% Fixed-to-Floating Rate Subordinated Notes due September 15, 2030 (CUSIP No. 667339AA3) (the \"Notes\"). The redemption price for the Notes will be equal to 100% of principal amount of the Notes redeemed, plus any accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026.\n\nIn accordance with the indenture governing the Notes, the holders of the Notes will receive notice of the redemption, the redemption price and further instructions and details related to the process of such redemption. Payment of the redemption price for the Notes will be made through the facilities of The Depository Trust Company."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS527908/Northwest-Bancshares-1-Logo.jpg?id=OA2890386&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/truist-announces-redemption-of-subordinated-notes-due-october-2026-302882455.html",
+    "title": "Truist announces redemption of subordinated notes due October 2026",
+    "url": "https://www.prnewswire.com/news-releases/truist-announces-redemption-of-subordinated-notes-due-october-2026-302882455.html",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "author": "Truist Financial Corporation",
+    "highlights": [
+     "CHARLOTTE, N.C., Sept. 17, 2026 / PRNewswire/ -- Truist Bank (NYSE: TFC) today announced it will redeem all $850,000,000 principal amount outstanding of its fixed rate subordinated notes due Oct. 30, 2026, (CUSIP 07330MAA5) on the redemption date of Sept. 30, 2026.\n\nThe redemption price for the subordinated notes will be equal to 100% of the principal amount plus accrued and unpaid interest to, but excluding, the redemption date. Interest on the subordinated notes will cease to accrue on and after the redemption date.\n\nPayment of the redemption price for the subordinated notes will be made through the facilities of The Depository Trust Company."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS212222/TruistWhiteLogo.jpg?id=OA2956127&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/08/3358176/0/en/constellation-brands-announces-delivery-of-notice-of-redemption-for-4-350-senior-notes-due-2027.html",
+    "title": "Constellation Brands Announces Delivery of Notice of",
+    "url": "https://www.globenewswire.com/news-release/2026/09/08/3358176/0/en/constellation-brands-announces-delivery-of-notice-of-redemption-for-4-350-senior-notes-due-2027.html",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "author": "Constellation Brands, Inc.",
+    "highlights": [
+     "# Constellation Brands Announces Delivery of Notice of Redemption for 4.350% Senior Notes Due 2027\n\n September 08, 2026 17:15 ET | Source: Constellation Brands, Inc. \n\nROCHESTER, N.Y., Sept. 08, 2026 (GLOBE NEWSWIRE) -- Constellation Brands (NYSE: STZ), a leading U.S.-based total beverage alcohol company, announced today that it has given notice for full redemption prior to maturity of all of its outstanding 4.350% Senior Notes due 2027 (CUSIP Number: 21036P BK3) to be effected on September 18, 2026. As of September 8, 2026, there were $600.0 million in aggregate principal amount of the notes outstanding.\n\nThe redemption price for the notes, payable in cash, will be calculated pursuant to the formula set forth in the supplemental indenture relating to the notes."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/a950d319-eafe-4bb0-886c-6a5a0e7009a4"
+   }
+  ],
+  "searchTime": 960.1,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "terms": "100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026",
+    "source_notice_date": "2026-09-04",
+    "event_type": "redemption",
+    "market_effective_date": "2026-09-15",
+    "new_cusip": "not stated",
+    "identifier_in_source": "06051GLX5",
+    "effective_as_stated": "September 15, 2026",
+    "new_symbol": "not stated"
+   },
+   "grounding": [
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/09/bank-of-america-announces-redemptions-of--500-000-000-floating-r.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+       "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

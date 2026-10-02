@@ -1,0 +1,244 @@
+{
+ "saved_at": "2026-10-02 13:06:42",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by The Procter & Gamble Company (NYSE: PG): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for The Procter & Gamble Company (NYSE: PG), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 7919,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "f4b2f7f653fc10c32be6fd1927a81abf",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.pginvestor.com/overview/default.aspx",
+    "title": "Procter & Gamble Investor Relations",
+    "url": "https://www.pginvestor.com/overview/default.aspx",
+    "highlights": [
+     "Investor Relations | Procter & Gamble Investor Relations\n...\n25 Annual Report (interactive)\n\n of FY 2025, Online link, (opens in new ... )\n- 2025 Annual Report (PDF)\n\n of FY 2025, PDF file, (opens in new window)\n- 2025 Proxy Statement\n\n of FY 2025, PDF file, (opens in new window)\n- 2025 Form 10-K\n\n of FY 2025, PDF file, (opens in new window)\n- 2025 Financials\n\n of FY 2025, Excel file, (opens in new window)"
+    ],
+    "image": "https://s204.q4cdn.com/332108499/files/design/site_logo/P_G_Logo_RGB.png"
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+    "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE",
+    "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+    "publishedDate": "2026-08-03T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "# Procter & Gamble debt notes delisted from NYSE \n\nProcter & Gamble Co. is having its 3.250% Notes due 2026 removed from listing and registration on the New York Stock Exchange LLC under Section 12(b) of the Securities Exchange Act of 1934.\n...\nProcter & Gamble Co. is having its 3.250% Notes due 2026 removed from listing and registration on the New York Stock Exchange LLC under Section 12(b) of the Securities Exchange Act of 1934.\n\nThe New York Stock Exchange certifies that it has complied with its rules to strike this class of securities from listing and/or withdraw registration pursuant to 17 CFR 240.12d2-2(b). The issuer is stated to have complied with the Exchange\u2019s rules and the requirements of 17 CFR 240.12d2-2(c) governing voluntary withdrawal of the class of securities from listing and registration.\n...\n## FAQ\n\n What security is Procter & Gamble (PG) removing from NYSE listing? \n\n Procter & Gamble is removing its 3.250% Notes due 2026 from listing and registration on the New York Stock Exchange LLC under Section 12(b) of the Exchange Act. \n\n Which form did Procter & Gamble (PG) and NYSE use for this delisting? \n\n The New York Stock Exchange filed a Form 25, a Notification of Removal from Listing and/or Registration under Section 12(b) of the Securities Exchange Act of 1934, for Procter & Gamble\u2019s 3.250% Notes due 2026. \n\n What regulations govern Procter & Gamble (PG) notes\u2019 removal from NYSE? \n\n The removal of Procter & Gamble\u2019s 3.250% Notes due 2026 is stated to comply with 17 CFR 240.12d2-2(b) for exchange action and 17 CFR 240.12d2-2(c) for voluntary withdrawal by the issuer. \n\n Who certified the NYSE action on Procter & Gamble (PG) notes? \n\n The filing is signed on behalf of New York Stock Exchange LLC by Anthony Sozzi, identified as Analyst, Market Watch, certifying reasonable grounds to file Form 25 for the 3.250% Notes due 2026. \n\n Does the Form 25 affect Procter & Gamble (PG) common stock? \n\n The Form 25 specifically addresses 3.250% Notes due 2026 of Procter & Gamble. It refers only to this class of debt securities and not to Procter & Gamble\u2019s common stock or other securities.\n...\n549\n\nFORM 25\n\n NOTIFICATION OF REMOVAL FROM LISTING AND/OR REGISTRATION UNDER SECTION 12(b) OF THE SECURITIES EXCHANGE ACT OF 1934. \n\nCommission File Number \n\n001-00434\n\n| Issuer: | PROCTER & GAMBLE Co |\n| --- | --- |\n| Exchange: | NEW YORK STOCK EXCHANGE LLC |\n\n (Exact name of Issuer as specified in its charter, and name of Exchange where security is listed and/or registered)\n...\n3.250% Notes due 2026\n\n (Description of class of securities) \n\n Please place an X in the box to designate the rule provision relied upon to strike the class of securities from listing and registration: \n\n| 17 CFR 240.12d2-2(a)(1) |\n| --- |\n| 17 CFR 240.12d2-2(a)(2) |\n| 17 CFR 240.12d2-2(a)(3) |\n| 17 CFR 240.12d2-2(a)(4) |\n| Pursuant to 17 CFR 240.12d2-2(b), the Exchange has complied with its rules to strike the class of securities from listing and/or withdraw registration on the Exchange. 1 |\n| Pursuant to 17 CFR 240.12d2-2(c), the Issuer has complied with its rules of the Exchange and the requirements of 17 CFR 240.12d-2(c) governing the voluntary withdrawal of the class of securities from listing and registration on the Exchange. |\n\n Pursuant to the requirements fo the Securities Exchange Act of 1934, NEW YORK STOCK EXCHANGE LLC certifies that it has reasonable ... to believe that it meets all of the requirements for filing the Form 25 and has ... this notification to be signed on its behalf by the undersigned duly authorized person. \n\n| 2026-08-03 | By | Anthony Sozzi | Analyst, Market Watch |\n| --- | --- | --- | --- |\n| Date | | Name | Title |"
+    ],
+    "image": "https://static.stocktitan.net/company-logo/pg-lg.png?v=05b32926f9"
+   },
+   {
+    "id": "https://www.stocktitan.net/sec-filings/PG/def-14a-procter-gamble-co-definitive-proxy-statement-eac782ce3c49.html",
+    "title": "Procter & Gamble sets Oct. 13 meeting on board, pay | PG Proxy Statement",
+    "url": "https://www.stocktitan.net/sec-filings/PG/def-14a-procter-gamble-co-definitive-proxy-statement-eac782ce3c49.html",
+    "publishedDate": "2026-08-28T00:00:00.000Z",
+    "author": "Stock Titan",
+    "highlights": [
+     "PROCTER & GAMBLE Co (PG) is holding its 2026 virtual annual shareholders meeting on October 13, 2026 at 9:00 a.m. Eastern Time. Shareholders of record on August 14, 2026 will vote on electing 12 directors, ratifying Deloitte & Touche LLP as auditor, approving a Say on Pay proposal, and considering three shareholder proposals that the Board recommends voting against.\n...\nMoeller retired as\n...\nthat transition, the board appointed Shail\n...\nWhen is PROCTER & GAMBLES (PG) 2026 annual shareholder meeting and who can vote? \n\n The meeting is on October 13, 2026 at 9:00 a.m. Eastern Time, held virtually via webcast. Shareholders of record as of August 14, 2026 are entitled to vote at the meeting and any postponement or adjournment. \n\n What key items are PG shareholders voting on at the 2026 annual meeting? \n\n Shareholders will vote to elect 12 directors, ratify Deloitte & Touche LLP as independent auditor, approve on an advisory basis executive compensation (Say on Pay), consider three shareholder proposals that the Board recommends voting against, and transact other proper business. \n\n How strong was shareholder support for PG\u2019s Say on Pay in 2025? \n\n At the 2025 annual meeting, 92.2% of votes were cast in favor of Procter & Gamble\u2019s Say on Pay proposal. The company describes this as a positive endorsement of its executive compensation practices and decisions. \n\n How is PG\u2019s CEO Shailesh Jejur ... compensated in FY 20 ... 5\u201326? \n\n Jejur ... -term incentive award, ... % options, 50% RSUs).\n...\nAugust 28, ... 026 \n\nFellow Procter & Gamble Shareholders: \n\nIt is my pleasure to invite you to this year\u2019s annual meeting of shareholders. The meeting will take place on Tuesday, October 13, 2026, at 9:00 a.m. Eastern Time. The meeting will be held virtually via a live audio webcast at www.virtualshareholdermeeting.com/PG2026. At the meeting, our shareholders will be asked to: \n\nElect the 12 Director nominees listed in the accompanying proxy statement; \n\nRatify the appointment of the independent registered public accounting firm; \n\nApprove, on an advisory basis, the Company\u2019s executive compensation (the \u201cSay on Pay\u201d vote);\n...\nrecord as of ... 6 (the \u201crecord date\u201d) are entitled to vote at the annual meeting and any postponement or adjournment thereof. Please see pages 97- 101 for additional information regarding accessing the meeting and how to vote your shares. You do not need to attend the virtual meeting in order to vote your shares.\n...\nYou are being asked to approve, on a non-binding, advisory basis, the compensation of our Named Executive Officers (\u201cNEOs\u201d), as outlined in this proxy statement beginning on page 37. This is often referred to as the \u201cSay on Pay\u201d vote.\n...\nWe Received Strong Shareholder Support with 92.2% in favor of Say on Pay at the 2025 Annual Meeting. This vote is a positive endorsement of the Company\u2019s executive compensation practices and decisions.\n...\nLong-Term Incentive Programs. The C&LD Committee approved a long-term incentive award of $ ... 0 for Mr. Je ... . One half of the award value was delivered in the PSP. The remaining half was in the LTIP grant, which the C&LD Committee determined would be delivered as 50% stock options and ... % RSUs for FY 20 ... 5-26.\n...\nBoard of Directors recommends a vote FOR\n...\npages 89-\n...\nYou are being asked to vote on the shareholder proposals included in this proxy statement. The Board has provided its response immediately following each proposal and recommends a vote AGAINST each proposal for the reasons indicated in the responses. \n\nThe Board of Directors recommends a vote AGAINST each shareholder proposal."
+    ],
+    "image": "https://static.stocktitan.net/filing-covers/pg_DEF-14A.webp"
+   },
+   {
+    "id": "https://finance.yahoo.com/quote/PG/press-releases/",
+    "title": "The Procter & Gamble Company (PG) Latest Press ...",
+    "url": "https://finance.yahoo.com/quote/PG/press-releases/",
+    "highlights": [
+     "The Procter & Gamble Company (PG) Latest Press Releases & Corporate News - Yahoo Finance\n\n# The Procter & Gamble Company (PG)\n...\nProcter & Gamble (P&G) continues to be a strong ... 70 ... of dividend increases. Recent reports highlight the company's solid cash flow generation and strategic marketing efforts, although it faces potential cost pressures and competitive challenges."
+    ],
+    "image": "https://pinhole.finance.yahoo.com/chart/PG/__screenshot"
+   },
+   {
+    "id": "https://www.advfn.com/stock-market/NYSE/PG/stock-news/99166403/form-4-statement-of-changes-in-beneficial-owners",
+    "title": "Form 4 - Statement of changes in beneficial ownership of securities",
+    "url": "https://www.advfn.com/stock-market/NYSE/PG/stock-news/99166403/form-4-statement-of-changes-in-beneficial-owners",
+    "publishedDate": "2026-08-20T00:00:00.000Z",
+    "highlights": [
+     "2. Issuer Name and Ticker or Trading Symbol PROCTER & GAMBLE Co [ PG ]\n...\nYear) 08/\n...\n| Common Stock | 08/19/2026 | | A | | 5,129 | A | $ 0 (1) | 13,153.9294 (2) | D | |\n| Common Stock | | | | | | | ... 8968 |\n...\n| Common Stock | | | | | | | | 43.95 | I ... International Stock Ownership Plan & Pension Plan |\n...\n| Restricted Stock Units | (3) | 08/17/2026 | | A | V | 5.2953 | | (4) | (4) | Common Stock | 5.2953 | $ 0 | 42.5303 | D | |\n\n| Explanation of Responses: |\n| --- |\n| 1. Stock award pursuant to issuer's 2025 Stock and Incentive Compensation Plan. |\n| 2. Total includes grant of dividend equivalents in the form of Restricted Stock Units (RSU's) settled in common stock and shares acquired through the issuer's dividend reinvestment plan. |\n| 3. Dividend equivalents in the form of Restricted Stock Units (RSUs) previously awarded pursuant to issuer's retirement program. All such RSUs represent a contingent right to receive Procter & Gamble common stock. |\n| 4. These units will deliver in shares on retirement from the company, unless delivery is deferred or such shares are contributed to reporting person's deferred compensation account. |"
+    ],
+    "image": "https://www.advfn.com/p.php?pid=staticchart&s=NYSE:PG&p=5&t=52"
+   },
+   {
+    "id": "https://livetodaystock.com/procter-gamble-dividend-stock-split-2026-2027/",
+    "title": "P&G Dividend and Stock Split Outlook 2026\u20132027 | LiveTodayStock",
+    "url": "https://livetodaystock.com/procter-gamble-dividend-stock-split-2026-2027/",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "author": "livetodaystock",
+    "highlights": [
+     "## P&G stock splits and bonus-share claims\n\nNeither reviewed 2026 dividend notice announces a new share split. This guide verifies no 2026 or 2027 split ratio or stock-distribution date. A cash-dividend increase changes cash per eligible share; a forward split changes how the same ownership is divided into units. The events should be tracked separately.\n\nA hypothetical 2-for-1 split doubles share count while halving the theoretical price. Per-share dividend comparisons then need a matching adjustment. At a hypothetical $160 price before any such event, the $4.354 unchanged-rate scenario implies approximately 2.72% yield. That arithmetic is not a current quote, valuation judgment or assurance against a capital loss."
+    ],
+    "image": "https://livetodaystock.com/wp-content/uploads/2026/09/annual-investor-guide-2026-2027.png"
+   },
+   {
+    "id": "https://last10k.com/sec-filings/pg/0000080424-26-000103.htm",
+    "title": "Procter Gamble Co (PG) 10-K Annual Report August 2026",
+    "url": "https://last10k.com/sec-filings/pg/0000080424-26-000103.htm",
+    "publishedDate": "2026-08-04T00:00:00.000Z",
+    "highlights": [
+     "CINCINNATI, July 29, 2026\n\n - The Procter & Gamble Company (NYSE:PG) reported fourth quarter and fiscal year 2026 results.\n...\n2025, the ... announced a portfolio and productivity plan to streamline its portfolio and organization to improve its ... in growth. The Company ... non-core restructuring costs of ... 1 to $1.6 billion ... -tax over a two-year period. The Company ... over half of the costs ... 6, with the\n...\n> Ticker: PG CIK: 80424 Form Type: 10-K Annual Report Accession Number: 0000080424-26-000103 Submitted to the SEC: Tue Aug 04 2026 4:11:35 PM EST Accepted by the SEC: Tue Aug 04 2026 Period: Tuesday, June 30, 2026 Industry: Soap Detergents Cleang Preparations Perfumes Cosmetics"
+    ],
+    "image": "https://last10k.com/last10k-social-sec-filings.jpg"
+   },
+   {
+    "id": "https://kalkine.com/news/announcements/procter-gamble-clo-sells-2238-shares-in-tax-cover",
+    "title": "Procter & Gamble CLO Sells 2,238 Shares in Tax Cover",
+    "url": "https://kalkine.com/news/announcements/procter-gamble-clo-sells-2238-shares-in-tax-cover",
+    "publishedDate": "2026-08-24T00:00:00.000Z",
+    "highlights": [
+     "Susan Street Whaley, Chief Legal Officer and Secretary of Procter & Gamble Co, filed a Form 4 on August 24, 2026, reporting the sale of 2,238 shares of common stock on August 20, 2026, to cover taxes on a stock award.\n...\n- Shares sold: 2,238 shares of Procter & Gamble common stock disposed of on August 20, 2026, via transaction code S.\n- Sale price: $143.79 per share, according to the filing.\n- Purpose: The filing notes the shares were \"sold to cover taxes on Stock Award.\"\n- Direct ownership after transaction: 26,988.9685 shares held directly following the reported transaction.\n- Indirect ownership: 7,187.9174 shares held indirectly by a retirement plan trustee.\n- Reporting person role: Susan Street Whaley is identified as Chief Legal Officer and Secretary of Procter & Gamble Co.\n...\nAccording to the Form 4 filed with the U.S. Securities and Exchange Commission, Susan Street Whaley, serving as Chief Legal Officer and Secretary of Procter & Gamble Co (NYSE:PG), reported a single open-market sale transaction dated August 20, 2026. The filing discloses that 2,238 shares of common stock were disposed of at a price of $143.79 per share. The filing's footnote states the transaction was a sale \"to cover taxes on Stock Award,\" indicating the disposition was associated with a tax obligation arising from a equity compensation event rather than a discretionary market sale.\n\nFollowing the reported transaction, the filing shows Whaley directly holds 26,988.9685 shares of Procter & Gamble common stock. In addition, the filing reports 7,187.9174 shares held indirectly through a retirement plan trustee. No derivative securities transactions were reported in Table II of the filing. The Form 4 was signed by Wednesday Shipp as attorney-in-fact for Susan Street Whaley and filed on August 24, 2026.\n...\nThe filing discloses a disposition of 2,238 shares of Procter & Gamble common stock by Chief Legal Officer Susan Street Whaley on August 20, 2026, at $143.79 per share, for the stated purpose of covering taxes on a stock award."
+    ],
+    "image": "https://kalkine.com/featured_image/gallery/xlarge/announcement1_06_04_2026_07_06_33_386361.webp"
+   },
+   {
+    "id": "https://finance.yahoo.com/quote/PG/news/",
+    "title": "The Procter & Gamble Company (PG) Latest Stock News & ...",
+    "url": "https://finance.yahoo.com/quote/PG/news/",
+    "highlights": [
+     "## News headlines Procter & Gamble (PG) is focusing on restructuring and leadership changes while maintaining its commitment to dividend growth. The company's dividend strategy, robust cash flow, and stable portfolio position it well for long-term investors despite recent market challenges.\n\nProcter & Gamble (PG) is focusing on restructuring and leadership changes while maintaining its commitment to dividend growth. The company's dividend strategy, robust cash flow, and stable portfolio position it well for long-term investors despite recent market challenges.\n...\n### Procter And Gamble Restructuring And Leadership Shift Create Valuation Watchpoints\n...\n### Procter And Gamble Taps Cynthia Rowley For Premium Downy Scent Launch"
+    ],
+    "image": "https://pinhole.finance.yahoo.com/chart/PG/__screenshot"
+   }
+  ],
+  "searchTime": 1439.1,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_identifier": "not stated",
+    "terms": "3.250% Notes due 2026",
+    "effective_as_stated": "2026-08-03",
+    "effective_date": "2026-08-03",
+    "event_type": "redemption",
+    "source_notice_date": "2026-08-03",
+    "identifier_in_source": "PG"
+   },
+   "grounding": [
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.stocktitan.net/sec-filings/PG/25-nse-procter-gamble-co-sec-filing-95821c516d45.html",
+       "title": "Procter & Gamble debt notes delisted from NYSE | PG SEC Filing - Form 25-NSE"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

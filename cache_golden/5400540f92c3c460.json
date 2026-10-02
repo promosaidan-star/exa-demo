@@ -1,0 +1,264 @@
+{
+ "saved_at": "2026-09-29 09:20:53",
+ "endpoint": "/search",
+ "body": {
+  "query": "Fifth Third Bancorp Form 8-K announcing the redemption of notes with CUSIP 316773 DD9, with the redemption date and redemption price",
+  "type": "auto",
+  "includeDomains": [
+   "sec.gov"
+  ],
+  "startPublishedDate": "2026-08-25T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the exchange's or the SEC's official notices about Fifth Third Bancorp notes with CUSIP 316773 DD9; ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3526,
+ "data": {
+  "requestId": "1beefb1a2797cf141840fe482a869a2a",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+    "title": "424B5",
+    "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+    "publishedDate": "2026-09-14T00:00:00.000Z",
+    "highlights": [
+     "The notes will be redeemable at our option, in whole or in part, at any time and from time to time, prior to their maturity at the respective redemption prices set forth herein. See \u201cDescription of Notes\u2014Optional Redemption.\u201d We do not intend to list the notes on any securities exchange. Currently, there are no public markets for the notes.\n...\nOptional Redemption \n\nPrior to the applicable Par Call Date (as defined in this prospectus supplement) of the 20 Notes, the 20 Notes, and the 20 Notes, respectively, we may redeem the applicable series of notes at our option, in whole or in part, at any time and from time to time, at a redemption price (expressed as a percentage of principal amount and rounded to three decimal places) equal to the greater of: \n\n| (1) | (a) the sum of the present values of the remaining scheduled payments of principal and interest thereon discounted to the redemption date (assuming the notes matured on the applicable Par Call Date) on a semi-annual basis (assuming a 360-day year consisting of twelve 30-day months) at the Treasury Rate plus basis points, in the case of the 20 Notes, basis points, in the case of the 20 Notes, and basis points, in the case of the 20 Notes less (b) interest accrued to the date of redemption, and |\n| --- | --- |\n\n| (2) | 100% of the principal amount of the notes to be redeemed, |\n| --- | --- |\n\n| plus, in either case, accrued and unpaid interest thereon to the redemption date. |\n| --- |\n\nOn or after the applicable Par Call Date, we may redeem the notes of the applicable series, in whole or in part, at any time and from time to time, at a redemption price equal to 100% of the principal amount of \n\n the notes of such series being redeemed plus accrued and unpaid interest thereon to the applicable redemption date. \n\n| See \u201cDescription of Notes\u2014Optional Redemption.\u201d |\n| --- |\n...\nOptional Redemption \n\nPrior to the applicable Par Call Date (as defined below), the Issuers may redeem the 20 Notes, the 20 Notes, or the 20 Notes at their option, in whole or in part, at any time and from time to time, at a redemption price (expressed as a percentage of principal amount and rounded to three decimal places) equal to the greater of: \n\n| (1) | (a) the sum of the present values of the remaining scheduled payments of principal and interest thereon discounted to the redemption date (assuming the notes matured on the applicable Par Call Date) on a semi-annual basis (assuming a 360-day year consisting of twelve 30-day months) at the Treasury Rate plus basis points, in the case of the 20 Notes, basis points, in the case of the 20 Notes, and basis points, in the case of the 20 Notes less (b) interest accrued to the date of redemption, and |\n| --- | --- |\n\n| (2) | 100% of the principal amount of the notes to be redeemed, |\n| --- | --- |\n\nplus, in either case, accrued and unpaid interest thereon to the redemption date. Notwithstanding the foregoing, if the redemption date is on or after a Record Date and on or before the related Interest Payment Date, any accrued and unpaid interest to the redemption date will be paid to the Person in whose name the applicable Note is registered at the close of business on such Record Date. On or after the applicable Par Call Date, we may redeem the notes, in whole or in part, at any time and from time to time, at a redemption price equal to 100% of the principal amount of the notes being redeemed plus accrued and unpaid interest thereon to the redemption date. \n\n\u201cPar Call Date\u201d means , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes, , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes, and , 20 ( months prior to the maturity date of the 20 Notes) for the 20 Notes.\n...\nNotice of redemption will be mailed or sent electronically pursuant to applicable procedures of The Depository Trust Company (\u201cDTC\u201d) at least 10 but not more than 60 days before the redemption date to each holder of record of the notes to be redeemed at its registered address. If less than all of the notes are to be redeemed at any time, and the notes are global securities, the notes to be redeemed will be selected by DTC in accordance with its standard procedures. If the notes to be redeemed are not global securities then held by DTC, the trustee will select notes to be redeemed on a pro rata basis, by lot, or by such other method the Trustee shall deem fair and appropriate subject to the rules and procedures of DTC. The notice of redemption for the notes will state, among other things, the amount of notes to be redeemed, the redemption date, the redemption price, if then determinable, or the manner in which the redemption price will be determined, the place or places that payment will be made upon presentation and surrender of notes to be redeemed, and any conditions precedent to the effectiveness of the redemption. Unless we default in the payment of the redemption price, interest will cease to accrue on any notes that have been called for redemption at the redemption date."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/2044009/000119312526394363/d141989d8k.htm",
+    "title": "8-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/2044009/000119312526394363/d141989d8k.htm",
+    "publishedDate": "2026-09-17T20:36:56.000Z",
+    "highlights": [
+     "Item 8.01 Other Events. \n\nOn September 11, 2026, Evernorth Holdings Inc., a Nevada corporation (\u201cPubco\u201d), entered into a note purchase agreement (the \u201cNote Purchase Agreement\u201d) with NH Investment & Securities Co., as trustee of Kyobo AIM Corporate Finance General Private Investment Trust No. 3, as purchaser (the \u201cPurchaser\u201d), pursuant to which Pubco agreed to issue $30.0 million aggregate principal amount of its 4.00% Convertible Senior PIK Notes due 2031 (the \u201cConvertible Notes\u201d) to the Purchaser. \n\nThe closing of the issuance of the Convertible Notes is conditioned upon, and is expected to occur concurrently with, the closing of the previously announced business combination (the \u201cBusiness Combination\u201d) contemplated by the Business Combination Agreement, dated as of October 19, 2025 (as amended, the \u201cBusiness Combination Agreement\u201d), by and among Armada Acquisition Corp. II, a Cayman Islands exempted company (the \u201cCompany\u201d), Pubco, Evernorth Corporate Merger Sub Inc., Pathfinder Digital Assets LLC (\u201cPathfinder\u201d), Evernorth Company Merger Sub LLC and Ripple Labs Inc. The Business Combination is expected to close during the fourth quarter of 2026."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1089063/000114036126037715/ef20082695_8k.htm",
+    "title": "dick's sporting goods, inc. - SEC.gov",
+    "url": "https://www.sec.gov/Archives/edgar/data/1089063/000114036126037715/ef20082695_8k.htm",
+    "publishedDate": "2026-09-25T20:50:27.000Z",
+    "highlights": [
+     "On September 22, 2026, DICK\u2019S Sporting Goods, Inc. (the \u201cCompany\u201d) entered into an underwriting agreement (the \u201cUnderwriting Agreement\u201d) with BofA Securities, Inc., PNC Capital Markets LLC and Wells Fargo Securities, LLC, acting for themselves and as representatives of the several underwriters named therein (collectively, the \u201cUnderwriters\u201d), pursuant to which the Company agreed to issue and sell to the Underwriters $1,000,000,000 aggregate principal amount of its senior notes, consisting of $400,000,000 aggregate principal amount of its 6.200% senior notes due 2036 (the \u201c2036 Notes\u201d) and $600,000,000 aggregate principal amount of its 6.900% senior notes due 2056 (the \u201c2056 Notes\u201d and together with the 2036 Notes, the \u201cNotes\u201d).\n\nThe Notes were registered under the Securities Act of 1933, as amended (the \u201cAct\u201d), pursuant to the Company\u2019s registration statement on Form S-3ASR (File No. 333-299029) (the \u201cRegistration Statement\u201d), dated September 21, 2026. On September 23, 2026, the Company filed with the U.S. Securities and Exchange Commission (the \u201cSEC\u201d) a prospectus supplement (the \u201cProspectus Supplement\u201d), containing the final terms of the Notes pursuant to Rule 424(b)(2) of the Act. The Notes were sold pursuant to the Underwriting Agreement and were issued pursuant to the Prospectus Supplement. The Notes are governed by the Indenture, dated January 14, 2022 (the \u201cBase Indenture\u201d), between the Company and U.S. Bank Trust Company, National Association, as trustee (as successor in interest to U.S. Bank National Association) (the \u201cTrustee\u201d), as supplemented by the Third Supplemental Indenture, dated September 25, 2026 (the \u201cSupplemental Indenture\u201d), between the Company and the Trustee.\n\nThe 2036 Notes will mature on September 25, 2036 and the 2056 Notes will mature on September 25, 2056. The Notes are unsecured, unsubordinated obligations of the Company and will rank equally in right of payment with all of the Company\u2019s existing and future unsecured, unsubordinated indebtedness, liabilities and other obligations. The Notes will not be guaranteed by any of the Company\u2019s subsidiaries and will therefore be structurally subordinated to the indebtedness and other liabilities of the Company\u2019s subsidiaries.\n...\n8-K filed\n...\n| 4.3 | Form of 6.200% Note due 2036 (included in Exhibit 4.2 to this Current Report on Form 8-K). |\n| 4.4 | Form of 6.900% Note due 2056 (included in Exhibit 4.2 to this Current Report on Form 8-K). |"
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/915840/000110465926111345/tm2622398d17_8k.htm",
+    "title": "beazer homes usa, inc. - SEC.gov",
+    "url": "https://www.sec.gov/Archives/edgar/data/915840/000110465926111345/tm2622398d17_8k.htm",
+    "publishedDate": "2026-09-28T20:34:32.000Z",
+    "highlights": [
+     "On September 28, 2026, Beazer Homes USA, Inc. (the \u201cCompany\u201d) issued a conditional notice of redemption to redeem the $350.0 million aggregate principal amount of 7.250% Senior Notes due 2029 (the \u201c2029 Notes\u201d) that remain outstanding (the \u201cRedemption\u201d) on October 20, 2026 (the \u201cRedemption Date\u201d), subject to satisfaction of the conditions set forth therein. The Redemption is being made pursuant to the terms of the indenture, dated as of September 24, 2019, governing the terms of the 2029 Notes, at a redemption price equal to 101.208% of the principal amount of the 2029 Notes to be redeemed, plus accrued and unpaid interest to the Redemption Date.\n\nThe Redemption is conditioned upon the substantially concurrent consummation, on the Redemption Date, of the previously announced merger (the \u201cMerger\u201d) of Bulldogs Merger Sub, Inc. (\u201cMerger Sub\u201d), a wholly owned subsidiary of Dream Finders Homes, Inc. (\u201cDream Finders\u201d), with and into the Company, with the Company continuing as the surviving corporation and a wholly owned subsidiary of Dream Finders, pursuant to that certain Agreement and Plan of Merger, dated as of August 6, 2026, among Dream Finders, Merger Sub and the Company, and the receipt by the Company, or by Dream Finders or any other person on the Company\u2019s behalf, of funds in an amount that, together with cash on hand, is sufficient to fund the aggregate redemption price for the 2029 Notes on the Redemption Date (the substantially concurrent consummation of the Merger and the receipt of such funds, collectively, the \u201cMerger Condition\u201d). Accordingly, none of the 2029 Notes will be deemed due and payable on the Redemption Date unless the Merger Condition is satisfied or waived by the Company in its sole discretion."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/886982/000119312526390084/spxe1873_prelim.htm",
+    "title": "424B2",
+    "url": "https://www.sec.gov/Archives/edgar/data/886982/000119312526390084/spxe1873_prelim.htm",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "highlights": [
+     "CUSIP / ISIN:\n\n40058LSW1 / US40058LSW18\n...\nGS Finance Corp. will sell to GS&Co., and GS&Co. will purchase from GS Finance Corp., the aggregate stated principal amount of the offered securities specified on the front cover of this pricing supplement. GS&Co. proposes initially to offer the securities to the public at the original issue price set forth on the cover page of this pricing supplement. Morgan Stanley Smith Barney LLC (Morgan Stanley Wealth Management), acting as dealer for the offering, will receive a selling concession of $35.00 for each security it sells. Morgan Stanley Wealth Management has informed us that it intends to internally allocate at Morgan Stanley Wealth Management $5.00 of the selling concession for each security as a structuring fee. The costs included in the original issue price of the securities will include a fee paid by GS&Co. to LFT Securities, LLC, an entity in which an affiliate of Morgan Stanley Wealth Management has an ownership interest, for providing certain electronic platform services with respect to this offering. GS&Co. is an affiliate of GS Finance Corp. and The Goldman Sachs Group, Inc. and, as such, will have a \u201cconflict of interest\u201d in this offering of securities within the meaning of Financial Industry Regulatory Authority, Inc. (FINRA) Rule 5121. Consequently, this offering of securities will be conducted in compliance with the provisions of FINRA Rule 5121. GS&Co. will not be permitted to sell securities in this offering to an account over which it exercises discretionary authority without the prior specific written approval of the account holder.\n\nWe expect to deliver the securities against payment therefor in New York, New York on October 5, 2026. Under Rule 15c6-1 of the Securities Exchange Act of 1934, trades in the secondary market generally are required to settle in one business day, unless the parties to any such trade expressly agree otherwise. Accordingly, purchasers who wish to trade securities on any date prior to one business day before delivery will be required to specify alternative settlement arrangements to prevent a failed settlement."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1058811/000119312526374299/immr-20260828.htm",
+    "title": "DEF 14A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1058811/000119312526374299/immr-20260828.htm",
+    "publishedDate": "2026-08-28T00:00:00.000Z",
+    "highlights": [
+     "We will announce the preliminary voting results at the FY 2026 Annual Meeting. Within four business days of the FY 2026 Annual Meeting, we will report the final results in a Current Report on Form 8-K filed with the SEC, a copy of which will be available at www.sec.gov."
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/1058811/000119312526374299/img40785351_0.jpg"
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000082/unm-20260826_ex991.htm",
+    "title": "Document",
+    "url": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000082/unm-20260826_ex991.htm",
+    "publishedDate": "2026-08-26T00:00:00.000Z",
+    "highlights": [
+     "Unum Group\u2019s board of directors authorizes\n\n$1 billion share repurchase program\n\nCHATTANOOGA, Tenn., August 26, 2026 \u2013 Unum Group (NYSE:UNM) announced today that its board of directors has approved a new share repurchase program authorizing the company to repurchase up to $1 billion of its common stock from time to time beginning on September 1, 2026. The company's current share repurchase program will continue in effect through August 31, 2026, at which time the current program will terminate and all subsequent repurchases will take place under the new program. \n\nThe timing and amount of share repurchases under the new program will be determined by management based on its evaluation of market conditions and other considerations. Repurchases may be made in open market transactions at prevailing prices, in privately negotiated transactions (including accelerated share repurchase programs), pursuant to preset trading plans meeting the requirements of Rule 10b5-1 under the Securities Exchange Act of 1934, or by other means in accordance with federal securities laws. The program may be suspended, modified, or terminated by the board at any time."
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000082/uga.jpg"
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/897322/000117891326004336/zk2636046.htm",
+    "title": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/897322/000117891326004336/zk2636046.htm",
+    "publishedDate": "2026-08-31T00:00:00.000Z",
+    "highlights": [
+     "On August 10, 2026, Gilat Satellite Networks Ltd. (the \u201c Company\u201d) furnished to the Securities and Exchange Commission (the \u201c SEC\u201d) a Report of Foreign Private Issuer on Form 6-K containing the Notice and Proxy Statement of the 2026 Annual General Meeting of Shareholders (the \u201c Proxy Statement\u201d) for the 2026 Annual General Meeting of Shareholders of to be held on September 8, 2026 at 12:00 p.m. Israel time at the Company\u2019s offices at 21 Yegia Kapayim Street, Kiryat Arye, Petah Tikva 4913020, Israel (the \u201c Meeting\u201d).\n\nThe Company is furnishing this Report on Form 6-K to announce that the proposed Compensation Policy for Executive Officers previously attached to the Proxy Statement as Annex B is being replaced with the revised Compensation Policy for Executive Officers attached hereto as Exhibit 99.1 (the \u201c Revised Proposed Policy\u201d). The Revised Proposed Policy shall constitute Annex B of the Proxy Statement, and the Proxy Statement shall be deemed revised accordingly."
+    ]
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526382688/d111778d6k.htm",
+    "title": "Form 6-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526382688/d111778d6k.htm",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "highlights": [
+     "SECURITIES AND EXCHANGE COMMISSION \n\nWashington, D.C. 20549 \n\nForm 6-K \n\nREPORT OF FOREIGN PRIVATE ISSUER \n\nPURSUANT TO RULE 13a-16 OR 15d-16 \n\nFOR THE MONTH OF SEPTEMBER 2026 \n\nCommission File Number: 001-43391 \n\nSK hynix Inc. \n\n(Translation of registrant\u2019s name into English) \n\n2091, Gyeongchung-daero \n\nBubal-eup, Icheon-si \n\nGyeonggi-do 17336, Korea \n\n(Address of principal executive office) \n\nIndicate by check mark whether the registrant files or will file annual reports under cover of Form 20-F or Form 40-F. \n\nForm 20-F \u2612 Form 40-F \u2610 \n\nClarification Regarding Rumors or Media Reports \n\nOn August 5, 2026, the Korea Economic Daily (also known as \u201c Hankyung\u201d) reported that \u201cSolidigm,\u201d a U.S. subsidiary of SK hynix Inc. (the \u201cCompany\u201d), is pursuing a pre-IPO capital raising of approximately Won 5 trillion. \n\nThe Company hereby clarifies that, while the Company\u2019s overseas subsidiary under the brand name \u201cSolidigm\u201d is reviewing various measures to strengthen its competitiveness, no matters have been determined as of the date hereof. The Company will make a further disclosure either when specific details are confirmed or within three months of the date of this report. \n\n Related Disclosure: See the current report on Form 6-K titled \u201cClarification Regarding Rumors or Media Reports\u201d furnished by the Company on August 6, 2026. \n\nSIGNATURE \n\nPursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, ... unto duly authorized.\n...\n| --- | --- |\n...\n| |\n|\n...\n: Head of Investor Relations | |\n\nDate: September 4, 2026"
+    ],
+    "image": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526382688/g111778g44a68.jpg"
+   },
+   {
+    "id": "https://www.sec.gov/Archives/edgar/data/1597835/000119312526388592/cmcm-6k-2026q2.htm",
+    "title": "6-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1597835/000119312526388592/cmcm-6k-2026q2.htm",
+    "publishedDate": "2026-09-11T00:00:00.000Z",
+    "highlights": [
+     "On September 11, 2026, Cheetah Mobile Inc. (\"Cheetah Mobile\" or the \"Company\") issued a press release announcing its unaudited consolidated financial results for the quarter ended June 30, 2026 and the press release is attached as Exhibit 99.1.\n...\nOn September 11, 2026, the Company entered into a share repurchase agreement to dispose of its entire 36.0% equity interest in a company that mainly engages in the gaming-related business, for an aggregate cash consideration of approximately US$41.3 million. The closing of the transaction is expected to occur in September ... 026, subject to the satisfaction of customary closing conditions."
+    ]
+   }
+  ],
+  "searchTime": 455.7,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "new_symbol": "not stated",
+    "terms": "not stated",
+    "new_cusip": "not stated",
+    "market_effective_date": "not stated",
+    "effective_as_stated": "not stated",
+    "event_type": "redemption",
+    "source_notice_date": "2026-09-14",
+    "identifier_in_source": "316773 DD9"
+   },
+   "grounding": [
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312526389920/d141326d424b5.htm",
+       "title": "424B5"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

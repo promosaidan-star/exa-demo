@@ -1,0 +1,195 @@
+{
+ "key_facts": [
+  {
+   "fact": "A GitHub user 'ryahern' named Ryan Ahern lists company 'Exa.ai', location San Francisco, website exa.ai.",
+   "source": "https://api.github.com/users/ryahern",
+   "confidence": "high"
+  },
+  {
+   "fact": "Ryan Ahern's commits on Exa-related PRs use the email rahern@exa.ai.",
+   "source": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/6237/commits",
+   "confidence": "high"
+  },
+  {
+   "fact": "LinkedIn profile linkedin.com/in/ryan-j-ahern has headline 'Building @ Exa', location San Francisco Bay Area (seen via DuckDuckGo snippet; direct fetch blocked HTTP 999).",
+   "source": "https://www.linkedin.com/in/ryan-j-ahern",
+   "confidence": "medium"
+  },
+  {
+   "fact": "On 2026-05-21 Ryan Ahern posted on LinkedIn that he joined Exa to build search for agents, and announced the $250M Series C at $2.2B led by a16z.",
+   "source": "https://www.linkedin.com/posts/ryan-j-ahern_years-ago-i-spent-my-days-scouring-the-globe-activity-7463017711267233792-SzAU",
+   "confidence": "high"
+  },
+  {
+   "fact": "His exact title and team at Exa are not stated anywhere public that I could read; public work points to technical GTM (FDE, solutions or partner engineering).",
+   "source": "https://github.com/pydantic/pydantic-ai/issues/6082",
+   "confidence": "medium"
+  },
+  {
+   "fact": "He merged a PR consolidating four Exa Agent MCP tools into one streaming agent_run tool with a handoff when runs exceed about a 750s window, and documented ZDR limits.",
+   "source": "https://github.com/exa-labs/exa-mcp-server/pull/383",
+   "confidence": "high"
+  },
+  {
+   "fact": "He merged a PR making unauthorized calls to protected Exa MCP tools return 401 instead of 'Method not found'.",
+   "source": "https://github.com/exa-labs/exa-mcp-server/pull/373",
+   "confidence": "high"
+  },
+  {
+   "fact": "He opened an issue to modernize Pydantic AI's Exa tools, citing a customer whose LLM was injecting domain filters into the query; he recommends highlights by default for token efficiency and says text is not deprecated.",
+   "source": "https://github.com/pydantic/pydantic-ai/issues/6082",
+   "confidence": "high"
+  },
+  {
+   "fact": "His Pydantic AI PR deprecated exa_find_similar_tool, added domain filters, highlights opt-in, an x-exa-integration attribution header and tests with 100% branch coverage; it was closed so the integration could move to Pydantic AI Harness.",
+   "source": "https://github.com/pydantic/pydantic-ai/pull/6237",
+   "confidence": "high"
+  },
+  {
+   "fact": "His ExaAgent capability and text_summary mode were merged into pydantic-ai-harness on 2026-07-21; the Pydantic side described the work as a partner collaboration with Exa.",
+   "source": "https://github.com/pydantic/pydantic-ai-harness/pull/386",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa's About page lists 24 people and does not include a Ryan Ahern.",
+   "source": "https://exa.ai/about",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa Search API type options are instant, fast, auto (default), deep-lite, deep, deep-reasoning; livecrawl and context are deprecated in favor of maxAgeHours and highlights/text.",
+   "source": "https://exa.ai/docs/reference/search",
+   "confidence": "high"
+  },
+  {
+   "fact": "Exa Agent API: POST /agent/runs, SSE streaming, JSON-schema structured output, effort tiers from minimal $0.012 to xhigh $1.00 plus metered auto/ultra; under ZDR run data lasts only up to 10 minutes after completion and previousRunId/Exa Connect are unavailable.",
+   "source": "https://exa.ai/docs/reference/agent-api-guide",
+   "confidence": "high"
+  },
+  {
+   "fact": "NYC Forward Deployed Engineer posting (published 2026-08-13): in-person NYC, $130K-$275K base plus equity and bonus; 'ship code in the morning and close a deal in the afternoon'.",
+   "source": "https://jobs.ashbyhq.com/exa/c542d672-691c-46c1-9741-856d66f2c2ea",
+   "confidence": "high"
+  },
+  {
+   "fact": "EMEA FDE posting says FDEs partner with an Account Executive to own the technical win and should scope POCs with clear success criteria; AI-assisted coding is expected.",
+   "source": "https://jobs.ashbyhq.com/exa/234bf118-672a-45d1-a4a2-02065d1c02f0",
+   "confidence": "high"
+  },
+  {
+   "fact": "Other Ryan Aherns found (Truveta CMO, Highmetric, Ingenico, Palo Alto/CyberArk, Booz Allen, CrestCura solar, actor, pianist) have no link to Exa.",
+   "source": "https://www.linkedin.com/in/ryan-ahern-3580b1108/",
+   "confidence": "high"
+  }
+ ],
+ "uncertainties": [
+  "His exact title and team at Exa are unconfirmed; the only public headline is 'Building @ Exa' and his LinkedIn profile page was blocked (HTTP 999).",
+  "No prior employers found; his own post only says he previously did research informing executive decisions, software architecture and product discovery.",
+  "Linking LinkedIn ryan-j-ahern to GitHub ryahern is an inference (same name, same company, same city), strong but not proven.",
+  "That this Ryan Ahern is the interviewer is inferred from the name and company match; no other Exa-linked Ryan Ahern was found, and the name came from the Ashby scheduler, not an email that states his title.",
+  "Exact start date at Exa unknown; he was there by 2026-05-21 and his first public Exa code is 2026-06-26.",
+  "He appears SF-based; how he relates to the NYC FDE team is unknown.",
+  "Jenna's email says 'walk us through', so other Exa people may join the call.",
+  "The X account @ryandahern could not be loaded (HTTP 402) and is not tied to him; the LinkedIn 'ryandahern' profile is an unrelated solar professional in Arizona.",
+  "The claim that find_similar is deprecated comes from his GitHub issue about exa-py; the current Exa search docs page I read did not mention find_similar either way."
+ ],
+ "verification": {
+  "checks": [
+   {
+    "claim": "1. GitHub user 'ryahern' is named Ryan Ahern, company 'Exa.ai', location San Francisco, website exa.ai.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.github.com/users/ryahern (read 2026-09-29: name 'Ryan Ahern', company 'Exa.ai', blog 'exa.ai', location 'San Francisco', account created 2018-03-07, 5 public repos, no public org memberships)"
+   },
+   {
+    "claim": "2. Ryan Ahern's commits on Exa-related PRs use the email rahern@exa.ai.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/6237/commits (5 commits by 'Ryan Ahern <rahern@exa.ai>', 2026-07-05 to 07-08) and https://api.github.com/repos/pydantic/pydantic-ai-harness/pulls/386/commits (commit 74faa358 by 'Ryan Ahern <rahern@exa.ai>', 2026-07-17)"
+   },
+   {
+    "claim": "4. On 2026-05-21 Ryan Ahern posted on LinkedIn that he joined Exa to build search for agents, and announced the $250M Series C at $2.2B led by a16z.",
+    "verdict": "confirmed",
+    "correction": "Substance correct, two small notes. (a) Timestamp is 2026-05-21 00:07 UTC, which is the afternoon of May 20 in US Pacific time. (b) His post says 'raised $250M at a $2.2B valuation led by a16z'; it does not use the words 'Series C'. The 'Series C' label comes from Exa's own job postings ('We raised a $250M Series C...'). His post also says he previously did research to inform executive decisions, software architecture and product discovery, and that Exa is hiring across GTM, Ops and Engineering.",
+    "source": "https://www.linkedin.com/posts/ryan-j-ahern_years-ago-i-spent-my-days-scouring-the-globe-activity-7463017711267233792-SzAU (public post HTML loaded, ld+json datePublished 2026-05-21T00:07:58.500Z); Series C wording: https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true"
+   },
+   {
+    "claim": "6. He merged a PR consolidating four Exa Agent MCP tools into one streaming agent_run tool with a handoff when runs exceed about a 750s window, and documented ZDR limits.",
+    "verdict": "wrong",
+    "correction": "Substance is correct; only 'he merged' is wrong. Ryan AUTHORED exa-labs/exa-mcp-server PR #383 (opened 2026-07-14); it was merged on 2026-07-16 by GitHub user 'kesku', not by him. The PR replaces agent_create_run, agent_wait_for_run, agent_get_run_output and agent_cancel_run with one agent_run tool that streams SSE from POST /agent/runs, returns a non-error status 'running' handoff with the run ID if the run outlives the ~750s MCP call window, resumes by GET polling every 4s, remaps legacy tool names, and documents ZDR limits (no runId resume, no previousRunId, no dataSources).",
+    "source": "https://api.github.com/repos/exa-labs/exa-mcp-server/pulls/383"
+   },
+   {
+    "claim": "7. He merged a PR making unauthorized calls to protected Exa MCP tools return 401 instead of 'Method not found'.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.github.com/repos/exa-labs/exa-mcp-server/pulls/373 (authored and self-merged by ryahern on 2026-06-26, about 4 minutes after opening; body says unauthorized calls got code -32601 'Method not found' and now get a 401). This is his earliest public Exa code."
+   },
+   {
+    "claim": "8. He opened a Pydantic AI issue to modernize the Exa tools, citing a customer whose LLM was injecting domain filters into the query; recommends highlights by default for token efficiency; says text is not deprecated.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.github.com/repos/pydantic/pydantic-ai/issues/6082 (opened by ryahern 2026-06-27; body: 'a customer configuration issue I'm seeing where the llm is injecting domain filters into the query itself'; his 2026-06-27 comment corrects a bot: text is not deprecated, highlights recommended as more token efficient for agents)"
+   },
+   {
+    "claim": "9. His Pydantic AI PR deprecated exa_find_similar_tool, added domain filters, highlights opt-in, an x-exa-integration attribution header and tests with 100% branch coverage; it was closed so the integration could move to Pydantic AI Harness.",
+    "verdict": "confirmed",
+    "correction": "Confirmed with nuances: the PR was closed, never merged, so none of this shipped in pydantic-ai core. The final PR text (highlights opt-in, full text stays default, 100% branch coverage) reflects 4 extra commits pushed by Pydantic maintainer Aditya Vardhan (adtyavrdhn) on 2026-07-15; Ryan's own stated preference in the thread was highlights by default. The header name x-exa-integration appears in Ryan's comment on issue #6082, not the PR body (body just says 'Exa integration attribution header'). Closing comment by DouweM 2026-07-15: Exa is going to the harness.",
+    "source": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/6237 ; https://api.github.com/repos/pydantic/pydantic-ai/issues/6237/comments ; https://api.github.com/repos/pydantic/pydantic-ai/issues/6082/comments"
+   },
+   {
+    "claim": "10. His ExaAgent capability and text_summary mode were merged into pydantic-ai-harness on 2026-07-21; the Pydantic side described the work as a partner collaboration with Exa.",
+    "verdict": "confirmed",
+    "correction": "Confirmed, but the 'partner collaboration' wording is in harness issue #375 (opened 2026-07-16 by strawgate / Bill Easton, bill@pydantic.dev), not in PR #386 itself. PR #386 was merged 2026-07-21T05:55Z by strawgate. Of its 8 commits, only 1 is Ryan's (text_summary + deferred ExaAgent); the other 7, including the base ExaSearch capability (web_search, get_page, opt-in deep_search), are by Bill Easton of Pydantic.",
+    "source": "https://api.github.com/repos/pydantic/pydantic-ai-harness/pulls/386 ; https://api.github.com/repos/pydantic/pydantic-ai-harness/pulls/386/commits ; https://api.github.com/repos/pydantic/pydantic-ai-harness/issues/375"
+   },
+   {
+    "claim": "11. Exa's About page lists 24 people and does not include a Ryan Ahern.",
+    "verdict": "wrong",
+    "correction": "The About page lists 23 people (carousel aria-setsize=\"23\", Will Bryk CEO through Rohit Prakash), not 24. It is correct that no Ryan Ahern appears (also no Sukhm Kang). Exa's job postings say the team is about 100 people, so the About page is a partial list and his absence from it says nothing.",
+    "source": "https://exa.ai/about (raw HTML fetched 2026-09-29)"
+   },
+   {
+    "claim": "12. Exa Search API type options are instant, fast, auto (default), deep-lite, deep, deep-reasoning; livecrawl and context are deprecated in favor of maxAgeHours and highlights/text.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/reference/search.md (type enum instant, fast, auto, deep-lite, deep, deep-reasoning, default auto; context: 'Deprecated. Use highlights or text instead'; livecrawl: 'Deprecated. Use maxAgeHours instead', do not send both). Also: crawledBeforeDate is deprecated in favor of snapshotAsOf."
+   },
+   {
+    "claim": "13. Exa Agent API: POST /agent/runs, SSE streaming, JSON-schema structured output, effort tiers minimal $0.012 to xhigh $1.00 plus metered auto/ultra; under ZDR run data lasts up to 10 minutes after completion and previousRunId/Exa Connect are unavailable.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://exa.ai/docs/reference/agent-api-guide.md (POST https://api.exa.ai/agent/runs; Accept: text/event-stream; outputSchema returns output.structured; minimal $0.012, low $0.025, medium $0.10, high $0.50, xhigh $1.00, auto metered to default $5 cap, ultra metered to default $20 cap; default effort is auto; ZDR: up to 10 minutes after terminal state, previousRunId not available, dataSources return 400)"
+   },
+   {
+    "claim": "14. NYC Forward Deployed Engineer posting (published 2026-08-13): in-person NYC, $130K-$275K base plus equity and bonus; 'ship code in the morning and close a deal in the afternoon'.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true (posting id c542d672-691c-46c1-9741-856d66f2c2ea, publishedAt 2026-08-13T17:57Z, location New York City, OnSite, salary 130000-275000 USD, Offers Equity, Offers Bonus). Read via Ashby's public posting API, not the jobs.ashbyhq.com page."
+   },
+   {
+    "claim": "15. EMEA FDE posting says FDEs partner with an Account Executive to own the technical win, should scope POCs with clear success criteria; AI-assisted coding is expected.",
+    "verdict": "confirmed",
+    "correction": "",
+    "source": "https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true (posting id 234bf118-672a-45d1-a4a2-02065d1c02f0, London, GBP 120K-200K plus bonus; text says 'Partnered with an Account Executive, you own the technical win', 'scope a POC with clear success criteria', and using AI-assisted tooling is expected)"
+   },
+   {
+    "claim": "3. LinkedIn profile ryan-j-ahern has headline 'Building @ Exa', location San Francisco Bay Area.",
+    "verdict": "unverifiable",
+    "correction": "Direct fetch of the profile returned HTTP 999 for me too, and the public post page did not show a headline. A web search for \"Ryan Ahern\" Exa returned no Exa-linked profile snippet. The headline and location could not be confirmed.",
+    "source": "https://www.linkedin.com/in/ryan-j-ahern (HTTP 999)"
+   }
+  ],
+  "missing": [
+   "find_similar deprecation IS confirmed by Exa itself: the OpenAPI spec marks /findSimilar deprecated with 'prefer /search with a query describing the source' (https://exa.ai/docs/exa-spec.yaml). This clears one of the researcher's open uncertainties. Do not demo findSimilar.",
+   "Ryan's shipped work is live product: the Agent API guide says in Exa MCP 'the agent_run tool is enabled by default' (https://exa.ai/docs/reference/agent-api-guide.md). If the demo touches Exa Agent or MCP, he wrote that tool (PR #383), so expect detailed questions on streaming, long runs, and ZDR.",
+   "His public priorities, which make good pitch hooks: highlights over full text for token efficiency, developer-set domain filters (includeDomains/excludeDomains) instead of letting the LLM stuff them into the query, auto/fast/deep over legacy neural/keyword, and structured output from Exa Agent. Sources: https://api.github.com/repos/pydantic/pydantic-ai/issues/6082 and /issues/6082/comments.",
+   "Agent API cost details the report left out: 1 Agent Compute Unit = $0.10, search tool calls $0.005 each, contact enrichment $0.02 per email and $0.07 per phone, budget.maxCostDollars accepts $1 to $100 for auto/ultra only (https://exa.ai/docs/reference/agent-api-guide.md). Useful for an enterprise cost slide.",
+   "Search API features relevant to an enterprise demo: category filter (company, people, news, financial report, publication, personal site; company and people reject startPublishedDate/endPublishedDate/excludeDomains with a 400), outputSchema for synthesized output (adds about 2 seconds), enterprise-only compliance 'hipaa' mode, maxAgeHours for freshness, snapshotAsOf for point-in-time (https://exa.ai/docs/reference/search.md).",
+   "Exa Connect data partners attachable to Agent runs include Financial Datasets (27,000+ US tickers, SEC filings), Macrobond (macro time series), Polymarket, Baselayer (KYB), Similarweb, Fiber.ai (https://exa.ai/docs/llms.txt). Relevant if AJ picks a finance/market use case; note Connect is unavailable under ZDR.",
+   "In issue #6082 comments Ryan refers to 'my colleague @tgonzalezc5' (Pydantic PR #5164, attribution header), a likely Exa teammate; not further verified.",
+   "His entire public PR history is 7 PRs; all Exa work falls between 2026-06-26 and 2026-07-17 (exa-mcp-server #373, #375, #383; pydantic-ai #6237; pydantic-ai-harness #386). Source: https://api.github.com/search/issues?q=author:ryahern+is:pr",
+   "Exa is hiring FDEs in SF (posted 2025-06-26, $130K-$275K), NYC, London (GBP 120K-200K), Singapore APJ ($150K-$250K), plus a new Forward Deployed Product Manager in SF posted 2026-09-26 (https://api.ashbyhq.com/posting-api/job-board/exa?includeCompensation=true). The SF FDE role existing suggests Ryan may sit on an SF-side GTM or partner team, but that is inference.",
+   "NYC FDE posting duties worth mirroring in the demo narrative: take a customer from first cold outbound to production integration to closed deal; build and ship demos, tutorials and sample apps; analyze usage data to spot churn risk and drive expansion. EMEA posting adds POCs/POVs, security questionnaires and RFP responses as enterprise evaluation steps (same Ashby API source)."
+  ]
+ }
+}

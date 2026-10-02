@@ -1,0 +1,282 @@
+{
+ "saved_at": "2026-09-29 09:20:21",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from Agroz Inc. (Nasdaq: AGRZ) announcing a reverse stock split, with the ratio, the effective date and time, the first day of split-adjusted trading, and the new CUSIP",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com"
+  ],
+  "startPublishedDate": "2026-08-20T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about Agroz Inc. (Nasdaq: AGRZ); ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 3607,
+ "data": {
+  "requestId": "cb92edabf068fb9f4c6262ef806f3478",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+    "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+    "publishedDate": "2026-09-24T17:12:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "# AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT\n...\nNOUNCES ANTICIPATED REVERSE STOCK SPLIT\n...\nKUALA LUMPUR, Malaysia, Sept. 24, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative, fully vertically integrated agricultural technology company designing, building, managing, and operating indoor Controlled Environment Agriculture vertical farms, today announced that it will effect a 1-for-20 reverse stock split (the \"Split\") of its issued and outstanding and authorized Class A Ordinary Shares, par value $0.001 per share (\"Ordinary Shares\"), effective at 12:00 am, Eastern time, on September 29, 2026.\n...\n- Conversion Ratio: Every 20 issued and outstanding Ordinary Shares will be consolidated into one Ordinary Share. \n- Fractional Shares: Shareholders entitled to fractional shares will receive one full share for each fractional portion. \n- Updated Stock Identifier: While the trading symbol for the Ordinary Shares will remain \"AGRZ,\" the Ordinary Shares will be designated a new CUSIP number G0136M119. \n- Equity Adjustments: Outstanding stock awards, options, and the shares reserved will be adjusted proportionally to reflect the Split. \n- Warrant Share and Exercise Price Adjustments: Any Ordinary Shares underlying outstanding warrants and the exercise price of the outstanding warrants will be adjusted proportionally to reflect this stock split."
+    ]
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-announces-receipt-of-nasdaq-staff-determination-and-implementation-of-compliance-plan-302857463.html",
+    "title": "AGROZ INC. ANNOUNCES RECEIPT OF NASDAQ STAFF DETERMINATION AND IMPLEMENTATION OF COMPLIANCE PLAN",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-receipt-of-nasdaq-staff-determination-and-implementation-of-compliance-plan-302857463.html",
+    "publishedDate": "2026-08-21T00:00:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "Company Intends to Request a Hearing; Compliance Measures Include Proposed Reverse Share Split and Expedited Completion of Annual Report\n\nKUALA LUMPUR, Malaysia, Aug. 21, 2026 /PRNewswire/ -- Agroz Inc. (Nasdaq: AGRZ) (\"Agroz\" or the \"Company\"), an agricultural technology company, today announced that it received a Staff Determination Letter (the \"Letter\") from the Listing Qualifications Department of The Nasdaq Stock Market LLC (\"Nasdaq\") dated August 18, 2026.\n...\n2. Nasdaq stated that the Company had not demonstrated compliance with the minimum stockholders' equity requirement applicable to initial listing and had not previously notified Nasdaq of its intention to cure the bid-price deficiency through a reverse share split within the applicable period, as contemplated by Nasdaq Listing Rule 5810(c)(3)(A)(ii).\n...\nThe Company is finalizing the submission of the necessary corporate-action application to implement a 1-for-10 reverse share split of its ordinary shares. The proposed reverse share split is intended to increase the per-share trading price of the Company's ordinary shares and support the Company's efforts to regain compliance with Nasdaq Listing Rule 5550(a)(2). Its implementation remains subject to the completion of all required corporate, regulatory and Nasdaq review processes.\n...\n\"Management and the Board are treating these matters as an ... ,\" said Gerard Lim, CEO. \"We have already commenced concrete remedial actions, including advancing the proposed reverse share split and strengthening the ... dedicated to completing our outstanding annual report. We intend to work ... and transparently with Nasdaq ... compliance process.\"\n...\nhas stated that trading in the Company's ordinary ... would be suspended at the opening ... on August ... 6, followed by the commencement ... procedures, including ... of a Form 25-NSE with the U. ... . Securities and Exchange"
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2902362&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-strengthens-global-position-with-series-of-prestigious-international-awards-and-industry-recognitions-302870211.html",
+    "title": "Agroz Strengthens Global Position with Series of Prestigious International Awards and Industry Recognitions",
+    "url": "https://www.prnewswire.com/news-releases/agroz-strengthens-global-position-with-series-of-prestigious-international-awards-and-industry-recognitions-302870211.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "# Agroz Strengthens Global Position with Series of Prestigious International Awards and Industry Recognitions\n\n Agroz Inc \n\nSep 04, 2026, 11:37 ET\n\nKUALA LUMPUR, Malaysia, Sept. 4, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative, fully vertically integrated agricultural technology company that designs, builds, manages, and operates indoor and outdoor Controlled Environment Agriculture (CEA) vertical farms, today announced a series of prestigious international awards and industry recognitions received over the past few months, further strengthening its position as a leading global AgriTech innovator.\n...\nThis press release contains \"forward-looking statements.\" You can identify forward-looking statements as those that are not historical in nature, particularly those that use terminology such as \"may,\" \"should,\" \"expects,\" \"anticipates,\" \"contemplates,\" \"estimates,\" \"believes,\" \"plans,\" \"projected,\" \"predicts,\" \"potential,\" or \"hopes\" or the negative of these or similar terms. The reader is cautioned not to rely on these forward-looking statements. Actual results could vary materially from the expectations and projections of Agroz. We base these forward-looking statements on our expectations and projections about future events, which we derive from the information currently available to us. Such forward-looking statements relate to future events or our future performance, including, without limitation, statements regarding the closing of the Offering and the use of proceeds from the sale of our ordinary shares in the Offering. These and other factors may cause our actual results to differ materially from any forward-looking statement. Forward-looking statements are only predictions. The forward-looking statements discussed in this press release and other statements made from time to time by us or our representatives may not occur, and actual events and results may differ materially and are subject to risks, uncertainties and assumptions about us more fully described in Agroz's filings with the SEC. We do not undertake to update any forward-looking statement as a result of new information or future events or developments, except as required by U.S. federal securities laws."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2931145&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-enters-into-strategic-supply-agreement-with-harvest-hive-302873810.html",
+    "title": "AGROZ INC. ENTERS INTO STRATEGIC SUPPLY ...",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-enters-into-strategic-supply-agreement-with-harvest-hive-302873810.html",
+    "author": "Agroz Inc",
+    "highlights": [
+     "# AGROZ INC. ENTERS INTO STRATEGIC SUPPLY AGREEMENT WITH HARVEST HIVE\n\n Agroz Inc \n\nSep 09, 2026, 08:52 ET\n\nKUALA LUMPUR, Malaysia and NEW YORK, Sept. 9, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative Controlled Environment Agriculture (CEA), precision agricultural technology, and fresh produce supply chain developer, today announced that it has executed a milestone multi-year Strategic Fresh Produce Supply and Offtake Agreement with Harvest Hive Sdn Bhd (\"Harvest Hive\"), a premier agricultural enterprise and farm aggregator operating across the Cameron Highlands farming corridor in Pahang, Malaysia"
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2938373&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "title": "TruGolf Announces Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/25/3369052/0/en/trugolf-announces-reverse-stock-split.html",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "author": "TruGolf Holdings, Inc.",
+    "highlights": [
+     "# TruGolf Announces Reverse Stock Split\n\n September 25, 2026 07:30 ET | Source: TruGolf Holdings, Inc. \n\nSalt Lake City, Utah, Sept. 25, 2026 (GLOBE NEWSWIRE) -- TruGolf Holdings, Inc. (NASDAQ: TRUG), today announced a 1-for-10 reverse split of its Class A common stock. Beginning on September 29, 2026, the Company\u2019s Class A common stock will continue to trade on The Nasdaq Capital Market on a split adjusted basis under the trading symbol \u201cTRUG\u201d but will trade under the following new CUSIP number: 243733607.\n\nAs a result of the reverse stock split, every 10 shares of Class A common stock issued and outstanding as of the effective date will be automatically combined into one share of Class A common stock. No fractional shares will be issued if, as a result of the reverse stock split, a stockholder would otherwise become entitled to a fractional share because the number of shares of Class A common stock they hold before the reverse stock split is not evenly divisible by ... split ratio. Instead, each stockholder will be entitled to receive a cash payment in lieu of a fractional share."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f4a0c099-6b5f-4f0e-8f37-43561ce681a5"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "title": "NextNRG Announces 1-for-10 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/10/3359502/0/en/nextnrg-announces-1-for-10-reverse-stock-split.html",
+    "publishedDate": "2026-09-10T00:00:00.000Z",
+    "author": "NextNRG, Inc.",
+    "highlights": [
+     "# NextNR ... Announces 1-for-10 Reverse Stock Split\n...\n08:30 ET | Source: NextNRG, Inc. \n\nMiami, FL, Sept. 10, 2026 (GLOBE NEWSWIRE) -- NextNRG, Inc. (Nasdaq: NXXT) (\"NextNRG\" or the \"Company\"), a pioneer in AI-driven energy innovation transforming how energy is produced, managed and delivered, today announced that it will effect a 1-for-10 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 14, 2026 at 12:00 a.m. (Eastern Time).\n\nThe Company\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cNXXT\u201d and will begin trading on a split-adjusted basis when the market opens on September 14, 2026. The new CUSIP number for the common stock following the reverse stock split will be 652941204. At the effective time of the reverse stock split, every 10 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 168.4 million shares to approximately 16.8 million shares, without giving effect to rounding. The reverse stock split will also apply to the Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/467287f0-fabc-4c2d-a951-3bb8bec81e97"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "title": "La Rosa Holdings Announces 1-for-6 Reverse Stock Split",
+    "url": "https://www.globenewswire.com/news-release/2026/09/03/3355926/0/en/la-rosa-holdings-announces-1-for-6-reverse-stock-split.html",
+    "publishedDate": "2026-09-03T00:00:00.000Z",
+    "author": "La Rosa Holdings Corp.",
+    "highlights": [
+     "# La Rosa Holdings Announces 1-for-6 Reverse Stock Split\n\n September 03, 2026 08:30 ET | Source: La Rosa Holdings Corp. \n\nCelebration, FL, Sept. 03, 2026 (GLOBE NEWSWIRE) -- La Rosa Holdings Corp. (NASDAQ: LRHC) (\u201cLa Rosa\u201d or the \u201cCompany\u201d), a real estate and PropTech enterprise, today announced that it will effect a 1-for-6 reverse split (\u201creverse stock split\u201d) of its shares of common stock that will become effective on September 8, 2026 at 12:01 a.m. (Eastern Time).\n\nLa Rosa\u2019s common stock will continue to trade on Nasdaq under the symbol \u201cLRHC\u201d and will begin trading on a split-adjusted basis when the market opens on September 8, 2026. The new CUSIP number for the common stock following the reverse stock split will be 50172T509. At the effective time of the reverse stock split, every 6 shares of the Company's issued and outstanding common stock will be automatically reclassified and combined into 1 share of common stock. The reverse stock split will reduce the number of outstanding shares of common stock from approximately 3.4 million shares to approximately 569 thousand shares, without giving effect to rounding. The reverse stock split will also apply to Company\u2019s common stock issuable upon exercise of the Company\u2019s outstanding stock options and warrants and upon conversion of outstanding convertible securities. No fractional shares will be issued; instead, any fractional entitlements will be rounded up to the next highest whole number at the participant level."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/f854f31e-8844-4c15-a86b-772ced2fcb2a"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/vision-marine-technologies-announces-reverse-stock-split-302858441.html",
+    "title": "Vision Marine Technologies Announces Reverse Stock Split",
+    "url": "https://www.prnewswire.com/news-releases/vision-marine-technologies-announces-reverse-stock-split-302858441.html",
+    "publishedDate": "2026-08-24T00:00:00.000Z",
+    "author": "Vision Marine Technologies, Inc",
+    "highlights": [
+     "MONTREAL , Aug. 24, 2026 /PRNewswire/ -- Vision Marine Technologies Inc. (NASDAQ: VMAR; TSXV: VMAR) (\"Vision Marine\" or the \"Company\") today announced that the Company's board of directors (the \"Board\") approved a 1-for-10 reverse stock split of the Company's common shares. The reverse stock split is expected to become effective when the market opens on August 26, 2026 (the \"Effective Date\") and the Company's common shares will begin trading on a split-adjusted basis under the existing trading symbol \"VMAR.\" The new CUSIP number for the Company's common shares following the reverse stock split will be 92840Q608.\n...\nThe primary purpose of the reverse stock split is to increase the per-share market price of the Company's common shares in an effort to regain compliance with the $1.00 minimum bid price requirement for continued listing on The Nasdaq Capital Market under Nasdaq Listing Rule 5550(a)(2). There can be no assurance that the reverse stock split will result in the Company regaining or maintaining compliance with this requirement. On August 20, 2026, the Board approved both the Effective Date of the reverse stock split as well as the ratio of the reverse stock split of 1-for-10."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1755161/Vision-Marine-Logo.jpg?id=OA2907138&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "title": "Republic Power Group Limited Announces 1-For-16 Reverse",
+    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367622/0/en/republic-power-group-limited-announces-1-for-16-reverse-share-split.html",
+    "publishedDate": "2026-09-23T00:00:00.000Z",
+    "author": "Republic Power Group Limited",
+    "highlights": [
+     "Singapore, Sept. 23, 2026 (GLOBE NEWSWIRE) -- Republic Power Group Limited (NASDAQ: RPGL), today announced that it will effect a reverse share split of its Class A ordinary shares, par value $0.50 per share (the \u201cClass A Ordinary Shares\u201d) and Class B ordinary shares, par value $0.50 per share (the \u201cClass B Ordinary Shares\u201d), at a ratio of 1-for-16, to be effective at the open of business on September 25, 2026.\n\nOur Class A Ordinary Shares will begin trading on a reverse share split-adjusted basis at the opening of The Nasdaq Capital Market (\u201cNasdaq\u201d) on September 25, 2026. There is no public market for our Class B Ordinary Shares. Following the reverse share split, the Class A Ordinary Shares will have a new par value of $8.0 per share and will continue to trade on Nasdaq under the symbol \u201cRPGL\u201d with the new CUSIP number, G7523E139. The reverse share split is expected to lead the Company\u2019s Class A Ordinary Shares to trade at approximately 16 times the price per share at which it trades prior to the effectiveness of the reverse share split. The Company, however, cannot assure that the price of its Class A Ordinary Shares after the reverse split will reflect the 1-for-16 reverse split ratio, that the price per share following the effective time of the reverse split will be maintained for any period of time, or that the price will remain above the pre-split trading price. The reverse share split is intended for the Company to maintain compliance with the minimum bid price requirement of $1.00 per Class A Ordinary Share for continued listing on Nasdaq.\n...\nOn August 28, 2026, the board of directors of the Company approved the reverse share split of the Class A Ordinary Shares and Class B Ordinary Shares, at a ratio of 1-for-16."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/ffc82cac-8012-4a4f-8092-d5dedf0a7dd4"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/14/3361572/0/en/intercont-cayman-limited-announces-effective-time-of-share-consolidation-reverse-share-splitto-regain-nasdaq-compliance.html",
+    "title": "Intercont (Cayman) Limited Announces Effective Time of",
+    "url": "https://www.globenewswire.com/news-release/2026/09/14/3361572/0/en/intercont-cayman-limited-announces-effective-time-of-share-consolidation-reverse-share-splitto-regain-nasdaq-compliance.html",
+    "publishedDate": "2026-09-14T00:00:00.000Z",
+    "author": "Intercont Cayman",
+    "highlights": [
+     "# Intercont (Cayman) Limited Announces Effective Time of Share Consolidation/Reverse Share Splitto Regain NASDAQ Compliance\n\n September 14, 202 ... 17:00 ET | Source: Intercont Cayman \n\nSINGAPORE, Sept. 14, 2026 (GLOBE NEWSWIRE) -- Intercont (Cayman) Limited (\u201cIntercont\u201d or the \u201cCompany\u201d), a global shipping enterprise, today announced that it will effect a share consolidation (\u201cReverse Share Split\u201d) of its ordinary shares at a ratio of 25-for-1, effective as of September 17, 2026 (the \u201cEffective Time\u201d), in order to regain compliance with the minimum $1.00 bid price per share requirement of Nasdaq\u2019s Marketplace Rule 5550(a)(2).\n\nBeginning with the opening of trading on September 17, 2026, the Company\u2019s Class A ordinary shares will trade on the Nasdaq Capital Market on a split-adjusted basis, under the same symbol \u201cNCT\u201d but under a new CUSIP number, G48049129.\n\nThe Company\u2019s shareholders previously approved the reverse split and granted the Company\u2019s board of directors the authority to determine the final consolidation ration (ranging from 2\u2011for\u20111 to 1000\u2011for\u20111) and the timing for its implementation, provided that such implementation occurs within five years from the date of approval. Upon effecting the consolidation, the number of authorized, issued, and unissued Class A ordinary shares will be reduced proportionally, and the par value per share will be increased by the same ratio. On September 5, 2026, the Company\u2019s board of directors approved the implementation of the Reverse Share Split at the ratio of 25-for-1 as of the Effective Time."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/bfdf2e80-9678-463d-9bfc-eb9c5f8b7a18"
+   }
+  ],
+  "searchTime": 1933.7,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "source_notice_date": "2026-09-24",
+    "event_type": "reverse split",
+    "new_cusip": "G0136M119",
+    "effective_as_stated": "12:00 am, Eastern time, on September 29, 2026",
+    "terms": "1-for-20",
+    "new_symbol": "AGRZ",
+    "identifier_in_source": "AGRZ",
+    "market_effective_date": "2026-09-29"
+   },
+   "grounding": [
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_cusip",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_symbol",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "market_effective_date",
+     "citations": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}

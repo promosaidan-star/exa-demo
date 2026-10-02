@@ -1,0 +1,200 @@
+{
+ "saved_at": "2026-09-29 09:20:49",
+ "endpoint": "/search",
+ "body": {
+  "query": "Press release from Fifth Third Bancorp announcing the redemption of its notes with CUSIP 316773 DD9, with the redemption date and redemption price",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "ir.53.com"
+  ],
+  "startPublishedDate": "2026-08-25T00:00:00Z",
+  "systemPrompt": "You are checking a security master exception for an investment operations team. Use only the issuer's own announcements about Fifth Third Bancorp notes with CUSIP 316773 DD9; ignore every other company and every other security. Copy dates and times exactly as the source writes them. If a later notice updates an earlier one, use the later one. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "market_effective_date",
+    "new_cusip",
+    "new_symbol",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security, exactly as the source prints it. For a bond with no CUSIP printed, the coupon and maturity as printed"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, ticker change, name change, ADS ratio change, redemption, tender offer, other"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split or ratio terms, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "market_effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms, or the redemption date for a bond, or not stated"
+    },
+    "new_cusip": {
+     "type": "string",
+     "description": "New CUSIP as stated, or not stated"
+    },
+    "new_symbol": {
+     "type": "string",
+     "description": "New ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 2763,
+ "data": {
+  "requestId": "e708e792290dd39226931dd1fca73de6",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.businesswire.com/news/home/20260826912496/en/Fifth-Third-Announces-Dual-Listing-on-NYSE-Texas",
+    "title": "Fifth Third Announces Dual Listing on NYSE Texas",
+    "url": "https://www.businesswire.com/news/home/20260826912496/en/Fifth-Third-Announces-Dual-Listing-on-NYSE-Texas",
+    "publishedDate": "2026-08-26T00:00:00.000Z",
+    "highlights": [
+     "**Fifth Third Announces Dual Listing on NYSE Texas**\n...\nCINCINNATI--(BUSINESS WIRE)--Fifth Third Bancorp (NYSE: FITB) today announced the dual listing of its common stock on NYSE Texas in Dallas. Fifth Third will maintain its primary listing on the New York Stock Exchange and will trade on NYSE Texas under the same \u201cFITB\u201d ticker symbol, effective August 27, 2026.\n...\nFifth Third Bank, National Association is a federally chartered institution. Fifth Third Bancorp is the indirect parent company of Fifth Third Bank, and its common stock is traded on the New York Stock Exchange under the symbol \"FITB.\" Investor information and press releases can be viewed at www.53.com. Deposit and credit products provided by Fifth Third Bank, National Association. Member FDIC."
+    ],
+    "image": "https://mms.businesswire.com/media/20260826912496/en/2142958/22/New_Fifth_Third_Logo_5-2024.jpg"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/truist-announces-redemption-of-subordinated-notes-due-october-2026-302882455.html",
+    "title": "Truist announces redemption of subordinated notes due October 2026",
+    "url": "https://www.prnewswire.com/news-releases/truist-announces-redemption-of-subordinated-notes-due-october-2026-302882455.html",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "author": "Truist Financial Corporation",
+    "highlights": [
+     "CHARLOTTE, N.C., Sept. 17, 2026 / PRNewswire/ -- Truist Bank (NYSE: TFC) today announced it will redeem all $850,000,000 principal amount outstanding of its fixed rate subordinated notes due Oct. 30, 2026, (CUSIP 07330MAA5) on the redemption date of Sept. 30, 2026.\n\nThe redemption price for the subordinated notes will be equal to 100% of the principal amount plus accrued and unpaid interest to, but excluding, the redemption date. Interest on the subordinated notes will cease to accrue on and after the redemption date.\n...\nnotes will be made through the ... The Depository Trust Company."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS212222/TruistWhiteLogo.jpg?id=OA2956127&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/17/3363684/0/en/ing-to-redeem-perpetual-capital-securities.html",
+    "title": "ING to redeem Perpetual Capital Securities",
+    "url": "https://www.globenewswire.com/news-release/2026/09/17/3363684/0/en/ing-to-redeem-perpetual-capital-securities.html",
+    "publishedDate": "2026-09-17T00:00:00.000Z",
+    "author": "ING Group",
+    "highlights": [
+     "# ING to redeem Perpetual Capital Securities\n\n September 17, 2026 02:00 ET | Source: ING Group\n...\nING announced today it will redeem USD 1,500 million of 5.750% Perpetual Additional Tier 1 Contingent Convertible Capital Securities (the \u201cPerpetual Capital Securities\u201d) on the call date of 16 November 2026, in line with ING\u2019s goal to continuously optimise its capital structure.\n\nThe Perpetual Capital Securities (CUSIP 456837AR4/ISIN US456837AR44) will be redeemed in full in accordance with their terms, with payment to be made on 16 November 2026. The redemption price will be the principal amount of the Perpetual Capital Securities. Accrued and unpaid interest due on the redemption date will be paid in the usual manner to holders of record as of 13 November 2026. The paying agent for the Perpetual Capital Securities is The Bank of New York Mellon, London Branch 160 Queen Victoria Street London EC4V 4LA United Kingdom."
+    ],
+    "image": "https://ml-eu.globenewswire.com/Resource/Download/f98b0fea-4867-42b4-a7ea-9e63eda03ea5"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/08/20/3348340/0/en/verizon-to-redeem-debt-securities-on-september-21-2026.html",
+    "title": "Verizon to redeem debt securities on September 21, 2026",
+    "url": "https://www.globenewswire.com/news-release/2026/08/20/3348340/0/en/verizon-to-redeem-debt-securities-on-september-21-2026.html",
+    "publishedDate": "2026-09-21T00:00:00.000Z",
+    "author": "Verizon Sourcing LLC",
+    "highlights": [
+     "NEW YORK, Aug. 20, 2026 (GLOBE NEWSWIRE) -- Verizon Communications Inc. (\u201cVerizon\u201d) (NYSE, NASDAQ: VZ) today announced that it will redeem, in whole, the following notes on September 21, 2026 (the \u201cRedemption Date\u201d):\n\n| I.D. Number | Title of Security | Principal Amount Outstanding |\n| --- | --- | --- |\n| CUSIP: 92343V ER1 ISIN: US92343VER15 | 4.329% Notes due 2028 (the \u201cNotes\u201d) | $1,250,000,000 |\n\n The redemption price for the Notes being redeemed will be equal to the greater of (i) 100% of the principal amount of the Notes being redeemed, or (ii) the sum of the present values of the remaining scheduled payments of principal and interest on the Notes being redeemed (exclusive of interest accrued to the Redemption Date), as the case may be, discounted to the Redemption Date on a semiannual basis (assuming a 360-day year consisting of twelve 30-day months) at the Treasury Rate (as defined in the Notes) plus 25 basis points (the \u201cRedemption Price\u201d), plus, in either case, accrued and unpaid interest on the principal amount being redeemed to, but excluding, the Redemption Date. The Redemption Price will be calculated in accordance with the terms of the Notes on the third Business Day (as defined in the Notes) preceding the Redemption Date."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/2a0c6c7a-3980-4c97-a719-a463817cf3f6"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "title": "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-500-000-000-floating-rate-senior-notes-and-1-500-000-000-5-933-fixedfloating-rate-senior-notes-due-september-2027--302870421.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n# Bank of America Announces Redemptions of $500,000,000 Floating Rate Senior Notes and $1,500,000,000 5.933% Fixed/Floating Rate Senior Notes, Due September 2027\n\n Bank of America Corporation \n\nSep 04, 202 ... , 16:20 ET\n\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all $500,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLX5) (the \"Floating Rate Notes\"), and all $1,500,000,000 principal amount outstanding of its 5.933% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 06051GLV9) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date.\n\nPayment of the redemption price for the Notes will be made through the facilities of The Depository Trust Company. The Bank of New York Mellon Trust Company, N.A. is the trustee and paying agent for the Notes."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931186&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "title": "Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027",
+    "url": "https://www.prnewswire.com/news-releases/bank-of-america-announces-redemptions-of-cad425-000-000-floating-rate-senior-notes-and-cad1-000-000-000-1-978-fixedfloating-rate-senior-notes-due-september-2027--302870327.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Bank of America Corporation",
+    "highlights": [
+     "00,000, ... Fixed/Floating Rate Senior\n...\n# Bank of America Announces Redemptions of CAD425,000,000 Floating Rate Senior Notes and CAD1,000,000,000 1.978% Fixed/Floating Rate Senior Notes, Due September 2027\n\n Bank of America Corporation \n\nSep 0 ... , 20 ... , 16:15 ET\n\nCHARLOTTE, N.C., Sept. 4, 2026 /PRNewswire/ -- Bank of America Corporation announced today that it will redeem on September 15, 2026 all CAD425,000,000 principal amount outstanding of its Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FY5, ISIN: CA060505FY50) (the \"Floating Rate Notes\"), and all CAD1,000,000,000 principal amount outstanding of its 1.978% Fixed/Floating Rate Senior Notes, due September 2027 (CUSIP No. 060505FZ2, ISIN: CA060505FZ26) (the \"Fixed/Floating Rate Notes\" and, together with the Floating Rate Notes, the \"Notes\").\n\nThe redemption price for each series of the Notes will be equal to 100% of the principal amount of such series, plus accrued and unpaid interest to, but excluding, the redemption date of September 15, 2026. Interest on each series of the Notes will cease to accrue on the redemption date. \n\nPayment of the redemption price for the Notes will be made in accordance with the applicable procedures of CDS Clearing and Depository Services Inc. The Bank of New York Mellon Trust Company, N.A. is the trustee and Computershare Advantage Trust Company of Canada (f/k/a BNY Trust Company of Canada) is the paying agent for the Notes."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS970893/Bank-of-America-Corporation-Logo.jpg?id=OA2931168&p=facebook"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/17/3363776/0/en/nykredit-bank-a-s-to-redeem-preferred-senior-notes.html",
+    "title": "Nykredit Bank A/S to redeem Preferred Senior Notes",
+    "url": "https://www.globenewswire.com/news-release/2026/09/17/3363776/0/en/nykredit-bank-a-s-to-redeem-preferred-senior-notes.html",
+    "publishedDate": "2026-09-17T09:18:09.000Z",
+    "highlights": [
+     "# Nykredit Bank A/S to redeem Preferred Senior Notes\n...\nNykredit Bank A/S has obtained approval from the Danish Financial Supervisory Authority to redeem its EUR 250,000,000 Preferred Senior Fixed Rate Resettable Notes (ISIN DK0030528187) in accordance with the Final Terms.\n\nThe notes will be redeemed on the Optional Redemption Date on 5 October 2026 at the Outstanding Principal Amount together with accrued interest."
+    ]
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/brc-group-holdings-inc-announces-full-redemption-of-6-50-senior-notes-due-2026--302862584.html",
+    "title": "BRC Group Holdings, Inc. Announces Full Redemption of 6.50% Senior Notes Due 2026",
+    "url": "https://www.prnewswire.com/news-releases/brc-group-holdings-inc-announces-full-redemption-of-6-50-senior-notes-due-2026--302862584.html",
+    "publishedDate": "2026-08-28T00:00:00.000Z",
+    "author": "BRC Group Holdings, Inc.",
+    "highlights": [
+     "LOS ANGELES, Aug. 28, 2026 /PRNewswire/ -- BRC Group Holdings, Inc. (Nasdaq: RILY) (\"BRC\" or the \"Company\") today announced that it has called for the full redemption equal to $142,137,375 aggregate principal amount of its 6.50% Senior Notes due 2026 (the \"Notes\") on September 29, 2026 (the \"Redemption Date\").\n\nThe redemption price is equal to 100% of the aggregate principal amount, plus any accrued and unpaid interest from the most recent Interest Payment Date and up to, but excluding, the Redemption Date, as set forth in each notice of redemption delivered to noteholders on August 28, 2026.\n\nInterest on the Notes will cease to accrue on and after the Redemption Date. The Notes, which are listed on NASDAQ under the ticker symbol \"RILYN,\" will be delisted and cease trading on the Redemption Date.\n...\nnot descriptions of historical facts ... statements within the meaning of the Private ... Reform Act of 1995, including statements regarding the ... 's intention and ability to redeem the full $142,137,375 aggregate principal amount of its 6.50% Senior Notes due 2026, the expected Redemption Date ... , 2026, and the expected payment of the redemption price along with accrued and unpaid interest. These statements ... based on management's current expectations and assumptions and are subject to ... , many beyond the Company's ... the Company's performance and actual results to differ ... to: macroeconomic ... , including interest ... fluctuations and inflation ... operational or financial ... could impact the execution of ... the financial markets and general economic conditions ... the Company's periodic reports ... Exchange Commission ( ... , the risks described ... Company's ... 5 Annual Report on Form 10-K, its Quarterly Report on Form 10-Q for the quarter ended March 31, 2026, and its Quarterly Report on Form 10-Q for the quarter ended June 30, 2026. Forward-looking statements speak only as of the date of this press release, and the Company undertakes no obligation to update them, except as required by law."
+    ],
+    "image": "https://www.prnewswire.com/content/dam/prnewswire/homepage/LIGHT_PRNewswire_By-Cision_Stacked.svg"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/21/3365328/0/en/equinox-gold-announces-redemption-of-its-outstanding-4-75-convertible-senior-notes-due-october-2028.html",
+    "title": "Equinox Gold Announces Redemption of its Outstanding 4.75%",
+    "url": "https://www.globenewswire.com/news-release/2026/09/21/3365328/0/en/equinox-gold-announces-redemption-of-its-outstanding-4-75-convertible-senior-notes-due-october-2028.html",
+    "publishedDate": "2026-09-21T00:00:00.000Z",
+    "author": "Equinox Gold Corp.",
+    "highlights": [
+     "# Equinox Gold Announces Redemption of its Outstanding 4.75% Convertible Senior Notes Due October 2028\n\n September 21, 2026 06:30 ET | Source: Equinox Gold Corp. \n\nVANCOUVER, British Columbia, Sept. 21, 2026 (GLOBE NEWSWIRE) -- Equinox Gold Corp. (TSX: EQX, NYSE American: EQX) (\u201cEquinox Gold\u201d or the \u201cCompany\u201d) announces that it has elected to exercise its right to redeem all of its outstanding $172.5 million aggregate principal amount of 4.75% Convertible Senior Notes due October 15, 2028 (the \u201cNotes\u201d) (CUSIP No. 29446YAC0). All dollar amounts are in United States dollars.\n\nThe Notes were issued pursuant to an indenture dated as of September 21, 2023 (the \u201cIndenture\u201d) between the Company and Computershare Trust Company, N.A., as trustee. In accordance with the terms of the Indenture, on October 20, 2026 (the \u201cRedemption Date\u201d), the Company will redeem all Notes that have not been converted prior to 5:00 p.m., New York City time on October 19, 2026 (the \u201cConversion Deadline\u201d).\n...\nThe redemption price for each Note will equal 100% of its outstanding principal amount, plus accrued and unpaid interest thereon to, but excluding, the Redemption Date (the \u201cRedemption Price\u201d). For each $1,000 principal amount of Notes, the Redemption Price will be equal to approximately $1,000.66. On the Redemption Date, the Redemption Price will become due and payable, and interest on the Notes will cease to accrue."
+    ],
+    "image": "https://ml.globenewswire.com/Resource/Download/322c1a7d-5c3e-4a91-8e8e-4842b3dafa6b"
+   },
+   {
+    "id": "https://www.globenewswire.com/news-release/2026/09/02/3355480/0/en/oxford-lane-capital-corp-announces-partial-redemption-of-5-00-notes-due-2027.html",
+    "title": "Oxford Lane Capital Corp. Announces Partial Redemption of",
+    "url": "https://www.globenewswire.com/news-release/2026/09/02/3355480/0/en/oxford-lane-capital-corp-announces-partial-redemption-of-5-00-notes-due-2027.html",
+    "publishedDate": "2026-09-02T00:00:00.000Z",
+    "author": "Oxford Lane Capital Corp.",
+    "highlights": [
+     "# Oxford Lane Capital Corp. Announces Partial Redemption of 5.00% Notes Due 2027\n\n September 02, 2026 16:01 ET | Source: Oxford Lane Capital Corp. \n\nGREENWICH, Conn., Sept. 02, 2026 (GLOBE NEWSWIRE) -- Oxford Lane Capital Corp. (NasdaqGS: OXLC, OXLCL, OXLCO, OXLCZ, OXLCN, OXLCI, OXLCG and OXLCM) (the \u201cCompany,\u201d \u201cwe,\u201d \u201cus\u201d or \u201cour\u201d) announced today that it has called for the redemption of a portion ($30,000,000 in aggregate principal amount) of the Company\u2019s 5.00% Notes due 2027 (the \u201cNotes\u201d), which are traded on the Nasdaq Global Select Market under the ticker OXLCZ. The Company will redeem $30,000,000 in aggregate principal amount of the outstanding Notes on October 2, 2026 (the \u201cRedemption Date\u201d). The Notes will be redeemed at a redemption price of $25 per Note, plus accrued and unpaid interest thereon from September 30, 2026 to, but not including the Redemption Date (the \u201cRedemption Payment\u201d).\n...\nthose Notes on"
+    ]
+   }
+  ],
+  "searchTime": 979.9,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "terms": "not stated",
+    "new_symbol": "not stated",
+    "effective_as_stated": "not stated",
+    "event_type": "not stated",
+    "source_notice_date": "not stated",
+    "market_effective_date": "not stated",
+    "identifier_in_source": "not stated",
+    "new_cusip": "not stated"
+   },
+   "grounding": []
+  }
+ }
+}

@@ -1,0 +1,282 @@
+{
+ "saved_at": "2026-10-02 13:14:51",
+ "endpoint": "/search",
+ "body": {
+  "query": "Recent corporate action announcements by Agroz Inc. (Nasdaq: AGRZ): reverse stock split, CUSIP or identifier change, redemption, or ticker change",
+  "type": "auto",
+  "includeDomains": [
+   "globenewswire.com",
+   "prnewswire.com",
+   "businesswire.com",
+   "accessnewswire.com",
+   "nasdaqtrader.com",
+   "sec.gov",
+   "newsroom.bankofamerica.com",
+   "news.microsoft.com",
+   "news.pg.com"
+  ],
+  "startPublishedDate": "2026-08-03T00:00:00Z",
+  "systemPrompt": "You are scanning a watchlist for an investment operations team. Report the most recent corporate action announced for Agroz Inc. (Nasdaq: AGRZ), either by the issuer itself or in an official exchange or SEC notice: a reverse or forward stock split, a CUSIP or ticker change, a name change, an ADS ratio change, or a redemption, tender offer or exchange offer for this security. Ignore every other company and every other security. Ignore earnings, dividends, buybacks, share offerings, lawsuits, law-firm advertisements and analyst commentary. If no such action appears in the sources, write none found for event_type and not stated for every other field. Copy dates and times exactly as the source writes them. Write not stated for any field the source does not give. Never infer.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "identifier_in_source",
+    "event_type",
+    "terms",
+    "effective_as_stated",
+    "effective_date",
+    "new_identifier",
+    "source_notice_date"
+   ],
+   "properties": {
+    "identifier_in_source": {
+     "type": "string",
+     "description": "Ticker or CUSIP of the affected security exactly as the source prints it, or not stated"
+    },
+    "event_type": {
+     "type": "string",
+     "description": "One of: reverse split, forward split, CUSIP change, ticker change, name change, ADS ratio change, redemption, tender offer, exchange offer, other, none found"
+    },
+    "terms": {
+     "type": "string",
+     "description": "Split ratio, or redemption price and amount, as stated"
+    },
+    "effective_as_stated": {
+     "type": "string",
+     "description": "Effective date and time exactly as the source writes it"
+    },
+    "effective_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD of the first trading day on the new terms for a split, or the redemption date for a bond, or not stated"
+    },
+    "new_identifier": {
+     "type": "string",
+     "description": "New CUSIP or new ticker as stated, or not stated"
+    },
+    "source_notice_date": {
+     "type": "string",
+     "description": "YYYY-MM-DD printed on the notice itself"
+    }
+   }
+  },
+  "contents": {
+   "highlights": true
+  }
+ },
+ "elapsed_ms": 6805,
+ "queued": false,
+ "queue_ms": 0,
+ "data": {
+  "requestId": "dea4af0c87e867024f1fcc2c388f15e0",
+  "resolvedSearchType": "",
+  "results": [
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+    "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+    "publishedDate": "2026-09-25T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 682 Information Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)\n...\n## Equity Corporate Actions Alert #2026 - 682 Information Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Agroz Inc. (AGRZ) will effect a one-for-twenty (1-20) reverse split of its Class A Ordinary Shares. The reverse stock split will become effective on Tuesday, September 29, 2026. In conjunction with the reverse split, the CUSIP number will change to G0136M119. If you would like to register as a market maker in AGRZ, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+    "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+    "publishedDate": "2026-09-24T17:12:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "# AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT\n...\nKUALA LUMPUR, Malaysia, Sept. 24, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative, fully vertically integrated agricultural technology company designing, building, managing, and operating indoor Controlled Environment Agriculture vertical farms, today announced that it will effect a 1-for-20 reverse stock split (the \"Split\") of its issued and outstanding and authorized Class A Ordinary Shares, par value $0.001 per share (\"Ordinary Shares\"), effective at 12:00 am, Eastern time, on September 29, 2026.\n...\n- Conversion Ratio: Every 20 issued and outstanding Ordinary Shares will be consolidated into one Ordinary Share. \n- Fractional Shares: Shareholders entitled to fractional shares will receive one full share for each fractional portion. \n- Updated Stock Identifier: While the trading symbol for the Ordinary Shares will remain \"AGRZ,\" the Ordinary Shares will be designated a new CUSIP number G0136M119. \n- Equity Adjustments: Outstanding stock awards, options, and the shares reserved will be adjusted proportionally to reflect the Split. \n- Warrant Share and Exercise Price Adjustments: Any Ordinary Shares underlying outstanding warrants and the exercise price of the outstanding warrants will be adjusted proportionally to reflect this stock split."
+    ]
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-announces-receipt-of-nasdaq-staff-determination-and-implementation-of-compliance-plan-302857463.html",
+    "title": "AGROZ INC. ANNOUNCES RECEIPT OF NASDAQ STAFF DETERMINATION AND IMPLEMENTATION OF COMPLIANCE PLAN",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-receipt-of-nasdaq-staff-determination-and-implementation-of-compliance-plan-302857463.html",
+    "publishedDate": "2026-08-21T00:00:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "Company Intends to Request a Hearing; Compliance Measures Include Proposed Reverse Share Split and Expedited Completion of Annual Report\n\nKUALA LUMPUR, Malaysia, Aug. 21, 2026 /PRNewswire/ -- Agroz Inc. (Nasdaq: AGRZ) (\"Agroz\" or the \"Company\"), an agricultural technology company, today announced that it received a Staff Determination Letter (the \"Letter\") from the Listing Qualifications Department of The Nasdaq Stock Market LLC (\"Nasdaq\") dated August 18, 2026.\n\nThe Letter states that Nasdaq has determined to delist the Company's securities from the Nasdaq Capital Market based on the following matters:\n...\n2. Nasdaq stated that the Company had not demonstrated compliance with the minimum stockholders' equity requirement applicable to initial listing and had not previously notified Nasdaq of its intention to cure the bid-price deficiency through a reverse share split within the applicable period, as contemplated by Nasdaq Listing Rule 5810(c)(3)(A)(ii).\n...\nThe Company intends to submit a timely request for a hearing before the Nasdaq Hearings Panel by the August 25, 2026 deadline to appeal the Staff Determination. If confirmed byNasdaq: The hearing request will stay the suspension and delisting action pending the Panel's decision and the expiration of any extension granted by the Panel. There can be no assurance that the hearing request will be successful or that the Company will regain or maintain compliance with all applicable Nasdaq continued-listing requirements.\n...\nThe Company is finalizing the submission of the necessary corporate-action application to implement a 1-for-10 reverse share split of its ordinary shares. The proposed reverse share split is intended to increase the per-share trading price of the Company's ordinary shares and support the Company's efforts to regain compliance with Nasdaq Listing Rule 5550(a)(2). Its implementation remains subject to the completion of all required corporate, regulatory and Nasdaq review processes.\n...\nIn connection with its appeal, the Company intends to present the Nasdaq Hearings Panel with its compliance strategy, including the proposed reverse share split, the engagement of its new PCAOB-registered auditor, the timetable for filing the outstanding Form 20-F and the Company's plan for satisfying Nasdaq's applicable financial and continued-listing requirements.\n\n\"Management and the Board are treating these matters as an immediate priority,\" said Gerard Lim, CEO. \"We have already commenced concrete remedial actions, including advancing the proposed reverse share split and strengthening the resources dedicated to completing our outstanding annual report. We intend to work closely and transparently with Nasdaq throughout the hearing and compliance process.\"\n...\nIf the Company does not submit a timely hearing request, Nasdaq has stated that trading in the Company's ordinary shares would be suspended at the opening of business on August 27, 2026, followed by the commencement of formal delisting procedures, including the filing of a Form 25-NSE with the U.S. Securities and Exchange Commission."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2902362&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-inc-enters-into-strategic-supply-agreement-with-harvest-hive-302873810.html",
+    "title": "AGROZ INC. ENTERS INTO STRATEGIC SUPPLY AGREEMENT WITH HARVEST HIVE",
+    "url": "https://www.prnewswire.com/news-releases/agroz-inc-enters-into-strategic-supply-agreement-with-harvest-hive-302873810.html",
+    "publishedDate": "2026-09-09T00:00:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "KUALA LUMPUR, Malaysia and NEW YORK, Sept. 9, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative Controlled Environment Agriculture (CEA), precision agricultural technology, and fresh produce supply chain developer, today announced that it has executed a milestone multi-year Strategic Fresh Produce Supply and Offtake Agreement with Harvest Hive Sdn Bhd (\"Harvest Hive\"), a premier agricultural enterprise and farm aggregator operating across the Cameron Highlands farming corridor in Pahang, Malaysia\n...\nThis press release contains \"forward-looking statements.\" You can identify forward-looking statements as those that are not historical in nature, particularly those that use terminology such as \"may,\" \"should,\" \"expects,\" \"anticipates,\" \"contemplates,\" \"estimates,\" \"believes,\" \"plans,\" \"projected,\" \"predicts,\" \"potential,\" or \"hopes\" or the negative of these or similar terms. The reader is cautioned not to rely on these forward-looking statements. Actual results could vary materially from the expectations and projections of Agroz. We base these forward-looking statements on our expectations and projections about future events, which we derive from the information currently available to us. Such forward-looking statements relate to future events or our future performance, including, without limitation, statements regarding the closing of the Offering and the use of proceeds from the sale of our ordinary shares in the Offering. These and other factors may cause our actual results to differ materially from any forward-looking statement. Forward-looking statements are only predictions. The forward-looking statements discussed in this press release and other statements made from time to time by us or our representatives may not occur, and actual events and results may differ materially and are subject to risks, uncertainties and assumptions about us more fully described in Agroz's filings with the SEC. We do not undertake to update any forward-looking statement as a result of new information or future events or developments, except as required by U.S. federal securities laws."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2938373&p=facebook"
+   },
+   {
+    "id": "https://www.prnewswire.com/news-releases/agroz-strengthens-global-position-with-series-of-prestigious-international-awards-and-industry-recognitions-302870211.html",
+    "title": "Agroz Strengthens Global Position with Series of Prestigious International Awards and Industry Recognitions",
+    "url": "https://www.prnewswire.com/news-releases/agroz-strengthens-global-position-with-series-of-prestigious-international-awards-and-industry-recognitions-302870211.html",
+    "publishedDate": "2026-09-04T00:00:00.000Z",
+    "author": "Agroz Inc",
+    "highlights": [
+     "KUALA LUMPUR, Malaysia, Sept. 4, 2026 /PRNewswire/ -- Agroz Inc. (NASDAQ: AGRZ) (\"Agroz\" or the \"Company\"), an innovative, fully vertically integrated agricultural technology company that designs, builds, manages, and operates indoor and outdoor Controlled Environment Agriculture (CEA) vertical farms, today announced a series of prestigious international awards and industry recognitions received over the past few months, further strengthening its position as a leading global AgriTech innovator.\n...\nCAUTIONARY STATEMENT CONCERNING FORWARD-LOOKING STATEMENTS \n\nThis press release contains \"forward-looking statements.\" You can identify forward-looking statements as those that are not historical in nature, particularly those that use terminology such as \"may,\" \"should,\" \"expects,\" \"anticipates,\" \"contemplates,\" \"estimates,\" \"believes,\" \"plans,\" \"projected,\" \"predicts,\" \"potential,\" or \"hopes\" or the negative of these or similar terms. The reader is cautioned not to rely on these forward-looking statements. Actual results could vary materially from the expectations and projections of Agroz. We base these forward-looking statements on our expectations and projections about future events, which we derive from the information currently available to us. Such forward-looking statements relate to future events or our future performance, including, without limitation, statements regarding the closing of the Offering and the use of proceeds from the sale of our ordinary shares in the Offering. These and other factors may cause our actual results to differ materially from any forward-looking statement. Forward-looking statements are only predictions. The forward-looking statements discussed in this press release and other statements made from time to time by us or our representatives may not occur, and actual events and results may differ materially and are subject to risks, uncertainties and assumptions about us more fully described in Agroz's filings with the SEC. We do not undertake to update any forward-looking statement as a result of new information or future events or developments, except as required by U.S. federal securities laws."
+    ],
+    "image": "https://mmx.prnewswire.com/media/MS1667491/LOGO-Logo-Logo.jpg?id=OA2931145&p=facebook"
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "title": "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-675",
+    "publishedDate": "2026-09-24T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX)\n...\n## Equity Corporate Actions Alert #2026 - 675 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for GMEX ROBOTICS CORPORATION (GMEX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | GMEX ROBOTICS CORPORATION (GMEX) will effect a one-for-nine (1-9) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.8064 to $0.000001 will become effective on Monday, September 28, 2026. In conjunction with the reverse split, the CUSIP number will change to G3514S161. If you would like to register as a market maker in GMEX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-696",
+    "title": "Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-696",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM)\n...\n## Equity Corporate Actions Alert #2026 - 696 Information Regarding the Reverse Stock Split, Par Value and CUSIP Number Change for BGM Group Ltd. (BGM) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | BGM Group Ltd (BGM) will effect a one-for-thirty (1-30) reverse split of its Class A Ordinary Shares. The reverse stock split and change in par value from $0.0001 to $0.003 will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to G7307E131. If you would like to register as a market maker in BGM, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "title": "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc.  (JAGX)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-662",
+    "publishedDate": "2026-09-15T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc. (JAGX)\n...\n## Equity Corporate Actions Alert #2026 - 662 Information Regarding the Reverse Stock Split and CUSIP Number Change for Jaguar Health, Inc. (JAGX) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Jaguar Health, Inc. (JAGX) will effect a one-for-fifteen (1-15) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, September 17, 2026. In conjunction with the reverse split, the CUSIP number will change to 47010C854. If you would like to register as a market maker in JAGX, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "title": "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=eca2026-695",
+    "publishedDate": "2026-09-29T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\nTuesday, September 29, 2026\n\n## Equity Corporate Actions Alert #2026 - 695 Information Regarding the Reverse Stock Split and CUSIP Number Change for Kustom Entertainment, Inc. (KUST) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources SEC Filing | Kustom Entertainment, Inc. (KUST) will effect a one-for-ten (1-10) reverse split of its Common Stock. The reverse stock split will become effective on Thursday, October 1, 2026. In conjunction with the reverse split, the CUSIP number will change to 25382T705. If you would like to register as a market maker in KUST, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   },
+   {
+    "id": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "title": "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)",
+    "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-651",
+    "publishedDate": "2026-09-08T00:00:00.000Z",
+    "highlights": [
+     "Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ)\n...\n## Equity Corporate Actions Alert #2026 - 651 Information Regarding the Reverse Stock Splits and CUSIP Number Changes for Tidal Group and Defiance ETFs (SMCZ, QBTZ, OKLL, RGTZ) \n\n| Category: Industry Announcement Markets Impacted: The Nasdaq Stock Market Contact Information: Nasdaq Corporate Data Operations (nasdaqreorgs@nasdaq.com) at +1 877 308 0523 Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100 Resources Press Release | Tidal Financial Group and Defiance ETFs will effect reverse stock splits on the following ETFs effective on Thursday, September 10, 2026. ETF Reverse Stock Splits effective Thursday, September 10, 2026 Ticker Fund Name Split Ratio Current CUSIP New CUSIP QBTZ Defiance Daily Target 2x Short QBTS ETF 1-5 88636W148 88636Y540 OKLL Defiance Daily Target 2x Long OKLO ETF 1-5 88636V678 88636Y524 RGTZ Defiance Daily Target 2x Short RGTI ETF 1-5 88636V652 88636Y516 SMCZ Defiance Daily Target 2X Short SMCI ETF 1-2 88636W262 88636Y482 If you would like to register as a market maker in any of these ETFs, contact Nasdaq Trading Services (tradingservices@nasdaq.com) at +1 212 231 5100. |\n| --- | --- |"
+    ]
+   }
+  ],
+  "searchTime": 2851.7,
+  "costDollars": {
+   "total": 0.007,
+   "search": {
+    "neural": 0.007
+   }
+  },
+  "output": {
+   "content": {
+    "identifier_in_source": "AGRZ",
+    "effective_as_stated": "Tuesday, September 29, 2026",
+    "effective_date": "2026-09-29",
+    "terms": "one-for-twenty (1-20)",
+    "source_notice_date": "2026-09-25",
+    "new_identifier": "G0136M119",
+    "event_type": "reverse split"
+   },
+   "grounding": [
+    {
+     "field": "identifier_in_source",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_as_stated",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "effective_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "terms",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "source_notice_date",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "new_identifier",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    },
+    {
+     "field": "event_type",
+     "citations": [
+      {
+       "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-682",
+       "title": "Equity Corporate Actions Alert #2026 - 682 \tInformation Regarding the Reverse Stock Split and CUSIP Number Change for Agroz Inc. (AGRZ)"
+      },
+      {
+       "url": "https://www.prnewswire.com/news-releases/agroz-inc-announces-anticipated-reverse-stock-split-302889571.html",
+       "title": "AGROZ INC. ANNOUNCES ANTICIPATED REVERSE STOCK SPLIT"
+      }
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ }
+}
